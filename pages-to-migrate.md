@@ -1,0 +1,47 @@
+## Pages to migrate
+
+| N   | Old URL                                                                                | New URL                                                                                     |
+| --- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| 1   | /lazyload-swiper-images-instances/                                                     | /blog/lazyload-swiper-images-instances/                                                     |
+| 2   | /lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp/                        | /blog/lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp/                        |
+| 3   | /                                                                                      | /                                                                                           |
+| 4   | /aspect-ratio-modern-reserve-space-lazy-images-async-content-responsive-design/        | /blog/aspect-ratio-modern-reserve-space-lazy-images-async-content-responsive-design/        |
+| 5   | /do-we-need-lazy-loading-libraries-data-src-in-2022/                                   | /blog/do-we-need-lazy-loading-libraries-data-src-in-2022/                                   |
+| 6   | /how-integrate-git-autocomplete-mac-shell-terminal-bash-zsh/                           | /blog/how-integrate-git-autocomplete-mac-shell-terminal-bash-zsh/                           |
+| 7   | /lazyload/                                                                             | /blog/lazyload/                                                                             |
+| 8   | /using-css-variables-to-scale-layout-spaces/                                           | /blog/using-css-variables-to-scale-layout-spaces/                                           |
+| 9   | /talks-how-and-why-to-optimize-web-performance-practical-tips-2023/                    | /blog/talks-how-and-why-to-optimize-web-performance-practical-tips-2023/                    |
+| 10  | /vanilla-lazyload-vs-lazysizes/                                                        | /blog/vanilla-lazyload-vs-lazysizes/                                                        |
+| 11  | /talks-how-and-why-to-optimize-web-performance-tips-trics-2023/                        | /blog/talks-how-and-why-to-optimize-web-performance-tips-trics-2023/                        |
+| 12  | /clever-way-serve-webp-modern-browsers-jpg-internet-explorer/                          | /blog/clever-way-serve-webp-modern-browsers-jpg-internet-explorer/                          |
+| 13  | /css-3-only-spinning-loading-animation/                                                | /blog/css-3-only-spinning-loading-animation/                                                |
+| 14  | /capping-image-fidelity-2x-minimize-loading-time/                                      | /blog/capping-image-fidelity-2x-minimize-loading-time/                                      |
+| 15  | /create-a-javascript-library-using-es2015-modules-gulp-rollup-jest/                    | /blog/create-a-javascript-library-using-es2015-modules-gulp-rollup-jest/                    |
+| 16  | /about/                                                                                | /about/                                                                                     |
+| 17  | /now-google-developer-expert-gde/                                                      | /blog/now-google-developer-expert-gde/                                                      |
+| 18  | /contact/                                                                              | /contact/                                                                                   |
+| 19  | /critical-css-jekyll-sass-github-pages/                                                | /blog/critical-css-jekyll-sass-github-pages/                                                |
+| 20  | /optimise-cls-loading-more-content-pagination/                                         | /blog/optimise-cls-loading-more-content-pagination/                                         |
+| 21  | /lazy-load-responsive-images-srcset/                                                   | /blog/lazy-load-responsive-images-srcset/                                                   |
+| 22  | /lazy-load-responsive-images-in-2019-srcset-sizes-more/                                | /blog/lazy-load-responsive-images-in-2019-srcset-sizes-more/                                |
+| 24  | /check-if-element-still-inside-viewport-after-given-time/                              | /blog/check-if-element-still-inside-viewport-after-given-time/                              |
+| 25  | /a-new-lazyload-to-improve-your-website-performance/                                   | /blog/a-new-lazyload-to-improve-your-website-performance/                                   |
+| 26  | /css-day-2022-talk-automating-responsive-images-automator-ottimizzazione-immagini-4-0/ | /blog/css-day-2022-talk-automating-responsive-images-automator-ottimizzazione-immagini-4-0/ |
+| 27  | /tables-look-like-lists-look-like-tables-accessible-responsive-design/                 | /blog/tables-look-like-lists-look-like-tables-accessible-responsive-design/                 |
+| 28  | /this-website-pwa/                                                                     | /blog/this-website-pwa/                                                                     |
+| 29  | /how-intergrate-git-autocomplete-mac-shell-terminal-bash-zsh/                          | /blog/how-intergrate-git-autocomplete-mac-shell-terminal-bash-zsh/                          |
+| 30  | /quicklink-case-study-faster-pages-increased-page-views/                               | /blog/quicklink-case-study-faster-pages-increased-page-views/                               |
+| 31  | /responsive-images-you-dont-need-picture-tag/                                          | /blog/responsive-images-you-dont-need-picture-tag/                                          |
+| 32  | /using-intersection-observers-to-create-vanilla-lazyload/                              | /blog/using-intersection-observers-to-create-vanilla-lazyload/                              |
+| 33  | /jquery_lazyload                                                                       | /blog/jquery_lazyload                                                                       |
+| 34  | /native-lazy-loading-with-vanilla-lazyload/                                            | /blog/native-lazy-loading-with-vanilla-lazyload/                                            |
+| 35  | /web-share-api-step-by-step/                                                           | /blog/web-share-api-step-by-step/                                                           |
+| 36  | /advanced-sprite-generation-using-compass-sass/                                        | /blog/advanced-sprite-generation-using-compass-sass/                                        |
+| 37  | /against-online-streaming-of-local-meetups-copy/                                       | /blog/against-online-streaming-of-local-meetups-copy/                                       |
+| 38  | /changing-text-color-for-contrast-based-on-background-lightness/                       | /blog/changing-text-color-for-contrast-based-on-background-lightness/                       |
+| 39  | /how-intergrate-git-autocomplete-mac-shell-terminal-bash-zsh                           | /blog/how-intergrate-git-autocomplete-mac-shell-terminal-bash-zsh                           |
+| 40  | /how-to-productively-use-the-new-chromium-based-microsoft-edge-browser/                | /blog/how-to-productively-use-the-new-chromium-based-microsoft-edge-browser/                |
+| 41  | /hybrid-lazy-loading-smashing-magazine-article/                                        | /blog/hybrid-lazy-loading-smashing-magazine-article/                                        |
+| 42  | /lazyload-conference-talk-automating-responsive-images-automator/                      | /blog/lazyload-conference-talk-automating-responsive-images-automator/                      |
+| 44  | /responsive-images-a-html-51-standard/                                                 | /blog/responsive-images-a-html-51-standard/                                                 |
+| 45  | /page2/                                                                                | /blog/                                                                                      |
