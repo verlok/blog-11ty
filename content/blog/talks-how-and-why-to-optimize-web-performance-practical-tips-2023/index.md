@@ -1,5 +1,6 @@
 ---
 title: Talking about how and why to optimize web performance in 2023
+description: During the first half of 2023 I've been talking about web performance at developer conferences, Google Developer Groups (GDG) and local meetups. Find all the details here.
 date: 2023-06-16
 tags:
   - web performance
@@ -8,7 +9,7 @@ tags:
   - meetup
 ---
 
-During the first half of 2023 I've been talking about web performance at developer conferences, Google Developer Groups (GDG) and local meetups. The title of my talk is "How and why ($) to improve web performance, practical tips for 2023". Find all details below.
+During the first half of 2023 I've been talking about web performance at developer conferences, Google Developer Groups (GDG) and local meetups. The title of my talk is "How and why ($) to improve web performance, practical tips for 2023". Find all the details below.
 
 <figure>
 {% image "rays_light_speed_optimization_abstract.png", "Rays of light in cyan and purple background", [600, 1200], "600px" %}
