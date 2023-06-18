@@ -7,7 +7,10 @@ numberOfLatestPostsToShow: 3
 ---
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+
+<p>Hello! I'm <a href="./about/">Andrea</a> and I wrote...</p>
+
+{# <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1> #}
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
