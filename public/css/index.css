@@ -186,9 +186,9 @@ header {
 
 }
 .postlist-item {
-	display: flex;
+	/* display: flex;
 	flex-wrap: wrap;
-	align-items: baseline;
+	align-items: baseline; */
 	margin-bottom: 1em;
 }
 
