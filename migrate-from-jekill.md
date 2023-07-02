@@ -3,22 +3,21 @@
 ## Steps
 
 - [ ] Copy name of file
-- [ ] Create folder with same name
-- [ ] Copy the image in
-- [ ] Create index.md
-- [ ] Copy text from post…md to index.md
-- [ ] Change the front matter to the following
-- [ ] Change the image to the following
+- [ ] Create new file with the name /blog/{copied_file_name}/index.md
+- [ ] Copy front matter and image from below, and paste it in the created file
+- [ ] If image, copy the image in the folder
 
 ## Front matter and image
 
-```
+```md
+---
 title: $
 description: $
 date: 202$-$$-$$
 tags:
   - $
   - $
+---
 
 <figure>
 	{% image "image.png", "$", [600, 1200], "600px" %}
