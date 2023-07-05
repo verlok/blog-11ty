@@ -40,8 +40,11 @@
 
 		<header>
 			<div class="content">
-				<a href="/" class="home-link">{{ metadata.title }}</a>
-
+				<a href="/" class="home-link">
+					<!-- {{ metadata.title }} -->
+					<span class="name">Andrea</span>
+					<span class="surname">Verlicchi</span>
+				</a>
 				{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 				<nav>
 					<h2 class="visually-hidden">Top level navigation menu</h2>
@@ -53,12 +56,14 @@
 						{%- endfor %}
 					</ul>
 				</nav>
+				{#- Now the things #}
+				<p>{{ metadata.description }}</p>
 			</div>
 		</header>
 
 		<main id="skip">
 			<div class="content">
-			{{ content | safe }}
+				{{ content | safe }}
 			</div>
 		</main>
 
