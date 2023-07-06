@@ -114,7 +114,7 @@
 	}
 
 	a[href] {
-		text-underline-offset: 4px;
+		text-underline-offset: .25em;
 		color: var(--text-color-link);
 	}
 	a[href]:visited {
