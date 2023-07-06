@@ -13,8 +13,8 @@ module.exports = eleventyConfig => {
 	// https://www.11ty.dev/docs/plugins/image/
 	eleventyConfig.addAsyncShortcode("image", async function imageShortcode(src, alt, widths, sizes) {
 		// Full list of formats here: https://www.11ty.dev/docs/plugins/image/#output-formats
-		// Warning: Avif can be resource-intensive so take care!
-		let formats = ["avif", "webp", "auto"];
+		// Commented AVIF in July 6th because Safari tries to render it, but it doesn't
+		let formats = [/* "avif",  */"webp", "auto"];
 		let file = relativeToInputPath(this.page.inputPath, src);
 		let metadata = await eleventyImage(file, {
 			widths: widths || ["auto"],
