@@ -203,10 +203,7 @@
 		padding: 0;
 	}
 	.postlist-item {
-		/* display: flex;
-	flex-wrap: wrap;
-	align-items: baseline; */
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 	}
 
 	.postlist-date,
@@ -240,6 +237,15 @@
 	.postlist-item-active .postlist-link {
 		font-weight: bold;
 	}
+	.postlist-button {
+		display: inline-block;
+		color: var(--text-color-link);
+		border: 1px solid var(--text-color-link);
+		padding: 0.35rem .75rem;
+		border-radius: 0.3rem;
+		text-decoration: none;
+		font-size: 90%;
+	}
 
 	/* Tags */
 	.post-tag {
@@ -251,6 +257,9 @@
 	}
 	.postlist-item > .post-tag {
 		align-self: center;
+	}
+	.postlist-item > p {
+		margin-bottom: 1.15rem;
 	}
 
 	/* Tags list */
