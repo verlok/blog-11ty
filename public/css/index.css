@@ -56,6 +56,9 @@
 			--text-color-special-link: #ff27a6;
 			--text-color-special-link-active: #ff27a6;
 			--text-color-special-link-visited: #ff27a6;
+			--text-color-header-special-link: #ff27a6;
+			--text-color-header-special-link-active: #ff27a6;
+			--text-color-header-special-link-visited: #ff27a6;
 
 			--background-color: #020202;
 		}
