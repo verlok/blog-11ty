@@ -8,7 +8,10 @@ eleventyNavigation:
 
 Hello, I'm Andrea, and I love to create and optimize websites. I'm passionate about web performance, web sustainability and user experience.
 
-{% image "2023-andrea-verlicchi-summit-enhanced.png", "Andrea Verlicchi", [600, 1200], "600px", false, "about-face" %}
+<figure class="about-face">
+	{% image "2023-andrea-verlicchi-summit-enhanced.png", "Andrea Verlicchi", [600, 1200], "600px" %}
+	<figcaption>Image courtesy: myself</figcaption>
+</figure>
 
 I write about the web on this tech blog, on [Medium](https://medium.com/@andrea.verlicchi) and [Smashing Magazine](https://www.smashingmagazine.com/author/andrea-verlicchi/), and I love to speak at web conferences.
 
