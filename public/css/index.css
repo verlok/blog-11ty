@@ -34,6 +34,9 @@
 		--text-color-header-special-link-active: #f82028;
 		--text-color-header-special-link-visited: #f82028;
 		--text-color-figcaptions: #808080;
+
+		--icon-color-fill: #828282;
+
 		--syntax-tab-size: 2;
 	}
 
@@ -259,6 +262,29 @@
 
 	.post-back a {
 		text-decoration: none;
+	}
+
+	/* Contact */
+
+	.contact-lists ul {
+		list-style-type: none;
+		padding: 0;
+	}
+	.contact-lists a {
+		display: inline-flex;
+		gap: .5em;
+		text-decoration: none;
+		align-items: baseline;
+	}
+
+	.icon {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+	}
+
+	.icon path {
+		fill: var(--icon-color-fill);
 	}
 
 	/* Tags */
