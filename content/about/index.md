@@ -1,10 +1,10 @@
 ---
 layout: layouts/base.njk
 eleventyNavigation:
-  key: About Me
+  key: About
   order: 3
 ---
-# About Me
+# About
 
 Hello, I'm Andrea, and I love to create and optimize websites. I'm passionate about web performance, web sustainability and user experience.
 
