@@ -320,9 +320,7 @@
 
 @layer overrides {
 	.home-link {
-		text-decoration-color: var(--text-color-header);
-		text-underline-offset: 0.2em;
-		text-decoration-thickness: 1px;
+		text-decoration: none;
 		.name {
 			color: var(--text-color-header);
 		}
