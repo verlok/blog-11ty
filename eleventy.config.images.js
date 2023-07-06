@@ -11,7 +11,7 @@ module.exports = eleventyConfig => {
 
 	// Eleventy Image shortcode
 	// https://www.11ty.dev/docs/plugins/image/
-	eleventyConfig.addAsyncShortcode("image", async function imageShortcode(src, alt, widths, sizes) {
+	eleventyConfig.addAsyncShortcode("image", async function imageShortcode(src, alt, widths, sizes, useLazyLoading) {
 		// Full list of formats here: https://www.11ty.dev/docs/plugins/image/#output-formats
 		// Commented AVIF in July 6th because Safari tries to render it, but it doesn't
 		let formats = [/* "avif",  */"webp", "auto"];
@@ -22,11 +22,12 @@ module.exports = eleventyConfig => {
 			outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
 		});
 
-		// TODO loading=eager and fetchpriority=high
+		// Find a way to pass loading lazy to second to more images
+		const loading = useLazyLoading ? "lazy" : "eager";
 		let imageAttributes = {
 			alt,
 			sizes,
-			loading: "lazy",
+			loading,
 			decoding: "async",
 		};
 		return eleventyImage.generateHTML(metadata, imageAttributes);
