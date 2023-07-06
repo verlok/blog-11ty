@@ -262,9 +262,18 @@
 	}
 
 	/* Post page */
-
 	.post-back a {
 		text-decoration: none;
+	}
+
+	/* About page */
+
+	@media (min-width: 620px) {
+		.about-face {
+			float: left;
+			margin: 0 1rem 1rem 0;
+			width: 250px;
+		}
 	}
 
 	/* Contact */
