@@ -81,11 +81,11 @@
 	}
 	.content h1 {
 		font-size: 2.5rem;
-    color: var(--text-color-special-link);
-    font-weight: bold;
-    letter-spacing: -1px;
-    line-height: 0.9;
-    text-transform: uppercase;
+		color: var(--text-color-special-link);
+		font-weight: bold;
+		letter-spacing: -1px;
+		line-height: 0.9;
+		text-transform: uppercase;
 	}
 
 	/* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -249,10 +249,16 @@
 		display: inline-block;
 		color: var(--text-color-link);
 		border: 1px solid var(--text-color-link);
-		padding: 0.35rem .75rem;
+		padding: 0.35rem 0.75rem;
 		border-radius: 0.3rem;
 		text-decoration: none;
 		font-size: 90%;
+	}
+
+	/* Post page */
+
+	.post-back a {
+		text-decoration: none;
 	}
 
 	/* Tags */
