@@ -75,6 +75,9 @@
 		color: var(--text-color);
 		background-color: var(--background-color);
 	}
+	body {
+		text-underline-offset: 0.25em;
+	}
 	html {
 		overflow-y: scroll;
 	}
@@ -114,7 +117,6 @@
 	}
 
 	a[href] {
-		text-underline-offset: .25em;
 		color: var(--text-color-link);
 	}
 	a[href]:visited {
@@ -273,7 +275,7 @@
 	}
 	.contact-lists a {
 		display: inline-flex;
-		gap: .5em;
+		gap: 0.5em;
 		text-decoration: none;
 		align-items: baseline;
 	}
