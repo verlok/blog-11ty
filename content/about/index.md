@@ -4,6 +4,11 @@ eleventyNavigation:
   key: About
   order: 3
 ---
+
+<nav class="post-back post-back--top">
+	<a href="/">&larr; Home page</a>
+</nav>
+
 # About
 
 Hello, I'm Andrea, and I love to create and optimize websites. I'm passionate about web performance, web sustainability and user experience.
