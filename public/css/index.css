@@ -114,6 +114,7 @@
 	}
 
 	a[href] {
+		text-underline-offset: 4px;
 		color: var(--text-color-link);
 	}
 	a[href]:visited {
@@ -342,12 +343,13 @@
 	/* ------------ My custom ------------- */
 
 	figure {
-		margin: 0;
+		margin: 0 0 1.5rem 0;
 	}
 
 	figcaption {
 		text-align: center;
 		margin-top: 0.5rem;
+		font-size: 90%;
 		color: var(--text-color-figcaptions);
 	}
 
