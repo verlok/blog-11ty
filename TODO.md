@@ -1,9 +1,5 @@
 # TODO
 
-## Before 1st golive
-
-- Add favicons with realfavicongenerator
-
 ## After golive
 
 - Check ogg:images for social sharing
