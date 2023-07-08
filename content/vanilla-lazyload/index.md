@@ -9,16 +9,18 @@ eleventyNavigation:
 	<a href="/">&larr; Home page</a>
 </nav>
 
-# Lazy Load
+# vanilla-lazyload
 
-I'm the author of a very popular lazy load script: vanilla-lazyload. You can find it on:
+I'm the author of a very popular lazy load script: vanilla-lazyload.<br>
+Here's where you can find it:
 
-- [GitHub](https://github.com/verlok/vanilla-lazyload)
-- [npm](https://www.npmjs.com/package/vanilla-lazyload)
-- [jsdelivr](https://www.jsdelivr.com/package/npm/vanilla-lazyload)
-- [ko-fi](https://ko-fi.com/verlok) ☕
+- Info, code, issues, sponsorship: [GitHub](https://github.com/verlok/vanilla-lazyload)
+- Use it via CDN: [jsdelivr](https://www.jsdelivr.com/package/npm/vanilla-lazyload)
+- Install it? Use [npm](https://www.npmjs.com/package/vanilla-lazyload)
 
-### Articles on lazy load
+Open source needs love and caffeine! ☕ [Buy me a coffee](https://ko-fi.com/verlok)
+
+### Articles on lazy loading
 
 Here are some articles about lazy-loading images!
 
