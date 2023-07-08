@@ -4,7 +4,6 @@
 
 - Check all redirects
 - Add favicons with realfavicongenerator
-- Remove "home" from the menu
 
 ## After golive
 
