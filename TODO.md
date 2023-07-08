@@ -2,7 +2,6 @@
 
 ## Before 1st golive
 
-- Check all redirects
 - Add favicons with realfavicongenerator
 
 ## After golive
