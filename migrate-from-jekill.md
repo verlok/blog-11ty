@@ -1,31 +1,4 @@
-# Migrate from Jekyll
-
-## Steps
-
-- [ ] Copy name of file
-- [ ] Create new file with the name /blog/{copied_file_name}/index.md
-- [ ] Copy front matter and image from below, and paste it in the created file
-- [ ] If image, copy the image in the folder
-
-## Front matter and image
-
-```md
----
-title: $
-description: $
-date: 202$-$$-$$
-tags:
-  - $
-  - $
----
-
-<figure>
-	{% image "image.png", "$", [600, 1200], "600px" %}
-	<figcaption>$</figcaption>
-</figure>
-```
-
-## Pages to migrate
+# Pages migrated / to check
 
 | Status  | N   | Old URL                                                                                | New URL                                                                                     |
 | ------- | --- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
@@ -46,7 +19,7 @@ tags:
 | Image!  | 15  | /create-a-javascript-library-using-es2015-modules-gulp-rollup-jest/                    | /blog/create-a-javascript-library-using-es2015-modules-gulp-rollup-jest/                    |
 | Done    | 16  | /about/                                                                                | /about/                                                                                     |
 | Image!  | 17  | /now-google-developer-expert-gde/                                                      | /blog/google-developer-expert-gde/                                                          |
-| TBC     | 18  | /contact/                                                                              | /contact/                                                                                   |
+| Done    | 18  | /contact/                                                                              | /contact/                                                                                   |
 | Image!  | 19  | /critical-css-jekyll-sass-github-pages/                                                | /blog/critical-css-jekyll-sass-github-pages/                                                |
 | Image!  | 20  | /optimise-cls-loading-more-content-pagination/                                         | /blog/optimise-cls-loading-more-content-pagination/                                         |
 | Image!  | 21  | /lazy-load-responsive-images-srcset/                                                   | /blog/lazy-load-responsive-images-srcset/                                                   |
