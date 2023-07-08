@@ -16,7 +16,6 @@ I'm the author of a very popular lazy load script: vanilla-lazyload. You can fin
 - [GitHub](https://github.com/verlok/vanilla-lazyload)
 - [npm](https://www.npmjs.com/package/vanilla-lazyload)
 - [jsdelivr](https://www.jsdelivr.com/package/npm/vanilla-lazyload)
-- [dedicated website](/vanilla-lazyload)
 - [ko-fi](https://ko-fi.com/verlok) ☕
 
 ### Articles on lazy load
