@@ -23,9 +23,9 @@ I'm the author of a very popular lazy load script: vanilla-lazyload. You can fin
 
 Here are some articles about lazy-loading images!
 
-- [Lazy load responsive images in 2020](./lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp)
-- [A smashing article on hybrid lazy loading](./hybrid-lazy-loading-smashing-magazine-article)
-- [Native lazy loading and js-based fallback with vanilla-lazyload 12](./native-lazy-loading-with-vanilla-lazyload)
-- [Check if an element is still inside viewport after a given time](./check-if-element-still-inside-viewport-after-given-time)
-- [Intersection Observer and Lazy Load of elements](./using-intersection-observers-to-create-vanilla-lazyload)
-- [A new LazyLoad to improve your website performance](./a-new-lazyload-to-improve-your-website-performance)
+- [Lazy load responsive images in 2020](/blog/lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp)
+- [A smashing article on hybrid lazy loading](/blog/hybrid-lazy-loading-smashing-magazine-article)
+- [Native lazy loading and js-based fallback with vanilla-lazyload 12](/blog/native-lazy-loading-with-vanilla-lazyload)
+- [Check if an element is still inside viewport after a given time](/blog/check-if-element-still-inside-viewport-after-given-time)
+- [Intersection Observer and Lazy Load of elements](/blog/using-intersection-observers-to-create-vanilla-lazyload)
+- [A new LazyLoad to improve your website performance](/blog/a-new-lazyload-to-improve-your-website-performance)
