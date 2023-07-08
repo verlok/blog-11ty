@@ -25,6 +25,6 @@ tags:
 	{% image "{{ image.png }}", "{{ Alt text }}", [600, 1200], "600px" %}
 	<figcaption>{{ Image caption }}</figcaption>
 </figure>
-```
 
 {{ More text here }}
+```
