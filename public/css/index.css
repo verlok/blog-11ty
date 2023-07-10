@@ -321,10 +321,10 @@
 	.post-metadata {
 		display: inline-flex;
 		flex-wrap: wrap;
-		gap: 0.5rem;
+		gap: 0.25rem 0.5rem;
 		list-style: none;
 		padding: 0;
-		margin: 0;
+		margin: 0 0 1.75rem 0;
 	}
 	.post-metadata time {
 		margin-right: 1rem;
