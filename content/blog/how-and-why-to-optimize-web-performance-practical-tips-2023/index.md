@@ -34,8 +34,8 @@ The first part of the talk is about the reasons why you should optimize web perf
 "Web Talks: from Design to Performance", <time datetime="2023-02-23">23 February 2023</time>.
 
 <figure>
-	{% image "gdg-torino-banner.png", "GDG Torino, WebTalks from design to performance, 23 feb 2023, 18:30, Talent Garden Fondazione Agnelli, Via Giuseppe Giacosa, 36/38, 10125 Torino TO", [600, 1200], "600px" %}
-	<figcaption>Banner of the event</figcaption>
+	{% image "gdg-torino-speakers.png", "GDG Torino from Design to Performance speakers Andrea Verlicchi and Alessandro Politi", [600, 1200], "600px" %}
+	<figcaption>Me and the other speaker Alessandro Politi just before the event start</figcaption>
 </figure>
 
 [Event page](https://gdg.community.dev/events/details/google-gdg-torino-presents-web-talks-from-design-to-performance/)
