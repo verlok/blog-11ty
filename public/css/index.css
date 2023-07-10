@@ -307,9 +307,6 @@
 
 	/* Tags */
 	.post-tag {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
 		text-transform: capitalize;
 		font-style: italic;
 	}
@@ -322,12 +319,13 @@
 
 	/* Tags list */
 	.post-metadata {
-		display: inline-flex;
-		flex-wrap: wrap;
-		gap: 0.25rem 0.5rem;
+		display: block;
 		list-style: none;
 		padding: 0;
 		margin: 0 0 1.75rem 0;
+	}
+	.post-metadata li {
+		display: inline-block;
 	}
 	.post-metadata time {
 		margin-right: 1rem;
