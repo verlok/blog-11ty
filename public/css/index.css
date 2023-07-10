@@ -78,9 +78,6 @@
 		color: var(--text-color);
 		background-color: var(--background-color);
 	}
-	body {
-		text-underline-offset: 0.25em;
-	}
 	html {
 		overflow-y: scroll;
 	}
@@ -121,6 +118,8 @@
 
 	a[href] {
 		color: var(--text-color-link);
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.10em;
 	}
 	a[href]:visited {
 		color: var(--text-color-link-visited);
@@ -212,6 +211,7 @@
 	}
 	.nav a[href][aria-current="page"] {
 		text-decoration: underline;
+
 	}
 
 	/* Posts list */
@@ -344,6 +344,7 @@
 	a[href].header-anchor:focus,
 	a[href].header-anchor:hover {
 		text-decoration: underline;
+		text-decoration-thickness: 2px;
 	}
 	a[href].header-anchor:focus,
 	:hover > a[href].header-anchor {
