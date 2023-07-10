@@ -93,6 +93,10 @@
 		line-height: 0.9;
 		text-transform: uppercase;
 	}
+	.content h2 {
+		margin-block-start: 2.5rem;
+		margin-block-end: 1rem;
+	}
 
 	/* https://www.a11yproject.com/posts/how-to-hide-content/ */
 	.visually-hidden {
@@ -211,7 +215,6 @@
 	}
 	.nav a[href][aria-current="page"] {
 		text-decoration: underline;
-
 	}
 
 	/* Posts list */
