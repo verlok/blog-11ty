@@ -29,8 +29,10 @@ module.exports = eleventyConfig => {
 			sizes,
 			loading,
 			decoding: "async",
-			class: className,
 		};
+		if (className) {
+			imageAttributes.class = className;
+		}
 		if (!useLazyLoading) {
 			imageAttributes.fetchpriority = "high";
 		}
