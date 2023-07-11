@@ -31,6 +31,9 @@ module.exports = eleventyConfig => {
 			decoding: "async",
 			class: className,
 		};
+		if (!useLazyLoading) {
+			imageAttributes.fetchpriority = "high";
+		}
 		return eleventyImage.generateHTML(metadata, imageAttributes);
 	});
 };
