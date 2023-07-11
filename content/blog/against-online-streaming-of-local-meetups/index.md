@@ -1,5 +1,5 @@
 ---
-title: Against online streaming of local meetups
+title: Against online streaming of local meetups.
 description: I like to take part to local meetup events. They are informative, fun, and socially engaging at the same time. Sometimes, the meetup organizers get asked to stream events online. It would be a cool feature, I guess, but if you ask me, it would do more harm than good the community. Let me explain why.
 date: 2022-11-19
 tags:
@@ -16,5 +16,3 @@ You could easily find some blog posts or online tutorial about the same topic of
 Furthermore, the fact that an event would also be streamed online, weakens the event in person. One might think “Hey, who is making me go to the city, I can see it in live streaming. Then when it's time "Hey, who is making me watch it live, I'll see the recording later". Then "Ah, why would I watch the recording, I'll watch an online tutorial". Maybe.
 
 If we talk about conferences, however, there are some differences. Conferences can be online, but I think they have to be online or offline, not both. Online conferences may have a larger audience, even worldwide, and may reduce costs for attendees, they are more accessible to those with mobility impairments, but in my opinion in-person conferences are the best, for the same reasons: being together with people sharing your interests, exchanging ideas, etc.
-
-And you? What do you think about streming meetups? Let me know in the comments!
