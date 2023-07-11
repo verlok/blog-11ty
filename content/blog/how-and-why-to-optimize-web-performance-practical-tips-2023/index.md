@@ -32,8 +32,13 @@ The first part of the talk is about the reasons why you should optimize web perf
 ## Google Developer Group, Turin 🇮🇹
 
 <figure>
-	{% image "gdg-torino-speakers.png", "GDG Torino from Design to Performance speakers Andrea Verlicchi and Alessandro Politi", [600, 1200], "600px" %}
-	<figcaption>Me and the other speaker Alessandro Politi just before the event start</figcaption>
+	{% image "gdg-torino-one-second.jpg", "Andrea Verlicchi showing a slide: 1 second loading improvement can bring to -14% bounce rate, +13% conversion rate", [600, 1200], "600px" %}
+	<figcaption>1 second loading time improvement can improve the website conversion rate and reduce the bounce rate</figcaption>
+</figure>
+
+<figure>
+	{% image "gdg-torino-audience.jpg", "Andrea Verlicchi speaking in front of the GDG Torino audience in February 2023", [600, 1200], "600px" %}
+	<figcaption>The beautiful audience in Turin</figcaption>
 </figure>
 
 "Web Talks: from Design to Performance", <time datetime="2023-02-23">23 February 2023</time>.
