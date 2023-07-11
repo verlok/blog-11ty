@@ -202,6 +202,6 @@ See how easy is it to check if an element is still inside the viewport after som
 
 For more information about how to create LazyLoad using `IntersectionObserver`, see [Intersection Observer and Lazy Load of elements](./using-intersection-observers-to-create-vanilla-lazyload).
 
-Is there something you would have done differently, or do you agree with what I did here? Please let me know in the comments!
+Is there something you would have done differently, or do you agree with what I did here? Please [reach out](/contact/) and let me know!
 
 If you want to show some love to LazyLoad, [star it on GitHub](https://github.com/verlok/vanilla-lazyload)! ⭐

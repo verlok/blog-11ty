@@ -115,4 +115,4 @@ The result is that this website is now:
 2. Accessible offline
 3. Modern :)
 
-If you have any hints or comments, please let me know in the comments!
+If you have any hints or comments, please [reach out](/contact/) and let me know!

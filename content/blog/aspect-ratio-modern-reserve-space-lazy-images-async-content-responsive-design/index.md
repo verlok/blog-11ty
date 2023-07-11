@@ -125,4 +125,4 @@ Just set the `width` and `height` attributes to images and pick one of the follo
 3. Use JavaScript lazy loading with placeholders
 
 I can't wait to know how you reduced your pages' [CLS](https://web.dev/cls) using these techniques.
-Please let me know in the comments!
+Please [reach out](/contact/) and let me know!

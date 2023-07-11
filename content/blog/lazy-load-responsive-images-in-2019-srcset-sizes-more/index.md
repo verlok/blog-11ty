@@ -226,7 +226,7 @@ Here is a summary:
 4. Use [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload/) to load your lazy images.
 5. Optionally use the IntersectionObserver polyfill if you want to load lazily on 100% of the browsers.
 
-If something is unclear or could be improved, let me know in the comments. Or [tweet me](https://twitter.com/verlok/).
+If something is unclear or could be improved, please [reach out](/contact/) and let me know.
 
 If you did find this useful, feel free to share it!
 
