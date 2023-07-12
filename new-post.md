@@ -22,7 +22,7 @@ tags:
 {{ Text here }}
 
 <figure>
-	{% image "{{ image.png }}", "{{ Alt text }}", [600, 1200], "600px" %}
+	{% image "{{ image.png }}", "{{ Alt text }}", [648, 1296], "648px" %}
 	<figcaption>{{ Image caption }}</figcaption>
 </figure>
 

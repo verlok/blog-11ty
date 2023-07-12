@@ -9,7 +9,7 @@ tags:
 ---
 
 <figure>
-	{% image "creation-of-adam.webp", "Michelangelo's 'Creation of Adam' painting", [600, 1200], "600px" %}
+	{% image "creation-of-adam.webp", "Michelangelo's 'Creation of Adam' painting", [648, 1296], "648px" %}
 	<figcaption>Michelangelo's "Creation of Adam" painting</figcaption>
 </figure>
 

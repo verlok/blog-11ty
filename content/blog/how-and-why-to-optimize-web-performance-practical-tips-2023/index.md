@@ -12,7 +12,7 @@ tags:
 During the first half of 2023 I've been talking about web performance at developer conferences, Google Developer Groups (GDG) and local meetups. The title of my talk is "How and why ($) to improve web performance, practical tips for 2023".
 
 <figure>
-{% image "first-slide.png", "How and why to optimize web performance, practical tips for 2023", [600, 1200], "600px" %}
+{% image "first-slide.png", "How and why to optimize web performance, practical tips for 2023", [648, 1296], "648px" %}
   <figcaption>The first slide of my deck</figcaption>
 </figure>
 
@@ -21,7 +21,7 @@ The first part of the talk is about the reasons why you should optimize web perf
 ## Bologna front-end, Bologna 🇮🇹
 
 <figure>
-	{% image "bologna-front-end.png", "Andrea Verlicchi showing a self-introductory slide at the Bologna Front-end event in February 2023", [600, 1200], "600px", true %}
+	{% image "bologna-front-end.png", "Andrea Verlicchi showing a self-introductory slide at the Bologna Front-end event in February 2023", [648, 1296], "648px", true %}
 	<figcaption>Me on stage at the Bologna Front-end event</figcaption>
 </figure>
 
@@ -32,12 +32,12 @@ The first part of the talk is about the reasons why you should optimize web perf
 ## Google Developer Group, Turin 🇮🇹
 
 <figure>
-	{% image "gdg-torino-one-second.jpg", "Andrea Verlicchi showing a slide: 1 second loading improvement can bring to -14% bounce rate, +13% conversion rate", [600, 1200], "600px", true %}
+	{% image "gdg-torino-one-second.jpg", "Andrea Verlicchi showing a slide: 1 second loading improvement can bring to -14% bounce rate, +13% conversion rate", [648, 1296], "648px", true %}
 	<figcaption>1 second loading time improvement can improve the website conversion rate and reduce the bounce rate</figcaption>
 </figure>
 
 <figure>
-	{% image "gdg-torino-audience.jpg", "Andrea Verlicchi speaking in front of the GDG Torino audience in February 2023", [600, 1200], "600px", true %}
+	{% image "gdg-torino-audience.jpg", "Andrea Verlicchi speaking in front of the GDG Torino audience in February 2023", [648, 1296], "648px", true %}
 	<figcaption>The beautiful audience in Turin</figcaption>
 </figure>
 
@@ -48,7 +48,7 @@ The first part of the talk is about the reasons why you should optimize web perf
 ## Dev Romagna, Imola 🇮🇹
 
 <figure>
-	{% image "dev-romagna.jpeg", "The location and the audience during the presentation of the Dev Romagna group", [600, 1200], "600px", true %}
+	{% image "dev-romagna.jpeg", "The location and the audience during the presentation of the Dev Romagna group", [648, 1296], "648px", true %}
 	<figcaption>The location and the audience during the presentation of the Dev Romagna group</figcaption>
 </figure>
 
@@ -59,7 +59,7 @@ The first part of the talk is about the reasons why you should optimize web perf
 ## Bologna JS + Google Developer Group, Bologna 🇮🇹
 
 <figure>
-	{% image "bologna-js.jpeg", "Andrea speaking in front of the audience, slide showing text 'Assicurati che le pagine siano idonee per la cache back/forward (bfcache)", [600, 1200], "600px", true %}
+	{% image "bologna-js.jpeg", "Andrea speaking in front of the audience, slide showing text 'Assicurati che le pagine siano idonee per la cache back/forward (bfcache)", [648, 1296], "648px", true %}
 	<figcaption>Me on stage at the Bologna event</figcaption>
 </figure>
 
@@ -70,7 +70,7 @@ The first part of the talk is about the reasons why you should optimize web perf
 ## Google Developer Group, Firenze 🇮🇹
 
 <figure>
-	{% image "gdg-firenze.jpeg", "Andrea speaking in front of the audience, shot from the side", [600, 1200], "600px", true %}
+	{% image "gdg-firenze.jpeg", "Andrea speaking in front of the audience, shot from the side", [648, 1296], "648px", true %}
 	<figcaption>Me speaking in front of the audience at Nana Bianca, Firenze</figcaption>
 </figure>
 
@@ -81,7 +81,7 @@ The first part of the talk is about the reasons why you should optimize web perf
 ## Google Developer Group, Munich 🇩🇪
 
 <figure>
-	{% image "gdg-munich.jpeg", "Andrea speaking in front of the audience, shot from the audience", [600, 1200], "600px", true %}
+	{% image "gdg-munich.jpeg", "Andrea speaking in front of the audience, shot from the audience", [648, 1296], "648px", true %}
 	<figcaption>Me speaking in front of the audience in Google Munich</figcaption>
 </figure>
 
@@ -92,7 +92,7 @@ The first part of the talk is about the reasons why you should optimize web perf
 ## Dev BCN Conference, Barcelona 🇪🇸
 
 <figure>
-	{% image "dev-bcn.jpg", "more organic traffic, more brand perception, more conversion rate, less carbon footprint", [600, 1200], "600px", true %}
+	{% image "dev-bcn.jpg", "more organic traffic, more brand perception, more conversion rate, less carbon footprint", [648, 1296], "648px", true %}
 	<figcaption>Me presenting one of the final slides on stage at the Dev BCN conference</figcaption>
 </figure>
 

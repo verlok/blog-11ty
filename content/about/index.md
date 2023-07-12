@@ -14,7 +14,7 @@ eleventyNavigation:
 Hello, I'm Andrea, and I love to create and optimize websites. I'm passionate about web performance, web sustainability and user experience.
 
 <figure class="about-face">
-	{% image "2023-andrea-verlicchi-summit-enhanced.png", "Andrea Verlicchi", [600, 1200], "600px" %}
+	{% image "2023-andrea-verlicchi-summit-enhanced.png", "Andrea Verlicchi", [648, 1296], "648px" %}
 	<figcaption>Image courtesy: myself</figcaption>
 </figure>
 
