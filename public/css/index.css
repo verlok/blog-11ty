@@ -12,15 +12,13 @@
 
 	/* Theme colors */
 	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #c0c0c0;
-		--color-gray-90: #333;
-
-		--background-color: #fff;
 		--headfoot__background-color: #222;
 
-		--text-color: var(--color-gray-90);
-		--text-color-header: var(--color-gray-20);
+		--background-color: #fff;
+		--background-color-code: #eee;
+
+		--text-color: #333;
+		--text-color-header: #e0e0e0;
 		--text-color-link: #1170a6;
 		--text-color-link-active: #1170a6;
 		--text-color-link-visited: #1170a6;
@@ -36,17 +34,17 @@
 		--text-color-figcaptions: #808080;
 
 		--icon-color-fill: #828282;
+		--text-color-code-border: #e0e0e0;
 
 		--syntax-tab-size: 2;
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--color-gray-20: #e0e0e0;
-			--color-gray-50: #c0c0c0;
-			--color-gray-90: #dad8d8;
+			--background-color: #020202;
+			--background-color-code: #333;
 
-			/* --text-color is assigned to --color-gray-_ above */
+			--text-color: #dad8d8;
 			--text-color-link: #a68dff;
 			--text-color-link-active: #a68dff;
 			--text-color-link-visited: #a68dff;
@@ -60,7 +58,7 @@
 			--text-color-header-special-link-active: #ff27a6;
 			--text-color-header-special-link-visited: #ff27a6;
 
-			--background-color: #020202;
+			--text-color-code-border: #333;
 		}
 	}
 
@@ -142,7 +140,7 @@
 
 	.links-nextprev {
 		list-style: none;
-		border-top: 1px dashed var(--color-gray-20);
+		border-top: 1px dashed #e0e0e0;
 		padding: 1em 0;
 	}
 
@@ -173,8 +171,13 @@
 		word-spacing: normal;
 		word-break: normal;
 	}
-	code {
-		word-break: break-all;
+	:not(pre) > code {
+		font-size: 90%;
+		padding: 0.2em 0.2em;
+		background-color: var(--background-color-code);
+		border: 1px solid var(--text-color-code-border);
+		border-radius: .2em;
+
 	}
 
 	/* Header */
