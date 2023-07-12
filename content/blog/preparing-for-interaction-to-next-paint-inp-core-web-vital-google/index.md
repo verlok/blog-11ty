@@ -13,7 +13,7 @@ tags:
 	<figcaption>Michelangelo's "Creation of Adam" painting</figcaption>
 </figure>
 
-As a web performance consultant, I'm always on the lookout for new developments that impact the user experience of websites. One such upcoming change is the introduction of a new metric called Interaction to Next Paint (INP) by Google.  Set to become a Core Web Vital in March 2024, INP is designed to measure the time it takes for a website to respond to user interactions. In this blog post, we will delve into what INP is, why it matters, and how companies can prepare themselves to ensure their websites meet this crucial web performance metric.
+As a web performance consultant, I'm always on the lookout for new developments that impact the user experience of websites. One such upcoming change is the introduction of a new metric called [Interaction to Next Paint (INP)](https://web.dev/inp/) by Google. Set to become a [Core Web Vital](https://web.dev/cwv/) in March 2024, INP is designed to measure the time it takes for a website to respond to user interactions. In this blog post, we will delve into what INP is, why it matters, and how companies can prepare themselves to ensure their websites meet this crucial web performance metric.
 
 ## Understanding Interaction to Next Paint (INP)
 
@@ -44,21 +44,21 @@ As the March 2024 deadline approaches, it's essential for companies to prepare f
 
 Tasks are any piece of discrete work that the browser does. Tasks include rendering, layout, parsing, and compiling and executing scripts. When tasks become long tasks—that is, 50 milliseconds or longer—they block the main thread from being able to respond quickly to user inputs.
 
-Another option is to consider using APIs such as `isInputPending` and the Scheduler API. `isInputPending` is a function that returns a boolean value that indicates whether a user input is pending. If it returns true, you can yield to the main thread so it can handle the pending user input.
+Another option is to consider using APIs such as `isInputPending` and the Scheduler API. `isInputPending` is a function that returns a boolean value that indicates whether a user input is pending. If it returns true, you can yield to the main thread so it can handle the pending user input. [Check out `isInputPending`](https://web.dev/optimize-long-tasks/#yield-only-when-necessary) to yield only when necessary.
 
-The Scheduler API is a more advanced approach, which allows you to schedule work based on a system of priorities that take into account whether the work being done is user-visible or backgrounded.
+The Scheduler API is a more advanced approach, which allows you to schedule work based on a system of priorities that take into account whether the work being done is user-visible or backgrounded. [Check out the Scheduler API](https://web.dev/optimize-long-tasks/#a-dedicated-scheduler-api).
 
 By breaking up long tasks, you're giving the browser more opportunities to fit in critical user-visible work, such as dealing with interactions and any resulting rendering updates.
 
 ### Avoid unnecessary JavaScript
 
-There's no doubt about it: websites are shipping more JavaScript than ever before, and the trend doesn't look like it's changing any time soon. When you ship too much JavaScript, you're creating an environment where tasks are competing for the main thread's attention. This can definitely affect your website's responsiveness, especially during that crucial startup period.
+There's no doubt about it: websites are [shipping more JavaScript](https://almanac.httparchive.org/en/2022/javascript#how-much-javascript-do-we-load) than ever before, and the trend doesn't look like it's changing any time soon. When you ship too much JavaScript, you're creating an environment where tasks are competing for the main thread's attention. This can definitely affect your website's responsiveness, especially during that crucial startup period.
 
 This is not an unsolvable problem, however. You do have some options:
 
-- Use the coverage tool in Chrome DevTools to find unused code in your website's resources. By reducing the size of the resources you need during startup, you can ensure your website spends less time parsing and compiling code, which leads to a smoother initial user experience.
-- Sometimes the unused code you find using the coverage tool is marked "unused" because it wasn't executed during startup, but is still necessary for some functionality in the future. This is code that you can move to a separate bundle via code splitting.
-- If you're using a tag manager, be sure to periodically check your tags to make sure they are optimized, or even if they're still being used. Older tags with unused code can be cleared out to make your tag manager's JavaScript smaller and more efficient.
+- Use the coverage tool in Chrome DevTools to find unused code in your website's resources. By reducing the size of the resources you need during startup, you can ensure your website spends less time parsing and compiling code, which leads to a smoother initial user experience. [Check out the Coverage Tool](https://developer.chrome.com/docs/devtools/coverage/).
+- Sometimes the unused code you find using the coverage tool is marked "unused" because it wasn't executed during startup, but is still necessary for some functionality in the future. This is code that you can move to a separate bundle via code splitting. [Find out more about code splitting](https://web.dev/reduce-javascript-payloads-with-code-splitting/).
+- If you're using a tag manager, be sure to periodically check your tags to make sure they are optimized, or even if they're still being used. Older tags with unused code can be cleared out to make your tag manager's JavaScript smaller and more efficient. [More best practices for tag managers](https://web.dev/tag-best-practices/).
 
 ### Avoid large rendering updates
 
@@ -67,8 +67,8 @@ JavaScript isn't the only thing that can affect your website's responsiveness. R
 Optimizing rendering work isn't a straightforward process, and it often depends on what you're trying to achieve. Even so, there are some things you can do to ensure that your rendering updates are reasonable, and don't sprawl into long tasks:
 
 - Avoid using `requestAnimationFrame()` for doing any non-visual work. `requestAnimationFrame()` calls are handled during the rendering phase of the event loop, and when too much work is done during this step, rendering updates can be delayed. It's essential that any work you're doing with `requestAnimationFrame()` is reserved strictly for tasks that involve rendering updates.
-- Keep your DOM size small. DOM size and the intensity of layout work are correlated. When the renderer has to update the layout for a very large DOM, the work required to recalculate its layout can increase significantly.
-- Use CSS containment. CSS containment relies on the CSS contain property, which gives instructions to the browser about how to do layout work for the container the contain property is set on, including even isolating the scope of layout and rendering to a specific root in the DOM. It's not always an easy process, but by isolating areas containing complex layouts, you can avoid doing layout and rendering work for them that isn't necessary.
+- Keep your DOM size small. DOM size and the intensity of layout work are correlated. When the renderer has to update the layout for a very large DOM, the work required to recalculate its layout can increase significantly. [Avoiding excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).
+- Use CSS containment. CSS containment relies on the CSS contain property, which gives instructions to the browser about how to do layout work for the container the contain property is set on, including even isolating the scope of layout and rendering to a specific root in the DOM. It's not always an easy process, but by isolating areas containing complex layouts, you can avoid doing layout and rendering work for them that isn't necessary. [More about CSS Containment](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment).
 
 
 ## Conclusion
