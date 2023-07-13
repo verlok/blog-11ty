@@ -172,4 +172,4 @@ new LazyLoad({
 
 I tested it by emulating a "slow 3G" connection, and I like the waterfall of network calls and the optimal value of the Largest Contentful Paint.
 
-[Try it live here](https://www.andreaverlicchi.eu/vanilla-lazyload/demos/swiper.html).
+[Try it live here](https://verlok.github.io/vanilla-lazyload/demos/swiper.html).
