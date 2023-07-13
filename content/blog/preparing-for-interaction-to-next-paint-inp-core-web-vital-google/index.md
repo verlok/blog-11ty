@@ -31,7 +31,7 @@ Moreover, Google has emphasized the importance of Core Web Vitals as a ranking f
 
 As the March 2024 deadline approaches, companies need to prepare for the inclusion of INP as a Core Web Vital. Here are some steps to ensure your website is ready:
 
-1. **Evaluate Current INP Performance**: Start by assessing your website's current INP performance. The easiest way is to check your website's INP values on CrUX or PageSpeed Insights. You can also query INP values for your competitors' websites. Benchmark your current INP scores and set goals for improvement.
+1. **Evaluate Current INP Performance**: Start by assessing your website's current INP performance. The easiest way to check your website's INP values is via [Google Search Console](https://search.google.com/search-console/about). Alternatively, you can try [Chrome User Experience Report](https://developer.chrome.com/docs/crux/) (CrUX) or [PageSpeed Insights](https://pagespeed.web.dev/). Benchmark your current INP scores and set goals for improvement.
 
 2. **Improve INP**: See next chapter to find out what to do to improve INP on your website.
 
@@ -39,6 +39,8 @@ As the March 2024 deadline approaches, companies need to prepare for the inclusi
 
 
 ## How to improve INP
+
+Let's get a little bit technical now. There are 3 types of actions you can take to improve INP on your website. Avoid or break up long tasks, avoid unnecessary JavaScript, and avoid large rendering updates.
 
 ### Avoid or break up long tasks
 
