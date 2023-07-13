@@ -9,10 +9,10 @@ tags:
   - google developer groups
 ---
 
-During the first half of 2023 I've been talking about web performance at developer conferences, Google Developer Groups (GDG) and local meetups. The title of my talk is "How and why ($) to improve web performance, practical tips for 2023".
+During the first half of 2023, I've been talking about web performance at developer conferences, Google Developer Groups (GDG) and local meetups. The title of my talk is "How and Why ($) to improve web performance, practical tips for 2023".
 
 <figure>
-{% image "first-slide.png", "How and why to optimize web performance, practical tips for 2023", [648, 1296], "648px" %}
+{% image "first-slide.png", "How and Why to optimize web performance, practical tips for 2023", [648, 1296], "648px" %}
   <figcaption>The first slide of my deck</figcaption>
 </figure>
 
@@ -59,7 +59,7 @@ The first part of the talk is about the reasons why you should optimize web perf
 ## Bologna JS + Google Developer Group, Bologna 🇮🇹
 
 <figure>
-	{% image "bologna-js.jpeg", "Andrea speaking in front of the audience, slide showing text 'Assicurati che le pagine siano idonee per la cache back/forward (bfcache)", [648, 1296], "648px", true %}
+	{% image "bologna-js.jpeg", "Andrea speaking in front of the audience, the slide shows the text 'Assicurati che le pagine siano idonee per la cache back/forward (bfcache)", [648, 1296], "648px", true %}
 	<figcaption>Me on stage at the Bologna event</figcaption>
 </figure>
 
