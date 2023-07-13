@@ -19,7 +19,7 @@ As a web performance consultant, I'm always on the lookout for new developments 
 
 INP is an important addition to the Core Web Vitals, a set of metrics that Google uses to assess and rank websites based on their user experience.
 
-Unlike other metrics such as Largest Contentful Paint (LCP) and Cumulative Layout Shift (CLS), which measure loading and visual stability, INP focuses on interactivity, meaning how quickly a website responds to user input after it has loaded. It quantifies the time it takes for the website to be ready to paint something after users interacted with them, and it aims to bring to user an experience without any noticeable delays.
+Unlike other metrics such as Largest Contentful Paint (LCP) and Cumulative Layout Shift (CLS), which measure loading and visual stability, INP focuses on interactivity, meaning how quickly a website responds to user input after it has loaded. It quantifies the time it takes for the website to be ready to paint something after users interacted with them, and it aims to bring users an experience without any noticeable delays.
 
 ## Why INP Matters
 
@@ -29,13 +29,13 @@ Moreover, Google has emphasized the importance of Core Web Vitals as a ranking f
 
 ## Preparing for INP
 
-As the March 2024 deadline approaches, it's essential for companies to prepare for the inclusion of INP as a Core Web Vital. Here are some steps to ensure your website is ready:
+As the March 2024 deadline approaches, companies need to prepare for the inclusion of INP as a Core Web Vital. Here are some steps to ensure your website is ready:
 
-1. **Evaluate Current INP Performance**: Start by assessing your website's current INP performance. The easiest way is to check your websites INP values on CrUX or PageSpeed Insights. You can also query INP values for your competitors website. Benchmark your current INP scores and set goals for improvement.
+1. **Evaluate Current INP Performance**: Start by assessing your website's current INP performance. The easiest way is to check your website's INP values on CrUX or PageSpeed Insights. You can also query INP values for your competitors' websites. Benchmark your current INP scores and set goals for improvement.
 
-2. **Improve INP**: See the next chapter to find out what to do in order to improve INP on your website.
+2. **Improve INP**: See next chapter to find out what to do to improve INP on your website.
 
-3. **Continuously monitor and iterate**: Web performance is an ongoing process, and it's crucial to monitor and measure INP regularly. Continuously analyze your website's performance, implement optimizations, and retest to ensure your INP scores meet the desired targets. Regularly review Google's developer documentation and community forums for updated best practices.
+3. **Continuously monitoring and iterate**: Web performance is an ongoing process, and it's crucial to monitor and measure INP regularly. Continuously analyze your website's performance, implement optimizations, and retest to ensure your INP scores meet the desired targets. Regularly review Google's developer documentation and community forums for updated best practices.
 
 
 ## How to improve INP
@@ -44,7 +44,7 @@ As the March 2024 deadline approaches, it's essential for companies to prepare f
 
 Tasks are any piece of discrete work that the browser does. Tasks include rendering, layout, parsing, and compiling and executing scripts. When tasks become long tasks—that is, 50 milliseconds or longer—they block the main thread from being able to respond quickly to user inputs.
 
-Another option is to consider using APIs such as `isInputPending` and the Scheduler API. `isInputPending` is a function that returns a boolean value that indicates whether a user input is pending. If it returns true, you can yield to the main thread so it can handle the pending user input. [Check out `isInputPending`](https://web.dev/optimize-long-tasks/#yield-only-when-necessary) to yield only when necessary.
+Another option is to consider using APIs such as `isInputPending` and the Scheduler API. `isInputPending` is a function that returns a boolean value that indicates whether user input is pending. If it returns true, you can yield to the main thread so it can handle the pending user input. [Check out `isInputPending`](https://web.dev/optimize-long-tasks/#yield-only-when-necessary) to yield only when necessary.
 
 The Scheduler API is a more advanced approach, which allows you to schedule work based on a system of priorities that take into account whether the work being done is user-visible or backgrounded. [Check out the Scheduler API](https://web.dev/optimize-long-tasks/#a-dedicated-scheduler-api).
 
@@ -64,7 +64,7 @@ This is not an unsolvable problem, however. You do have some options:
 
 JavaScript isn't the only thing that can affect your website's responsiveness. Rendering can be a type of expensive work in its own right—and when large rendering updates happen, they can interfere with your website's ability to respond to user inputs.
 
-Optimizing rendering work isn't a straightforward process, and it often depends on what you're trying to achieve. Even so, there are some things you can do to ensure that your rendering updates are reasonable, and don't sprawl into long tasks:
+Optimizing rendering work isn't a straightforward process, and it often depends on what you're trying to achieve. Even so, there are some things you can do to ensure that your rendering updates are reasonable and don't sprawl into long tasks:
 
 - Avoid using `requestAnimationFrame()` for doing any non-visual work. `requestAnimationFrame()` calls are handled during the rendering phase of the event loop, and when too much work is done during this step, rendering updates can be delayed. It's essential that any work you're doing with `requestAnimationFrame()` is reserved strictly for tasks that involve rendering updates.
 - Keep your DOM size small. DOM size and the intensity of layout work are correlated. When the renderer has to update the layout for a very large DOM, the work required to recalculate its layout can increase significantly. [Avoiding excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).
