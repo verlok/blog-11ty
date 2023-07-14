@@ -15,7 +15,6 @@
 		--headfoot__background-color: #222;
 
 		--background-color: #fff;
-		--background-color-code: #eee;
 
 		--text-color: #333;
 		--text-color-header: #e0e0e0;
@@ -34,7 +33,9 @@
 		--text-color-figcaptions: #808080;
 
 		--icon-color-fill: #828282;
-		--text-color-code-border: #e0e0e0;
+
+		--background-color-code-inline: #eee;
+		--border-color-code-inline: #ccc;
 
 		--syntax-tab-size: 2;
 	}
@@ -42,7 +43,6 @@
 	@media (prefers-color-scheme: dark) {
 		:root {
 			--background-color: #020202;
-			--background-color-code: #333;
 
 			--text-color: #dad8d8;
 			--text-color-link: #a68dff;
@@ -58,7 +58,8 @@
 			--text-color-header-special-link-active: #ff27a6;
 			--text-color-header-special-link-visited: #ff27a6;
 
-			--text-color-code-border: #333;
+			--background-color-code-inline: #222;
+			--border-color-code-inline: #555;
 		}
 	}
 
@@ -169,10 +170,9 @@
 	:not(pre) > code {
 		font-size: 90%;
 		font-family: var(--font-family-monospace);
-		padding: 0.2em 0.2em;
-		background-color: var(--background-color-code);
-		border: 1px solid var(--text-color-code-border);
-		border-radius: .2em;
+		padding: .125em .25em;
+		background-color: var(--background-color-code-inline);
+		border: 1px solid var(--border-color-code-inline);
 	}
 
 	/* Header */
