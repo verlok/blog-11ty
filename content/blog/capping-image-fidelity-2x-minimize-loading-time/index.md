@@ -218,12 +218,12 @@ I’ve created a [GitHub repo](https://github.com/verlok/cap-image-fidelity-to-2
 Single image with fidelity capped to 2x:
 
 - [GitHub repo](https://github.com/verlok/cap-image-fidelity-to-2x)
-- [Live here](https://www.andreaverlicchi.eu/cap-image-fidelity-to-2x/)
+- [Live here](https://verlok.github.io/cap-image-fidelity-to-2x/)
 - [Codepen](https://codepen.io/verlok/pen/wvWRgEG)
 
 Or try [the page shown in the video above](https://faulty-driving.surge.sh/).
 
-🌟 [Open the live demo](https://www.andreaverlicchi.eu/cap-image-fidelity-to-2x/) 💻
+🌟 [Open the live demo](https://verlok.github.io/cap-image-fidelity-to-2x/) 💻
 
 ## Psst! You can still lazy-load images
 

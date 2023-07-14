@@ -59,7 +59,7 @@ If your mobile users are on flaky connections and go offline and back online, va
 
 ### Supports conditional usage of native lazyloading
 
-If your users are on a browser supporting native lazyloading and you want to use it, with vanilla-lazyload you can conditionally activate it by setting the `use_native` option to `true`. Find here [more information](https://github.com/verlok/vanilla-lazyload#mixed-native-and-js-based-lazy-loading) and the [conditional native lazyload demo](https://www.andreaverlicchi.eu/vanilla-lazyload/demos/native_lazyload_conditional.html).
+If your users are on a browser supporting native lazyloading and you want to use it, with vanilla-lazyload you can conditionally activate it by setting the `use_native` option to `true`. Find here [more information](https://github.com/verlok/vanilla-lazyload#mixed-native-and-js-based-lazy-loading) and the [conditional native lazyload demo](https://verlok.github.io/vanilla-lazyload/demos/native_lazyload_conditional.html).
 
 ### Works with your DOM, your own classes and data-attributes
 
@@ -69,7 +69,7 @@ Both scripts work by default with the `data-src` attribute and the `lazy` class 
 
 Both vanilla-lazyload and lazysizes can lazyload responsive images by all kinds, the simple `img` tag and the `picture` tag with multiple `source` tags.
 
-For more information, check out [lazy load responsive images in 2020](https://www.andreaverlicchi.eu/lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp/) by yours truly.
+For more information, check out [lazy load responsive images in 2020](/blog/lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp/) by yours truly.
 
 ### ...and automatically calculate the value of the `sizes` attribute
 

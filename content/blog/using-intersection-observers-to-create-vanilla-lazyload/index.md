@@ -1,6 +1,6 @@
 ---
-title: Intersection Observer and Lazy Load of elements
-description: In August 2017 the Intersection Observer API, a new exciting browser API, finally gained quite a wide support. We can use to know when two DOM elements intersect, or when a given DOM element enters the browser viewport. Lazy loading of images is just the case.
+title: Intersection Observer and lazy loading of elements
+description: In August 2017 the Intersection Observer API, a new exciting browser API, finally gained quite wide support. We can use it to know when two DOM elements intersect, or when a given DOM element enters the browser viewport. The lazy loading of images is just the case.
 date: 2017-09-04
 tags:
   - browsers APIs
@@ -8,7 +8,7 @@ tags:
   - techniques
 ---
 
-In August 2017 a new exciting browser API finally [gained](https://hacks.mozilla.org/2017/08/intersection-observer-comes-to-firefox/) quite a [wide support](https://caniuse.com/#search=IntersectionObserver): the [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API), which we can use to know when two DOM elements intersect, or when a given DOM element **enters the browser viewport**. Lazy loading of images is just the case.
+In August 2017 a new exciting browser API finally [gained](https://hacks.mozilla.org/2017/08/intersection-observer-comes-to-firefox/) quite [wide support](https://caniuse.com/#search=IntersectionObserver): the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API), which we can use to know when two DOM elements intersect, or when a given DOM element **enters the browser viewport**. The lazy loading of images is just the case.
 
 About 3 years and 500 commits ago, I gave birth to a new vanilla javascript [lazy load script](https://github.com/verlok/vanilla-lazyload), currently known as `vanilla-lazyload` on [npm](https://www.npmjs.com/package/vanilla-lazyload) and [cdnjs](https://cdnjs.com/libraries/vanilla-lazyload), and starred by **1,135 people on GitHub**.
 
@@ -36,7 +36,7 @@ var myObserver = new IntersectionObserver((entries) => {
 });
 ```
 
-Once the intersection observer is created an assigned to a variable, you can start observing on a target element with:
+Once the intersection observer is created and assigned to a variable, you can start observing on a target element with:
 
 ```js
 var elementToObserve = document.getElementById('observeMe');
