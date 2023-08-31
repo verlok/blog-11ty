@@ -17,7 +17,7 @@ In August 2023, Google introduced the `scheduler.yield`, available as an origin 
 
 The `scheduler.yield` is a new feature in Chrome that allows web developers to explicitly tell the browser to yield control back to the main thread. This can be useful for tasks that are known to take a long time, as this allows _other_ tasks to get time on the main thread sooner (than if they had to wait for long tasks to finish).
 
-When you explicitly yield, you're telling the browser "hey, I understand that the work I'm about to do could take a while, and I don't want you to have to do all of that work before responding to user input or other tasks that might be important, too".
+When you explicitly yield, you're telling the browser "Hey, I understand that the work I'm about to do could take a while, and I don't want you to have to do all of that work before responding to user input or other tasks that might be important, too".
 
 This can help to improve the overall responsiveness of the web page, as the browser will be able to focus on other tasks while the long-running task is in progress.
 
@@ -41,7 +41,7 @@ async function yieldy () {
 But wait, can I use it only in Chrome?
 Yes, but you could fall back to using the good old `setTimeout` and do something similar.
 
-The only differnece is browsers that don't support `scheduler.yield` will yield without "front of queue" behavior, as `setTimeout` sends the remaining work to the back of the task queue.
+The only difference is browsers that don't support `scheduler.yield` will yield without "front of queue" behavior, as `setTimeout` sends the remaining work to the back of the task queue.
 
 ```js
 // A function for shimming scheduler.yield and setTimeout:
