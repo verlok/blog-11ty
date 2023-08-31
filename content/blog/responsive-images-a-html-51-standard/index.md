@@ -1,6 +1,6 @@
 ---
 title: Responsive images, an HTML 5.1 standard
-description: "It's official. Responsive images are a W3C recommendation since November 2016, featuring the brand new picture tag and new attributes for the img tag: `srcset` and `sizes`"
+description: "It's official. Responsive images are a W3C recommendation since November 2016, featuring the brand new picture tag and new attributes for the img tag: srcset and sizes"
 
 date: 2017-04-10
 tags:
@@ -9,7 +9,7 @@ tags:
   - techniques
 ---
 
-It's official. Responsive images are a [W3C recommendation](https://www.w3.org/TR/html51/) since November 2016, featuring the brand new `picture` tag and new attributes for the `img` tag: `srcset` and `sizes`.
+It's official. Responsive images have been a [W3C recommendation](https://www.w3.org/TR/html51/) since November 2016, featuring the brand new `picture` tag and new attributes for the `img` tag: `srcset` and `sizes`.
 
 ## Why responsive images?
 
@@ -21,24 +21,24 @@ The initial approach was to use one large image for all viewport sizes, so that 
 
 Developers then started to use javascript to *pick the right image size* based on the viewport, that's when scripts like [picturefill](https://github.com/scottjehl/picturefill) came about.
 
-But the thing is that javascript is slower then pure HTML: it must be downloaded, parsed and executed before the browser could even start downloading the images. The web needed something native to go back defining images in the HTML in order to allow browsers to start downloading them as soon as possible.
+But the thing is that javascript is slower than pure HTML: it must be downloaded, parsed and executed before the browser could even start downloading the images. The web needed something native to go back to defining images in the HTML to allow browsers to start downloading them as soon as possible.
 
 That's why a group of independent designers and developers who go by the name of [Responsive Images Community Group](http://ricg.io/), started proposing new tags and attributes.
 
 ## What are responsive images?
 
-"Responsive images" is the name given to the technique of **defining more than one source per each image**, and make the browser **to download the best one**, depending on a number of factors, which are:
+"Responsive images" is the name given to the technique of **defining more than one source per each image**, and making browsers **to download the best one**, depending on the following factors:
 
 * browser viewport, or your website layout
 * device pixel density
 
-Users have different pixel densities depending on the monitor of their device. Standard devices have a pixel density of 1, meaning the monitor has 1 device pixel per CSS pixel, while newest HiDpi monitors - including "Retina" displays - have a higher density. For example, a pixel density of 2 means that the monitor has 2x2 device pixels per CSS pixel, and so forth.
+Users have different pixel densities depending on the monitor of their device. Standard devices have a pixel density of 1, meaning the monitor has 1 device pixel per CSS pixel, while the newest HiDpi monitors - including "Retina" displays - have a higher density. For example, a pixel density of 2 means that the monitor has 2x2 device pixels per CSS pixel, and so forth.
 
-HiDpi displays are great when rendering vectors, like fonts or SVG images. But when it comes to render images, browsers will just stretch the original image, making it blurry on devices that are supposed to deliver a better quality.
+HiDpi displays are great when rendering vectors, like fonts or SVG images. But when it comes to rendering images, browsers will just stretch the original image, making it blurry on devices that are supposed to deliver a better quality.
 
 ## Supporting hiDpi displays
 
-The simplest of things you can do with the new `srcset` attribute is supporting different pixel densities. You just need to specify different sources for your image, describing each one with the `x` descriptor, which indicates the pixel density of the image source. Like that:
+The simplest of things you can do with the new `srcset` attribute is to support different pixel densities. You just need to specify different sources for your image, describing each one with the `x` descriptor, which indicates the pixel density of the image source. Like that:
 
 ```html
 <img src="shirt_300w.jpg"
@@ -48,11 +48,11 @@ The simplest of things you can do with the new `srcset` attribute is supporting 
   width="300" height="380">
 ```
 
-In this example, we want to display an image of 300 x 380 *CSS* pixels. The standard density image is `shirt_300w.jpg` and it's described by the `1x` descriptor. The double density image is `shirt_300w.jpg`, and it needs to be 600 x 760 pixels.
+In this example, we want to display an image of 300 x 380 *CSS* pixels. The standard density image is `shirt_300w.jpg` and it's described by the `1x` descriptor. The double-density image is `shirt_300w.jpg`, and it needs to be 600 x 760 pixels.
 
 **Note:** browsers that understand the new `srcset` attribute will ignore the `src` one, which is still required.
 
-This is already a good result to deliver the best image quality to our users, but what if in our responsive layout the image size varies depending on the available space?
+This is already a good result to deliver the best image quality to our users, but what if in our responsive layout, the image size varies depending on the available space?
 
 ## Different image sizes
 
@@ -92,11 +92,11 @@ To markup this in our HTML, we must do:
          300px">
 ```
 
-With this markup, the browser knows the space that the image will occupy on the screen (throuh `sizes`) and all the available image sources that we prepared for our users (through `srcset`).
+With this markup, the browser knows the space that the image will occupy on the screen (through `sizes`) and all the available image sources that we prepared for our users (through `srcset`).
 
 At this point, the browser will choose what image source to download based on the information we provided and the information it knows about our user, such as screen density, cached files, connection speed, etc.
 
 
 ## Browser support
 
-The `srcset` attribute is supported across all browsers except Internet Explorer. Fortunately, there's an official [polyfill](https://github.com/scottjehl/picturefill/) that we can use to emulate native browser behaviour on legacy browsers.
+The `srcset` attribute is supported across all browsers except Internet Explorer. Fortunately, there's an official [polyfill](https://github.com/scottjehl/picturefill/) that we can use to emulate native browser behavior on legacy browsers.

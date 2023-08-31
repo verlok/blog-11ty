@@ -1,13 +1,13 @@
 ---
 title: A clever way to serve WebP images to modern browsers and JPG to IE
-description: Before the day Safari started support WebP images, we were forced to use the `picture` tag to serve WebP images to browsers supporting it. Today all modern browsers support WebP, so there's probably a clever way to do that using a single tag, `img`.
+description: Before the day Safari started to support WebP images, we were forced to use the picture tag to serve WebP images to browsers supporting it. Today all modern browsers support WebP, so there's probably a clever way to do that using a single tag, img.
 date: 2020-11-29
 tags:
   - images
   - techniques
 ---
 
-Before the day Safari started support WebP images, we were forced to use the `picture` tag to serve WebP images to browsers supporting it. Today all modern browsers support WebP, so there's probably a clever way to do that using a single tag: `img`.
+Before the day Safari started to support WebP images, we were forced to use the `picture` tag to serve WebP images to browsers supporting it. Today all modern browsers support WebP, so there's probably a clever way to do that using a single tag: `img`.
 
 ## How we did it before
 
