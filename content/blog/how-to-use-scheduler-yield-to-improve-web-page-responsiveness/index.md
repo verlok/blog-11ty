@@ -1,5 +1,5 @@
 ---
-title: How to Use `scheduler.yield` to Improve Web Page Responsiveness
+title: How to use `scheduler.yield` to improve web page responsiveness
 description: Google Chrome is introducing a new feature called `scheduler.yield`. This feature allows web developers to explicitly tell the browser to yield control to the main thread. Here are the key points.
 date: 2023-08-31
 tags:
@@ -13,13 +13,15 @@ tags:
 	<figcaption>Just a random yield image</figcaption>
 </figure>
 
-In August 2023, Google introduced the `scheduler.yield` origin trial, available in Chrome 115 and later.
+In August 2023, Google introduced the `scheduler.yield`, available as an origin trial in Chrome 115 and later.
 
-The `scheduler.yield` origin trial is a new feature in Chrome that allows web developers to explicitly tell the browser to yield control back to the main thread. This can be useful for tasks that are known to take a long time, as this allows _other_ tasks to get time on the main thread sooner (than if they had to wait for long tasks to finish).
+The `scheduler.yield` is a new feature in Chrome that allows web developers to explicitly tell the browser to yield control back to the main thread. This can be useful for tasks that are known to take a long time, as this allows _other_ tasks to get time on the main thread sooner (than if they had to wait for long tasks to finish).
 
 When you explicitly yield, you're telling the browser "hey, I understand that the work I'm about to do could take a while, and I don't want you to have to do all of that work before responding to user input or other tasks that might be important, too".
 
 This can help to improve the overall responsiveness of the web page, as the browser will be able to focus on other tasks while the long-running task is in progress.
+
+And of course, this will come in handy when working on improving the [Interaction to Next Paint (INP)](https://web.dev/inp/) web vital, which will become a Core Web Vital starting March 2024.
 
 This is how you use it:
 
