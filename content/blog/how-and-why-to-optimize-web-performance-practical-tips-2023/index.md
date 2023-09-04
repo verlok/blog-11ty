@@ -92,7 +92,7 @@ The first part of the talk is about the reasons why you should optimize web perf
 ## Dev BCN Conference, Barcelona 🇪🇸
 
 <figure>
-	{% image "devbcn-1.png", "Andrea Verlicchi showing a slide about Core Web Vitals and the new Interaction to Next Paint on stage at the Dev BCN conference", [648, 1296], "648px", true %}
+	{% image "devbcn.png", "Andrea Verlicchi showing a slide about Core Web Vitals and the new Interaction to Next Paint on stage at the Dev BCN conference", [648, 1296], "648px", true %}
 	<figcaption>Me presenting a slide about Core Web Vitals on stage at the Dev BCN conference</figcaption>
 </figure>
 
