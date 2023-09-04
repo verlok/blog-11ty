@@ -1,6 +1,6 @@
 ---
 title: "Talking about How and Why ($) to optimize web performance in 2023"
-description: During the first half of 2023 I've been talking about how and why to optimise web performance at developer conferences, Google Developer Groups (GDG) and local meetups.
+description: During the first half of 2023 I've been talking about how and why to optimize web performance at developer conferences, Google Developer Groups (GDG) and local meetups.
 date: 2023-06-16
 tags:
   - talks
@@ -92,8 +92,8 @@ The first part of the talk is about the reasons why you should optimize web perf
 ## Dev BCN Conference, Barcelona 🇪🇸
 
 <figure>
-	{% image "dev-bcn.jpg", "more organic traffic, more brand perception, more conversion rate, less carbon footprint", [648, 1296], "648px", true %}
-	<figcaption>Me presenting one of the final slides on stage at the Dev BCN conference</figcaption>
+	{% image "devbcn-1.png", "Andrea Verlicchi showing a slide about Core Web Vitals and the new Interaction to Next Paint on stage at the Dev BCN conference", [648, 1296], "648px", true %}
+	<figcaption>Me presenting a slide about Core Web Vitals on stage at the Dev BCN conference</figcaption>
 </figure>
 
 "How and why ($) to improve web performance in 2023", <time datetime="2023-07-04">4 July 2023</time>.
