@@ -1,6 +1,6 @@
 ---
 title: "Talking about How and Why ($) to optimize web performance in 2023"
-description: During the first half of 2023 I've been talking about how and why to optimize web performance at developer conferences, Google Developer Groups (GDG) and local meetups.
+description: In 2023 I've been speaking about web performance at conferences, Google Developer Groups (GDG) and local meetups all over Europe. The title of this talk is "How and Why ($) to improve web performance, practical tips for 2023".
 date: 2023-06-16
 tags:
   - talks
@@ -9,14 +9,30 @@ tags:
   - google developer groups
 ---
 
-During the first half of 2023, I've been talking about web performance at developer conferences, Google Developer Groups (GDG) and local meetups. The title of my talk is "How and Why ($) to improve web performance, practical tips for 2023".
-
 <figure>
-{% image "first-slide.png", "How and Why to optimize web performance, practical tips for 2023", [648, 1296], "648px" %}
-  <figcaption>The first slide of my deck</figcaption>
+	{% image "a-me-speaking-devbcn.webp", "Andrea Verlicchi on stage at the DevBCN conference. Barcelona, 2023", [648, 1296], "648px" %}
+  <figcaption>Me on stage. <em>Credits: DevBCN conference</em></figcaption>
 </figure>
 
+In 2023 I've been speaking about web performance at conferences, Google Developer Groups (GDG) and local meetups all over Europe. The title of this talk is "How and Why ($) to improve web performance, practical tips for 2023".
+
 The first part of the talk is about the reasons why you should optimize web performance, and the second part is about how to do it, with practical tips coming [from Google](https://web.dev/top-cwv-2023/) and based on data collected during the [web performance chapter](https://almanac.httparchive.org/en/2022/performance) of the [web almanac 2022](https://almanac.httparchive.org/en/2022/).
+
+## Next up: DevFest Vienna 🇦🇹
+
+<em>Picture coming soon</em>
+
+"How and why ($) to improve web performance in 2023", <time datetime="2023-10-14">14 October 2023</time>.
+
+[DevFest schedule](https://devfest.at/schedule/)
+
+## WaysConf, Kraków 🇵🇱
+
+<em>Picture coming soon</em>
+
+"How and why ($) to improve web performance in 2023", <time datetime="2023-09-04">4 September 2023</time>.
+
+[Conference talk page](https://www.waysconf.com/lecture/how-and-why-to-improve-web-performance-in-2023)
 
 ## Dev BCN Conference, Barcelona 🇪🇸
 
