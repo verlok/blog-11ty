@@ -9,10 +9,37 @@
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26756203-1"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+			function gtag() {
+				dataLayer.push(arguments);
+			}
 			gtag('js', new Date());
 
 			gtag('config', 'UA-26756203-1');
+		</script>
+		<script>
+			if ("serviceWorker" in navigator) {
+				navigator
+					.serviceWorker
+					.register("/service-worker.js")
+					.then((registration) => {
+						registration.addEventListener("updatefound", () => {
+							const newWorker = registration.installing;
+							newWorker.addEventListener("statechange", () => {
+								if (newWorker.state === "installed") {
+									if (navigator.serviceWorker.controller) {
+										// New service worker installed and registered, we reload the page
+										window
+											.location
+											.reload();
+									}
+								}
+							});
+						});
+					})
+					.catch((error) => {
+						console.error("Service Worker registration failed:", error);
+					});
+			}
 		</script>
 		{#- end #}
 
