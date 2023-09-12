@@ -1,13 +1,13 @@
-@layer base, syntax-highlighting, overrides;
+@layer base, syntax-highlighting, theme;
 
 @layer base {
 	/* Defaults */
 	:root {
 		--font-family: -apple-system, system-ui, sans-serif;
-		--font-family-monospace: JetBrains Mono, Consolas, Menlo, Monaco, Andale Mono WT,
-			Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
-			Courier, monospace;
+		--font-family-monospace: JetBrains Mono, Consolas, Menlo, Monaco,
+			Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter,
+			DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L,
+			Courier New, Courier, monospace;
 	}
 
 	/* Theme colors */
@@ -108,9 +108,6 @@
 		width: 1px;
 	}
 
-	p:last-child {
-		margin-bottom: 0;
-	}
 	p {
 		line-height: 1.5;
 	}
@@ -120,9 +117,10 @@
 	}
 
 	a[href] {
+		padding: 0.75rem 0;
 		color: var(--text-color-link);
 		text-decoration-thickness: 1px;
-		text-underline-offset: 0.10em;
+		text-underline-offset: 0.1em;
 	}
 	a[href]:visited {
 		color: var(--text-color-link-visited);
@@ -170,27 +168,50 @@
 	:not(pre) > code {
 		font-size: 90%;
 		font-family: var(--font-family-monospace);
-		padding: .125em .25em;
+		padding: 0.125em 0.25em;
 		background-color: var(--background-color-code-inline);
 		border: 1px solid var(--border-color-code-inline);
+	}
+}
+
+@layer theme {
+	/* Pictures */
+	figure {
+		margin: 0 0 1.5rem 0;
+	}
+	figcaption {
+		text-align: center;
+		margin-top: 0.5rem;
+		font-size: 90%;
+		color: var(--text-color-figcaptions);
 	}
 
 	/* Header */
 	header {
 		background-color: var(--headfoot__background-color);
-		padding: 1rem;
+		padding: 0.5rem 1rem;
 		color: var(--text-color-header);
 	}
 	header .content {
 		display: flex;
-		gap: 1em 0.5rem;
+		gap: 0 0.5rem;
 		flex-wrap: wrap;
+		justify-content: space-between;
 		align-items: flex-end;
 	}
 	.home-link {
 		font-size: 1.5rem;
 		font-weight: 700;
 		margin-right: 2rem;
+		padding: 0.75rem 0;
+		text-decoration: none;
+
+		.name {
+			color: var(--text-color-header);
+		}
+		.surname {
+			color: var(--text-color-header-special-link);
+		}
 	}
 	.home-link:link:not(:hover) {
 		text-decoration: none;
@@ -200,18 +221,22 @@
 	.nav {
 		display: flex;
 		padding: 0;
-		margin: 0;
+		margin: 0 0 0 -0.5rem;
 		list-style: none;
 	}
 	.nav-item {
 		display: inline-block;
-		margin-right: 1rem;
+		/* margin-right: 1rem; */
 		text-underline-offset: 0.25em;
 	}
-	.nav-item a[href]:not(:hover) {
+	.nav-item a {
+		padding: 0.75rem 0.5rem;
+		display: block;
+	}
+	.nav-item a:not(:hover) {
 		text-decoration: none;
 	}
-	.nav a[href][aria-current="page"] {
+	.nav a[aria-current="page"] {
 		text-decoration: underline;
 	}
 
@@ -336,17 +361,17 @@
 		font-size: 1rem;
 		margin-left: 0.1rem;
 	}
-	a[href].header-anchor,
-	a[href].header-anchor:visited {
+	a.header-anchor,
+	a.header-anchor:visited {
 		color: transparent;
 	}
-	a[href].header-anchor:focus,
-	a[href].header-anchor:hover {
+	a.header-anchor:focus,
+	a.header-anchor:hover {
 		text-decoration: underline;
 		text-decoration-thickness: 2px;
 	}
-	a[href].header-anchor:focus,
-	:hover > a[href].header-anchor {
+	a.header-anchor:focus,
+	:hover > a.header-anchor {
 		color: #aaa;
 	}
 
@@ -356,34 +381,12 @@
 
 	/* ------------ My custom ------------- */
 
-	figure {
-		margin: 0 0 1.5rem 0;
-	}
-
-	figcaption {
-		text-align: center;
-		margin-top: 0.5rem;
-		font-size: 90%;
-		color: var(--text-color-figcaptions);
-	}
-
 	main img {
 		display: block;
 		max-width: 100%;
 		height: auto;
 	}
-}
 
-@layer overrides {
-	.home-link {
-		text-decoration: none;
-		.name {
-			color: var(--text-color-header);
-		}
-		.surname {
-			color: var(--text-color-header-special-link);
-		}
-	}
 	header a {
 		color: var(--text-color-header-link);
 	}
