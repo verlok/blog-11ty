@@ -4,31 +4,42 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ title or metadata.title }}</title>
-		<meta name="description" content="{{ description or metadata.description }}">
-		<meta name="generator" content="{{ eleventy.generator }}">
 
-		{#- Atom and JSON feeds included by default #}
-		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
-
-		{#- From realfavicongenerator #}
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#ffc40d">
-		<meta name="theme-color" content="#000000">
-
-		{#-
-		Google tag (gtag.js) #}
+		{#- Google tag (gtag.js) #}
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26756203-1"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+			function gtag() {
+				dataLayer.push(arguments);
+			}
 			gtag('js', new Date());
 
 			gtag('config', 'UA-26756203-1');
+		</script>
+		<script>
+			if ("serviceWorker" in navigator) {
+				navigator
+					.serviceWorker
+					.register("/service-worker.js")
+					.then((registration) => {
+						registration.addEventListener("updatefound", () => {
+							const newWorker = registration.installing;
+							newWorker.addEventListener("statechange", () => {
+								if (newWorker.state === "installed") {
+									if (navigator.serviceWorker.controller) {
+										// New service worker installed and registered, we reload the page
+										window
+											.location
+											.reload();
+									}
+								}
+							});
+						});
+					})
+					.catch((error) => {
+						console.error("Service Worker registration failed:", error);
+					});
+			}
 		</script>
 		{#- end #}
 
@@ -53,6 +64,22 @@
 		</style>
 		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
+
+		<meta name="description" content="{{ description or metadata.description }}">
+		<meta name="generator" content="{{ eleventy.generator }}">
+
+		{#- Atom and JSON feeds included by default #}
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+
+		{#- From realfavicongenerator #}
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#ffc40d">
+		<meta name="theme-color" content="#000000">
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>

@@ -1,6 +1,6 @@
 ---
 title: How to integrate git in Mac OS Terminal (shell)
-description: Now that `zsh` is the default shell on Mac OS terminal, you might want to setup you new Mac or VS Code terminal to have a smart integration with `git`, something similar to git bash for Windows.
+description: Now that zsh is the default shell on Mac OS terminal, you might want to setup you new Mac or VS Code terminal to have a smart integration with git, something similar to git bash for Windows.
 date: 2022-03-11
 tags:
   - mac

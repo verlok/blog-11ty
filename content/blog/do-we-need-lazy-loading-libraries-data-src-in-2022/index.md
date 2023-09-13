@@ -1,6 +1,6 @@
 ---
-title: Do we still need lazy loading libraries and `data-src` in 2022?
-description: Back in the days, as browser support for native lazy loading was not widespread as today, the best practice was to markup our images with data attributes like `data-src` and use a JavaScript library like my vanilla-lazyload to start loading them as they entered the visible portion of the page. Is it still a best practice today?
+title: Do we still need lazy loading libraries and data-src in 2022?
+description: Back in the days, as browser support for native lazy loading was not as widespread as today, the best practice was to markup our images with data attributes like data-src and use a JavaScript library like my vanilla-lazyload to start loading them as they entered the visible portion of the page. Is it still a best practice today?
 date: 2022-11-13
 tags:
   - considerations
@@ -9,7 +9,7 @@ tags:
   - native lazy loading
 ---
 
-Back in the days, as browser support for [native lazy loading](https://web.dev/browser-level-image-lazy-loading/) was not widespread as today, the best practice was to markup our images with data attributes like `data-src` and use a JavaScript library like my [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload) to start loading them as they entered the visible portion of the page. Is it still a best practice today?
+Back in the days, as browser support for [native lazy loading](https://web.dev/browser-level-image-lazy-loading/) was not as widespread as today, the best practice was to markup our images with data attributes like `data-src` and use a JavaScript library like my [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload) to start loading them as they entered the visible portion of the page. Is it still a best practice today?
 
 ## What is lazy loading?
 
