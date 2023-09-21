@@ -19,11 +19,11 @@ The talk was rated very positively! [Read feedback on joind.in](https://joind.in
 Here's the video of my talk. It's in Italian only, sorry to all non-italian-speaking people.
 
 <div class="videoWrapper">
-  <iframe class="lazy" width="100%" height="auto" data-src="https://www.youtube.com/embed/8D4skk17BGI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe loading="lazy" width="100%" height="auto" src="https://www.youtube.com/embed/8D4skk17BGI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 And here are the slides, for your convenience.
 
 <div class="slideshareWrapper">
-    <iframe class="lazy" data-src="https://www.slideshare.net/slideshow/embed_code/key/f0UQZznjoJ5Yvs?hostedIn=slideshare&page=upload" width="100%" height="autp" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    <iframe loading="lazy" src="https://www.slideshare.net/slideshow/embed_code/key/f0UQZznjoJ5Yvs?hostedIn=slideshare&page=upload" width="100%" height="autp" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 </div>

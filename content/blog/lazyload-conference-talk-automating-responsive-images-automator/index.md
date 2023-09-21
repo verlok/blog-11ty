@@ -21,7 +21,7 @@ The tool mentioned in the the talk is [responsive-images-automator](https://gith
 Here's the video of my talk.
 
 <div class="videoWrapper">
-  <iframe class="lazy" width="100%" height="auto" data-src="https://www.youtube.com/embed/vuWH34f6uds" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe loading="lazy" width="100%" height="auto" src="https://www.youtube.com/embed/vuWH34f6uds" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 How did you find it? Please [reach out](/contact/) and let me know!
