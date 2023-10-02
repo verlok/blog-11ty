@@ -28,7 +28,10 @@ The first part of the talk is about the reasons why you should optimize web perf
 
 ## WaysConf, Kraków 🇵🇱
 
-<em>Picture coming soon</em>
+<figure>
+	{% image "waysconf.png", "Andrea Verlicchi on stage at the WaysConf Kraków", [648, 1296], "648px", true %}
+	<figcaption>Me explaining the difference between lab and RUM tools at WaysConf 2023</figcaption>
+</figure>
 
 "How and why ($) to improve web performance in 2023", <time datetime="2023-09-04">4 September 2023</time>.
 
