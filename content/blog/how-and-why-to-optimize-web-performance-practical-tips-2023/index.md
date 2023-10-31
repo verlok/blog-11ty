@@ -20,7 +20,10 @@ The first part of the talk is about the reasons why you should optimize web perf
 
 ## Next up: DevFest Vienna 🇦🇹
 
-<em>Picture coming soon</em>
+<figure>
+	{% image "devfest-vienna.webp", "Andrea Verlicchi on stage at DevFest Vienna, 2023", [648, 1296], "648px" %}
+  <figcaption>Me on stage explaining what is Interaction to Next Paint</figcaption>
+</figure>
 
 "How and why ($) to improve web performance in 2023", <time datetime="2023-10-14">14 October 2023</time>.
 
