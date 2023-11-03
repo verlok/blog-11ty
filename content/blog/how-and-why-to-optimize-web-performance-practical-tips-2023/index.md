@@ -18,7 +18,13 @@ In 2023 I've been speaking about web performance at conferences, Google Develope
 
 The first part of the talk is about the reasons why you should optimize web performance, and the second part is about how to do it, with practical tips coming [from Google](https://web.dev/top-cwv-2023/) and based on data collected during the [web performance chapter](https://almanac.httparchive.org/en/2022/performance) of the [web almanac 2022](https://almanac.httparchive.org/en/2022/).
 
-## Next up: DevFest Vienna 🇦🇹
+Find below the slides of my talk, both in English and Italian language.
+
+[Slides in English](/pdf/how-why-improve-web-performance-practical-tips-2023.pdf) 🇬🇧 &middot; [Slide in Italiano](/pdf/come-perche-migliorare-prestazioni-web-consigli-pratici-2023.pdf) 🇮🇹
+
+---
+
+## DevFest, Vienna 🇦🇹
 
 <figure>
 	{% image "devfest-vienna.webp", "Andrea Verlicchi on stage at DevFest Vienna, 2023", [648, 1296], "648px" %}
@@ -121,9 +127,3 @@ The first part of the talk is about the reasons why you should optimize web perf
 "Web performance per tutti", <time datetime="2023-02-15">15 February 2023</time>.
 
 [Event page](https://www.meetup.com/it-IT/bologna-front-end/events/291336433/) &middot; 📹 [Video recording](https://www.youtube.com/watch?v=eBBGYyKd7lg)
-
-## Slides
-
-Find below the most updated slides of my talk, both in English and Italian language.
-
-[Slides in English](/pdf/how-why-improve-web-performance-practical-tips-2023.pdf) 🇬🇧 &middot; [Slide in Italiano](/pdf/come-perche-migliorare-prestazioni-web-consigli-pratici-2023.pdf) 🇮🇹
