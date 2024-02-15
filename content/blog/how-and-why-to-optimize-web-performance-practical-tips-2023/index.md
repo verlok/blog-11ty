@@ -44,7 +44,7 @@ Find below the slides of my talk, both in English and Italian language.
 
 "How and why ($) to improve web performance in 2023", <time datetime="2023-09-04">4 September 2023</time>.
 
-[📺 Video][https://www.youtube.com/watch?v=ofRvkAJXGGw] [Conference talk page](https://www.waysconf.com/lecture/how-and-why-to-improve-web-performance-in-2023)
+[📺 Video](https://www.youtube.com/watch?v=ofRvkAJXGGw) [Conference talk page](https://www.waysconf.com/lecture/how-and-why-to-improve-web-performance-in-2023)
 
 ## Dev BCN Conference, Barcelona 🇪🇸
 
