@@ -44,7 +44,7 @@ Find below the slides of my talk, both in English and Italian language.
 
 "How and why ($) to improve web performance in 2023", <time datetime="2023-09-04">4 September 2023</time>.
 
-[Conference talk page](https://www.waysconf.com/lecture/how-and-why-to-improve-web-performance-in-2023)
+[📺 Video][https://www.youtube.com/watch?v=ofRvkAJXGGw] [Conference talk page](https://www.waysconf.com/lecture/how-and-why-to-improve-web-performance-in-2023)
 
 ## Dev BCN Conference, Barcelona 🇪🇸
 
@@ -88,7 +88,7 @@ Find below the slides of my talk, both in English and Italian language.
 
 "Come e perché ($) migliorare le Prestazioni Web: consigli pratici per il 2023", <time datetime="2023-04-05">5 April 2023</time>.
 
-[Bologna JS event page](https://www.meetup.com/it-IT/bologna-js-meetup/events/292424299/), [GDG event page](https://gdg.community.dev/events/details/google-gdg-bologna-presents-come-e-perche-migliorare-le-prestazioni-web-consigli-pratici-per-il-2023/), &middot; 📹 [Video recording](https://www.youtube.com/watch?v=_UuExM3NhaA)
+[📺 Video](https://www.youtube.com/watch?v=_UuExM3NhaA) &middot; [Bologna JS event page](https://www.meetup.com/it-IT/bologna-js-meetup/events/292424299/) &middot; [GDG event page](https://gdg.community.dev/events/details/google-gdg-bologna-presents-come-e-perche-migliorare-le-prestazioni-web-consigli-pratici-per-il-2023/)
 
 ## Dev Romagna, Imola 🇮🇹
 
@@ -126,4 +126,4 @@ Find below the slides of my talk, both in English and Italian language.
 
 "Web performance per tutti", <time datetime="2023-02-15">15 February 2023</time>.
 
-[Event page](https://www.meetup.com/it-IT/bologna-front-end/events/291336433/) &middot; 📹 [Video recording](https://www.youtube.com/watch?v=eBBGYyKd7lg)
+[📺 Video](https://www.youtube.com/watch?v=eBBGYyKd7lg) &middot; [Event page](https://www.meetup.com/it-IT/bologna-front-end/events/291336433/) 
