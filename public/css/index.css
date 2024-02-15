@@ -332,6 +332,7 @@
 	.post-tag {
 		text-transform: capitalize;
 		font-style: italic;
+		padding: 0.25rem 0;
 	}
 	.postlist-item > .post-tag {
 		align-self: center;
