@@ -9,12 +9,16 @@ tags:
   - google developer groups
 ---
 
+<!--
 <figure>
 	{% image "a-me-speaking-devbcn.webp", "Andrea Verlicchi on stage at the DevBCN conference. Barcelona, 2023", [648, 1296], "648px" %}
   <figcaption>Me on stage. <em>Credits: DevBCN conference</em></figcaption>
 </figure>
+-->
 
 In 2023 I've been speaking about web performance at conferences, Google Developer Groups (GDG) and local meetups all over Europe. The title of this talk is "How and Why ($) to improve web performance, practical tips for 2023".
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ofRvkAJXGGw?si=2WGVWiQhq2ckqNY_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 The first part of the talk is about the reasons why you should optimize web performance, and the second part is about how to do it, with practical tips coming [from Google](https://web.dev/top-cwv-2023/) and based on data collected during the [web performance chapter](https://almanac.httparchive.org/en/2022/performance) of the [web almanac 2022](https://almanac.httparchive.org/en/2022/).
 
