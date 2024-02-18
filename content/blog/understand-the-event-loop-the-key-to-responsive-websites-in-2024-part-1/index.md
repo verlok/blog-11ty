@@ -104,12 +104,12 @@ So, at some point the browser will say to the event loop: "hey, you know, we nee
 
 ## An infinite loop with `while(true)`
 
+Here's a page with a gif and some text and a big button that runs an infinite JavaScript loop.
+
 <figure>
 	{% image "04 - example page for infinite loop.png", "A simple page with a gif of a cat, some text, and an infinite loop button", [648, 1296], "648px", true %}
 	<figcaption>A simple page with a gif of a cat, some text, and an infinite loop button</figcaption>
 </figure>
-
-Here's a page with a gif and some text and a big button that runs an infinite JavaScript loop.
 
 ```js
 button.addEventListener('click', (event) => {  
@@ -124,7 +124,7 @@ So, if I click that button, everything stops. The gif has stopped. I can no long
 	<figcaption>Visualization of the event loop executing an infinite loop</figcaption>
 </figure>
 
-The user clicks the button, so, the browser says: hey, event loop, I've got a task for you", and event loop's like "yep, no problem, I'm on it." But this task never ends. It's running JavaScript forever.
+The user clicks the button, so, the browser says: "hey, event loop, I've got a task for you", and event loop's like "yep, no problem, I'm on it." But this task never ends. It's running JavaScript forever.
 
 A couple of milliseconds later the browser says, "hey, event loop, we need to update that gif that was on the page. So, if you could just render at your next earliest convenience that would be fantastic". The event loop's like, "yeah, okay, I'll get around to that right after I finish this infinite loop that I'm busy doing right now."
 
