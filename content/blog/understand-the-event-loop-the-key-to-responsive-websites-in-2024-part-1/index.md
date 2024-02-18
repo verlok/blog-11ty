@@ -100,7 +100,7 @@ The render steps are another detour and that involves style calculation.
 - Layout (L): this is creating a render tree, figuring out where everything is on the page and where it's positioned.
 - Paint (P): creating the actual pixel data, doing the actual painting.
 
-So, at some point the browser will say to the event loop: "hey, you know, we need to update what's on the screen and the event loop's like no problem, I'll get around to that next time I go around the event loop."
+So, at some point the browser will say to the event loop: "hey, you know, we need to update what's on the screen" and the event loop's like "no problem, I'll get around to that next time I go around the event loop."
 
 ## An infinite loop with `while(true)`
 
@@ -180,8 +180,81 @@ So, that means at some point the browser can say "huh, we should update the disp
 
 And that's why a `setTimeout` loop is not render blocking.
 
-## To be continued
+## `requestAnimationFrame`
 
-This is about the first part of Jake's talk about the event loop. The second part will talk about `requestAnimationFrame`, microtasks, and `requestIdleCallback`. I will summarize the rest of the talk in a following post and link it here.
+Now if you want to run code that has anything to do with rendering, a task is really the wrong place to do it, because a task is on the opposite side of the world to all of the rendering stuff, as far as the event loop is concerned.
 
-Please [watch the original video](https://youtu.be/cCOL7MC4Pl0?si=xdpnyk1Z9hwtkFyZ) from Jake Archibald, one of the greatest contributions to understand how browsers process the work they have to do, and it does it in a very easy-to-understand way.
+What we want to do is we want to run code in the render steps. We want to run code here.
+
+<figure>
+	{% image "08 - requestAnimationFrame.png", "A yellow box labeled rAF has appeared before the style block in the render detour", [648, 1296], "648px" %}
+	<figcaption><code>requestaAnimationFrame</code> is the yellow box labeled rAF which appeared before the style (S) block in the render detour</figcaption>
+</figure>
+
+And the browser lets us do that and it lets us do that using `requestAnimationFrame`.
+"rAF" callbacks, they happen as part of the render steps, and to show why this is useful, I'm going to animate a box, just a box, using this code.
+
+<figure>
+	{% image "09 - one box.png", "A square box on a blue background", [648, 1296], "648px" %}
+	<figcaption>The box which is about to be animated</figcaption>
+</figure>
+
+```js
+function callback() {
+	moveBoxForwardOnePixel();
+	requestAnimationFrame(callback);
+}
+callback();
+```
+
+So, I'm going to move that box forward one pixel, and then use requestAnimationFrame to create a loop around this. And that's it. That's all it does. 
+
+So, that's `requestAnimationFrame`, but what if we switched requestAnimationFrame for `setTimeout`?
+
+```js
+function callback() {
+	moveBoxForwardOnePixel();
+	setTimeout(callback, 0);
+}
+callback();
+```
+
+It looks like this.
+
+<figure>
+	{% image "10 - two boxes.png", "Two square boxes on a blue background, the first labeled requestAnimationFrame, the second labeled setTimeout", [648, 1296], "648px" %}
+	<figcaption>The two boxes being animated. The one labeled <code>setTimeout</code> is moving faster than the one labeled <code>requestAnimationFrame</code></figcaption>
+</figure>
+
+Now, this box is moving faster. 
+
+It's moving about 3.5 times faster, and that means this callback is being called more often, and that is not a good thing. That's not a good thing at all. 
+
+We saw earlier that rendering can happen in between tasks.
+
+But just because it can happen doesn't mean it must.
+We can take a task, "Should we render?", "No, it can't be bothered yet." Go around the event loop, pick up another task. "Shall we render now?", "No, it doesn't feel like the right time. Many tasks can happen and before the browser goes, "yeah, actually next time we will update the display". 
+
+And the browser gets to decide when to do this, and it tries to be as efficient as possible. The render steps only happen if there's something actually worth updating.
+If nothing's changed, it won't bother.
+
+Like if the browser tab is in the background, if it isn't visible, it will never run the render steps because there's no point, but also the majority of screens update at a set frequency. In most cases that's 60 times a second. Some screens go faster, some screens go slower, but 60 Hertz is the most common.
+
+So, if we changed page styles like a thousand times a second, it's not going to run the render steps a thousand times a second, it will synchronize itself with the display, and only render up to a frequency the display is capable of. Usually, 60 times a second.
+
+Otherwise, it would be a waste of time, like there's no point rendering stuff the user will never see. But that's what `setTimeout` is doing here. It's moving faster because it's updating the position of that box more times than the user can see, more times than this display is capable of showing us.
+
+
+
+
+<!--====== TO BE CONTINUED? ======-->
+
+## To be continued...
+
+This is about the first part of Jake's talk about the event loop. The second part will talk about microtasks, `requestIdleCallback`, and more.
+
+## Watch the video!
+
+Find below the video from the talk, which uses "slides" that Jake did an amazing job animating.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cCOL7MC4Pl0?si=EEhZlFn4UuzsfCpj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
