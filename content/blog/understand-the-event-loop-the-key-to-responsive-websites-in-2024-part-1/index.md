@@ -61,7 +61,7 @@ So, what we do is this: we queue a task. We queue a task to get back on to the m
 ## Visualize the event loop
 
 <figure>
-	{% image "01 - the event loop and the task detour on the left.png", "The event loop and the task detour on the left", [648, 1296], "648px" %}
+	{% image "01 - the event loop and the task detour on the left.png", "The event loop and the task detour on the left", [648, 1296], "648px", true %}
 	<figcaption>This is how Jake depicted the event loop. It's a circle, the execution goes round and round, until a task is queued in the "task detour" on the left.</figcaption>
 </figure>
 
@@ -77,7 +77,7 @@ Well, according to the spec we wrote these two algorithms go parallel, each wait
 So, the browser says to the event loop "hey, I've got something here that wants to do main thread work. In fact, I have two things", and it adds each one as a separate to-do item in the task queue.
 
 <figure>
-	{% image "02 - tasks in the queue.png", "Two tasks are scheduled for execution in the task queue", [648, 1296], "648px" %}
+	{% image "02 - tasks in the queue.png", "Two tasks are scheduled for execution in the task queue", [648, 1296], "648px", true %}
 	<figcaption>Now two tasks are scheduled for execution in the task queue</figcaption>
 </figure>
 
@@ -90,7 +90,7 @@ And that's tasks.It would be pretty simple if that's all it was, but it gets mor
 This is what the browser uses to update what's actually on the screen.
 
 <figure>
-	{% image "03 - the render steps - style, layout, painting.png", "The render steps", [648, 1296], "648px" %}
+	{% image "03 - the render steps - style, layout, painting.png", "The render steps", [648, 1296], "648px", true %}
 	<figcaption>On the right side of the event loop, the render steps: style, layout, painting</figcaption>
 </figure>
 
@@ -105,7 +105,7 @@ So, at some point the browser will say to the event loop: "hey, you know, we nee
 ## An infinite loop with `while(true)`
 
 <figure>
-	{% image "04 - example page for infinite loop.png", "A simple page with a gif of a cat, some text, and an infinite loop button", [648, 1296], "648px" %}
+	{% image "04 - example page for infinite loop.png", "A simple page with a gif of a cat, some text, and an infinite loop button", [648, 1296], "648px", true %}
 	<figcaption>A simple page with a gif of a cat, some text, and an infinite loop button</figcaption>
 </figure>
 
@@ -120,7 +120,7 @@ button.addEventListener('click', (event) => {
 So, if I click that button, everything stops. The gif has stopped. I can no longer select text. The whole tab comes to a standstill.
 
 <figure>
-	{% image "05 - infinite loop in the event loop.png", "The execution point is stuck in the single task in the queue", [648, 1296], "648px" %}
+	{% image "05 - infinite loop in the event loop.png", "The execution point is stuck in the single task in the queue", [648, 1296], "648px", true %}
 	<figcaption>Visualization of the event loop executing an infinite loop</figcaption>
 </figure>
 
@@ -163,7 +163,7 @@ This is a loop, but each time we go round the loop we're using `setTimeout` to q
 If we execute that `setTimeout` loop in the demo page, it looks nothing has changed, but here's what's happening in the background.
 
 <figure>
-	{% image "06 - setTimeout loop being executed.png", "The execution point is going towards the next task queued", [648, 1296], "648px" %}
+	{% image "06 - setTimeout loop being executed.png", "The execution point is going towards the next task queued", [648, 1296], "648px", true %}
 	<figcaption>The execution of a <code>setTimeout</code> loop executes a single task, than queue another one</figcaption>
 </figure>
 
@@ -174,7 +174,7 @@ That just keeps happening and happening until the end of time, but as we've alre
 So, that means at some point the browser can say "huh, we should update the display for that gif", because at that point it can go around and update the display.
 
 <figure>
-	{% image "07 - still have time to process rendering tasks.png", "The execution point is going towards the rendering steps", [648, 1296], "648px" %}
+	{% image "07 - still have time to process rendering tasks.png", "The execution point is going towards the rendering steps", [648, 1296], "648px", true %}
 	<figcaption>After the execution of that <code>setTimeout</code> callback, the loop is able to render</figcaption>
 </figure>
 
@@ -187,7 +187,7 @@ Now if you want to run code that has anything to do with rendering, a task is re
 What we want to do is we want to run code in the render steps. We want to run code here.
 
 <figure>
-	{% image "08 - requestAnimationFrame.png", "A yellow box labeled rAF has appeared before the style block in the render detour", [648, 1296], "648px" %}
+	{% image "08 - requestAnimationFrame.png", "A yellow box labeled rAF has appeared before the style block in the render detour", [648, 1296], "648px", true %}
 	<figcaption><code>requestaAnimationFrame</code> is the yellow box labeled rAF which appeared before the style (S) block in the render detour</figcaption>
 </figure>
 
@@ -195,7 +195,7 @@ And the browser lets us do that and it lets us do that using `requestAnimationFr
 "rAF" callbacks, they happen as part of the render steps, and to show why this is useful, I'm going to animate a box, just a box, using this code.
 
 <figure>
-	{% image "09 - one box.png", "A square box on a blue background", [648, 1296], "648px" %}
+	{% image "09 - one box.png", "A square box on a blue background", [648, 1296], "648px", true %}
 	<figcaption>The box which is about to be animated</figcaption>
 </figure>
 
@@ -222,7 +222,7 @@ callback();
 It looks like this.
 
 <figure>
-	{% image "10 - two boxes.png", "Two square boxes on a blue background, the first labeled requestAnimationFrame, the second labeled setTimeout", [648, 1296], "648px" %}
+	{% image "10 - two boxes.png", "Two square boxes on a blue background, the first labeled requestAnimationFrame, the second labeled setTimeout", [648, 1296], "648px", true %}
 	<figcaption>The two boxes being animated. The one labeled <code>setTimeout</code> is moving faster than the one labeled <code>requestAnimationFrame</code></figcaption>
 </figure>
 
