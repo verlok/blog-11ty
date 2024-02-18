@@ -208,9 +208,9 @@ function callback() {
 callback();
 ```
 
-So, I'm going to move that box forward one pixel, and then use requestAnimationFrame to create a loop around this. And that's it. That's all it does. 
+So, I'm going to move that box forward one pixel, and then use `requestAnimationFrame` to create a loop around this. And that's it. That's all it does. 
 
-So, that's `requestAnimationFrame`, but what if we switched requestAnimationFrame for `setTimeout`?
+So, that's `requestAnimationFrame`, but what if we switched `requestAnimationFrame` for `setTimeout`?
 
 ```js
 function callback() {
