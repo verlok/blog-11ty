@@ -231,10 +231,9 @@ Now, this box is moving faster.
 
 It's moving about 3.5 times faster, and that means this callback is being called more often, and that is not a good thing. That's not a good thing at all. 
 
-We saw earlier that rendering can happen in between tasks.
+We saw earlier that rendering can happen in between tasks. But just because it can happen doesn't mean it must.
 
-But just because it can happen doesn't mean it must.
-We can take a task, "Should we render?", "No, it can't be bothered yet." Go around the event loop, pick up another task. "Shall we render now?", "No, it doesn't feel like the right time. Many tasks can happen and before the browser goes, "yeah, actually next time we will update the display". 
+We can take a task, "Should we render?", "No, it can't be bothered yet." Go around the event loop, pick up another task. "Shall we render now?", "No, it doesn't feel like the right time". Many tasks can happen and before the browser goes, "Yeah, actually next time we will update the display". 
 
 And the browser gets to decide when to do this, and it tries to be as efficient as possible. The render steps only happen if there's something actually worth updating.
 If nothing's changed, it won't bother.
