@@ -188,7 +188,7 @@ What we want to do is we want to run code in the render steps. We want to run co
 
 <figure>
 	{% image "08 - requestAnimationFrame.png", "A yellow box labeled rAF has appeared before the style block in the render detour", [648, 1296], "648px", true %}
-	<figcaption><code>requestaAnimationFrame</code> is the yellow box labeled rAF which appeared before the style (S) block in the render detour</figcaption>
+	<figcaption><code>requestAnimationFrame</code> is the yellow box labeled "rAF" which appeared before the style (S) block in the render detour</figcaption>
 </figure>
 
 And the browser lets us do that and it lets us do that using `requestAnimationFrame`.
