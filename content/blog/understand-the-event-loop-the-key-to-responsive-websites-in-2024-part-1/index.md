@@ -81,7 +81,7 @@ So, the browser says to the event loop "hey, I've got something here that wants 
 	<figcaption>Now two tasks are scheduled for execution in the task queue</figcaption>
 </figure>
 
-The event loop's like, sure, that's fine, I'll get around to it. So, it runs the first callback, it goes around the event loop and runs the second callback.
+The event loop's like: "sure, that's fine, I'll get around to it". So, it runs the first callback, it goes around the event loop and runs the second callback.
 
 And that's tasks.It would be pretty simple if that's all it was, but it gets more complicated when we think about the render steps.
 
