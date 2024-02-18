@@ -182,9 +182,9 @@ And that's why a `setTimeout` loop is not render blocking.
 
 ## `requestAnimationFrame`
 
-Now if you want to run code that has anything to do with rendering, a task is really the wrong place to do it, because a task is on the opposite side of the world to all of the rendering stuff, as far as the event loop is concerned.
+Now if you want to run code that has anything to do with rendering, a task is really the wrong place to do it, because a task is on the opposite side of the world to all of the rendering stuff, as far as the event loop is concerned. What we want to do is we want to run code in the render steps. 
 
-What we want to do is we want to run code in the render steps. We want to run code here.
+We want to run code here:
 
 <figure>
 	{% image "08 - requestAnimationFrame.png", "A yellow box labeled rAF has appeared before the style block in the render detour", [648, 1296], "648px", true %}
