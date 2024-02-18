@@ -192,6 +192,7 @@ We want to run code here:
 </figure>
 
 And the browser lets us do that and it lets us do that using `requestAnimationFrame`.
+
 "rAF" callbacks, they happen as part of the render steps, and to show why this is useful, I'm going to animate a box, just a box, using this code.
 
 <figure>
