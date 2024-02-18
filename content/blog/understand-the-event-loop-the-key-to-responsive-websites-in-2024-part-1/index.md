@@ -130,7 +130,7 @@ A couple of milliseconds later the browser says, "hey, event loop, we need to up
 
 Then the user tries to highlight text and that involves like hit testing, involves looking at the DOM to see what the text actually is. So, the browser says: "Hey, I've got a couple of more items for your to-do list there". And the event loop's like: "Are you having a laugh? Do you know how long it takes to perform an infinite loop? It's a long time, you know. There is a clue in the name."
 
-So, that is why a while loop blocks rendering and other page interaction.
+So, that is why a `while` loop blocks rendering and other page interaction.
 
 But this is a good thing in practice. 
 
