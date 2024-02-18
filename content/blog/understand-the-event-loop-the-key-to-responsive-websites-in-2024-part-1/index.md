@@ -1,5 +1,5 @@
 ---
-title: Understand the event loop, the key to reactive websites in 2024 - Part 1
+title: Understand the event loop, the key to reactive websites - Part 1
 description: Jake Archibald's talk on the Event Loop is still one of the main sources of information about how the Event Loop works and how to avoid blocking the browser's main thread and therefore, websites reactivity. In his video, Jake covers several key concepts, which I'm gonna try and summarize in this blog post.
 date: 2024-02-17
 tags:
