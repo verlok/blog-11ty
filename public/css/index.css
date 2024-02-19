@@ -31,20 +31,19 @@
 		--text-color-header-special-link: #f82028;
 		--text-color-header-special-link-active: #f82028;
 		--text-color-header-special-link-visited: #f82028;
-		--text-color-figcaptions: #808080;
-
-		--icon-color-fill: #828282;
-
+		--text-color-figcaptions: #666666;
+		--icon-color-fill: #666666;
+		
 		--background-color-code-inline: #eee;
 		--border-color-code-inline: #ccc;
-
+		
 		--syntax-tab-size: 2;
 	}
-
+	
 	@media (prefers-color-scheme: dark) {
 		:root {
 			--background-color: #020202;
-
+			
 			--text-color: #dad8d8;
 			--text-color-link: #a68dff;
 			--text-color-link-active: #a68dff;
@@ -58,6 +57,9 @@
 			--text-color-header-special-link: #ff27a6;
 			--text-color-header-special-link-active: #ff27a6;
 			--text-color-header-special-link-visited: #ff27a6;
+			
+			--text-color-figcaptions: #888888;
+			--icon-color-fill: #888888;
 
 			--background-color-code-inline: #222;
 			--border-color-code-inline: #555;
