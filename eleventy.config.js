@@ -43,17 +43,12 @@ module.exports = function (eleventyConfig) {
 		cacheId: "andreaverlicchi.eu", // change this to your application id
 		globIgnores: [
 			// any files you don't want service worker to cache go here
-			"*.moecceccosa",
 		],
 		runtimeCaching: [
 			{
-				// we always want fresh copy of the index page
-				urlPattern: /\/$/,
-				handler: "NetworkFirst",
-			},
-			{
-				// we also want fresh copies of any HTML page
-				urlPattern: /\.html$/,
+				// we always want a fresh copy of the home page -- url ending in ".eu"
+				// or any page -- url ending in "/"
+				urlPattern: /(\.eu$)|\/$/,
 				handler: "NetworkFirst",
 			},
 			{
