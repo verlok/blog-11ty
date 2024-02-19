@@ -1,15 +1,15 @@
 ---
 title: Understand the event loop, the key to reactive websites - Part 1
-description: Jake Archibald's talk on the Event Loop is still one of the main sources of information about how the Event Loop works and how to avoid blocking the browser's main thread and therefore, websites reactivity. In his video, Jake covers several key concepts, which I'm gonna try and summarize in this blog post.
+description: Jake Archibald's talk "In the loop" is still one of the best sources of information about the event loop and about how it processes tasks in the browser. Understand how the event loop works is important to make sure we don't hinder websites reactivity. Since I didn't find anything that comprehensible in a blog post format, I'm gonna try and transpose his talk in this blog post.
 date: 2024-02-17
 tags:
   - web performance
   - interaction to next paint
 ---
 
-Jake Archibald's talk "In the loop" about how the Event Loop processes tasks in the browser is still one of the best sources of information about how things work in the browser internals, which is important to undestand how to avoid blocking the browser's ability to respond to user inputs and therefore, websites reactivity.
+[Jake Archibald](https://jakearchibald.com/)'s talk "In the loop" is still one of the best sources of information about the event loop and about how it processes tasks in the browser. Understand how the event loop works is important to make sure we don't hinder websites reactivity.
 
-In this video from JSConf Asia 2018, [Jake](https://jakearchibald.com/) covers several key concepts, so I'm gonna try and transpose it in this blog post.
+Since I didn't find anything that comprehensible in a blog post format, I'm gonna try and transpose his talk in this blog post. I'm also embedding the video at the end.
 
 ## Main thread and deterministic order
 
