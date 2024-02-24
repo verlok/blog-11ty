@@ -246,29 +246,41 @@ Otherwise, it would be a waste of time, like there's no point rendering stuff th
 
 #### Other ways of queuing a task
 
-<!-- 🛑 INSERT IMAGE OF THE 3 SQUARES "RACING" -->
-
 So far, we've been using `setTimeout` as a shorthand for "queuing a task", and it isn't really, because even though we've put 0 milliseconds for the callback, it's more like 4.7 milliseconds that the browser will use as a default (the specs the browser can pick any number to use, but Jake has tested and measured it).
 
-There isn't a single method that just queues a task,
-but we can kind of fake it using message channels.
-Jake ran a test with that, the result is we're getting a task every two-hundredths (2/100) of a millisecond. So, rendering can happen between tasks, but you can have many, even tens of thousands of tasks between renderings.
+<!-- 🛑 TODO: replace image with one at a higher resolution -->
+
+<figure>
+	{% image "11 - three boxes LD.png", "Three square boxes on a blue background, the first labeled requestAnimationFrame, the second labeled setTimeout, the third labeled queueTask", [648, 1296], "648px", true %}
+	<figcaption>The three boxes being animated. The one labeled <code>queueTask</code> is moving so fast that it appears randomly positioned on its lane</figcaption>
+</figure>
+
+There isn't a single method that just queues a task, but we can kind of fake it using message channels. Jake ran a test with that. The result is there are so many tasks happening that it kind of just looks like the box is getting a random position. We're getting a task every two-hundredths (2/100) of a millisecond. So rendering can happen between tasks, but you can have many, even tens of thousands of tasks between renderings.
 
 ## Tasks and frames in time
-
-<!-- 🛑 INSERT IMAGE OF THE FRAMES WITH TASKS -->
 
 Let's imagine each of these is a frame that is displayed to the user. 
 
 So, our rendering steps they happen at the start of each frame and that includes like style calculation, layout and paint, not necessarily all three every time.
 
+<figure>
+	{% image "12 - Frames with rendering tasks.png", "Three rectangles representing frames, each one containing a purple rectangle and a green rectangle representing style and render tasks", [648, 1296], "648px", true %}
+	<figcaption>Three frames, each one containing a style task (purple) and a render tasks (green)</figcaption>
+</figure>
+
 Depends what actually needs updating, but I like this. I like this. This is very neat and tidy. This is a beautiful picture.
 
-<!-- 🛑 INSERT IMAGE OF TASKS APPEARING EVERYWHERE -->
+<figure>
+	{% image "13 - Tasks are everythere.png", "Same as previous figure, now with yellow rectangle shown in random positions inside each rectangle representing a frame", [648, 1296], "648px", true %}
+	<figcaption>Tasks are executed everythere during a single frame</figcaption>
+</figure>
 
 Tasks on the other hand, they couldn't give a stuff. They just kind of appear anywhere they fancy. The event loop ensures that they happen in the right order, they happen in the order they were queued, but in terms of timing within a frame there is no kind of ordering here at all.
 
 And we saw this with our `setTimeout`. We were getting four per frame, three or four per frame, and that means that three-quarters of those callbacks were wasted effort in terms of rendering.
+
+<!-- 🛑 INSERT IMAGE
+ OF 3/4 OF TASKS HIGHLIGHTED -->
 
 Old animation libraries used to do something like this, where they were trying to use a millisecond value that's going to give them roughly 60 callbacks per second and they're assuming a lot about the screen there. They're assuming a screen is 60 Hertz, but that was the common case.
 
