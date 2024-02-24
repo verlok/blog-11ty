@@ -279,25 +279,46 @@ Tasks on the other hand, they couldn't give a stuff. They just kind of appear an
 
 And we saw this with our `setTimeout`. We were getting four per frame, three or four per frame, and that means that three-quarters of those callbacks were wasted effort in terms of rendering.
 
-<!-- 🛑 INSERT IMAGE
- OF 3/4 OF TASKS HIGHLIGHTED -->
+<figure>
+	 {% image "14 - 3 out of 4 tasks highlghted.png", "Same as previous figure, now 3 out of 4 yellow rectangles are offset, representing the wasted effort", [648, 1296], "648px", true %}
+	<figcaption>3 out of 4 tasks highlghted as wasted effort in terms of rendering</figcaption>
+</figure>
 
-Old animation libraries used to do something like this, where they were trying to use a millisecond value that's going to give them roughly 60 callbacks per second and they're assuming a lot about the screen there. They're assuming a screen is 60 Hertz, but that was the common case.
+Old animation libraries used to do something like this, where they were trying to use a millisecond value that's going to give them roughly 60 callbacks per second...
+
+```js
+setTimeout (animFrame, 1000 / 60);
+```
+
+...and they're assuming a lot about the screen there. They're assuming a screen is 60 Hertz, but that was the common case.
+
+<figure>
+	{% image "15 - Tasks distributed across frames.png", "Tasks distributed one per frame", [648, 1296], "648px", true %}
+	<figcaption>Tasks are scheduled in every frame using <code>setTimeout</code></figcaption>
+</figure>
 
 So, it kind of worked, it eliminated some of the duplicate effort. Unfortunately, it was a massive hack because setTimeout was not designed for animation and it really shows like due to inaccuracies you can end up with drift.
 
-<!-- 🛑 INSERT IMAGE OF TASKS DISTRIBUTED MORE OR LESS ONCE PER FRAME, BUT WITH MISTAKES -->
+<figure>
+	{% image "16 - Tasks distributed across frames, with mistake.png", "One yellow square which was supposed to be in the second frame appears in the third frame", [648, 1296], "648px", true %}
+	<figcaption>One task was supposed to be in the second frame, but was executed during the third frame</figcaption>
+</figure>
 
 So, what's happened here is we're doing nothing in one frame, and then in the next frame we're doing twice the amount of work, and that is a visual jank to user, it doesn't look great.
 
-<!-- 🛑 INSERT IMAGE OF ONE TASK GOING LONG AND OVER THE NEXT FRAME -->
-
 Also, if one of your tasks runs long, you can end up moving the render steps around because it's all running on the same thread and you're sort of disturbing that lovely routine that they have.
+
+<figure>
+	{% image "17 - Tasks distributed along frames, one going long to the next frame.png", "Yellow squares starting inside each frame, the first one of them extending over to the next frame", [648, 1296], "648px", true %}
+	<figcaption>Frames are starting inside each frame, the first one of them being executed over to the next frame</figcaption>
+</figure>
+
+If we use `requestAnimationFrame` rather than `setTimeout`, it would look a lot more like this. All neat and tidy. All nice and ordered. Everything is within the timing of the frame, even this longer task here. 
 
 <!-- 🛑 INSERT IMAGE OF TASKS BEING GROUPED TOGETHER BEFORE THE RENDERING -->
 
-If we use `requestAnimationFrame` rather than `setTimeout`, it would look a lot more like this. All neat and tidy. All nice and ordered. Everything is within the timing of the frame,
-even this longer task here. Jake says when he sees performance traces like this, this makes me happy. This is showing a good user experience.
+Jake says when he sees performance traces like this, it makes him happy, as this is showing a good user experience.
+
 
 You can't avoid tasks completely of course because things like click events they're going to be delivered to you in a task, and generally you want to respond to those as soon as possible. But if you have things like timers or you have stuff coming from the network, Jake recommends using `requestAnimationFrame` to batch that work together, especially if you already have animations running because you can save yourself a lot of duplicate work.
 
@@ -321,15 +342,23 @@ button.addEventListener('click', () => {
 
 So, code like this might seem expensive, like we're showing and hiding a box many many times, but this is actually really cheap, like JavaScript will always run to completion before rendering happens. 
 
-So, while you're doing this the browser just sits back, and it lets you have your fun changing a value and it doesn't really think about it in terms of CSS at all. And then at the end when it actually comes around to the render steps it goes, right, what did you actually change in the end? And the only bit that matters is the final line.
+So, while you're doing this the browser just sits back, and it lets you have your fun changing a value and it doesn't really think about it in terms of CSS at all. And then at the end when it actually comes around to the render steps it goes, right, what did you actually change in the end? And the only bit that matters is the final line. And the only bit that matters is the final line.
 
-So the code above is equivalent to
+So the code above, in terms of rendering, is equivalent to the following code.
 
 ```js
 button.addEventListener('click', () => {
 	box.style.display = "none";
 });
 ```
+
+## Tasks and transitions
+
+And this explains a gotcha in CSS
+or at least something that caught me out.
+I had a thing, right?
+that I wanted to animate from an X position of 1000 to 500.
+...
 
 
 <!--====== TO BE CONTINUED? ======-->
