@@ -1,15 +1,15 @@
 ---
 title: Understand the event loop, the key to reactive websites - Part 1
-description: Jake Archibald's talk on the Event Loop is still one of the main sources of information about how the Event Loop works and how to avoid blocking the browser's main thread and therefore, websites reactivity. In his video, Jake covers several key concepts, which I'm gonna try and summarize in this blog post.
+description: Jake Archibald's talk "In the loop" is still one of the best sources of information about the event loop and about how it processes tasks in the browser. Understand how the event loop works is important to make sure we don't hinder websites reactivity. Since I didn't find anything that comprehensible in a blog post format, I'm gonna try and transpose his talk in this blog post.
 date: 2024-02-17
 tags:
   - web performance
   - interaction to next paint
 ---
 
-Jake Archibald's talk on the Event Loop is still one of the main sources of information about how the Event Loop works and how to avoid blocking the browser's main thread and therefore, websites reactivity.
+[Jake Archibald](https://jakearchibald.com/)'s talk "In the loop" is still one of the best sources of information about the event loop and about how it processes tasks in the browser. Understand how the event loop works is important to make sure we don't hinder websites reactivity.
 
-In this video from JSConf Asia 2018, [Jake](https://jakearchibald.com/) covers several key concepts, which I'm gonna try and summarize in this blog post.
+Since I didn't find anything that comprehensible in a blog post format, I'm gonna try and transpose his talk in this blog post. I'm also embedding the video at the end.
 
 ## Main thread and deterministic order
 
@@ -81,9 +81,9 @@ So, the browser says to the event loop "hey, I've got something here that wants 
 	<figcaption>Now two tasks are scheduled for execution in the task queue</figcaption>
 </figure>
 
-The event loop's like, sure, that's fine, I'll get around to it. So, it runs the first callback, it goes around the event loop and runs the second callback.
+The event loop's like: "sure, that's fine, I'll get around to it". So, it runs the first callback, it goes around the event loop and runs the second callback.
 
-And that's tasks.It would be pretty simple if that's all it was, but it gets more complicated when we think about the render steps.
+And that's tasks. It would be pretty simple if that's all it was, but it gets more complicated when we think about the render steps.
 
 ## The render steps
 
@@ -104,12 +104,12 @@ So, at some point the browser will say to the event loop: "hey, you know, we nee
 
 ## An infinite loop with `while(true)`
 
+Here's a page with a gif and some text and a big button that runs an infinite JavaScript loop.
+
 <figure>
 	{% image "04 - example page for infinite loop.png", "A simple page with a gif of a cat, some text, and an infinite loop button", [648, 1296], "648px", true %}
 	<figcaption>A simple page with a gif of a cat, some text, and an infinite loop button</figcaption>
 </figure>
-
-Here's a page with a gif and some text and a big button that runs an infinite JavaScript loop.
 
 ```js
 button.addEventListener('click', (event) => {  
@@ -124,13 +124,13 @@ So, if I click that button, everything stops. The gif has stopped. I can no long
 	<figcaption>Visualization of the event loop executing an infinite loop</figcaption>
 </figure>
 
-The user clicks the button, so, the browser says: hey, event loop, I've got a task for you", and event loop's like "yep, no problem, I'm on it." But this task never ends. It's running JavaScript forever.
+The user clicks the button, so, the browser says: "hey, event loop, I've got a task for you", and event loop's like "yep, no problem, I'm on it." But this task never ends. It's running JavaScript forever.
 
 A couple of milliseconds later the browser says, "hey, event loop, we need to update that gif that was on the page. So, if you could just render at your next earliest convenience that would be fantastic". The event loop's like, "yeah, okay, I'll get around to that right after I finish this infinite loop that I'm busy doing right now."
 
-Then the user tries to highlight text and that involves like hit testing, involves looking at the DOM to see what the text actually is. So, the browser says, hey, I've got a couple of more items for your to-do list there. And the event loop's like, "Are you having a laugh? Do you know how long it takes to perform an infinite loop? It's a long time, you know. There is a clue in the name."
+Then the user tries to highlight text and that involves like hit testing, involves looking at the DOM to see what the text actually is. So, the browser says: "Hey, I've got a couple of more items for your to-do list there". And the event loop's like: "Are you having a laugh? Do you know how long it takes to perform an infinite loop? It's a long time, you know. There is a clue in the name."
 
-So, that is why a while loop blocks rendering and other page interaction.
+So, that is why a `while` loop blocks rendering and other page interaction.
 
 But this is a good thing in practice. 
 
@@ -182,16 +182,17 @@ And that's why a `setTimeout` loop is not render blocking.
 
 ## `requestAnimationFrame`
 
-Now if you want to run code that has anything to do with rendering, a task is really the wrong place to do it, because a task is on the opposite side of the world to all of the rendering stuff, as far as the event loop is concerned.
+Now if you want to run code that has anything to do with rendering, a task is really the wrong place to do it, because a task is on the opposite side of the world to all of the rendering stuff, as far as the event loop is concerned. What we want to do is we want to run code in the render steps. 
 
-What we want to do is we want to run code in the render steps. We want to run code here.
+We want to run code here:
 
 <figure>
 	{% image "08 - requestAnimationFrame.png", "A yellow box labeled rAF has appeared before the style block in the render detour", [648, 1296], "648px", true %}
-	<figcaption><code>requestaAnimationFrame</code> is the yellow box labeled rAF which appeared before the style (S) block in the render detour</figcaption>
+	<figcaption><code>requestAnimationFrame</code> is the yellow box labeled "rAF" which appeared before the style (S) block in the render detour</figcaption>
 </figure>
 
 And the browser lets us do that and it lets us do that using `requestAnimationFrame`.
+
 "rAF" callbacks, they happen as part of the render steps, and to show why this is useful, I'm going to animate a box, just a box, using this code.
 
 <figure>
@@ -207,9 +208,9 @@ function callback() {
 callback();
 ```
 
-So, I'm going to move that box forward one pixel, and then use requestAnimationFrame to create a loop around this. And that's it. That's all it does. 
+So, I'm going to move that box forward one pixel, and then use `requestAnimationFrame` to create a loop around this. And that's it. That's all it does. 
 
-So, that's `requestAnimationFrame`, but what if we switched requestAnimationFrame for `setTimeout`?
+So, that's `requestAnimationFrame`, but what if we switched `requestAnimationFrame` for `setTimeout`?
 
 ```js
 function callback() {
@@ -230,10 +231,9 @@ Now, this box is moving faster.
 
 It's moving about 3.5 times faster, and that means this callback is being called more often, and that is not a good thing. That's not a good thing at all. 
 
-We saw earlier that rendering can happen in between tasks.
+We saw earlier that rendering can happen in between tasks. But just because it can happen doesn't mean it must.
 
-But just because it can happen doesn't mean it must.
-We can take a task, "Should we render?", "No, it can't be bothered yet." Go around the event loop, pick up another task. "Shall we render now?", "No, it doesn't feel like the right time. Many tasks can happen and before the browser goes, "yeah, actually next time we will update the display". 
+We can take a task, "Should we render?", "No, it can't be bothered yet." Go around the event loop, pick up another task. "Shall we render now?", "No, it doesn't feel like the right time". Many tasks can happen and before the browser goes, "Yeah, actually next time we will update the display". 
 
 And the browser gets to decide when to do this, and it tries to be as efficient as possible. The render steps only happen if there's something actually worth updating.
 If nothing's changed, it won't bother.
