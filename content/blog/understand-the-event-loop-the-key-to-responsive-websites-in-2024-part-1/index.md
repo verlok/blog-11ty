@@ -244,7 +244,80 @@ So, if we changed page styles like a thousand times a second, it's not going to 
 
 Otherwise, it would be a waste of time, like there's no point rendering stuff the user will never see. But that's what `setTimeout` is doing here. It's moving faster because it's updating the position of that box more times than the user can see, more times than this display is capable of showing us.
 
+#### Other ways of queuing a task
 
+<!-- 🛑 INSERT IMAGE OF THE 3 SQUARES "RACING" -->
+
+So far, we've been using `setTimeout` as a shorthand for "queuing a task", and it isn't really, because even though we've put 0 milliseconds for the callback, it's more like 4.7 milliseconds that the browser will use as a default (the specs the browser can pick any number to use, but Jake has tested and measured it).
+
+There isn't a single method that just queues a task,
+but we can kind of fake it using message channels.
+Jake ran a test with that, the result is we're getting a task every two-hundredths (2/100) of a millisecond. So, rendering can happen between tasks, but you can have many, even tens of thousands of tasks between renderings.
+
+## Tasks and frames in time
+
+<!-- 🛑 INSERT IMAGE OF THE FRAMES WITH TASKS -->
+
+Let's imagine each of these is a frame that is displayed to the user. 
+
+So, our rendering steps they happen at the start of each frame and that includes like style calculation, layout and paint, not necessarily all three every time.
+
+Depends what actually needs updating, but I like this. I like this. This is very neat and tidy. This is a beautiful picture.
+
+<!-- 🛑 INSERT IMAGE OF TASKS APPEARING EVERYWHERE -->
+
+Tasks on the other hand, they couldn't give a stuff. They just kind of appear anywhere they fancy. The event loop ensures that they happen in the right order, they happen in the order they were queued, but in terms of timing within a frame there is no kind of ordering here at all.
+
+And we saw this with our `setTimeout`. We were getting four per frame, three or four per frame, and that means that three-quarters of those callbacks were wasted effort in terms of rendering.
+
+Old animation libraries used to do something like this, where they were trying to use a millisecond value that's going to give them roughly 60 callbacks per second and they're assuming a lot about the screen there. They're assuming a screen is 60 Hertz, but that was the common case.
+
+So, it kind of worked, it eliminated some of the duplicate effort. Unfortunately, it was a massive hack because setTimeout was not designed for animation and it really shows like due to inaccuracies you can end up with drift.
+
+<!-- 🛑 INSERT IMAGE OF TASKS DISTRIBUTED MORE OR LESS ONCE PER FRAME, BUT WITH MISTAKES -->
+
+So, what's happened here is we're doing nothing in one frame, and then in the next frame we're doing twice the amount of work, and that is a visual jank to user, it doesn't look great.
+
+<!-- 🛑 INSERT IMAGE OF ONE TASK GOING LONG AND OVER THE NEXT FRAME -->
+
+Also, if one of your tasks runs long, you can end up moving the render steps around because it's all running on the same thread and you're sort of disturbing that lovely routine that they have.
+
+<!-- 🛑 INSERT IMAGE OF TASKS BEING GROUPED TOGETHER BEFORE THE RENDERING -->
+
+If we use `requestAnimationFrame` rather than `setTimeout`, it would look a lot more like this. All neat and tidy. All nice and ordered. Everything is within the timing of the frame,
+even this longer task here. Jake says when he sees performance traces like this, this makes me happy. This is showing a good user experience.
+
+You can't avoid tasks completely of course because things like click events they're going to be delivered to you in a task, and generally you want to respond to those as soon as possible. But if you have things like timers or you have stuff coming from the network, Jake recommends using `requestAnimationFrame` to batch that work together, especially if you already have animations running because you can save yourself a lot of duplicate work.
+
+## Tasks and render timing
+
+There's one more detail I want to get to and this is something that catches a lot of developers out, it caught me out. `requestAnimationFrame` it comes before processing CSS and before painting.
+
+```js
+button.addEventListener('click', () => {
+	box.style.display = "none";
+	box.style.display = "block";
+	box.style.display = "none";
+	box.style.display = "block";
+	box.style.display = "none";
+	box.style.display = "block";
+	box.style.display = "none";
+	box.style.display = "block";
+	box.style.display = "none";
+});
+```
+
+So, code like this might seem expensive, like we're showing and hiding a box many many times, but this is actually really cheap, like JavaScript will always run to completion before rendering happens. 
+
+So, while you're doing this the browser just sits back, and it lets you have your fun changing a value and it doesn't really think about it in terms of CSS at all. And then at the end when it actually comes around to the render steps it goes, right, what did you actually change in the end? And the only bit that matters is the final line.
+
+So the code above is equivalent to
+
+```js
+button.addEventListener('click', () => {
+	box.style.display = "none";
+});
+```
 
 
 <!--====== TO BE CONTINUED? ======-->
