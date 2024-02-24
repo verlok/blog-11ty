@@ -315,10 +315,12 @@ Also, if one of your tasks runs long, you can end up moving the render steps aro
 
 If we use `requestAnimationFrame` rather than `setTimeout`, it would look a lot more like this. All neat and tidy. All nice and ordered. Everything is within the timing of the frame, even this longer task here. 
 
-<!-- 🛑 INSERT IMAGE OF TASKS BEING GROUPED TOGETHER BEFORE THE RENDERING -->
+<figure>
+	{% image "18 - Tasks are grouped together at the beginning of every frame.png", "The yellow rectangles representing tasks are grouped together at the beginning of each frame", [648, 1296], "648px", true %}
+	<figcaption>Tasks are grouped together at the beginning of every frame, using <code>requestAnimationFrame</code> instead of <code>setTimeout</code></figcaption>
+</figure>
 
 Jake says when he sees performance traces like this, it makes him happy, as this is showing a good user experience.
-
 
 You can't avoid tasks completely of course because things like click events they're going to be delivered to you in a task, and generally you want to respond to those as soon as possible. But if you have things like timers or you have stuff coming from the network, Jake recommends using `requestAnimationFrame` to batch that work together, especially if you already have animations running because you can save yourself a lot of duplicate work.
 
