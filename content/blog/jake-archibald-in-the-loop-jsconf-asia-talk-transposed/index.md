@@ -354,9 +354,9 @@ button.addEventListener('click', () => {
 });
 ```
 
-## Queuing transitions
+## Queuing tasks to make transitions
 
-I'm going to omit the part where Jake explained how to queue some Javascript to animate a box from 1000 to 500 pixels using a double `requestAnimationFrame` callback, as it's irrelevant at the time of writing: we now have the [Web Animation API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API) which, at the time of Jake's talk, was available only in Chrome. 
+I'm going to omit the part where Jake explained how to queue some Javascript to animate a box from 1000 to 500 pixels using a double `requestAnimationFrame` callback, as it's irrelevant at the time of writing: we now have the [Web Animation API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API) which was available only in Chrome at the time of Jake's talk.
 
 <!--
 THE REST OF THE TRANSCRIPT
@@ -365,248 +365,60 @@ THE REST OF THE TRANSCRIPT
 
 I want to take a look at microtasks.
 This is probably the least understood part of the event loop I'd say.
-I strongly associate microtasks with promises,
-but this is not where they started.
-Back in the 1990s,
-browsers wanted to give developers a way to monitor DOM changes
-and the W3C went, okay, we'll sort that out for you,
-and they gave us mutation events.
-So, this is where I could say,
-okay, I want to know when a node is inserted into the body element.
-And fine, excellent,
-and you get a series of other events as well.
-But, in practice this was pretty problematic.
-We take this bit of code here,
-what I'm doing is I'm adding a hundred spans into the body element.
+I strongly associate microtasks with promises, but this is not where they started.
+Back in the 1990s, browsers wanted to give developers a way to monitor DOM changes and the W3C went, okay, we'll sort that out for you, and they gave us mutation events.
+So, this is where I could say, okay, I want to know when a node is inserted into the body element.
+And fine, excellent, and you get a series of other events as well.
+But, in practice this was pretty problematic. 
+We take this bit of code here, what I'm doing is I'm adding a hundred spans into the body element.
 
 How many events would you expect to receive as a result of this?
-One event?
-One event for the whole operation?
-Nope.
-100 events?
-One for each span.
-Yes.
-But also, another hundred for this line here
-when the content is going into the actual span,
-a text node is going into the span
-and because these events bubble,
-this simple piece of code is going to land you with 200 events.
-And because of this like relatively simple DOM modifications
-ended up triggering thousands of events
-and if you were doing like a tiny bit of work in these listeners
-that quickly became a big bit of work,
-and it was a performance disaster.
+One event? One event for the whole operation? Nope. 
+100 events? One for each span. Yes.
+But also, another hundred for this line here when the content is going into the actual span, a text node is going into the span and because these events bubble, this simple piece of code is going to land you with 200 events.
+And because of this like relatively simple DOM modifications ended up triggering thousands of events and if you were doing like a tiny bit of work in these listeners that quickly became a big bit of work, and it was a performance disaster.
 What we really wanted was a way to sort of hear about a batch of this work.
 It's similar to what we saw with styles before.
-We want the browser to kind of sit back,
-let us do some stuff
-and then at a convenient point, say, some stuff changed.
+We want the browser to kind of sit back, let us do some stuff and then at a convenient point, say, some stuff changed.
 Here is a kind of an event or something to represent all of those changes.
 
-We want to hear about it once not 200 times
-and the answer became mutation observers,
-and they created a new queue called microtasks.
-A lot of documentation I read about microtasks
-suggests that it happens like, I don't know, every turn of the event loop
-or it happens after a task or something like that
-and it is kind of true.
-There is a single place on the event loop where microtasks happen,
-but that is not where you'll generally encounter it.
-They also happen whenever JavaScript finishes executing.
-That means that the JavaScript stack has gone from having stuff in it
-to having no stuff in it
-and that's where we run microtasks.
-So, you can end up with microtasks happening halfway through a task,
-you can have microtasks in the render steps as part of requestAnimationFrames,
-kind of anywhere, anywhere JavaScript can run.
-So, that means this JavaScript will run to completion
-adding a hundred spans and their contents.
-JavaScript finishes executing
-and we get our mutation observer callback.
+We want to hear about it once not 200 times and the answer became mutation observers.
+And they created a new queue called microtasks.
+A lot of documentation I read about microtasks suggests that it happens like, I don't know, every turn of the event loop or it happens after a task or something like that and it is kind of true.
+There is a single place on the event loop where microtasks happen, but that is not where you'll generally encounter it. They also happen whenever JavaScript finishes executing.
+That means that the JavaScript stack has gone from having stuff in it to having no stuff in it and that's where we run microtasks.
+
+So, you can end up with microtasks happening halfway through a task, you can have microtasks in the render steps as part of `requestAnimationFrames`, kind of anywhere, anywhere JavaScript can run.
+So, that means this JavaScript will run to completion adding a hundred spans and their contents.
+JavaScript finishes executing and we get our mutation observer callback.
+
 Promises made use of them as well.
-So, here we queue a microtask and then log(‘Yo!’),
-
+So, here we queue a microtask and then log ‘Yo!’.
 JavaScript has finished executing.
-So, we go for the microtasks, and we log(‘Hey!’).
-And that means when the Promise callback is executing
-you were guaranteed that no other JavaScript is midway through at the time,
-the Promise callback is right at the bottom of the stack,
-and that's why promises use microtasks.
-But what happens if we create a loop using microtasks?
-A bit like we did with setTimeout before.
-Same demo again.
-Click the button
-and it blocks rendering,
-it blocks the tab in the same way a plain while loop did,
-very different from setTimeout before.
-So, Promise callbacks are async,
-fine,
-but what does async actually mean?
-I mean all it means is that they happen after synchronously executing code,
-so that's why we get (‘Yo!’) before (‘Hey!’).
-But just being async doesn't mean it must yield to rendering,
-doesn't mean it must yield to any particular part of the event loop.
-We've looked at three different queues so far.
-We’ve looked at task queues,
-animation callback queues
-which is where requestAnimationFrame callbacks happen
-and now we're looking at microtasks,
-and just to make your lives a little bit easier
-they all are processed very subtly differently.
-Like we've seen with task queues,
-we take one item and we take one item only
-and if another item is queued it just goes to the end of the queue.
-Fine.
-Animation callbacks they happen until completion,
-except ones that were queued while we were processing animation callbacks.
-They are deferred to the next frame.
-Microtasks on the other hand they are processed to completion
-including any additionally queued items.
-So, if you were adding items to the queue as quickly as you're processing them
-you are processing microtasks forever.
-The event loop cannot continue until that queue has completely emptied
-and that is why it blocks rendering.
-I get really excited about this stuff.
-I hope other people are excited about this as I am.
-Thank you.
-One person. Excellent.
-You know what, I used to have a real job like many of you did.
-This stuff like it's sort of speaking the standards work, the creating slides.
-This used to be my hobby
-but then my hobby became my job,
-and now I have no hobbies.
-I'm a boring person now,
-and I didn't actually notice when this happened, like genuinely.
-The first time I noticed is when I went for an eye test
-and the optician just making small talk asked,
-“and what are your hobbies?”
-I am like, “oh shit, when did this happen? I don't have any.”
+So, we go for the microtasks, and we log ‘Hey!’.
 
-Like I said, I stress,
-so I got a bit like oh, I can't say nothing, who says nothing?
-So, it's just totally true.
-I panicked and I said “I play the piano.”
-I don't play the piano.
-And then I stressed even more because I thought like she was going to say,
-“Oh well. That's great.
-We don't need to use the letters chart then,
-here's some sheet music.
-Can you read me the first five bars? What chord is this?”
-Thankfully she didn't.
-But yeah, my optician now thinks I'm a pianist.
-That’s great.
-I don't go back to the opticians anymore. I'm terrified of like more piano chat.
-I don't know how I survive in the real world.
-I think you're ready for this next one.
-Occasionally I run little JavaScript quizzes.
-Maybe that's my hobby.
-Nope. That's work too.
-Never mind.
-Yes, I run little JavaScript quizzes, and this is my favorite question.
-So, I've got a button and on click I resolved a Promise
-and then log something.
-But I have two event listeners on the same element doing the same thing.
+And that means when the Promise callback is executing you were guaranteed that no other JavaScript is midway through at the time, the Promise callback is right at the bottom of the stack, and that's why promises use microtasks.
 
-So, if the user clicks a button, what happens?
-In which order are things logged?
-Well, our first listener executes. Great.
-So, that's on the JavaScript stack.
-Queues a microtask
-and then we get to the next line where we log Listener 1
-and that's the first answer.
-Most folks agree on that bit, but what next?
-And I ran a Twitter poll on this last week.
-I've been speaking to a few of you, a few of you saw it.
-Most people would say the next thing logged is Listener 2, that's 63%,
-5% of people think NaN is just logs and then Infinity,
-that is not the answer,
-but fair enough to that 5% of people,
-but yes, we've got 63%
-and Listener 2 is the wrong answer.
-This is a real gotcha with script,
-but if you thought it was Listener 2 then you're in very good company.
-So, don't worry about it.
-Our Listener has finished.
-So, we've gone from having something on the JavaScript stack to nothing.
-So, it is Microtask time.
-We are going to run that promise
-and we are going to log Microtask 1
-and there we go.
-And then it's time for the second listener
-and that works the same.
-So, the order is Listener 1 Microtask 1,
-Listener 2 Microtask 2.
-But that's if the user clicks the button.
-What if the button is clicked using JavaScript?
-Oh, yes, it's different.
-For starters, our script is on the stack.
-We call click and that synchronously dispatches the events.
-So, we start with Listener 1. Great.
-We queue a microtask and we log Listener 1
-and now it's microtask time.
-No. No, it is not microtask time.
-We can't run microtasks.
-This is where it's different
-because our JavaScript stack is not empty,
-button.click has not returned yet.
-So, we move on to Listener 2.
-We queue another microtask
-and now we log Listener 2
-and this is where it diverges.
-And now, our listener is done.
-In fact, all our listeners are done.
-button.click returns,
-our JavaScript stack empties
-and now we can process those microtasks
-and they happen in order
-and this has real-world implications.
-So, beware if you're using promises in this way,
-if you're using automated tests as well
-because automated tests if they're clicking things on the page,
-they're likely to be using JavaScript to do it
-and that can change the behavior of your code.
-This also came up when we were looking at
-how to add observables to the DOM
-and how they'd integrate with promises.
-We hit this question,
-If we have a promise that represents the next click of a particular link,
-it's just this little bit of code here,
-can someone use that promise and still call event.preventDefault?
+But what happens if we create a loop using microtasks? A bit like we did with setTimeout before. Same demo again.
+Click the button and it blocks rendering, it blocks the tab in the same way a plain while loop did, very different from setTimeout before.
 
-Promises are async.
-So, have we missed our chance to prevent the default here?
-Turns out no, it's fine. It's totally fine. This works.
-This just works unless again the user clicks the link
-or some code clicks the link using JavaScript.
-And this is the final puzzle of the talk. I'm overrunning a little bit.
-To figure this out we actually need to take a look at the spec.
-So, this is a very rough description of how the spec for clicking a link works,
-but we start by creating an event object
-and then for every listener we have
-we invoke that listener with the event object
-and then we take a look at,
-has that eventObject's canceled flag been set.
-If it's been set then we're not going to follow the hyperlink,
-but if it's unset, we will follow the hyperlink.
-When you call event.preventDefault
-it sets this canceled flag on the event object.
-So, if the user clicks a link that's fine,
-our microtasks happen here after each callback
-because that's where the JavaScript stack empties,
-but when we call click with JavaScript,
-it's just going to call out to Process a link click algorithm,
-and it only returns once that algorithm is complete.
-So, the JavaScript stack never empties during this algorithm.
-So, our micro tasks can't happen.
-So, it hits this step 3 where it looks at the eventObject
-and even if you've got loads of promises trying to call like preventDefault
-it's too late.
-It's going to follow the hyperlink
-and then sometime later those promise callbacks happen,
-but you've missed the boat.
-You've missed the point where you can actually cancel that event.
-So, remember that microtasks they behave quite differently
-depending on the JavaScript stack.
+So, Promise callbacks are async, fine, but what does async actually mean?
+I mean all it means is that they happen after synchronously executing code, so that's why we get ‘Yo!’ before ‘Hey!’.
+
+But just being async doesn't mean it must yield to rendering, doesn't mean it must yield to any particular part of the event loop.
+
+We've looked at three different queues so far. We’ve looked at task queues, animation callback queues which is where `requestAnimationFrame` callbacks happen and now we're looking at microtasks, and just to make your lives a little bit easier they all are processed very subtly differently.
+
+Like we've seen with task queues, we take one item and we take one item only and if another item is queued it just goes to the end of the queue. Fine.
+
+Animation callbacks they happen until completion, except ones that were queued while we were processing animation callbacks. They are deferred to the next frame. Microtasks on the other hand they are processed to completion including any additionally queued items.
+
+So, if you were adding items to the queue as quickly as you're processing them you are processing microtasks forever. The event loop cannot continue until that queue has completely emptied and that is why it blocks rendering. 
+
+---
+
+The talk ends with a Javascript quiz about microtasks...
+
 -->
 
 <!--====== TO BE CONTINUED? ======-->
