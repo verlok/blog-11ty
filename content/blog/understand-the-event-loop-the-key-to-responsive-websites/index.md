@@ -1,5 +1,5 @@
 ---
-title: Understand the event loop, the key to reactive websites
+title: "Jake Archibald's talk \"In the loop\" transposed"
 description: Jake Archibald's talk "In the loop" is still one of the best sources of information about the event loop and about how it processes tasks in the browser. Understand how the event loop works is important to make sure we don't hinder websites reactivity. Since I didn't find anything that comprehensible in a blog post format, I'm gonna try and transpose his talk in this blog post.
 date: 2024-02-17
 tags:
