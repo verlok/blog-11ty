@@ -1,15 +1,15 @@
 ---
 title: "Jake Archibald's talk \"In the loop\" transposed"
-description: Jake Archibald's talk "In the loop" is still one of the best sources of information about the event loop and about how it processes tasks in the browser. Understand how the event loop works is important to make sure we don't hinder websites reactivity. Since I didn't find anything that comprehensible in a blog post format, I'm gonna try and transpose his talk in this blog post.
+description: Jake Archibald's talk "In the loop" is still one of the best sources of information about the event loop and about how it processes tasks in the browser. Understand how the event loop works is important to make sure we don't hinder websites reactivity. Since I didn't find anything as comprehensible as that in a blog post format, I'm transposing his talk into this blog post.
 date: 2024-02-17
 tags:
   - web performance
   - interaction to next paint
 ---
 
-[Jake Archibald](https://jakearchibald.com/)'s talk "In the loop" is still one of the best sources of information about the event loop and about how it processes tasks in the browser. Understand how the event loop works is important to make sure we don't hinder websites reactivity.
+[Jake Archibald](https://jakearchibald.com/)'s talk "In the loop" (JS Conf Asia) is still one of the best sources of information about the event loop and about how it processes tasks in the browser. Understand how the event loop works is important to make sure we don't hinder websites reactivity.
 
-Since I didn't find anything that comprehensible in a blog post format, I'm gonna try and transpose his talk in this blog post. I'm also embedding the video at the end.
+Since I didn't find anything as comprehensible as that in a blog post format, I'm transposing his talk into this blog post. Find the video at the end of the post.
 
 ## Main thread and deterministic order
 
