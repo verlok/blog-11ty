@@ -43,9 +43,7 @@ So, although we have this main thread thing, we tend to spawn a whole series of 
 
 ## Task queues
 
-Take `setTimeout`, for instance. Have you thought about how it actually works?
-
-The `setTimeout` method, when invoked, must run the following steps:
+Take `setTimeout`, for instance. Have you thought about how it actually works? When invoked, must run the following steps:
 
 - wait `ms` milliseconds
 - invoke callback
