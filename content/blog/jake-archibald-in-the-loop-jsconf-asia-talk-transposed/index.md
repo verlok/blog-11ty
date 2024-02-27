@@ -58,7 +58,7 @@ But we create a new problem here, because now we're invoking a callback from som
 
 So, what we do is this: we queue a task. We queue a task to get back on to the main thread at some point, and now we're calling JavaScript on the thread where JavaScript lives, so it all works.
 
-## Visualize the event loop
+## Meet the event loop
 
 <figure>
 	{% image "01 - the event loop and the task detour on the left.png", "The event loop and the task detour on the left", [648, 1296], "648px", true %}
@@ -72,16 +72,16 @@ setTimeout(callback1, 1000);
 setTimeout(callback2, 1000);
 ```
 
-Well, according to the spec we wrote these two algorithms go parallel, each waits for a thousand milliseconds, and then they need to come back on to the main thread, and they do that by queuing a task.
+Well, according to the spec, these two algorithms go parallel, each waits for a thousand milliseconds, and then they need to come back on to the main thread. And they do that by queuing a task.
 
-So, the browser says to the event loop "hey, I've got something here that wants to do main thread work. In fact, I have two things", and it adds each one as a separate to-do item in the task queue.
+So, the browser says to the event loop "Hey, I've got something here that wants to do main thread work. In fact, I have two things", and it adds each one as a separate to-do item in the task queue.
 
 <figure>
 	{% image "02 - tasks in the queue.png", "Two tasks are scheduled for execution in the task queue", [648, 1296], "648px", true %}
 	<figcaption>Now two tasks are scheduled for execution in the task queue</figcaption>
 </figure>
 
-The event loop's like: "sure, that's fine, I'll get around to it". So, it runs the first callback, it goes around the event loop and runs the second callback.
+The event loop's like: "Sure, that's fine, I'll get around to it". So, it runs the first callback, it **goes around the event loop**, and runs the second callback.
 
 And that's tasks. It would be pretty simple if that's all it was, but it gets more complicated when we think about the render steps.
 
@@ -100,7 +100,7 @@ The render steps are another detour and that involves style calculation.
 - Layout (L): this is creating a render tree, figuring out where everything is on the page and where it's positioned.
 - Paint (P): creating the actual pixel data, doing the actual painting.
 
-So, at some point the browser will say to the event loop: "hey, you know, we need to update what's on the screen" and the event loop's like "no problem, I'll get around to that next time I go around the event loop."
+So, at some point the browser will say to the event loop: "Hey, you know, we need to update what's on the screen" and the event loop's like "No problem, I'll get around to that next time I go around the event loop."
 
 ## An infinite loop with `while(true)`
 
@@ -124,19 +124,13 @@ So, if I click that button, everything stops. The gif has stopped. I can no long
 	<figcaption>Visualization of the event loop executing an infinite loop</figcaption>
 </figure>
 
-The user clicks the button, so, the browser says: "hey, event loop, I've got a task for you", and event loop's like "yep, no problem, I'm on it." But this task never ends. It's running JavaScript forever.
+The user clicks the button, so, the browser says: "Hey, event loop, I've got a task for you", and event loop's like "Yep, no problem, I'm on it." But this task never ends. It's running JavaScript forever.
 
-A couple of milliseconds later the browser says, "hey, event loop, we need to update that gif that was on the page. So, if you could just render at your next earliest convenience that would be fantastic". The event loop's like, "yeah, okay, I'll get around to that right after I finish this infinite loop that I'm busy doing right now."
+A couple of milliseconds later the browser says: "Hey, event loop, we need to update that gif that was on the page. So, if you could just render at your next earliest convenience that would be fantastic". The event loop's like, "Yeah, okay, I'll get around to that right after I finish this infinite loop that I'm busy doing right now."
 
 Then the user tries to highlight text and that involves like hit testing, involves looking at the DOM to see what the text actually is. So, the browser says: "Hey, I've got a couple of more items for your to-do list there". And the event loop's like: "Are you having a laugh? Do you know how long it takes to perform an infinite loop? It's a long time, you know. There is a clue in the name."
 
-So, that is why a `while` loop blocks rendering and other page interaction.
-
-But this is a good thing in practice. 
-
-## Your task will complete before next rendering
-
-Let's look again at the code that we started with.
+So, that is why a `while` loop blocks rendering and other page interaction. But this is a good thing in practice. Let's look again at the code that we started with.
 
 ```js
 document.body.appendChild(el);
@@ -145,7 +139,7 @@ el.style.display = 'none';
 
 I used to worry that this would result in a flash of content, but it can't, right? Because this script runs as part of a task, and that must run to completion before the browser can get back around to the render steps.
 
-The event loop guarantees your task will complete before next rendering happens.
+**The event loop guarantees your task will complete before next rendering happens.**
 
 ## An infinite loop with `setTimeout()`
 
@@ -210,7 +204,7 @@ callback();
 
 So, I'm going to move that box forward one pixel, and then use `requestAnimationFrame` to create a loop around this. And that's it. That's all it does. 
 
-So, that's `requestAnimationFrame`, but what if we switched `requestAnimationFrame` for `setTimeout`?
+But what if we switched `requestAnimationFrame` for `setTimeout`?
 
 ```js
 function callback() {
@@ -227,16 +221,25 @@ It looks like this.
 	<figcaption>The two boxes being animated. The one labeled <code>setTimeout</code> is moving faster than the one labeled <code>requestAnimationFrame</code></figcaption>
 </figure>
 
-Now, this box is moving faster. 
-
-It's moving about 3.5 times faster, and that means this callback is being called more often, and that is not a good thing. That's not a good thing at all. 
+The new box animated with `setTimeout` is moving about 3.5 times faster, and that means this callback is being called more often, and that is not a good thing. That's not a good thing at all. 
 
 We saw earlier that rendering can happen in between tasks. But just because it can happen doesn't mean it must.
 
-We can take a task, "Should we render?", "No, it can't be bothered yet." Go around the event loop, pick up another task. "Shall we render now?", "No, it doesn't feel like the right time". Many tasks can happen and before the browser goes, "Yeah, actually next time we will update the display". 
+We can take a task, "Should we render?", "No, it can't be bothered yet." 
 
-And the browser gets to decide when to do this, and it tries to be as efficient as possible. The render steps only happen if there's something actually worth updating.
-If nothing's changed, it won't bother.
+<figure>
+	{% image "10a - Should we render no.png", "In the event loop, the switch leading to the render detour is closed", [648, 1296], "648px", true %}
+	<figcaption>Should we render? Not yet.</figcaption>
+</figure>
+
+Go around the event loop, pick up another task. "Shall we render now?", "No, it doesn't feel like the right time". Many tasks can happen and before the browser goes, "Yeah, actually next time we will update the display". 
+
+<figure>
+	{% image "10b - Should we render yes.png", "In the event loop, the switch leading to the render detour is open", [648, 1296], "648px", true %}
+	<figcaption>Should we render? Now it's time.</figcaption>
+</figure>
+
+And the browser gets to decide when to do this, and it tries to be as efficient as possible. The render steps only happen if there's something actually worth updating. If nothing's changed, it won't bother.
 
 Like if the browser tab is in the background, if it isn't visible, it will never run the render steps because there's no point, but also the majority of screens update at a set frequency. In most cases that's 60 times a second. Some screens go faster, some screens go slower, but 60 Hertz is the most common.
 
@@ -248,10 +251,8 @@ Otherwise, it would be a waste of time, like there's no point rendering stuff th
 
 So far, we've been using `setTimeout` as a shorthand for "queuing a task", and it isn't really, because even though we've put 0 milliseconds for the callback, it's more like 4.7 milliseconds that the browser will use as a default (the specs the browser can pick any number to use, but Jake has tested and measured it).
 
-<!-- 🛑 TODO: replace image with one at a higher resolution -->
-
 <figure>
-	{% image "11 - three boxes LD.png", "Three square boxes on a blue background, the first labeled requestAnimationFrame, the second labeled setTimeout, the third labeled queueTask", [648, 1296], "648px", true %}
+	{% image "11 - Three boxes.png", "Three square boxes on a blue background, the first labeled requestAnimationFrame, the second labeled setTimeout, the third labeled queueTask", [648, 1296], "648px", true %}
 	<figcaption>The three boxes being animated. The one labeled <code>queueTask</code> is moving so fast that it appears randomly positioned on its lane</figcaption>
 </figure>
 
@@ -400,7 +401,7 @@ A lot of documentation I read about microtasks suggests that it happens like, I 
 
 That means that the JavaScript stack has gone from having stuff in it to having no stuff in it and that's where we run microtasks.
 
-So, you can end up with microtasks happening halfway through a task, you can have microtasks in the render steps as part of `requestAnimationFrama`s, kind of anywhere, anywhere JavaScript can run.
+So, you can end up with microtasks happening halfway through a task, you can have microtasks in the render steps as part of `requestAnimationFrame`s, kind of anywhere, anywhere JavaScript can run.
 
 ```js
 for (let i=0; i<100; i++) {
@@ -426,7 +427,9 @@ Then, we go for the microtasks, and we log ‘Hey!’.
 
 And that means when the Promise callback is executing you were guaranteed that no other JavaScript is midway through at the time, the Promise callback is right at the bottom of the stack, and that's why Promises use microtasks.
 
-But what happens if we create a loop using microtasks? A bit like we did with `setTimeout` before. 
+## An infinite loop with `Promise.resolve()`
+
+But what happens if we create a loop using microtasks? In terms of code, a bit like we did with `setTimeout` [before](#an-infinite-loop-with-settimeout).
 
 ```js
 function loop() {
@@ -440,11 +443,10 @@ loop();
 	<figcaption>Same demo again: a cat gif, a bunch of text, and a button labeled "Microtask Loop"</figcaption>
 </figure>
 
-Click the button and it blocks rendering, it blocks the tab in the same way a plain while loop did, but very different from `setTimeout` before.
+Click the button and... it blocks rendering, it blocks the tab in the same way a plain `while` loop did, but very different from `setTimeout` before.
 
 So, `Promise` callbacks are async, fine, but what does async actually mean?
-
-I mean all it means is that they happen after synchronously executing code, so that's why we get ‘Yo!’ before ‘Hey!’.
+All it means is that they happen after synchronously executing code, so that's why we get ‘Yo!’ before ‘Hey!’.
 But just being async doesn't mean it must yield to rendering, doesn't mean it must yield to any particular part of the event loop.
 
 <figure>
