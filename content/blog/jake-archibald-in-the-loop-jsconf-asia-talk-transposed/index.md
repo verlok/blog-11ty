@@ -1,5 +1,5 @@
 ---
-title: "Jake Archibald's talk \"In the loop\" transposed"
+title: "Jake Archibald's talk \"In the loop\", transposed"
 description: Jake Archibald's talk "In the loop" is still one of the best sources of information about the event loop and about how it processes tasks in the browser. Understand how the event loop works is important to make sure we don't hinder websites reactivity. Since I didn't find anything as comprehensible as that in a blog post format, I'm transposing his talk into this blog post.
 date: 2024-02-17
 tags:
