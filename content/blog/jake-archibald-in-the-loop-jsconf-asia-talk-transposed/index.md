@@ -252,7 +252,9 @@ So far, we've been using `setTimeout` as a shorthand for "queuing a task", and i
 	<figcaption>The three boxes being animated. The one labeled <code>queueTask</code> is moving so fast that it appears randomly positioned on its lane</figcaption>
 </figure>
 
-There isn't a single method that just queues a task, but we can kind of fake it using message channels. Jake ran a test with that. The result is there are so many tasks happening that it kind of just looks like the box is getting a random position. We're getting a task every two-hundredths (2/100) of a millisecond. So rendering can happen between tasks, but you can have many, even tens of thousands of tasks between renderings.
+There isn't a single method that just queues a task, but we can kind of fake it using message channels. Jake ran a test with that. 
+
+The result is there are so many tasks happening that it kind of just looks like the box is getting a random position. We're getting a task every two-hundredths (2/100) of a millisecond. So rendering can happen between tasks, but you can have many, even tens of thousands of tasks between renderings.
 
 ## Tasks and frames in time
 
@@ -351,9 +353,9 @@ button.addEventListener('click', () => {
 });
 ```
 
-## Queuing tasks to make transitions
+## Animate a box?
 
-I'm going to omit the part where Jake explained how to queue some Javascript to animate a box from 1000 to 500 pixels using a double `requestAnimationFrame` callback, as it's irrelevant at the time of writing: we now have the [Web Animation API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API) which was available only in Chrome at the time of Jake's talk.
+I'm omitting the part where Jake explained how to queue some Javascript to animate a box from 1000 to 500 pixels using a double `requestAnimationFrame` callback, as it's irrelevant at the time of writing: the [Web Animation API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API), which was only available in Chrome at the time of Jake's talk, is now cross-browser.
 
 ## Microtasks
 
