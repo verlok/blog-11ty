@@ -50,9 +50,7 @@ Take `setTimeout`, for instance. Have you thought about how it actually works? W
 
 Done. 
 
-We run the steps in parallel, which is a way to say get off the main thread and run this stuff at the same time as other stuff. 
-
-But we create a new problem here, because now we're invoking a callback from something other than the main thread, and I mean, there's no way this can really work. You would end up with lots of JavaScript running in parallel, still editing the same DOM and you'd end up with all of these race conditions.
+We run the steps in parallel — which is a way to say get off the main thread and run this stuff at the same time as other stuff — but we create a new problem here, because now we're invoking a callback from something other than the main thread, and there's no way this can really work. You would end up with lots of JavaScript running in parallel, still editing the same DOM and you'd end up with all of these race conditions.
 
 So, what we do is this: we queue a task. We queue a task to get back on to the main thread at some point, and now we're calling JavaScript on the thread where JavaScript lives, so it all works.
 
