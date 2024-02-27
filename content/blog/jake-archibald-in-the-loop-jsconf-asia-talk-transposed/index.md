@@ -1,5 +1,5 @@
 ---
-title: "Jake Archibald's talk \"In the loop\" transposed"
+title: "Jake Archibald's talk \"In the loop\", transposed"
 description: Jake Archibald's talk "In the loop" is still one of the best sources of information about the event loop and about how it processes tasks in the browser. Understand how the event loop works is important to make sure we don't hinder websites reactivity. Since I didn't find anything as comprehensible as that in a blog post format, I'm transposing his talk into this blog post.
 date: 2024-02-17
 tags:
@@ -43,18 +43,14 @@ So, although we have this main thread thing, we tend to spawn a whole series of 
 
 ## Task queues
 
-Take `setTimeout`, for instance. Have you thought about how it actually works?
-
-The `setTimeout` method, when invoked, must run the following steps:
+Take `setTimeout`, for instance. Have you thought about how it actually works? When invoked, must run the following steps:
 
 - wait `ms` milliseconds
 - invoke callback
 
 Done. 
 
-We run the steps in parallel, which is a way to say get off the main thread and run this stuff at the same time as other stuff. 
-
-But we create a new problem here, because now we're invoking a callback from something other than the main thread, and I mean, there's no way this can really work. You would end up with lots of JavaScript running in parallel, still editing the same DOM and you'd end up with all of these race conditions.
+We run the steps in parallel — which is a way to say get off the main thread and run this stuff at the same time as other stuff — but we create a new problem here, because now we're invoking a callback from something other than the main thread, and there's no way this can really work. You would end up with lots of JavaScript running in parallel, still editing the same DOM and you'd end up with all of these race conditions.
 
 So, what we do is this: we queue a task. We queue a task to get back on to the main thread at some point, and now we're calling JavaScript on the thread where JavaScript lives, so it all works.
 
