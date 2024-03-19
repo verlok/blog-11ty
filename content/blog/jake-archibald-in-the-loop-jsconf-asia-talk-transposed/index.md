@@ -360,7 +360,7 @@ I'm omitting the part where Jake explained how to queue some Javascript to anima
 Back in the 1990s, browsers wanted to give developers a way to monitor DOM changes and the W3C gave us mutation events.
 
 ```js
-document.body.addEventListener('DOMNodeIbserted', () => {
+document.body.addEventListener('DOMNodeInserted', () => {
 	console.log('Stuff added to the <body>');
 });
 ```
