@@ -119,6 +119,16 @@ module.exports = function (eleventyConfig) {
 		});
 	});
 
+	// Add collection to filter only talks
+	eleventyConfig.addCollection("posts__talks", function (collectionApi) {
+		return collectionApi.getFilteredByTag("talks");
+	});
+
+	// Add collection to filter only lazyload posts
+	eleventyConfig.addCollection("posts__lazyload", function (collectionApi) {
+		return collectionApi.getFilteredByTag("lazyload");
+	});
+
 	// Features to make your build faster (when you need them)
 
 	// If your passthrough copy gets heavy and cumbersome, add this line

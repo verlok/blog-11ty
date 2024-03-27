@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 eleventyNavigation:
   key: Lazy load
-  order: 5
+  order: 6
 ---
 
 <nav class="post-back post-back--top">
