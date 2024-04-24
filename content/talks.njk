@@ -1,15 +1,15 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Blog
-  order: 2
+  key: Talks
+  order: 3
 ---
 
 <nav class="post-back post-back--top">
 	<a href="/">&larr; Home page</a>
 </nav>
 
-<h1>Blog</h1>
+<h1>Talks</h1>
 
-{% set postslist = collections.posts %}
+{% set postslist = collections.posts__talks %}
 {% include "postslist.njk" %}
