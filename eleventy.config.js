@@ -39,6 +39,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 
+	/*
+	PWA plugin
 	eleventyConfig.addPlugin(pluginPWA, {
 		cacheId: "andreaverlicchi.eu", // change this to your application id
 		globIgnores: [
@@ -64,6 +66,7 @@ module.exports = function (eleventyConfig) {
 			},
 		],
 	});
+  */
 
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
