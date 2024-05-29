@@ -1,6 +1,6 @@
 ---
-title: Get speedy with responsive images - LazyLoad Conference 2022
-description: On June 24th, 2022 I spoke about how to automate responsive images optimisation at the LazyLoad conference 2022. Here's the video of my talk.
+title: "Talk: Get speedy with responsive images - LazyLoad Conference 2022"
+description: On June 24th, 2022 I spoke about how to automate responsive images optimisation at the LazyLoad Conference 2022. Here's the video of my talk.
 
 date: 2022-06-24
 tags:

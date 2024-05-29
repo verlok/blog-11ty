@@ -1,5 +1,5 @@
 ---
-title: "Talking about How and Why ($) to optimize web performance in 2023"
+title: "Talk: How and Why ($) to optimize web performance in 2023"
 description: In 2023 I've been speaking about web performance at conferences, Google Developer Groups (GDG) and local meetups all over Europe. The title of this talk is "How and Why ($) to improve web performance, practical tips for 2023".
 date: 2023-06-16
 tags:
@@ -130,4 +130,4 @@ Find below the slides of my talk, both in English and Italian language.
 
 "Web performance per tutti", <time datetime="2023-02-15">15 February 2023</time>.
 
-[📺 Video](https://www.youtube.com/watch?v=eBBGYyKd7lg) &middot; [Event page](https://www.meetup.com/it-IT/bologna-front-end/events/291336433/) 
+[📺 Video](https://www.youtube.com/watch?v=eBBGYyKd7lg) &middot; [Event page](https://www.meetup.com/it-IT/bologna-front-end/events/291336433/)
