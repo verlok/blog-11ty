@@ -8,14 +8,14 @@ tags:
   - interaction to next paint
 ---
 
-In 2024 I've been speaking about enhancing web responsiveness, debugging and avoiding slow interactions, which are measured from the new metric from Interaction to Next Paint (INP), part of the Core Web Vitals starting from March 2024.
+In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discussed debugging and avoiding slow interactions, which are measured by the new metric Interaction to Next Paint (INP). This metric, introduced in March 2024, is part of the Core Web Vitals.
 
 <figure>
 	{% image "me-speaking-bologna-js.jpg", "Andrea Verlicchi speaking at Bologna JS, a few people in the front rows, the slide shows the word 'Conclusion'", [648, 1296], "648px" %}
   <figcaption>Me speaking at the Bologna JS Meetup.</figcaption>
 </figure>
 
-After an initial explanation of the new metric Interaction to Next Paint (INP), I show how to debug slow interaction using Google Chrome's Developer Tools and Real User Monitoring (RUM) data, and I go over 3 common mistakes to avoid in order to have snappy user interactions and keep your INP below 200 ms.
+After providing an initial explanation of INP, I show how to debug slow interactions using Google Chrome's Developer Tools and Real User Monitoring (RUM) data. I also cover three common mistakes to avoid to ensure snappy user interactions and keep your INP below 200 milliseconds.
 
 [Slides](./pdf/lets-make-web-more-responsive-bologna-js-2024-05-22.pdf)
 
