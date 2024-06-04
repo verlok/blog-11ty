@@ -14,6 +14,7 @@ In May 2024, I began speaking at local meetups and conferences about enhancing w
 	{% image "title-slide-enhancing-web-responsiveness.png", "Enhancing Web Responsiveness - Debugging and avoiding slow interactions - Andrea Verlicchi - Web Performance GDE - @verlok", [648, 1296], "648px" %}
   <figcaption>The title slide of my talk</figcaption>
 </figure>
+<!-- TODO: Replace title slide with video when available -->
 
 After providing an initial explanation of INP, I show how to debug slow interactions using Google Chrome's Developer Tools and Real User Monitoring (RUM) data. I also cover three common mistakes to avoid to ensure snappy user interactions and keep your INP below 200 milliseconds.
 
