@@ -20,7 +20,7 @@ After providing an initial explanation of INP, I show how to debug slow interact
 
 [Slides](./pdf/lets-make-web-more-responsive-bologna-js-2024-05-22.pdf)
 
-## GDG Madrid - 4 June 2024 🇪🇸
+## GDG Madrid 🇪🇸 - <time datetime="2024-06-04">4 June 2024</time>
 
 <figure>
 	{% image "me-speaking-gdg-madrid.jpg", "Andrea Verlicchi speaking at GDG Madrid (c/o Celonis), a few people in the front rows, the slide showing the input delay part of the INP measurement in the browser's main thread", [648, 1296], "648px" %}
@@ -29,7 +29,7 @@ After providing an initial explanation of INP, I show how to debug slow interact
 
 📺 Video coming soon - [GDG event page](https://gdg.community.dev/events/details/google-gdg-madrid-presents-hagamos-que-la-web-sea-mas-responsive-en-2024/)
 
-## Bologna JS, Bologna - 22 May 2024 🇮🇹
+## Bologna JS, Bologna 🇮🇹 - <time datetime="2024-05-22">22 May 2024</time>
 
 <figure>
 	{% image "me-speaking-bologna-js.jpg", "Andrea Verlicchi speaking at Bologna JS, a few people in the front rows, the slide shows the word 'Conclusion'", [648, 1296], "648px" %}
