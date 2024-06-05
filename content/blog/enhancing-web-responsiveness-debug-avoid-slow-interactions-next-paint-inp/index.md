@@ -8,7 +8,7 @@ tags:
   - interaction to next paint
 ---
 
-In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discussed debugging and avoiding slow interactions, which are measured by the new metric Interaction to Next Paint (INP). This metric, introduced in March 2024, is part of the Core Web Vitals.
+In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions, which are measured by the new metric Interaction to Next Paint (INP). This metric, introduced in March 2024, is part of the Core Web Vitals.
 
 <figure>
 	{% image "title-slide-enhancing-web-responsiveness.png", "Enhancing Web Responsiveness - Debugging and avoiding slow interactions - Andrea Verlicchi - Web Performance GDE - @verlok", [648, 1296], "648px" %}
