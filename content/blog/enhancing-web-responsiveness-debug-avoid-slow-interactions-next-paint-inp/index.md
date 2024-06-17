@@ -37,7 +37,7 @@ The title of the talk, in Italian, was "Migliorare la reattività del web — Gu
 
 <figure>
 	{% image "me-speaking-gdg-madrid.jpg", "Andrea Verlicchi speaking at GDG Madrid (c/o Celonis), a few people in the front rows, the slide showing the input delay part of the INP measurement in the browser's main thread", [648, 1296], "648px" %}
-  <figcaption>Me speaking at the Madrid chapter of Google Developer Groups.</figcaption>
+  <figcaption>Presenting at GDG Madrid, showing the first of the INP subparts: Input Delay.</figcaption>
 </figure>
 
 [GDG event page](https://gdg.community.dev/events/details/google-gdg-madrid-presents-hagamos-que-la-web-sea-mas-responsive-en-2024/)
@@ -46,7 +46,7 @@ The title of the talk, in Italian, was "Migliorare la reattività del web — Gu
 
 <figure>
 	{% image "me-speaking-bologna-js.jpg", "Andrea Verlicchi speaking at Bologna JS, a few people in the front rows, the slide shows the word 'Conclusion'", [648, 1296], "648px" %}
-  <figcaption>Me speaking at the Bologna JS Meetup.</figcaption>
+  <figcaption>At the Bologna JS Meetup. This is the only picture I've got 🤷‍♂️. It's pretty final.</figcaption>
 </figure>
 
 [📺 Video](https://youtube.com/live/ibZ1y3LxKKg?feature=share) &middot; [Meetup event page](https://www.meetup.com/bologna-js-meetup/events/300919249/)
