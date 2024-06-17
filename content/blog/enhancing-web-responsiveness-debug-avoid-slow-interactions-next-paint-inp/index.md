@@ -20,6 +20,19 @@ After providing an initial explanation of INP, I show how to debug slow interact
 
 [Slides](./pdf/lets-make-web-more-responsive-bologna-js-2024-05-22.pdf)
 
+## We Make Future, Bologna 🇮🇹 - <time datetime="2024-06-14">14 June 2024</time>
+
+<figure>
+	{% image "me-speaking-wmf-bologna.jpg", "Andrea Verlicchi speaking on the Coding Front-end stage of We Make Future Bologna. The slide shows the browser visiting a website, the developer tools of the browser open on the Perforamnce panel, and 7 steps described to the right. 1: Emulate device, 2: Performance options, 3: Slowdown the CPU, 4: Start recording, 5: Click around, 6: Type around, 7: Stop recording", [648, 1296], "648px" %}
+  <figcaption>On the Coding Front-end stage of WMF 2024: how to debug INP, the hard way.</figcaption>
+</figure>
+
+The title of the talk, in Italian, was "Migliorare la reattività del web — Guida pratica per debug e prevenzione delle interazioni lente".
+
+
+📺 Video coming soon - [Event page](https://www.wemakefuture.it/s/65e6dde7acc90ad8ebbfff17/#sala=CodingFrontend|codingfrontend)
+
+
 ## GDG Madrid 🇪🇸 - <time datetime="2024-06-04">4 June 2024</time>
 
 <figure>
@@ -27,7 +40,7 @@ After providing an initial explanation of INP, I show how to debug slow interact
   <figcaption>Me speaking at the Madrid chapter of Google Developer Groups.</figcaption>
 </figure>
 
-📺 Video coming soon - [GDG event page](https://gdg.community.dev/events/details/google-gdg-madrid-presents-hagamos-que-la-web-sea-mas-responsive-en-2024/)
+[GDG event page](https://gdg.community.dev/events/details/google-gdg-madrid-presents-hagamos-que-la-web-sea-mas-responsive-en-2024/)
 
 ## Bologna JS, Bologna 🇮🇹 - <time datetime="2024-05-22">22 May 2024</time>
 
