@@ -40,7 +40,9 @@ The title of the talk, in Italian, was "Migliorare la reattività del web — Gu
   <figcaption>Presenting at GDG Madrid, showing the first of the INP subparts: Input Delay.</figcaption>
 </figure>
 
-[GDG event page](https://gdg.community.dev/events/details/google-gdg-madrid-presents-hagamos-que-la-web-sea-mas-responsive-en-2024/)
+The title of the talk in Spanish was: "Hagamos que la web sea mas responsive en 2024".
+
+[GDG Madrid event](https://gdg.community.dev/events/details/google-gdg-madrid-presents-hagamos-que-la-web-sea-mas-responsive-en-2024/)
 
 ## Bologna JS, Bologna 🇮🇹 - <time datetime="2024-05-22">22 May 2024</time>
 
