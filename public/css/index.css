@@ -97,6 +97,8 @@
 		letter-spacing: -1px;
 		line-height: 0.9;
 		hyphens: auto;
+		text-wrap: balance;
+		text-wrap: pretty;
 	}
 
 	.content h2 {
@@ -308,9 +310,14 @@
 		text-decoration: none;
 		letter-spacing: -1px;
 		line-height: 1.2;
+		display: block;
+		hyphens: auto;
+		text-wrap: balance;
+		text-wrap: pretty;
 	}
 
 	.postlist-link[href] {
+		padding: 0;
 		color: var(--text-color-special-link);
 	}
 
