@@ -98,7 +98,6 @@
 		line-height: 0.9;
 		hyphens: auto;
 		text-wrap: balance;
-		text-wrap: pretty;
 	}
 
 	.content h2 {
@@ -313,7 +312,6 @@
 		display: block;
 		hyphens: auto;
 		text-wrap: balance;
-		text-wrap: pretty;
 	}
 
 	.postlist-link[href] {
