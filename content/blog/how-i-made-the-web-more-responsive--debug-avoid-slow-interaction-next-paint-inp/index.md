@@ -1,6 +1,6 @@
 ---
-title: "Talk: Enhancing web responsiveness. Debugging and avoiding slow interactions"
-description: "Videos, slides, dates and locations of my web performance talk I brought at conferences, Google Developer Groups (GDG) and meetups around Europe."
+title: "Talk: How I made the web more responsive — real-world case studies of INP optimizations"
+description: "Videos, slides, dates and locations of the web performance talk I brought at conferences, Google Developer Groups (GDG) and meetups around Europe where I discuss debugging and avoiding slow interactions based on my experience on auditing Interaction to Next Paint (INP) on clients' websites."
 date: 2024-05-24
 tags:
   - talks
@@ -8,7 +8,7 @@ tags:
   - interaction to next paint
 ---
 
-In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions, which are measured by the new metric Interaction to Next Paint (INP). This metric, introduced in March 2024, is part of the Core Web Vitals.
+In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions based on my experience on auditing Interaction to Next Paint (INP) on clients websites.
 
 <figure>
 	{% image "title-slide-enhancing-web-responsiveness.png", "Enhancing Web Responsiveness - Debugging and avoiding slow interactions - Andrea Verlicchi - Web Performance GDE - @verlok", [648, 1296], "648px" %}
@@ -16,9 +16,10 @@ In May 2024, I began speaking at local meetups and conferences about enhancing w
 </figure>
 <!-- TODO: Replace title slide with video when available -->
 
-After providing an initial explanation of INP, I show how to debug slow interactions using Google Chrome's Developer Tools and Real User Monitoring (RUM) data. I also cover three common mistakes to avoid to ensure snappy user interactions and keep your INP below 200 milliseconds.
+After providing an initial explanation of INP, I show how to debug slow interactions using Google Chrome's Developer Tools, the Core Web Vitals extension for Chrome, and Real User Monitoring (RUM) data. I also cover three common mistakes to avoid in order to ensure snappy user interactions and keep your INP below 200 milliseconds.
 
 [Slides](./pdf/lets-make-web-more-responsive-bologna-js-2024-05-22.pdf)
+
 
 ## We Make Future, Bologna 🇮🇹 - <time datetime="2024-06-14">14 June 2024</time>
 
