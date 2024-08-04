@@ -1,6 +1,6 @@
 ---
 title: "Talk: How I made the web more responsive — real-world case studies of INP optimizations"
-description: "Videos, slides, dates and locations of the web performance talk I brought at conferences, Google Developer Groups (GDG) and meetups around Europe where I discuss debugging and avoiding slow interactions based on my experience on auditing Interaction to Next Paint (INP) on clients' websites."
+description: "In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions based on my experience on auditing Interaction to Next Paint (INP) on clients' websites. Find here videos, slides, dates and locations my talk."
 date: 2024-05-24
 tags:
   - talks
@@ -8,7 +8,7 @@ tags:
   - interaction to next paint
 ---
 
-In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions based on my experience on auditing Interaction to Next Paint (INP) on clients websites.
+In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions based on my experience in auditing Interaction to Next Paint (INP) on clients' websites.
 
 <figure>
 	{% image "title-slide-enhancing-web-responsiveness.png", "Enhancing Web Responsiveness - Debugging and avoiding slow interactions - Andrea Verlicchi - Web Performance GDE - @verlok", [648, 1296], "648px" %}
@@ -24,7 +24,7 @@ After providing an initial explanation of INP, I show how to debug slow interact
 ## We Make Future, Bologna 🇮🇹 - <time datetime="2024-06-14">14 June 2024</time>
 
 <figure>
-	{% image "me-speaking-wmf-bologna.jpg", "Andrea Verlicchi speaking on the Coding Front-end stage of We Make Future Bologna. The slide shows the browser visiting a website, the developer tools of the browser open on the Perforamnce panel, and 7 steps described to the right. 1: Emulate device, 2: Performance options, 3: Slowdown the CPU, 4: Start recording, 5: Click around, 6: Type around, 7: Stop recording", [648, 1296], "648px" %}
+	{% image "me-speaking-wmf-bologna.jpg", "Andrea Verlicchi speaking on the Coding Front-end stage of We Make Future Bologna. The slide shows the browser visiting a website, the developer tools of the browser open on the Performance panel, and 7 steps described to the right. 1: Emulate device, 2: Performance options, 3: Slowdown the CPU, 4: Start recording, 5: Click around, 6: Type around, 7: Stop recording", [648, 1296], "648px" %}
   <figcaption>On the Coding Front-end stage of WMF 2024: how to debug INP, the hard way.</figcaption>
 </figure>
 
