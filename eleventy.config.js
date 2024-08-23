@@ -10,7 +10,7 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
 
-const pluginPWA = require("eleventy-plugin-pwa-v2");
+const eleventyPluginSpeculationRules = require("eleventy-plugin-speculation-rules");
 
 module.exports = function (eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
@@ -39,29 +39,15 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 
-	/*
-	PWA plugin
-	eleventyConfig.addPlugin(pluginPWA, {
-		cacheId: "andreaverlicchi.eu", // change this to your application id
-		globIgnores: [
-			// any files you don't want service worker to cache go here
-		],
-		runtimeCaching: [
-			{
-				// we always want a fresh copy of the home page -- url ending in ".eu"
-				// or any page -- url ending in "/"
-				urlPattern: /(\.eu$)|\/$/,
-				handler: "NetworkFirst",
-			},
-			{
-				// we serve stale copies of static assets while they're refreshed
-				urlPattern:
-					/^.*\.(jpg|png|mp4|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
-				handler: "StaleWhileRevalidate",
-			},
-		],
-	});
-  */
+	eleventyConfig.addPlugin(eleventyPluginSpeculationRules);
+
+	/* eleventyConfig.addPlugin(eleventyPluginSpeculationRules, {
+		mode: "prerender", // prefetch | prerender
+		eagerness: "moderate", // conservative | moderate | eager
+		noPrerenderSelector: ".no-prerender",
+		include: [],
+		exclude: [],
+	}); */
 
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
