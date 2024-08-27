@@ -7,7 +7,7 @@ tags:
   - cumulative layout shift
 ---
 
-**Cumulative Layout Shift (CLS)** is a core web vital metric that measures visual stability. It occurs when content on a web page moves unexpectedly, often causing user frustration. 
+**Cumulative Layout Shift (CLS)** is a core web vital metric that measures visual stability. It occurs when content on a web page moves unexpectedly, often causing user frustration.
 
 One common cause of CLS is a **promotional banner being injected at the top of the page** after the main content has already loaded. This would push down other elements on the page, leading to a poor user experience. Unluckily, this is a very common problem occurring in the websites I've been working on or consulting for.
 
@@ -33,92 +33,70 @@ Here's how we can implement this:
 
 ## Implementation
 
-Below is an example of how you can implement this in your HTML and JavaScript:
+Find here the [GitHub repository](https://github.com/verlok/cls-issue-promotional-banner-mitigation/) with the code and the [live demo](https://verlok.github.io/cls-issue-promotional-banner-mitigation/) on GitHub Pages.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CLS Issue Mitigation</title>
-    <style>
-      #promo-banner {
-        background-color: #ffcc00;
-        padding: 10px;
-        margin-bottom: 10px;
-        text-align: center;
-        display: none;
-      }
-      #close-banner {
-        background-color: #ff0000;
-        color: white;
-        padding: 5px 10px;
-        border: none;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="promo-banner"></div>
-    <button id="fetch-promo">Fetch Promo</button>
-    <button id="close-banner">Close Banner</button>
+For your convenience, here's the code copy-pasted from the demo page.
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const bannerContainerId = "promo-banner";
-        const bannerSessionKey = "promoBannerContent";
-        const bannerClosedKey = "promoBannerClosed";
+```js
+document.addEventListener("DOMContentLoaded", function () {
+  const bannerContainerId = "promo-banner"; // ID of the banner container
+  const bannerSessionKey = "promoBannerContent";
+  const bannerClosedKey = "promoBannerClosed";
 
-        const isBannerClosed = () =>
-          sessionStorage.getItem(bannerClosedKey) === "true";
+  // Function to check if the banner was closed by the user
+  const isBannerClosed = () =>
+    sessionStorage.getItem(bannerClosedKey) === "true";
 
-        const injectBanner = (bannerContent) => {
-          const bannerContainer = document.getElementById(bannerContainerId);
-          if (bannerContainer) {
-            bannerContainer.innerHTML = bannerContent;
-            bannerContainer.style.display = "block";
-          }
-        };
+  // Check if the banner was previously closed by the user. If yes, do nothing.
+  if (isBannerClosed()) return;
 
-        if (!isBannerClosed()) {
-          const savedBannerContent = sessionStorage.getItem(bannerSessionKey);
-          if (savedBannerContent) {
-            injectBanner(savedBannerContent);
-          }
+  // Function to inject the banner into the page
+  const injectBanner = (bannerContent) => {
+    const bannerContainer = document.getElementById(bannerContainerId);
+    if (bannerContainer) {
+      bannerContainer.innerHTML = bannerContent;
+      bannerContainer.style.display = "block";
+    }
+  };
 
-          const loadPromotion = () => {
-            const bannerContent = "<div>Your promotion content here</div>";
-            sessionStorage.setItem(bannerSessionKey, bannerContent);
-            injectBanner(bannerContent);
-          };
+  // 👀 Check if banner content exists in sessionStorage, and eventually inject it
+  const savedBannerContent = sessionStorage.getItem(bannerSessionKey);
+  if (savedBannerContent) {
+    injectBanner(savedBannerContent);
+  }
 
-          document
-            .getElementById("fetch-promo")
-            .addEventListener("click", loadPromotion);
+  // Function to simulate the fetch of the promotion.
+  const loadPromotion = () => {
+    setTimeout(() => {
+      const bannerContent = "<div>Your promotion content here</div>";
 
-          const closeBanner = () => {
-            sessionStorage.setItem(bannerClosedKey, "true");
-            const bannerContainer = document.getElementById(bannerContainerId);
-            if (bannerContainer) {
-              bannerContainer.style.display = "none";
-            }
-          };
+      // Inject the banner content
+      injectBanner(bannerContent);
 
-          document
-            .getElementById("close-banner")
-            .addEventListener("click", closeBanner);
-        }
-      });
-    </script>
-  </body>
-</html>
+      // 👀 Save the banner content to sessionStorage for the next time
+      sessionStorage.setItem(bannerSessionKey, bannerContent);
+    }, 600);
+  };
+
+  // Function to handle banner close action
+  const closeBanner = () => {
+    sessionStorage.setItem(bannerClosedKey, "true");
+    const bannerContainer = document.getElementById(bannerContainerId);
+    if (bannerContainer) {
+      bannerContainer.style.display = "none";
+    }
+  };
+
+  // Simulate fetching the promotion
+  loadPromotion();
+
+  // Example event listener for closing the banner
+  document
+    .getElementById("close-banner")
+    .addEventListener("click", closeBanner);
+});
+</script>
 ```
-
-### Repository and demo
-
-You can find the [repository](https://github.com/verlok/cls-issue-promotional-banner-mitigation/) and the [live demo](https://verlok.github.io/cls-issue-promotional-banner-mitigation/) on GitHub.
-
 
 ## How It Works
 
