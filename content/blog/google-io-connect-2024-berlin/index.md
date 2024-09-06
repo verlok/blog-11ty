@@ -7,7 +7,10 @@ tags:
 ---
 
 Google I/O is the annual Google event for developers which takes place in their offices in California, <abbr title="United States of America">USA</title>.
-Google I/O Connect <abbr title="Europe, Middle-East and Africa">EMEA</abbr> is ... ⚠️ continue from here. As well as last year, I was invited to Google I/O Connect 2024. And as a Google Developer Expert (GDE), on the next day I also took part to the GDE Forum in Berlin Google offices. Keep reading to find out what these events were like and what I liked most of them.
+Google I/O Connect is a series of hands-on, in-person developer events held around the world, to help developers apply the technology and announcements from Google I/O through live sessions, demos, codelabs, office hours, and more.
+As well as last year, I was invited to Google I/O Connect <abbr title="Europe, Middle-East and Africa">EMEA</abbr> 2024. 
+And as a Google Developer Expert (GDE), on the next day I also took part to the GDE Forum in Berlin Google offices. 
+Keep reading to find out what these events were like and what I liked most of them.
 
 <figure>
 	{% image "01_cover.jpg", "Andrea Verlicchi leaning on the slash between the I and the O of the Google I/O Connect logo covered in flowers", [648, 1296], "648px", true %}
