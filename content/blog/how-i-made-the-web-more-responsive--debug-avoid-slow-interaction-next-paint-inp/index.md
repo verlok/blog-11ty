@@ -1,25 +1,35 @@
 ---
 title: "Talk: How I made the web more responsive — real-world case studies of INP optimizations"
 description: "In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions based on my experience on auditing Interaction to Next Paint (INP) on clients' websites. Find here videos, slides, dates and locations my talk."
-date: 2024-05-24
+date: 2024-09-17
 tags:
   - talks
   - web performance
   - interaction to next paint
 ---
 
-In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions based on my experience in auditing Interaction to Next Paint (INP) on clients' websites.
+In May 2024, I started speaking at local meetups and conferences about improving web responsiveness. My talks focus on debugging and preventing slow interactions, drawing from my experience auditing Interaction to Next Paint (INP) on dozens of clients' websites.
 
 <figure>
-	{% image "title-slide-enhancing-web-responsiveness.png", "Enhancing Web Responsiveness - Debugging and avoiding slow interactions - Andrea Verlicchi - Web Performance GDE - @verlok", [648, 1296], "648px" %}
-  <figcaption>The title slide of my talk</figcaption>
+	{% image "main-image.jpg", "Andrea Verlicchi speaking at We Love Speed, Nantes, 2024", [648, 1296], "648px" %}
+  <figcaption>Me speasking at We Love Speed 2024, Nantes</figcaption>
 </figure>
 <!-- TODO: Replace title slide with video when available -->
 
-After providing an initial explanation of INP, I show how to debug slow interactions using Google Chrome's Developer Tools, the Core Web Vitals extension for Chrome, and Real User Monitoring (RUM) data. I also cover three common mistakes to avoid in order to ensure snappy user interactions and keep your INP below 200 milliseconds.
+After providing an initial explanation of INP, I demonstrate how to debug slow interactions using both Chrome DevTools and Real User Monitoring (RUM) data. I then illustrate three common mistakes I encountered while auditing INP on dozens of websites and explain how to avoid them to ensure snappy user interactions and keep your INP below 200 milliseconds.
 
-[Slides](./pdf/lets-make-web-more-responsive-bologna-js-2024-05-22.pdf)
+[📽️ Slides](https://docs.google.com/presentation/d/1kSHr9mEN2Q4Nyis8uWvxoA3_pqOIywr3TXCLeO_-4qA/edit)
 
+## We Love Speed, Nantes 🇫🇷 - <time datetime="2024-07-17">17 September 2024</time>
+
+<figure>
+	{% image "me-speaking-welovespeed-nantes.jpg", "Andrea Verlicchi speaking on stage at We Love Speed, Nantes. The slide shows the flame chart of the performance trace run after an INP optimization", [648, 1296], "648px" %}
+  <figcaption>On stage at We Love Speed 2024.</figcaption>
+</figure>
+
+The title of the talk was "How I made the web more responsive - real-world case studies of INP optimizations", in French "Comment j’ai rendu le web plus réactif — études de cas concrets d’optimisations d’INP".
+
+📺 Video coming soon - [Event page](https://www.welovespeed.com/en/2024/talks/how-i-made-the-web-more-responsive/)
 
 ## We Make Future, Bologna 🇮🇹 - <time datetime="2024-06-14">14 June 2024</time>
 
@@ -30,8 +40,7 @@ After providing an initial explanation of INP, I show how to debug slow interact
 
 The title of the talk, in Italian, was "Migliorare la reattività del web — Guida pratica per debug e prevenzione delle interazioni lente".
 
-
-📺 Video coming soon - [Event page](https://www.wemakefuture.it/s/65e6dde7acc90ad8ebbfff17/#sala=CodingFrontend|codingfrontend)
+[📺 Video](https://www.youtube.com/watch?v=OQ8djUCFHTk) - [Event page](https://www.wemakefuture.it/s/65e6dde7acc90ad8ebbfff17/#sala=CodingFrontend|codingfrontend)
 
 
 ## GDG Madrid 🇪🇸 - <time datetime="2024-06-04">4 June 2024</time>
