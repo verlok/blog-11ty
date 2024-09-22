@@ -313,7 +313,10 @@
 		hyphens: auto;
 		text-wrap: balance;
 	}
-
+	.postlist-image {
+		display: block;
+		margin-top: 1rem;
+	}
 	.postlist-link[href] {
 		padding: 0;
 		color: var(--text-color-special-link);
@@ -347,8 +350,16 @@
 		text-decoration: none;
 	}
 
-	/* About page */
+	/* Post list image */
+	@media screen and (min-width: 620px) {
+		.postlist-image {
+			max-width: 45%;
+			float: left;
+			margin-right: 1rem;
+		}
+	}
 
+	/* About page */
 	@media (min-width: 620px) {
 		.about-face {
 			float: left;
@@ -358,7 +369,6 @@
 	}
 
 	/* Contact */
-
 	.contact-lists ul {
 		list-style-type: none;
 		padding: 0;
@@ -370,13 +380,11 @@
 		text-decoration: none;
 		align-items: baseline;
 	}
-
 	.icon {
 		display: inline-block;
 		width: 16px;
 		height: 16px;
 	}
-
 	.icon path {
 		fill: var(--icon-color-fill);
 	}
