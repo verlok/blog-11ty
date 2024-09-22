@@ -43,6 +43,7 @@
 		"markdown-it-anchor": "^8.6.7"
 	},
 	"dependencies": {
-		"eleventy-plugin-pwa-v2": "^1.0.1"
+		"eleventy-plugin-pwa-v2": "^1.0.1",
+		"jsdom": "^25.0.1"
 	}
 }

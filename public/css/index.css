@@ -264,9 +264,14 @@
 		text-decoration: none;
 		letter-spacing: -1px;
 		line-height: 1.2;
+		display: block;
 		/* text-underline-position: from-font;
 		text-underline-offset: 4px;
 		text-decoration-thickness: 1px; */
+	}
+	.postlist-image {
+		display: block;
+		margin-top: 1rem;
 	}
 	.postlist-link[href] {
 		color: var(--text-color-special-link);
@@ -295,8 +300,16 @@
 		text-decoration: none;
 	}
 
-	/* About page */
+	/* Post list image */
+	@media screen and (min-width: 620px) {
+		.postlist-image {
+			max-width: 45%;
+			float: left;
+			margin-right: 1rem;
+		}
+	}
 
+	/* About page */
 	@media (min-width: 620px) {
 		.about-face {
 			float: left;
@@ -306,7 +319,6 @@
 	}
 
 	/* Contact */
-
 	.contact-lists ul {
 		list-style-type: none;
 		padding: 0;
@@ -317,13 +329,11 @@
 		text-decoration: none;
 		align-items: baseline;
 	}
-
 	.icon {
 		display: inline-block;
 		width: 16px;
 		height: 16px;
 	}
-
 	.icon path {
 		fill: var(--icon-color-fill);
 	}
