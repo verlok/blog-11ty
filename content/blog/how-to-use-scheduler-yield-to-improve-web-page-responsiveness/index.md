@@ -78,14 +78,14 @@ async function doWork () {
 You can try `scheduler.yield` on your browser by enabling the "experimental web platform features" flag, as shown in the following image:
 
 <figure>
-	{% image "enable-experimental-web-platform-features.png", "Experimental web platform features enabled in Chrome browser's settings", [648, 1296], "648px" %}
+	{% image "enable-experimental-web-platform-features.png", "Experimental web platform features enabled in Chrome browser's settings", [648, 1296], "648px", true %}
 	<figcaption>How to enable experimental web platform features in Chrome browser</figcaption>
 </figure>
 
 And then, you will be able to use it:
 
 <figure>
-	{% image "how-it-looks-in-console.png", "scheduler.yield is present, scheduler.yield() returns a Promise (pending)", [648, 1296], "648px" %}
+	{% image "how-it-looks-in-console.png", "scheduler.yield is present, scheduler.yield() returns a Promise (pending)", [648, 1296], "648px", true %}
 	<figcaption>How `scheduler.yield` looks when invoked in the developer tools console</figcaption>
 </figure>
 

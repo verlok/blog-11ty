@@ -70,15 +70,22 @@ module.exports = (eleventyConfig) => {
 	};
 	*/
 
-	eleventyConfig.addFilter("extractImage", function (content) {
+	eleventyConfig.addFilter("extractImage", function (content, isFirst) {
 		const dom = new JSDOM(content);
 		const fig = dom.window.document.querySelector("figure");
 		if (!fig) return "";
 		const picture = fig.querySelector("picture");
 		const img = fig.querySelector("img");
+		if (isFirst) {
+			img.setAttribute("fetchpriority", "high");
+			img.setAttribute("loading", "eager");
+		} else {
+			img.removeAttribute("fetchpriority");
+			img.setAttribute("loading", "lazy");
+		}
 		const returnedTag = picture || img;
 		if (returnedTag) {
-			returnedTag.classList.add('postlist-image')
+			returnedTag.classList.add("postlist-image");
 			return returnedTag.outerHTML;
 		}
 		return "";

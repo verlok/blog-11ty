@@ -42,7 +42,7 @@ Find below the slides of my talk, both in English and Italian language.
 ## DevFest, Vienna 🇦🇹 – <time datetime="2023-10-14">14 October 2023</time>
 
 <figure>
-	{% image "devfest-vienna.webp", "Andrea Verlicchi on stage at DevFest Vienna, 2023", [648, 1296], "648px" %}
+	{% image "devfest-vienna.webp", "Andrea Verlicchi on stage at DevFest Vienna, 2023", [648, 1296], "648px", true %}
   <figcaption>Me on stage explaining what is Interaction to Next Paint</figcaption>
 </figure>
 

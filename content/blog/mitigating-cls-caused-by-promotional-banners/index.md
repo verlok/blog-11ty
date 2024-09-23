@@ -1,11 +1,16 @@
 ---
 title: "Mitigating CLS Caused by Promotional Banners: A Practical Solution"
-description: "Let's explore a practical solution for mitigating Cumulative Layout Shift (CLS) caused by promotional banners on websites. It explains how to prevent unexpected layout shifts by using sessionStorage to remember the banner's content and display state across page loads."
+description: "Exploring a practical solution for mitigating Cumulative Layout Shift (CLS) caused by promotional banners. Prevent unexpected layout shifts by using sessionStorage to remember the banner's content and display state across page loads."
 date: 2024-08-26
 tags:
   - web performance
   - cumulative layout shift
 ---
+
+<figure>
+	{% image "screenshot.png", "The home page of a website with a top promotional banner pushing down the content below it", [648, 1296], "648px" %}
+	<figcaption>A website with a top promotional banner pushing down the content below it</figcaption>
+</figure>
 
 **Cumulative Layout Shift (CLS)** is a core web vital metric that measures visual stability. It occurs when content on a web page moves unexpectedly, often causing user frustration.
 
