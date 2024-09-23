@@ -292,11 +292,20 @@
 		margin-bottom: 2rem;
 		display: grid;
 		gap: 1rem;
+	}
+
+	.postlist-item--no-image {
+		grid-template-areas:
+			"title"
+			"description"
+			"button";
+	}
+	.postlist-item--with-image {
 		grid-template-areas:
 			"title"
 			"image"
 			"description"
-			"button button";
+			"button";
 	}
 
 	.postlist-link {
@@ -367,13 +376,13 @@
 
 	/* Post list image left */
 	@media screen and (min-width: 620px) {
-		.postlist-item {
-			display: grid;
+		.postlist-item--with-image {
 			grid-template-areas:
 				"title title"
 				"image description"
 				"button button";
 		}
+
 		.postlist-title {
 			grid-area: title;
 		}
