@@ -1,6 +1,6 @@
 ---
 title: "Talk: How I made the web more responsive — real-world case studies of INP optimizations"
-description: "In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions based on my experience on auditing Interaction to Next Paint (INP) on clients' websites. Find here videos, slides, dates and locations."
+description: "In May 2024, I began speaking at conferences and meetups about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions based on my experience on auditing Interaction to Next Paint (INP) on clients' websites. Videos, slides, dates and locations of my talk."
 date: 2024-09-17
 tags:
   - talks
@@ -8,7 +8,7 @@ tags:
   - interaction to next paint
 ---
 
-In May 2024, I started speaking at local meetups and conferences about improving web responsiveness. My talks focus on debugging and preventing slow interactions, drawing from my experience auditing Interaction to Next Paint (INP) on dozens of clients' websites.
+In May 2024, I started speaking at conferences and meetups about improving web responsiveness. My talks focus on debugging and preventing slow interactions, drawing from my experience auditing Interaction to Next Paint (INP) on dozens of clients' websites.
 
 <figure>
 	{% image "main-image.jpg", "Andrea Verlicchi speaking at We Love Speed, Nantes, 2024", [648, 1296], "648px" %}
