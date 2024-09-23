@@ -9,6 +9,11 @@ tags:
 
 With each new iOS release, I always look forward to exploring the latest features Apple has to offer. iOS 18 has introduced several changes, some small and subtle, others more profound, that have significantly enhanced my user experience. Here are my favorite new features in iOS 18 and why I think they’re a game-changer.
 
+<figure>
+	{% image "IMG_5193.PNG", "The iOS 18 keyboard switcher showing different keyboards sets: Italian and English, Portuguese and French, Spanish and German", [648, 1296], "648px", true %}
+	<figcaption>The iOS 18 keyboard switcher showing different keyboards sets: Italian and English, Portuguese and French, Spanish and German</figcaption>
+</figure>
+
 ## 1. Bilingual Keyboards: A Seamless Multilingual Experience
 
 One of my absolute favorite updates is the new keyboard functionality that allows me to type in multiple languages without changing the input language manually. It's much better this way! Essentially, iOS 18 offers bilingual keyboards, so I can write messages like:
