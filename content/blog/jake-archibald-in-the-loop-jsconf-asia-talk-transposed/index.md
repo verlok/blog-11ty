@@ -55,7 +55,7 @@ So, what we do is this: we queue a task. We queue a task to get back on to the m
 ## Meet the event loop
 
 <figure>
-	{% image "01 - the event loop and the task detour on the left.png", "The event loop and the task detour on the left", [648, 1296], "648px", true %}
+	{% image "01 - the event loop and the task detour on the left.png", "The event loop and the task detour on the left", [648, 1296], "648px" %}
 	<figcaption>This is how Jake depicted the event loop. It's a circle, the execution goes round and round, until a task is queued in the "task detour" on the left.</figcaption>
 </figure>
 

@@ -8,7 +8,7 @@ tags:
 ---
 
 <figure>
-	{% image "screenshot.png", "The home page of a website with a top promotional banner pushing down the content below it", [648, 1296], "648px", true %}
+	{% image "screenshot.png", "The home page of a website with a top promotional banner pushing down the content below it", [648, 1296], "648px" %}
 	<figcaption>A website with a top promotional banner pushing down the content below it</figcaption>
 </figure>
 
