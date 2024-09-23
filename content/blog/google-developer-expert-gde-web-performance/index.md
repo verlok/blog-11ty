@@ -10,7 +10,7 @@ tags:
 In December 2023 I became a Google Developer Expert (GDE) for Web Performance. [Google Developer Experts](https://developers.google.com/community/experts) is a Google program to create a global network of professionals, influencers, and thought leaders, and enable them to share their knowledge with the developer community, like speaking at events, sharing best practices, and mentoring others.
 
 <figure>
-	{% image "experts_logo.png", "Experts", [648, 1296], "648px", true %}
+	{% image "experts_logo.png", "Experts", [648, 1296], "648px" %}
 	<figcaption>The Google Develoeper Experts logo</figcaption>
 </figure>
 
