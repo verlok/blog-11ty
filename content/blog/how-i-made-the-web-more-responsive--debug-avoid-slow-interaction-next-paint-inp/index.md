@@ -1,6 +1,6 @@
 ---
 title: "Talk: How I made the web more responsive — real-world case studies of INP optimizations"
-description: "In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions based on my experience on auditing Interaction to Next Paint (INP) on clients' websites. Find here videos, slides, dates and locations my talk."
+description: "In May 2024, I began speaking at local meetups and conferences about enhancing web responsiveness. Specifically, I discuss debugging and avoiding slow interactions based on my experience on auditing Interaction to Next Paint (INP) on clients' websites. Find here videos, slides, dates and locations."
 date: 2024-09-17
 tags:
   - talks

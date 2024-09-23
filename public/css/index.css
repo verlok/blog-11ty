@@ -292,6 +292,21 @@
 		margin-bottom: 2rem;
 	}
 
+	.postlist-link[href] > .postlist-title {
+		text-decoration: none;
+		padding: 0;
+		color: var(--text-color-special-link);
+		margin-bottom: 1rem;
+	}
+
+	.postlist-link[href]:active > .postlist-title {
+		color: var(--text-color-special-link-active);
+	}
+
+	.postlist-link[href]:visited > .postlist-title {
+		color: var(--text-color-special-link-visited);
+	}
+
 	.postlist-date,
 	.postlist-item:before {
 		font-size: 0.8125rem;
@@ -302,7 +317,7 @@
 		word-spacing: -0.5px;
 	}
 
-	.postlist-link {
+	.postlist-title {
 		font-size: 1.5rem;
 		font-weight: 700;
 		flex-basis: calc(100% - 1.5rem);
@@ -312,26 +327,18 @@
 		display: block;
 		hyphens: auto;
 		text-wrap: balance;
+		margin-bottom: 1rem;
 	}
 	.postlist-image {
 		display: block;
-		margin-top: 1rem;
-	}
-	.postlist-link[href] {
-		padding: 0;
-		color: var(--text-color-special-link);
 	}
 
-	.postlist-link[href]:active {
-		color: var(--text-color-special-link-active);
-	}
-
-	.postlist-link[href]:visited {
-		color: var(--text-color-special-link-visited);
-	}
-
-	.postlist-item-active .postlist-link {
+	.postlist-item-active {
 		font-weight: bold;
+	}
+
+	.postlist-description {
+		color: var(--text-color);
 	}
 
 	.postlist-button {
@@ -350,12 +357,29 @@
 		text-decoration: none;
 	}
 
-	/* Post list image */
+	/* Post list image left */
 	@media screen and (min-width: 620px) {
+		.postlist-item {
+			display: grid;
+			grid-template-areas:
+				"title title"
+				"image description"
+				"button button";
+		}
+		.postlist-link {
+			display: contents;
+		}
+		.postlist-title {
+			grid-area: title;
+		}
 		.postlist-image {
-			max-width: 45%;
-			float: left;
-			margin-right: 1rem;
+			grid-area: image;
+		}
+		.postlist-description {
+			grid-area: description;
+		}
+		.postlist-buttonslot {
+			grid-area: button;
 		}
 	}
 
