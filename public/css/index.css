@@ -290,19 +290,28 @@
 
 	.postlist-item {
 		margin-bottom: 2rem;
+		display: grid;
+		gap: 1rem;
+		grid-template-areas:
+			"title"
+			"image"
+			"description"
+			"button button";
 	}
 
-	.postlist-link[href] > .postlist-title {
+	.postlist-link {
+		display: contents;
+	}
+
+	.postlist-link[href] {
 		text-decoration: none;
-		padding: 0;
-		color: var(--text-color-special-link);
-		margin-bottom: 1rem;
 	}
-
+	.postlist-link[href] > .postlist-title {
+		color: var(--text-color-special-link);
+	}
 	.postlist-link[href]:active > .postlist-title {
 		color: var(--text-color-special-link-active);
 	}
-
 	.postlist-link[href]:visited > .postlist-title {
 		color: var(--text-color-special-link-visited);
 	}
@@ -321,13 +330,12 @@
 		font-size: 1.5rem;
 		font-weight: 700;
 		flex-basis: calc(100% - 1.5rem);
-		text-decoration: none;
 		letter-spacing: -1px;
 		line-height: 1.2;
 		display: block;
 		hyphens: auto;
 		text-wrap: balance;
-		margin-bottom: 1rem;
+		margin: 0;
 	}
 	.postlist-image {
 		display: block;
@@ -339,6 +347,7 @@
 
 	.postlist-description {
 		color: var(--text-color);
+		margin: 0;
 	}
 
 	.postlist-button {
@@ -347,7 +356,6 @@
 		border: 1px solid var(--text-color-link);
 		padding: 0.35rem 0.75rem;
 		border-radius: 0.3rem;
-		text-decoration: none;
 		font-size: 90%;
 	}
 
@@ -365,9 +373,6 @@
 				"title title"
 				"image description"
 				"button button";
-		}
-		.postlist-link {
-			display: contents;
 		}
 		.postlist-title {
 			grid-area: title;
