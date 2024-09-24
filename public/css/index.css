@@ -70,10 +70,6 @@
 		box-sizing: border-box;
 	}
 
-	@view-transition {
-		navigation: auto;
-	}
-
 	html,
 	body {
 		padding: 0;
