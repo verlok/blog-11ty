@@ -49,33 +49,13 @@ module.exports = (eleventyConfig) => {
 			return eleventyImage.generateHTML(metadata, imageAttributes);
 		}
 	);
-	/*
-	eleventyConfig.addShortcode("first-image", (post) => {
-		extractFirstImage(post);
-	});
-
-	const extractFirstImage = (templateContent) => {
-		if (templateContent.includes("<picture>")) {
-			const pictureTagBegin = templateContent.indexOf("<picture>");
-			const pictureTagEnd =
-				templateContent.indexOf("</picture>", pictureTagBegin) +
-				"</picture>".length;
-			//console.log(pictureTagBegin, pictureTagEnd);
-			//console.log(templateContent.substring(pictureTagBegin, pictureTagEnd));
-			return "Cippa lippa";
-			return templateContent.substring(pictureTagBegin, pictureTagEnd);
-		}
-
-		return "";
-	};
-	*/
 
 	eleventyConfig.addFilter("extractImage", function (content, isFirst) {
 		const dom = new JSDOM(content);
-		const fig = dom.window.document.querySelector("figure");
-		if (!fig) return "";
-		const picture = fig.querySelector("picture");
-		const img = fig.querySelector("img");
+		const img = dom.window.document.querySelector("img");
+		if (!img) return "";
+		const picture = dom.window.document.querySelector("picture");
+		// WARNING: CAN THE IMAGE BE FROM A DIFFERENT PICTURE?
 		if (isFirst) {
 			img.setAttribute("fetchpriority", "high");
 			img.setAttribute("loading", "eager");
