@@ -2,6 +2,16 @@ const path = require("path");
 const eleventyImage = require("@11ty/eleventy-img");
 const { JSDOM } = require("jsdom");
 
+const correctLazyAttributes = (img, isFirst) => {
+	if (isFirst) {
+		img.setAttribute("fetchpriority", "high");
+		img.setAttribute("loading", "eager");
+	} else {
+		img.removeAttribute("fetchpriority");
+		img.setAttribute("loading", "lazy");
+	}
+};
+
 module.exports = (eleventyConfig) => {
 	function relativeToInputPath(inputPath, relativeFilePath) {
 		let split = inputPath.split("/");
@@ -52,30 +62,12 @@ module.exports = (eleventyConfig) => {
 
 	eleventyConfig.addFilter("extractImage", function (content, isFirst) {
 		const dom = new JSDOM(content);
-
-		// Find the first image
 		const img = dom.window.document.querySelector("img");
 		if (!img) return "";
-		// And the closest picture
+		img.classList.add("postlist-image");
+		correctLazyAttributes(img, isFirst);
 		const picture = img.closest("picture");
-
-		// If this is asked to be the first, add fetch priority and eager
-		// If not the first, set it to loading lazy and remove fetchpriority
-		if (isFirst) {
-			img.setAttribute("fetchpriority", "high");
-			img.setAttribute("loading", "eager");
-		} else {
-			img.removeAttribute("fetchpriority");
-			img.setAttribute("loading", "lazy");
-		}
-
-		// If a picture was found, return it, else return the image
-		const returnedTag = picture || img;
-
-		// Ah, I need that class on the correct tag
-		returnedTag.classList.add("postlist-image");
-
-		// Now I can return it
-		return returnedTag.outerHTML;
+		//const returnedTag = picture || img;
+		return (picture || img).outerHTML;
 	});
 };
