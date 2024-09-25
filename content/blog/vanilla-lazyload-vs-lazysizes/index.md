@@ -10,6 +10,8 @@ tags:
 
 As the author of vanilla-lazyload, it's not the first time I get asked the question: <q>What are the differences between vanilla-lazyload and lazysizes?</q> This blog post is the answer to that question.
 
+{% image "vanilla-lazyload-vs-lazysizes.webp", "vanilla-lazyload vs lazysizes", [648, 1296], "648px" %}
+
 ## What are vanilla-lazyload and lazy sizes?
 
 [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload/) and [lazysizes](https://github.com/afarkas/lazysizes/) are two popular Javascript libraries to [lazyload](https://web.dev/lazy-loading/) images and other DOM elements, meaning <strong>load them only when they enter the visible portion of the web page</strong> (the browser viewport), or a little bit earlier than they do.

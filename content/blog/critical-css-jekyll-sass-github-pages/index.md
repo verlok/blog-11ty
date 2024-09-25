@@ -10,6 +10,8 @@ tags:
 
 My blog used to be run by **Jekyll on GitHub pages** and its CSS was built using SASS. Today I decided to boost performance even more inlining the render-blocking _critical_ CSS, but even searching the internet I struggled to find an easy way to do it. This post is for you, in case you want to do the same.
 
+{% image "critical-css-jekyll-sass.png", "Random blurred code", [648, 1296], "648px" %}
+
 ## The critical style
 
 In the critical SASS file, use the SASS `@import` directive to include all the partials that have an impact on the layout of your page. Also include your _variables_ and _mixins_ that might be required from the imported partials.

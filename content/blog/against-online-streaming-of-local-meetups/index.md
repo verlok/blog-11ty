@@ -9,6 +9,8 @@ tags:
 
 I like to take part to local meetup events. They are informative, fun, and socially engaging at the same time. Sometimes, the meetup organizers get asked to stream events online. It would be a cool feature, I guess, but if you ask me, it would do more harm than good the community. Let me explain why.
 
+{% image "online_events.webp", "A sketch of a computer with persons having an online meeting", [648, 1296], "648px" %}
+
 Listening to the meetup topic in person, together with other people who share your interests, focused on the speaker and her/his slides, it's a type of experience. Watching to such an event at home, in front of a screen, alone, with distractions calling for your attention, far from where the event is happening, is a much weaker type of experience.
 
 You could easily find some blog posts or online tutorial about the same topic of the meetup event, most likely of a better quality. The real value of in-person meetup lies in socialising, networking, in the exchange of ideas that happens before and after the talk, and if you want, at the pizza place afterwards.

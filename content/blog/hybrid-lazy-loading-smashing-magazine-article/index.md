@@ -10,6 +10,11 @@ tags:
 
 On <time datetime="2019-05-06">May 6th, 2019</time> I wrote my first article on **Smashing Magazine**: <a href="https://www.smashingmagazine.com/2019/05/hybrid-lazy-loading-progressive-migration-native/">Hybrid Lazy Loading: A Progressive Migration To Native Lazy Loading</a>.
 
+<figure>
+  {% image "vanilla-lazyload-smashing.png", "A screenshot of the article on Smashing Magazine", [648, 1296], "648px" %}
+  <figcaption>A screenshot of the article on Smashing Magazine</figcaption>
+</figure>
+
 > Native lazy loading is coming to the web. Since it doesn’t depend on JavaScript, it will revolutionize the way we lazy load content today, making it easier for developers to lazy load images and iframes. But it’s not a feature we can polyfill, and it will take some time before it becomes usable across all browsers. In this article, you’ll learn how it works and how you can progressively replace your JavaScript-driven lazy loading with its native alternative, thanks to hybrid lazy loading.
 
 In the past few weeks, you might have heard or read about native lazy loading, which is coming to Chromium 75 in the upcoming months.

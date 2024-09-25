@@ -11,6 +11,8 @@ tags:
 
 On April 6th 2019, Addy Osmany wrote about [native image lazy-loading](https://addyosmani.com/blog/lazy-loading/). Two days later Yvain, a front-end developer from Paris, [asked me](https://github.com/verlok/vanilla-lazyload/issues/331) if my [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload/) could be a **loading attribute polyfill**, inspiring me to develop and release version 12 of the script, which features a new `use_native` option to enable native lazy-loading where supported. You can already use it today.
 
+{% image "lazyload-use_native.png", "Use native in vanilla lazyload", [648, 1296], "648px" %}
+
 ## Wait... what?
 
 In case you missed Addy Osmani's article, it will be possible to _natively_ lazy load images through the `loading="lazy"` attribute on images and iframes, and it's already possible on Chrome 75 (currently Canary).

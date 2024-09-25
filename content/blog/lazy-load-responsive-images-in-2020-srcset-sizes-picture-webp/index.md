@@ -11,6 +11,8 @@ tags:
 
 Do you want to boost performance on your website? You can do that by using **responsive images** and **lazy loading**! In this article, you will find the **HTML, JavaScript, and CSS code** to lazy load responsive images, to make browsers use **modern image formats** like **WebP** and **Jpeg2000**, and to enable **native lazy load** where supported.
 
+{% image "lazy-load-responsive-images-2020.webp", "Lazy Load responsive images in 2020", [648, 1296], "648px" %}
+
 ## Definitions
 
 **Responsive images** are `img` tags that download the right image source depending on your design and the user's device. You can provide information about your design in the `sizes` attribute and a list of image sources in the `srcset` attribute. You can also use media queries by wrapping your `img` in a `picture` tag. More about [responsive images in the MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).

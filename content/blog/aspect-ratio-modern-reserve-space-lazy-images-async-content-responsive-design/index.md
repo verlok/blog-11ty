@@ -12,8 +12,9 @@ tags:
   - core web vitals
 ---
 
-
 To avoid **layout shifting** and optimize for the [Cumulative Layout Shift](https://web.dev/cls/) [web vital](https://web.dev/vitals/) in you web pages, you need to reserve space for any **content that might be rendered later in time**. This is the case for images, videos and any asynchonously loaded content (e.g with AJAX calls). Here's a new way to do it.
+
+{% image "aspect-ratio.png", "Different aspect ratios represented in squares and rectangles. 1/1, 4/3, 16/9, 2/3", [648, 1296], "648px" %}
 
 ## The good old way
 
