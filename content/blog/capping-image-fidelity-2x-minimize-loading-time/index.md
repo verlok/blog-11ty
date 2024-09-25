@@ -8,6 +8,8 @@ tags:
   - images
 ---
 
+{% image "capping-image-fidelity.jpg", "Capping image fidelity to 2x", [648, 1296], "648px" %}
+
 With the rise of very high density “super retina” displays in the newest high-end devices, capping image fidelity to 2x leads to a big improvement in terms of rendering speed, and no perceivable quality loss for your users. Here’s a new best practice on how to do that.
 
 ## Images x screen densities
@@ -20,14 +22,11 @@ So the first thing we started doing was to provide both a standard image and an 
 
 ```html
 <img
-    src="batman_1x.jpg"
-    srcset="
-        batman_1x.jpg 1x,
-        batman_2x.jpg 2x
-    "
-    alt="Batman, Super-man and Wonder Woman"
-    width="1280"
-    height="720"
+	src="batman_1x.jpg"
+	srcset="batman_1x.jpg 1x, batman_2x.jpg 2x"
+	alt="Batman, Super-man and Wonder Woman"
+	width="1280"
+	height="720"
 />
 ```
 
@@ -41,14 +40,10 @@ The simplest way to code responsive images is to list all the image sizes we hav
 
 ```html
 <img
-    src="batman_1280w.jpg"
-    srcset="
-        batman_1280w.jpg 1280w,
-        batman_1024w.jpg 1024w,
-        batman_768w.jpg   768w
-    "
-    alt="Batman, Super-man and Wonder Woman"
-    sizes="100vw"
+	src="batman_1280w.jpg"
+	srcset="batman_1280w.jpg 1280w, batman_1024w.jpg 1024w, batman_768w.jpg 768w"
+	alt="Batman, Super-man and Wonder Woman"
+	sizes="100vw"
 />
 ```
 
@@ -56,15 +51,15 @@ Additionally, when the size of your images changes depending on media queries, w
 
 ```html
 <img
-    src="batman_1280w.jpg"
-    srcset="
-        batman_1440w.jpg 1440w,
-        batman_1280w.jpg 1280w,
-        batman_1024w.jpg 1024w,
-        batman_768w.jpg   768w
-    "
-    alt="Batman, Super-man and Wonder Woman"
-    sizes="(min-width: 640px) 50vw, 100vw"
+	src="batman_1280w.jpg"
+	srcset="
+		batman_1440w.jpg 1440w,
+		batman_1280w.jpg 1280w,
+		batman_1024w.jpg 1024w,
+		batman_768w.jpg   768w
+	"
+	alt="Batman, Super-man and Wonder Woman"
+	sizes="(min-width: 640px) 50vw, 100vw"
 />
 ```
 
@@ -75,13 +70,8 @@ If you feel confused, I recommend you to read [Srcset and Sizes from Eric Portis
 At the time I am writing this article, there's a bunch of high-end devices, both from Apple and Google, mounting a HiDPI display with 3x pixel density or more. Apple calls them Super Retina displays, Google calls them FHD+ displays.
 
 <figure>
-  <div class="post-image-spacer" style="background-color: #fff; padding-bottom: 81.5%">
-    <picture>
-        <source type="image/webp" srcset="/assets/post-images/capping-image-fidelity-to-2x/devices-with-super-hidpi-display__1x.webp 1x, /assets/post-images/capping-image-fidelity-to-2x/devices-with-super-hidpi-display__2x.webp 2x">
-        <img alt="Capping image fidelity at 2x" src="/assets/post-images/capping-image-fidelity-to-2x/devices-with-super-hidpi-display__2x.jpg" srcset="/assets/post-images/capping-image-fidelity-to-2x/devices-with-super-hidpi-display__1x.jpg 1x, /assets/post-images/capping-image-fidelity-to-2x/devices-with-super-hidpi-display__2x.jpg 2x" class="post-image">
-    </picture>
-  </div>
-  <figcaption>Apple and Google devices with 3x HiDPI displays (excluding "Max" versions)</figcaption>
+	{% image "devices-with-super-hidpi-display.jpg", "Apple iPhone 12 Mini, Apple iPhone X, Apple iPhone XS, Apple iPhone 11 Pro, Google Pixel 3, Google Pixel 4, Google Pixel 5, Apple iPhone 12, Apple iPhone 12 Pro", [648, 1296], "648px" %}
+  <figcaption>Devices with super HiDPI displays</figcaption>
 </figure>
 
 Apple launched their first Super Retina display with the iPhone X, the same kind of display is mounted in the iPhone XS / Max, iPhone 11 Pro / 11 Pro Max, and on all the phones in the iPhone 12 line-up, including the 12 Mini.
@@ -112,30 +102,21 @@ The only way to do that on the web is to use the `picture` tag like the followin
 
 ```html
 <picture>
-    <!-- Landscape tablet / computers -->
-    <source
-        media="(min-width: ####px)"
-        srcset="
-            batman_###w.jpg 1x,
-            batman_###w.jpg 2x
-        "
-    />
-    <!-- Portrait tablet / landscape smartphone -->
-    <source
-        media="(min-width: ###px)"
-        srcset="batman_###w.jpg 2x"
-    />
-    <!-- Larger smartphone(s) -->
-    <source
-        media="(min-width: ###px)"
-        srcset="batman_###w.jpg 2x"
-    />
-    <!-- Smallest smartphone -->
-    <img
-        src="batman_###w.jpg"
-        srcset="batman_###w.jpg 2x"
-        alt="Batman Super-man and Wonder"
-    />
+	<!-- Landscape tablet / computers -->
+	<source
+		media="(min-width: ####px)"
+		srcset="batman_###w.jpg 1x, batman_###w.jpg 2x"
+	/>
+	<!-- Portrait tablet / landscape smartphone -->
+	<source media="(min-width: ###px)" srcset="batman_###w.jpg 2x" />
+	<!-- Larger smartphone(s) -->
+	<source media="(min-width: ###px)" srcset="batman_###w.jpg 2x" />
+	<!-- Smallest smartphone -->
+	<img
+		src="batman_###w.jpg"
+		srcset="batman_###w.jpg 2x"
+		alt="Batman Super-man and Wonder"
+	/>
 </picture>
 ```
 
@@ -153,32 +134,26 @@ If your layout requires you to do more than 1 media query for tablets and comput
 
 ```html
 <picture>
-    <!-- Landscape tablet / computers -->
-    <source
-        media="(min-width: ###px) "
-        sizes="(min-width: ###px) 33vw, 50vw"
-        srcset="
+	<!-- Landscape tablet / computers -->
+	<source
+		media="(min-width: ###px) "
+		sizes="(min-width: ###px) 33vw, 50vw"
+		srcset="
             batman_####w.jpg ####w,
             batman_####w.jpg ####w,
             batman_###w.jpg   ###w
         "
-    />
-    <!-- Portrait tablet / landscape smartphone -->
-    <source
-        media="(min-width: ###px)"
-        srcset="batman_###w.jpg 2x"
-    />
-    <!-- Larger smartphone(s) -->
-    <source
-        media="(min-width: ###px)"
-        srcset="batman_###w.jpg 2x"
-    />
-    <!-- Smallest smartphone -->
-    <img
-        src="batman_###w.jpg"
-        srcset="batman_###w.jpg 2x"
-        alt="Batman Super-man and Wonder"
-    />
+	/>
+	<!-- Portrait tablet / landscape smartphone -->
+	<source media="(min-width: ###px)" srcset="batman_###w.jpg 2x" />
+	<!-- Larger smartphone(s) -->
+	<source media="(min-width: ###px)" srcset="batman_###w.jpg 2x" />
+	<!-- Smallest smartphone -->
+	<img
+		src="batman_###w.jpg"
+		srcset="batman_###w.jpg 2x"
+		alt="Batman Super-man and Wonder"
+	/>
 </picture>
 ```
 
@@ -197,19 +172,13 @@ I did a test and I found out that an HTML file containing 54 images weighs 37 kb
 Using this technique on the product listing page of one of the websites we manage led to an **image weight reduction of 45%**. Images weight on an iPhone 11 Pro was 1.7 Mb before and it’s only 949 kb after the capping.
 
 <figure>
-  <div class="post-image-spacer" style="background-color: #000; padding-bottom: 54.5%">
-    <picture>
-        <source type="image/webp" srcset="/assets/post-images/capping-image-fidelity-to-2x/image-weight-reduction__1x.webp 1x, /assets/post-images/capping-image-fidelity-to-2x/image-weight-reduction__2x.webp 2x">
-        <img alt="Capping image fidelity at 2x" src="/assets/post-images/capping-image-fidelity-to-2x/image-weight-reduction__2x.jpg" srcset="/assets/post-images/capping-image-fidelity-to-2x/image-weight-reduction__1x.jpg 1x, /assets/post-images/capping-image-fidelity-to-2x/image-weight-reduction__2x.jpg 2x" class="post-image">
-    </picture>
-  </div>
+	{% image "image-weight-reduction.jpg", "Name w476.jpg, Size 185kb vs Name w360jpg, Size 102kb, etc.", [648, 1296], "648px" %}
   <figcaption>Images weight before (left) and after the capping (right)</figcaption>
 </figure>
 
 <div class="videoWrapper">
     <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/c2frAgQ_8lQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 ## Demos
 
@@ -231,39 +200,32 @@ One of the best practices to minimize your website’s [Largest Contentful Paint
 
 ```html
 <picture>
-    <!-- Landscape tablet / computers -->
-    <source
-        media="(min-width: ###px) "
-        data-sizes="(min-width: ###px) 33vw, 50vw"
-        data-srcset="
+	<!-- Landscape tablet / computers -->
+	<source
+		media="(min-width: ###px) "
+		data-sizes="(min-width: ###px) 33vw, 50vw"
+		data-srcset="
             batman_####w.jpg ####w,
             batman_####w.jpg ####w,
             batman_###w.jpg   ###w
         "
-    />
-    <!-- Portrait tablet / landscape smartphone -->
-    <source
-        media="(min-width: ###px)"
-        data-srcset="batman_###w.jpg 2x"
-    />
-    <!-- Larger smartphone(s) -->
-    <source
-        media="(min-width: ###px)"
-        data-srcset="batman_###w.jpg 2x"
-    />
-    <!-- Smallest smartphone -->
-    <img
-        data-src="batman_###w.jpg"
-        data-srcset="batman_###w.jpg 2x"
-        alt="Batman Super-man and Wonder"
-    />
+	/>
+	<!-- Portrait tablet / landscape smartphone -->
+	<source media="(min-width: ###px)" data-srcset="batman_###w.jpg 2x" />
+	<!-- Larger smartphone(s) -->
+	<source media="(min-width: ###px)" data-srcset="batman_###w.jpg 2x" />
+	<!-- Smallest smartphone -->
+	<img
+		data-src="batman_###w.jpg"
+		data-srcset="batman_###w.jpg 2x"
+		alt="Batman Super-man and Wonder"
+	/>
 </picture>
 ```
 
 More about [lazy loading responsive images](./lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp).
 
 ## To wrap up
-
 
 In web design with responsive images, capping image fidelity on super HiDPI devices is a relatively new best practice, because of the growing number of smartphones spoiling super HiDPI displays.
 
