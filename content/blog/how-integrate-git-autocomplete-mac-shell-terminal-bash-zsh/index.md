@@ -1,6 +1,6 @@
 ---
 title: How to integrate git in Mac OS Terminal (shell)
-description: Now that zsh is the default shell on Mac OS terminal, you might want to setup you new Mac or VS Code terminal to have a smart integration with git, something similar to [git bash](https://gitforwindows.org/) for Windows.
+description: Now that zsh is the default shell on Mac OS terminal, you might want to setup you new Mac or VS Code terminal to have a smart integration with git, something similar to git bash for Windows.
 date: 2022-03-11
 tags:
   - tutorials
@@ -10,6 +10,12 @@ tags:
 ---
 
 Now that `zsh` is the default shell on Mac OS terminal, you might want to setup you new Mac or VS Code terminal to have a smart integration with `git`, something similar to [git bash](https://gitforwindows.org/) for Windows.
+
+
+<figure>
+	{% image "terminal.png", "Mac OS X Terminal app | blog-11ty git:(main) * git status | On branch main | Your branch is ahead of 'origin/main' by 1 commit. (use \"git push\" to publish your local commits) | Changes not staged for commit: | (use \"git add ‹file>...\" to update what will be committed) | (use \"git restore ‹file>...\" to discard changes in working directory) | modified: content/blog/how-integrate-git-autocomplete-mac-shell-terminal-bash-zsh/index.md | no changes added to commit (use \"git add\" and/or \"git commit -a\")", [648, 1296], "648px" %}
+  <figcaption>Mac OS Terminal with git integration</figcaption>
+</figure>
 
 After searching around for a while and finding tools to integrate with `bash`, I finally found [this article](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Zsh) that offers an explanation on how to integrate `git` with `zsh` in Mac OS Terminal (or shell).
 
