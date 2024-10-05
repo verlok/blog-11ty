@@ -31,18 +31,6 @@ The title of the talk was "How I made the web more responsive - real-world case 
 
 📺 Video coming soon - [Event page](https://www.welovespeed.com/en/2024/talks/how-i-made-the-web-more-responsive/)
 
-## Google Developer Group, Bologna 🇮🇹 - <time datetime="2024-10-01">01 October 2024</time>
-
-Title: "Come ho reso il web più reattivo - Guida pratica di come trovare ed evitare le interazioni lente."
-
-[Event page](https://gdg.community.dev/events/details/google-gdg-bologna-presents-come-ho-reso-il-web-piu-reattivo/)
-
-## DevRomagna, Faenza 🇮🇹 - <time datetime="2024-09-26">26 September 2024</time>
-
-Title: "Come ho reso il web più reattivo - Guida pratica di come trovare ed evitare le interazioni lente."
-
-[Event page](https://meetu.ps/e/NtXTj/zKMHn/i)
-
 ## We Make Future, Bologna 🇮🇹 - <time datetime="2024-06-14">14 June 2024</time>
 
 <figure>
@@ -65,6 +53,18 @@ The title of the talk, in Italian, was "Migliorare la reattività del web — Gu
 The title of the talk in Spanish was: "Hagamos que la web sea mas responsive en 2024".
 
 [GDG Madrid event](https://gdg.community.dev/events/details/google-gdg-madrid-presents-hagamos-que-la-web-sea-mas-responsive-en-2024/)
+
+## Google Developer Group, Bologna 🇮🇹 - <time datetime="2024-10-01">01 October 2024</time>
+
+Title: "Come ho reso il web più reattivo - Guida pratica di come trovare ed evitare le interazioni lente."
+
+[Event page](https://gdg.community.dev/events/details/google-gdg-bologna-presents-come-ho-reso-il-web-piu-reattivo/)
+
+## DevRomagna, Faenza 🇮🇹 - <time datetime="2024-09-26">26 September 2024</time>
+
+Title: "Come ho reso il web più reattivo - Guida pratica di come trovare ed evitare le interazioni lente."
+
+[Event page](https://meetu.ps/e/NtXTj/zKMHn/i)
 
 ## Bologna JS, Bologna 🇮🇹 - <time datetime="2024-05-22">22 May 2024</time>
 
