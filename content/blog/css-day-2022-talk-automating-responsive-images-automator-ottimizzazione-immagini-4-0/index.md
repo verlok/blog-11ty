@@ -8,6 +8,11 @@ tags:
   - talks
 ---
 
+<figure>
+	{% image "me-stage-cssday.png", "Andrea Verlicchi on stage at CSS Day 2022, Faenza, April 1st 2022", [648, 1296], "648px" %}
+  <figcaption>Me on stage at CSS Day 2022, Faenza</figcaption>
+</figure>
+
 On April 1st 2022 I spoke about **responsive images optimisation 4.0** at the [CSS Day 2022 Conference](https://2022.cssday.it) in Faenza, Italy. This talk – in Italian language – is on how to become more productive by automating responsive images. Here's the video of my talk. It's in Italian language only.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8D4skk17BGI?si=lSA2B2PT_dEfXY-l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>

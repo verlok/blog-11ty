@@ -9,11 +9,6 @@ tags:
   - open source
 ---
 
-<!-- <figure>
-	{% image "generate.png", "A slide of the talk. From datafile, with some magic, generate HTML tags", [648, 1296], "648px" %}
-  <figcaption>A slide of the talk explaining how to generate HTML code from a data file, with magic</figcaption>
-</figure> -->
-
 <figure>
 	{% image "frame-video.png", "Andrea Verlicchi sitting in his living room, during the talk", [648, 1296], "648px" %}
   <figcaption>This is a frame of the video, before I dove into the technical parts</figcaption>
