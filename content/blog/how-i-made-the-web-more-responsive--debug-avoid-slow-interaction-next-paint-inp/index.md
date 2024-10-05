@@ -20,6 +20,7 @@ After providing an initial explanation of INP, I demonstrate how to debug slow i
 
 [📽️ Slides](https://docs.google.com/presentation/d/1kSHr9mEN2Q4Nyis8uWvxoA3_pqOIywr3TXCLeO_-4qA/edit)
 
+
 ## We Love Speed, Nantes 🇫🇷 - <time datetime="2024-07-17">17 September 2024</time>
 
 <figure>
@@ -30,6 +31,7 @@ After providing an initial explanation of INP, I demonstrate how to debug slow i
 The title of the talk was "How I made the web more responsive - real-world case studies of INP optimizations", in French "Comment j’ai rendu le web plus réactif — études de cas concrets d’optimisations d’INP".
 
 📺 Video coming soon - [Event page](https://www.welovespeed.com/en/2024/talks/how-i-made-the-web-more-responsive/)
+
 
 ## We Make Future, Bologna 🇮🇹 - <time datetime="2024-06-14">14 June 2024</time>
 
@@ -42,6 +44,7 @@ The title of the talk, in Italian, was "Migliorare la reattività del web — Gu
 
 [📺 Video](https://www.youtube.com/watch?v=OQ8djUCFHTk) - [Event page](https://www.wemakefuture.it/s/65e6dde7acc90ad8ebbfff17/#sala=CodingFrontend|codingfrontend)
 
+
 ## Google Developer Group, Madrid 🇪🇸 - <time datetime="2024-06-04">4 June 2024</time>
 
 <figure>
@@ -52,6 +55,17 @@ The title of the talk, in Italian, was "Migliorare la reattività del web — Gu
 The title of the talk in Spanish was: "Hagamos que la web sea mas responsive en 2024".
 
 [GDG Madrid event](https://gdg.community.dev/events/details/google-gdg-madrid-presents-hagamos-que-la-web-sea-mas-responsive-en-2024/)
+
+
+## Bologna JS, Bologna 🇮🇹 - <time datetime="2024-05-22">22 May 2024</time>
+
+<figure>
+	{% image "me-speaking-bologna-js.jpg", "Andrea Verlicchi speaking at Bologna JS, a few people in the front rows, the slide shows the word 'Conclusion'", [648, 1296], "648px", true %}
+  <figcaption>At the Bologna JS Meetup. This is the only picture I've got 🤷‍♂️. It's pretty final.</figcaption>
+</figure>
+
+[📺 Video](https://youtube.com/live/ibZ1y3LxKKg?feature=share) &middot; [Meetup event page](https://www.meetup.com/bologna-js-meetup/events/300919249/)
+
 
 ## Google Developer Group, Bologna 🇮🇹 - <time datetime="2024-10-01">01 October 2024</time>
 
@@ -64,6 +78,7 @@ Title: "Come ho reso il web più reattivo - Guida pratica di come trovare ed evi
 
 [Event page](https://gdg.community.dev/events/details/google-gdg-bologna-presents-come-ho-reso-il-web-piu-reattivo/)
 
+
 ## DevRomagna, Faenza 🇮🇹 - <time datetime="2024-09-26">26 September 2024</time>
 
 <figure>
@@ -74,12 +89,3 @@ Title: "Come ho reso il web più reattivo - Guida pratica di come trovare ed evi
 Title: "Come ho reso il web più reattivo - Guida pratica di come trovare ed evitare le interazioni lente."
 
 [Event page](https://meetu.ps/e/NtXTj/zKMHn/i)
-
-## Bologna JS, Bologna 🇮🇹 - <time datetime="2024-05-22">22 May 2024</time>
-
-<figure>
-	{% image "me-speaking-bologna-js.jpg", "Andrea Verlicchi speaking at Bologna JS, a few people in the front rows, the slide shows the word 'Conclusion'", [648, 1296], "648px", true %}
-  <figcaption>At the Bologna JS Meetup. This is the only picture I've got 🤷‍♂️. It's pretty final.</figcaption>
-</figure>
-
-[📺 Video](https://youtube.com/live/ibZ1y3LxKKg?feature=share) &middot; [Meetup event page](https://www.meetup.com/bologna-js-meetup/events/300919249/)
