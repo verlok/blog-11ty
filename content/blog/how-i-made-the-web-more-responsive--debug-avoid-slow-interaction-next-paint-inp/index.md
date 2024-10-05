@@ -42,8 +42,7 @@ The title of the talk, in Italian, was "Migliorare la reattività del web — Gu
 
 [📺 Video](https://www.youtube.com/watch?v=OQ8djUCFHTk) - [Event page](https://www.wemakefuture.it/s/65e6dde7acc90ad8ebbfff17/#sala=CodingFrontend|codingfrontend)
 
-
-## GDG Madrid 🇪🇸 - <time datetime="2024-06-04">4 June 2024</time>
+## Google Developer Group, Madrid 🇪🇸 - <time datetime="2024-06-04">4 June 2024</time>
 
 <figure>
 	{% image "me-speaking-gdg-madrid.jpg", "Andrea Verlicchi speaking at GDG Madrid (c/o Celonis), a few people in the front rows, the slide showing the input delay part of the INP measurement in the browser's main thread", [648, 1296], "648px", true %}
@@ -56,11 +55,21 @@ The title of the talk in Spanish was: "Hagamos que la web sea mas responsive en 
 
 ## Google Developer Group, Bologna 🇮🇹 - <time datetime="2024-10-01">01 October 2024</time>
 
+<figure>
+	{% image "me-speaking-gdg-bologna.jpg", "Andrea Verlicchi on stage at Phygital Hub (Gellify)", [648, 1296], "648px" %}
+	<figcaption>Me speaking on "stage" at Phygital Hub (Gellify)</figcaption>
+</figure>
+
 Title: "Come ho reso il web più reattivo - Guida pratica di come trovare ed evitare le interazioni lente."
 
 [Event page](https://gdg.community.dev/events/details/google-gdg-bologna-presents-come-ho-reso-il-web-piu-reattivo/)
 
 ## DevRomagna, Faenza 🇮🇹 - <time datetime="2024-09-26">26 September 2024</time>
+
+<figure>
+	{% image "me-speaking-devromagna-faenza.jpg", "Andrea Verlicchi on stage at DevRomagna, Faenza", [648, 1296], "648px" %}
+	<figcaption>Me speaking on "stage" on stage at DevRomagna, Faenza</figcaption>
+</figure>
 
 Title: "Come ho reso il web più reattivo - Guida pratica di come trovare ed evitare le interazioni lente."
 
