@@ -70,7 +70,7 @@ The title of the talk in Spanish was: "Hagamos que la web sea mas responsive en 
 ## Google Developer Group, Bologna 🇮🇹 - <time datetime="2024-10-01">01 October 2024</time>
 
 <figure>
-	{% image "me-speaking-gdg-bologna.jpg", "Andrea Verlicchi on stage at Phygital Hub (Gellify)", [648, 1296], "648px" %}
+	{% image "me-speaking-gdg-bologna.jpg", "Andrea Verlicchi on stage at Phygital Hub (Gellify)", [648, 1296], "648px", true %}
 	<figcaption>Me speaking on "stage" at Phygital Hub (Gellify)</figcaption>
 </figure>
 
@@ -82,7 +82,7 @@ Title: "Come ho reso il web più reattivo - Guida pratica di come trovare ed evi
 ## DevRomagna, Faenza 🇮🇹 - <time datetime="2024-09-26">26 September 2024</time>
 
 <figure>
-	{% image "me-speaking-devromagna-faenza.jpg", "Andrea Verlicchi on stage at DevRomagna, Faenza", [648, 1296], "648px" %}
+	{% image "me-speaking-devromagna-faenza.jpg", "Andrea Verlicchi on stage at DevRomagna, Faenza", [648, 1296], "648px", true %}
 	<figcaption>Me speaking on "stage" on stage at DevRomagna, Faenza</figcaption>
 </figure>
 
