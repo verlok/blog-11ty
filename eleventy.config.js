@@ -12,6 +12,8 @@ const pluginImages = require("./eleventy.config.images.js");
 
 const eleventyPluginSpeculationRules = require("eleventy-plugin-speculation-rules");
 
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+
 module.exports = function (eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
@@ -40,6 +42,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginBundle);
 
 	eleventyConfig.addPlugin(eleventyPluginSpeculationRules);
+
+	// If you have other `addPlugin` calls, it’s important that UpgradeHelper is added last.
+	eleventyConfig.addPlugin(UpgradeHelper);
 
 	/* eleventyConfig.addPlugin(eleventyPluginSpeculationRules, {
 		mode: "prerender", // prefetch | prerender
