@@ -27,4 +27,13 @@ tags:
 </figure>
 
 {{ More text here }}
+
+{{ Lazy images need a `true` at the end }}
+
+<figure>
+	{% image "{{ image.png }}", "{{ Alt text }}", [648, 1296], "648px", true %}
+	<figcaption>{{ Image caption }}</figcaption>
+</figure>
+
+
 ```
