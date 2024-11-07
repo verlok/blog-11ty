@@ -1,5 +1,5 @@
 ---
-title: "How to Use Google Meet with Two Screens: Separating Shared Content and Attendees' Faces"
+title: "How to use Google Meet with two screens: separating shared content and attendees' faces"
 description: Learn how to enhance your Google Meet experience by using Companion mode to separate shared content and attendees' faces across two screens for better focus and engagement.
 date: 2024-11-06
 tags:
