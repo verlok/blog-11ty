@@ -7,21 +7,22 @@ tags:
   - perf.now
 ---
 
+From **November 14 to 15**, I attended [**performance.now**](https://www.perfnow.nl/) in **Amsterdam**, the most esteemed conference in the realm of web performance in Europe. As someone deeply embedded in this niche of web development, meeting other like-minded people at the event was both inspiring and invaluable.
+
 <figure>
 	{% image "cover.png", "performance.now() – Andrea Verlicchi – @verlok (he/him) – Speed Kit, IT, – Sponsors: Google, SpeedCurve, Mozilla, Akamai, Sentry. The image also contains stickers from Firefox, SpeedCurve #perfhero, No vanity metrics P50, Anti Javascript Javascript Club", [648, 1296], "648px" %}
 	<figcaption>My performance.now 2024 badge, plus some swag and stickers</figcaption>
 </figure>
 
-From **November 14 to 15**, I attended [**performance.now**](https://www.perfnow.nl/) in **Amsterdam**, the most esteemed conference in the realm of web performance in Europe. As someone deeply embedded in this niche of web development, meeting other like-minded people at the event was both inspiring and invaluable.
 
 ## Exceptional Content and Speakers
 
 <figure>
-	{% image "schedule.png", "Schedule for first and second day, also available following the link in the next paragraph", [648, 1296], "648px", true %}
-	<figcaption>The schedule for the 2 days</figcaption>
+	{% image "schedule.png", "Schedule for first and second day, also available following the link in the figure caption", [648, 1296], "648px", true %}
+	<figcaption>The <a href="https://perfnow.nl/schedule">schedule</a> for the two conference days.</figcaption>
 </figure>
 
-From the moment the conference commenced, it was evident that performance.now() stands out for its **high-caliber content and [speakers](https://perfnow.nl/speakers)**. Each [session](https://perfnow.nl/schedule) was meticulously curated, featuring industry leaders who covered a wide array of topics surrounding modern web performance challenges and solutions. 
+From the moment the conference commenced, it was evident that performance.now() stands out for its **high-caliber content and [speakers](https://perfnow.nl/speakers)**. Each session was meticulously curated, featuring industry leaders who covered a wide array of topics surrounding modern web performance challenges and solutions. 
 
 Keynotes explored the evolving landscape of web speed, emphasizing the critical need for responsiveness and user-centric metrics. Talks addressed diverse subjects, from accessibility's impact on performance to practical strategies for improving Core Web Vitals, particularly INP (Interaction to Next Paint). Other presentations focused on advanced tooling, font optimization, and minimizing third-party script impacts. 
 
