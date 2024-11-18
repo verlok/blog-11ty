@@ -44,11 +44,12 @@ module.exports = (eleventyConfig) => {
 
 			// Find a way to pass loading lazy to second to more images
 			const loading = useLazyLoading ? "lazy" : "eager";
+			const decoding = useLazyLoading ? "async" : "sync";
 			let imageAttributes = {
 				alt,
 				sizes,
 				loading,
-				decoding: "async",
+				decoding,
 			};
 			if (className) {
 				imageAttributes.class = className;
