@@ -16,6 +16,11 @@ From **November 14 to 15**, I attended [**performance.now**](https://www.perfnow
 
 ## Exceptional Content and Speakers
 
+<figure>
+	{% image "schedule.png", "Schedule for first and second day, also available following the link in the next paragraph", [648, 1296], "648px", true %}
+	<figcaption>The schedule for the 2 days</figcaption>
+</figure>
+
 From the moment the conference commenced, it was evident that performance.now() stands out for its **high-caliber content and [speakers](https://perfnow.nl/speakers)**. Each [session](https://perfnow.nl/schedule) was meticulously curated, featuring industry leaders who covered a wide array of topics surrounding modern web performance challenges and solutions. 
 
 Keynotes explored the evolving landscape of web speed, emphasizing the critical need for responsiveness and user-centric metrics. Talks addressed diverse subjects, from accessibility's impact on performance to practical strategies for improving Core Web Vitals, particularly INP (Interaction to Next Paint). Other presentations focused on advanced tooling, font optimization, and minimizing third-party script impacts. 
