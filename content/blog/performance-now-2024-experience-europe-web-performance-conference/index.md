@@ -94,7 +94,7 @@ These notes have been instrumental in formulating follow-up actions and integrat
 
 <figure>
 	{% image "attendees.webp", "Front rows attendees of performance.now()", [648, 1296], "648px", true %}
-	<figcaption>I like ot be in the front rows to visually engage with the speakers</figcaption>
+	<figcaption>I like to be in the front rows to visually engage with the speakers</figcaption>
 </figure>
 
 Attending Performance.now was a rewarding experience that reinforced my commitment to excellence in web performance. The blend of **high-level content, expert speakers, and a vibrant community** makes it an unmissable event for anyone in this niche. I look forward to applying the knowledge gained and contributing further to the ongoing dialogue in our field.
