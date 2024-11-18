@@ -63,7 +63,7 @@ Brian's insights into effectively sifting through vast amounts of performance da
 
 <figure>
 	{% image "brian-perf-sync-needle-haystack.JPG", "Brian Louis Ramirez on stage at Performance.sync 2024", [648, 1296], "648px", true %}
-	<figcaption>Madames et messieurs, [Brian Louis Ramirez](https://screenspan.net/) on stage</figcaption>
+	<figcaption>Madames et messieurs, <a href="https://screenspan.net/">Brian Louis Ramirez</a> on stage</figcaption>
 </figure>
 
 
