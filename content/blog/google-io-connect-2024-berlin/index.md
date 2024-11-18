@@ -3,6 +3,7 @@ title: "Impressions on the Google I/O Connect 2024 + GDE Forum in Berlin"
 description: "As well as last year, I was invited to Google I/O Connect EMEA 2024. And as a Google Developer Expert (GDE), on the next day I also took part to the GDE Forum in Berlin Google offices. My impressions are in this blog post."
 date: 2024-08-01
 tags:
+  - conferences
   - google I/O connect
 ---
 
