@@ -6,9 +6,11 @@ const correctLazyAttributes = (img, isFirst) => {
 	if (isFirst) {
 		img.setAttribute("fetchpriority", "high");
 		img.setAttribute("loading", "eager");
+		img.setAttribute("decoding", "sync");
 	} else {
 		img.removeAttribute("fetchpriority");
 		img.setAttribute("loading", "lazy");
+		img.setAttribute("decoding", "async");
 	}
 };
 
