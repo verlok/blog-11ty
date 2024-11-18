@@ -57,11 +57,13 @@ Check out [Henri Helvetica's Youtube channel](https://www.youtube.com/channel/UC
 
 ## Pre-event: Performance.Sync by Mozilla
 
-**On November 13**, the day before Performance.now, I also had the pleasure of taking part in **Performance.Sync**, an event organized by Mozilla. During this session, my good colleague **Brian** presented on the topic of "**Finding the Needle in the Haystack**," which focused on identifying anomalies in **Real User Monitoring (RUM) data**. Brian's insights into effectively sifting through vast amounts of performance data to pinpoint critical issues were both enlightening and highly practical. Participating in Performance.Sync provided a deeper understanding of advanced data analysis techniques and reinforced the importance of meticulous monitoring in optimizing web performance.
+**On November 13**, the day before Performance.now, I also had the pleasure of taking part in **Performance.Sync**, an event organized by Mozilla. During this session, my good colleague Brian Louis Ramirez presented on the topic of "**Finding the needle in the haystack**", which focused on identifying anomalies in **Real User Monitoring (RUM) data**. 
+
+Brian's insights into effectively sifting through vast amounts of performance data to pinpoint critical issues were both enlightening and highly practical. Participating in Performance.Sync provided a deeper understanding of advanced data analysis techniques and reinforced the importance of meticulous monitoring in optimizing web performance.
 
 <figure>
 	{% image "brian-perf-sync-needle-haystack.JPG", "Brian Louis Ramirez on stage at Performance.sync 2024", [648, 1296], "648px", true %}
-	<figcaption>Madames et messieurs, Brian Louis Ramirez on stage</figcaption>
+	<figcaption>Madames et messieurs, [Brian Louis Ramirez](https://screenspan.net/) on stage</figcaption>
 </figure>
 
 
@@ -81,7 +83,7 @@ Throughout the conference, I took some notes that I will carefully review at a s
 - Variable fonts are lighter only if you use 2 or more variations of the font, otherwise just load the single variation (e.g. the bold version for titles)
 - The CSS overview tab in developer tools gives you the idea of how many instances of the page are using which fonts
 - There's a new working group for incremental font transfer, to download only the portion of the font users currently need
-- `size-adjust` (at box size) and `font-size-adjust` (at font level) are useful to try and render the fallback font like the web font (I noted there is a css-size-adjust-tester tool, which I can't find at the moment)
+- `size-adjust` (at box size) and `font-size-adjust` (at font level) are useful to try and render the fallback font like the web font. I noted there is a css-size-adjust-tester tool, which I can't find at the moment, whereas I found [Brian Louis Ramirez's fallback font generator](https://screenspan.net/fallback/).
 - Google Publisher Tag (GPT) has a [feature to yield to the main thread](https://developers.google.com/publisher-tag/reference#googletag.config.PageSettingsConfig.threadYield) to optimize INP
 - When there are gaps in commit events in dev tools, look in other tracks or load the trace in Perfetto to find out why
 
