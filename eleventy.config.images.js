@@ -3,7 +3,6 @@ const eleventyImage = require("@11ty/eleventy-img");
 const { JSDOM } = require("jsdom");
 
 const correctLazyAttributes = (img, isFirst) => {
-	img.setAttribute("decoding", "async"); // Always async, as Barry explains here https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/
 	if (isFirst) {
 		img.setAttribute("fetchpriority", "high");
 		img.setAttribute("loading", "eager");
@@ -45,12 +44,10 @@ module.exports = (eleventyConfig) => {
 
 			// Find a way to pass loading lazy to second to more images
 			const loading = useLazyLoading ? "lazy" : "eager";
-			const decoding = "async"; // Always async, as Barry explains here https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/
 			let imageAttributes = {
 				alt,
 				sizes,
 				loading,
-				decoding,
 			};
 			if (className) {
 				imageAttributes.class = className;
