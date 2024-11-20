@@ -76,7 +76,7 @@ Throughout the conference, I took some notes that I will carefully review at a s
 - Only alert on the KPI changes, not when enablers changed
 - Bucket type of regressions in moderate, acceptable and critical, based on the % of regression
 - When a regression happened, triage who, wht, when, where and why it happened
-- ~Lazy loaded images can be decoded asynchronously, but eagerly loaded images should not.~ Contested after the talk from Barry Pollard, who wrote [what decode async actually does](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/]. 
+- ~Lazy loaded images can be decoded asynchronously, but eagerly loaded images should not.~ Contested, see [what `decode=async` actually does](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/). 
 - The new annotations functionality on Chrome Dev Tools will be very useful to me and other professionals
 - We can use [crbug.com/new](https://crbug.com/new) to report bugs to the Chromium project and eventually request new features
 - Chrome developer is moving the insights from the Performance Insights panel to the Performance panel -- there is one for CSS performance too, if you trace with the "Selector stats (slow)" option active
