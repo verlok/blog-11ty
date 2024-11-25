@@ -57,6 +57,8 @@ Using *Companion mode* lets you join a Google Meet meeting again from a second t
 6. **Enhance the Companion mode window with my Google Meet true full screen bookmarklet**
    In the *Companion mode* window, you can use my [Google Meet true full screen](https://github.com/verlok/google-meet-true-full-screen/) bookmarklet to enable a true full-screen mode. This way, the shared content fills the screen without any extra UI elements, making it easier to focus on the presentation.
 
+7. **Bonus step** If you bring the main Google Meet's picture-in-picture (PIP) in the main Google Meet window, it's even possible to bring participants faces in front of someone else's presented content, like you can do with Zoom.
+
 ## Why this setup works
 
 This setup keeps attendees’ faces, chat, and controls accessible in the main window, while reserving a second screen exclusively for content. It’s a more immersive experience and a workaround for Google Meet’s current UI limitations.
