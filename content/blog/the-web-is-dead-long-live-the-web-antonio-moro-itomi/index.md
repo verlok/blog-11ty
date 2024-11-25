@@ -6,7 +6,8 @@ tags:
   - reposts
 ---
 
-👀 The author of this article is Antonio Moro aka Itomi. Find the original article, in Italian, [here](https://www.clickbaiting.it/p/il-web-e-morto-lunga-vita-al-web). [Itomi Studio](https://itomi.studio/) | [About](https://itomi.studio/about/) | [Shop](https://itomi.shop/).
+👀 The author of this article is Antonio Moro aka Itomi.
+<br>[🇮🇹 Original article](https://www.clickbaiting.it/p/il-web-e-morto-lunga-vita-al-web) | [Itomi Studio](https://itomi.studio/) | [About](https://itomi.studio/about/) | [Shop](https://itomi.shop/)
 
 The closure of Badtaste.it is just the latest closing on a coffin that has already been closed for years: online publishing as we have known it for the past twenty years is now dead and buried.
 
