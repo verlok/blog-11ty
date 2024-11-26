@@ -22,12 +22,6 @@ After providing an initial explanation of INP, I demonstrate how to debug slow i
   <figcaption>On stage at We Love Speed 2024, Nantes</figcaption>
 </figure>
 
-{# <figure>
-	{% image "me-speaking-welovespeed-nantes.jpg", "Andrea Verlicchi speaking on stage at We Love Speed, Nantes. The slide shows the flame chart of the performance trace run after an INP optimization", [648, 1296], "648px", true %}
-  <figcaption>On stage at We Love Speed 2024.</figcaption>
-</figure> #}
-
-
 The title of the talk was "How I made the web more responsive - real-world case studies of INP optimizations", in French "Comment j’ai rendu le web plus réactif — études de cas concrets d’optimisations d’INP".
 
 [📺 Video](https://www.youtube.com/watch?v=FDb4aKLIVsI) - [Event page](https://www.welovespeed.com/en/2024/talks/how-i-made-the-web-more-responsive/)
