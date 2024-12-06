@@ -125,3 +125,4 @@ Optimizing SVG usage on websites involves balancing performance, maintainability
 
 - [From Fonts to SVG: An Icon Migration Strategy](https://calendar.perfplanet.com/2021/from-fonts-to-svg-an-icon-migration-strategy/) by Erwin Hofman
 - [vanilla-lazyload GitHub Repository](https://github.com/verlok/vanilla-lazyload) by Andrea Verlicchi (yours truly)
+- [SVG sprites generator](https://svgsprit.es/)
