@@ -13,7 +13,6 @@
 ---
 title: {{ TITLE }}
 description: {{ DESCRIPTION }}
-date: {{ 202$-$$-$$ }}
 tags:
   - {{ Tag 1 }}
   - {{ Tag 2 }}
