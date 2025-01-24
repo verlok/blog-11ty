@@ -15,9 +15,9 @@ In a recent conversation among web performance enthusiasts, the topic of efficie
 
 Let's consider the following methods for loading SVGs.
 
-## 1. Inline svgs
+## 1. Inline SVGs
 
-**Usage:** Ideal for above-the-fold icons like logos or menu buttons, es;pecially when you need to style or animate individual elements within the SVG using CSS or JavaScript.
+**Usage:** Ideal for above-the-fold icons like logos or menu buttons, especially when you need to style or animate individual elements within the SVG using CSS or JavaScript.
 
 **Advantages:**
 
