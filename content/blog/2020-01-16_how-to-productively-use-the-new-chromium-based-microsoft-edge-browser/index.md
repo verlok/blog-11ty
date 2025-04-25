@@ -73,7 +73,7 @@ I personally used Microsoft Edge Dev as my primary browser for months on both Ma
 
 ## Is this the end of Internet Explorer?
 
-There are still companies using Internet Explorer for some compatibility reasons (old web-based tools or intranet websites). This version of Edge features an "Internet Explorer Mode" so those companies can finally set Microsoft Edge as default browsers for their workers, who will be able to browse the web using a modern browser, without breaking their old tools functionality.
+There are still companies using [Internet Explorer](https://www.bairesdev.com/blog/internet-explorer-history/) for some compatibility reasons (old web-based tools or intranet websites). This version of Edge features an "Internet Explorer Mode" so those companies can finally set Microsoft Edge as default browsers for their workers, who will be able to browse the web using a modern browser, without breaking their old tools functionality.
 
 ## Help the web
 
