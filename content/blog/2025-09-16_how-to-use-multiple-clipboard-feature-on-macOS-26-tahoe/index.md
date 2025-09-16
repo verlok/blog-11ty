@@ -1,6 +1,6 @@
 ---
 title: "The macOS clipboard manager you've been waiting for, now native in MacOS 26 Tahoe"
-description: "We've been asking for it, and now it's finally here: a native clipboard history feature in macOS! You no longer have to rely on third-party apps to access items you've copied in the past. It's a game-changer for anyone who regularly copies and pastes multiple pieces of text, links, or images."
+description: "You know when you copy a piece of code, then you copy another one and you lose the previous one? Or you know you have something in your clipboard, you'd like to copy something else, but you have to paste what's in your clipboard first, otherwise you'll lose it? No more clipboard stress. Finally, multiple clipboard landed on macOS."
 tags:
   - tutorials
   - mac-os
@@ -11,9 +11,9 @@ tags:
 	<figcaption>A screenshot of the Spotlight overlay showing the (searchable) clipboard history.</figcaption>
 </figure>
 
-For what seems like forever, we've been asking for it, and now it's finally here: **a native clipboard history feature in macOS**!
+You know when you copy a piece of code, then you copy another one and you lose the previous one? Or you know you have something in your clipboard, you'd like to copy something else, but you have to paste what's in your clipboard first, otherwise you'll lose it? No more clipboard stress. Finally, multiple clipboard landed on macOS 26 Tahoe. 
 
-With the release of macOS 26 Tahoe, you **no longer have to rely on third-party apps** to access items you've copied in the past. It's a game-changer for anyone who regularly copies and pastes multiple pieces of text (even code blocks) links, or images.
+With the release of macOS Tahoe, you no longer have to rely on third-party apps to access items you've copied in the past. It's a game-changer for anyone who regularly copies and pastes multiple pieces of text (including code blocks), links, or images.
 
 Here’s a quick guide on how to start using this long-awaited feature and supercharge your workflow.
 
