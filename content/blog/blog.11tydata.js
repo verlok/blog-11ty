@@ -5,7 +5,7 @@ const getFolderName = (data) => {
 	return folderName;
 };
 
-module.exports = {
+export default {
 	tags: ["posts"],
 	layout: "layouts/post.njk",
 	eleventyComputed: {

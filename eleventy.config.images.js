@@ -1,6 +1,6 @@
-const path = require("path");
-const eleventyImage = require("@11ty/eleventy-img");
-const { JSDOM } = require("jsdom");
+import path from "path";
+import eleventyImage from "@11ty/eleventy-img";
+import { JSDOM } from "jsdom";
 
 const correctLazyAttributes = (img, isFirst) => {
 	if (isFirst) {
@@ -12,7 +12,7 @@ const correctLazyAttributes = (img, isFirst) => {
 	}
 };
 
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig) => {
 	function relativeToInputPath(inputPath, relativeFilePath) {
 		let split = inputPath.split("/");
 		split.pop();

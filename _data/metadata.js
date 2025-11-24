@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	title: "Andrea Verlicchi",
 	url: "https://andreaverlicchi.eu/",
 	language: "en",
