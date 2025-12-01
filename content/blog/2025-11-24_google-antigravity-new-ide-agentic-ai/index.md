@@ -21,6 +21,13 @@ With Gemini 3's advanced reasoning, tooling, and autonomous programming capabili
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SVCBA-pBgt0?si=-KPiJ6v2sxRXdude" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 On Friday, my workmate Brian and I put it to work on some complex task in the development of the project we're working on, with the Gemini 3 model, and we were quite impressed by it.
+
+What I love about Antigravity is that it handles planning by producing two text artifacts, just like a Tech Lead would: a **Walkthrough** and **Tasks**. You can provide feedback on these — whether it made a mistake or if the prompt wasn't specific enough — by selecting text and commenting on it, similar to how you would in Google Docs or Notion. You can also give feedback on the entire approach, much like in a Pull Request. I almost always write "LGTM" (Looks Good To Me) there. Then it starts working. Actually, lately, it starts even before your feedback to get a head start, confident in its plan, and can correct course later if needed.
+
+I tried working without Antigravity, using only OpenSpec with Gemini 3 via the `gemini-cli`, but it felt more cumbersome and frustrating. The CLI isn't asynchronous like Antigravity, so you lose a lot of time waiting for the AI to think. Antigravity breaks everything down into smaller tasks that are easier and faster for the AI to handle, so it effectively starts working sooner and finishes faster.
+
+Then there's the **Agent Manager**. If you feel like being an AI-powered superhero coder, you can ask it to do several things in parallel, even on different repos (or different clones of the same repo if you need to work on two different branches).
+
 I wanted to know more on how to use it best, so this weekend I took some time to watch a couple of videos that I highly recommend.
 
 ## Learn the basics of Google Antigravity
