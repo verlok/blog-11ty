@@ -13,6 +13,10 @@ tags:
 
 In Google Meet, if you're working with two screens, you might want to keep the shared content on one screen while keeping the faces of attendees on another. This setup allows for better engagement in the meeting by making it easier to focus on the faces of attendees, chat, and other meeting interactions, while still keeping an eye on the presentation or shared content. Here’s how you can do it with Google Meet's *Companion mode* and a few manual steps.
 
+> [!UPDATE]
+> The wait is over!!! This is not required from March 2026 anymore, because Google [released](https://releasebot.io/updates/google/google-meet#:~:text=Move%20shared%20content%20in%20Google%20Meet%20to%20a%20separate%20window%20with%20the%20%E2%80%9COpen%20in%20new%20window%E2%80%9D%20option) the feature to bring the shared content to a new window! 🥳
+> I'm leaving the article here because it's a nice example of how to use Companion mode and it might be useful for some people.
+
 ## Step-by-step guide to using Companion mode
 
 Using *Companion mode* lets you join a Google Meet meeting again from a second tab or window without duplicating audio, allowing you to configure each window individually. Here’s how I set it up:
