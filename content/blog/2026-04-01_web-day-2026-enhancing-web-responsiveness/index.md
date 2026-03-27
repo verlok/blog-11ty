@@ -1,5 +1,5 @@
 ---
-title: "I Spoke at Web Day 2026 in Milan"
+title: "Talk: Enhancing Web Responsiveness at Web Day 2026, Milan"
 description: "I gave a talk about Enhancing Web Responsiveness at Web Day 2026 in Milan, sharing practical tips to debug and avoid slow interactions using Interaction to Next Paint (INP)."
 date: 2026-04-01
 tags:

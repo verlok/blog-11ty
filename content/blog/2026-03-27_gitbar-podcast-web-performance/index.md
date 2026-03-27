@@ -1,5 +1,5 @@
 ---
-title: "I Was a Guest on GitBar Podcast"
+title: "GitBar Podcast: Non toccate quel tag!"
 description: "I joined Mauro \"Brainrepo\" Murru on the GitBar podcast to chat about web performance, Core Web Vitals, image optimization, and the silent damage of Google Tag Manager."
 date: 2026-03-27
 tags:
