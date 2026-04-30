@@ -61,26 +61,13 @@ So `sizes` can mostly go away. But we're still left with that long `srcset` list
 
 For years I've been dreaming about a container image format — a single file containing every resolution of an image inside it. Think of it as a bundled folder of images, packaged as one.
 
-With a format like that, the `<img>` tag for a lazy image could collapse to this:
+With a format like that, the `<img>` tag, at least for lazy images, could be drastically simplified. Something like this:
 
 ```html
-<img src="shirt.webp" sizes="auto" loading="lazy" alt="A shirt" />
+<img srcset="shirt.imgc *w" sizes="auto" loading="lazy" alt="A shirt" />
 ```
 
 No `srcset`. No comma-separated list of widths. The browser would open the file, see which resolutions are inside, and download only the bytes it needs for the size it has to render.
-
-For hero images, we'd still pair it with an upfront `sizes`, but the markup would shrink dramatically:
-
-```html
-<img
-	src="shirt.webp"
-	sizes="(min-width: 1200px) 100vw,
-         (min-width: 600px) 600px,
-         300px"
-	loading="eager"
-	alt="A shirt"
-/>
-```
 
 The `<img>` tag, finally simple again.
 
