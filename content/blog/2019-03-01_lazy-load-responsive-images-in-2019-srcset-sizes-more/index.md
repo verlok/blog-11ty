@@ -5,6 +5,7 @@ tags:
   - techniques
   - lazy loading
   - responsive images
+  - images
 ---
 
 In the latest years, both at my job and as maintainer of a [LazyLoad script](https://github.com/verlok/vanilla-lazyload), I've specialized in **lazy loading** of **responsive images**. Today I'm going to show you what HTML, CSS and JavaScript code you need to write _in 2019_ in order to serve responsive images _and_ load them lazily. In the second part of the post, I'm also showing how to make the browser **natively pick the WebP image** when it supports it.
@@ -32,13 +33,13 @@ Here's the markup of an immediately loaded responsive image.
 ```html
 <!-- Immediately loaded, responsive image -->
 <img
-  alt="Image 01"
-  src="https://via.placeholder.com/220x280?text=Img+01"
-  srcset="
-    https://via.placeholder.com/220x280?text=Img+01 220w,
-    https://via.placeholder.com/440x560?text=Img+01 440w
-  "
-  sizes="220px"
+	alt="Image 01"
+	src="https://via.placeholder.com/220x280?text=Img+01"
+	srcset="
+		https://via.placeholder.com/220x280?text=Img+01 220w,
+		https://via.placeholder.com/440x560?text=Img+01 440w
+	"
+	sizes="220px"
 />
 ```
 
@@ -51,12 +52,12 @@ And here's the markup you're going to need in order to _lazy load_ a responsive 
 ```html
 <!-- Lazy loaded responsive image -->
 <img
-  alt="Image 03"
-  class="lazy"
-  data-src="https://via.placeholder.com/220x280?text=Img+03"
-  data-srcset="https://via.placeholder.com/220x280?text=Img+03 220w,
+	alt="Image 03"
+	class="lazy"
+	data-src="https://via.placeholder.com/220x280?text=Img+03"
+	data-srcset="https://via.placeholder.com/220x280?text=Img+03 220w,
         https://via.placeholder.com/440x560?text=Img+03 440w"
-  data-sizes="220px"
+	data-sizes="220px"
 />
 ```
 
@@ -65,13 +66,13 @@ If you want your lazy images to have a low-quality preview image while they load
 ```html
 <!-- Lazy loaded responsive image with low-quality preview -->
 <img
-  alt="Image 03"
-  class="lazy"
-  src="https://via.placeholder.com/11x14?text=Img+03"
-  data-src="https://via.placeholder.com/220x280?text=Img+03"
-  data-srcset="https://via.placeholder.com/220x280?text=Img+03 220w,
+	alt="Image 03"
+	class="lazy"
+	src="https://via.placeholder.com/11x14?text=Img+03"
+	data-src="https://via.placeholder.com/220x280?text=Img+03"
+	data-srcset="https://via.placeholder.com/220x280?text=Img+03 220w,
         https://via.placeholder.com/440x560?text=Img+03 440w"
-  data-sizes="220px"
+	data-sizes="220px"
 />
 ```
 
@@ -99,8 +100,8 @@ You need LazyLoad to manage and load all the images with the `.lazy` class in th
 
 ```js
 var lazyLoad = new LazyLoad({
-  elements_selector: ".lazy"
-  // More options here
+	elements_selector: ".lazy",
+	// More options here
 });
 ```
 
@@ -121,23 +122,23 @@ when the images aren't loaded yet.
 This value depends on your layout.
 */
 .imageList li {
-  min-height: 300px;
+	min-height: 300px;
 }
 
 /*
 Avoid empty images to appear as broken
 */
 img:not([src]):not([srcset]) {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 /*
 Fixes the Firefox anomaly while images are loading
 */
 @-moz-document url-prefix() {
-  img:-moz-loading {
-    visibility: hidden;
-  }
+	img:-moz-loading {
+		visibility: hidden;
+	}
 }
 ```
 
@@ -155,21 +156,21 @@ Here's the code you're gonna need in this case. In order to have immediately loa
 
 ```html
 <picture>
-  <source
-    media="(min-width: 1024px)"
-    data-srcset="https://via.placeholder.com/1024x576?text=Horizontal+Image 1x,
+	<source
+		media="(min-width: 1024px)"
+		data-srcset="https://via.placeholder.com/1024x576?text=Horizontal+Image 1x,
       https://via.placeholder.com/2048x1152?text=Horizontal+Image 2x"
-  />
-  <source
-    media="(max-width: 1023px)"
-    data-srcset="https://via.placeholder.com/640x960?text=Vertical+Image 1x,
+	/>
+	<source
+		media="(max-width: 1023px)"
+		data-srcset="https://via.placeholder.com/640x960?text=Vertical+Image 1x,
       https://via.placeholder.com/1280x1920?text=Vertical+Image 2x"
-  />
-  <img
-    class="lazy"
-    alt="Stivaletti"
-    data-src="https://via.placeholder.com/1024x576?text=Horizontal+Image"
-  />
+	/>
+	<img
+		class="lazy"
+		alt="Stivaletti"
+		data-src="https://via.placeholder.com/1024x576?text=Horizontal+Image"
+	/>
 </picture>
 ```
 
@@ -183,20 +184,20 @@ Here's the code! Again, in order to obtain immediately loaded images, just use t
 
 ```html
 <picture>
-  <source
-    type="image/webp"
-    data-srcset="https://via.placeholder.com/1024x576?text=WebP+Image 1x,
+	<source
+		type="image/webp"
+		data-srcset="https://via.placeholder.com/1024x576?text=WebP+Image 1x,
       https://via.placeholder.com/2048x1152?text=WebP+Image 2x"
-    data-sizes="220px"
-  />
-  <img
-    data-src="https://via.placeholder.com/256.jpg?text=1024x576+Jpg+Image"
-    data-srcset="https://via.placeholder.com/1024x576?text=Jpg+Image 1x,
+		data-sizes="220px"
+	/>
+	<img
+		data-src="https://via.placeholder.com/256.jpg?text=1024x576+Jpg+Image"
+		data-srcset="https://via.placeholder.com/1024x576?text=Jpg+Image 1x,
       https://via.placeholder.com/2048x1152?text=Jpg+Image 2x"
-    data-sizes="220px"
-    alt="An image"
-    class="lazy"
-  />
+		data-sizes="220px"
+		alt="An image"
+		class="lazy"
+	/>
 </picture>
 ```
 

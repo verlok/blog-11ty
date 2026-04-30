@@ -7,6 +7,7 @@ tags:
   - aspect-ratio
   - responsive design
   - responsive images
+  - images
   - cumulative layout shift
   - core web vitals
 ---
@@ -21,22 +22,22 @@ The traditional way to reserve space for images is to use the vertical padding t
 
 ```html
 <div class="image-wrapper">
-  <img alt="An image" src="image.jpg" />
+	<img alt="An image" src="image.jpg" />
 </div>
 ```
 
 ```css
 .image-wrapper {
-  width: 100%;
-  height: 0;
-  padding-bottom: 150%;
-  /* 👆 image height / width * 100% */
-  position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 150%;
+	/* 👆 image height / width * 100% */
+	position: relative;
 }
 .image {
-  width: 100%;
-  height: auto;
-  position: absolute;
+	width: 100%;
+	height: auto;
+	position: absolute;
 }
 ```
 
@@ -45,21 +46,9 @@ The traditional way to reserve space for images is to use the vertical padding t
 The modern and simpler way is to define a width / height aspect ratio implicitly by [defining the width and height attributes on images and videos](https://twitter.com/addyosmani/status/1276779799198007301). This is called "mapped aspect-ratio".
 
 ```html
-<img
-  alt="An image"
-  src="image.jpg"
-  width="200"
-  height="300"
-/>
+<img alt="An image" src="image.jpg" width="200" height="300" />
 
-<video
-  alt="A video"
-  src="video.mp4"
-  width="1600"
-  height="900"
->
-  ...
-</video>
+<video alt="A video" src="video.mp4" width="1600" height="900">...</video>
 ```
 
 ```css
@@ -68,7 +57,7 @@ The modern and simpler way is to define a width / height aspect ratio implicitly
   width and height attributes */
 img,
 video {
-  aspect-ratio: attr(width) / attr(height);
+	aspect-ratio: attr(width) / attr(height);
 }
 ```
 
@@ -80,12 +69,12 @@ But there are some caveats when using JavaScript-powered lazy loading.
 
 I've created a set of demos on Codepen to test mapped `aspect-ratio` in different cases.
 
-| Use case                                                     | Works? | Demo                                          |
-| ------------------------------------------------------------ | ------ | --------------------------------------------- |
-| Native lazy loading (no placeholders required)               | 🟢 Yes | [Demo](https://codepen.io/verlok/pen/ExPwzGO) |
-| Javascript lazy loading (no placeholders, no `display` fix)  | 🔴 No  | [Demo](https://codepen.io/verlok/pen/bGEYyZe) |
-| Javascript lazy loading (no placeholders, with `display` fix)     | 🟢 Yes | [Demo](https://codepen.io/verlok/pen/RwKeoBX) |
-| Javascript lazy loading (SVG placeholders, no `display` fix) | 🟢 Yes | [Demo](https://codepen.io/verlok/pen/zYNmoxz) |
+| Use case                                                      | Works? | Demo                                          |
+| ------------------------------------------------------------- | ------ | --------------------------------------------- |
+| Native lazy loading (no placeholders required)                | 🟢 Yes | [Demo](https://codepen.io/verlok/pen/ExPwzGO) |
+| Javascript lazy loading (no placeholders, no `display` fix)   | 🔴 No  | [Demo](https://codepen.io/verlok/pen/bGEYyZe) |
+| Javascript lazy loading (no placeholders, with `display` fix) | 🟢 Yes | [Demo](https://codepen.io/verlok/pen/RwKeoBX) |
+| Javascript lazy loading (SVG placeholders, no `display` fix)  | 🟢 Yes | [Demo](https://codepen.io/verlok/pen/zYNmoxz) |
 
 With `display` fix I mean I needed to set the images `display` property to `block`, because leaving its value to the default one (`inline-block`) didn't work out for Javascript lazy-loaded images.
 
@@ -98,21 +87,18 @@ You should see some space is reserved _before_ the images start loading, so the 
 In the future, you will also be able to explicitly set the aspect ratio in your CSS code using [the aspect-ratio CSS rule](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio).
 
 ```html
-<div class="async">
-  Content is loading...
-</div>
+<div class="async">Content is loading...</div>
 ```
 
 ```css
 .async {
-  aspect-ratio: 16/9;
+	aspect-ratio: 16/9;
 }
 ```
 
 ~~Unfortunately, this has currently (April 2021) supported only by Chromium browsers. We still don't know if and when this will be supported in future versions of Safari.~~
 
 **November 2021 update:** this is now [supported](https://caniuse.com/mdn-css_properties_aspect-ratio) by all latest versions of all browsers (except for Internet Explorer, but... well).
-
 
 ## Conclusion
 

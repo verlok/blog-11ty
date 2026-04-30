@@ -4,6 +4,7 @@ description: "It's official. Responsive images are a W3C recommendation since No
 
 tags:
   - responsive images
+  - images
   - web performance
   - techniques
 ---
@@ -16,9 +17,9 @@ Back in 2010, Ethan Marcotte started talking of [responsive web design](https://
 
 That was revolutionary, but suddenly we developers had a new problem to face: in a responsive website, **how big should the website's image files be**?
 
-The initial approach was to use one large image for all viewport sizes, so that images looked great on large screens even if they had to be scaled down on smaller devices, but soon this turned out to be a bad practice: *slower connections* on mobile devices and *less performing CPUs* were slowing down the website and making user experience worse.
+The initial approach was to use one large image for all viewport sizes, so that images looked great on large screens even if they had to be scaled down on smaller devices, but soon this turned out to be a bad practice: _slower connections_ on mobile devices and _less performing CPUs_ were slowing down the website and making user experience worse.
 
-Developers then started to use javascript to *pick the right image size* based on the viewport, that's when scripts like [picturefill](https://github.com/scottjehl/picturefill) came about.
+Developers then started to use javascript to _pick the right image size_ based on the viewport, that's when scripts like [picturefill](https://github.com/scottjehl/picturefill) came about.
 
 But the thing is that javascript is slower than pure HTML: it must be downloaded, parsed and executed before the browser could even start downloading the images. The web needed something native to go back to defining images in the HTML to allow browsers to start downloading them as soon as possible.
 
@@ -28,8 +29,8 @@ That's why a group of independent designers and developers who go by the name of
 
 "Responsive images" is the name given to the technique of **defining more than one source per each image**, and making browsers **to download the best one**, depending on the following factors:
 
-* browser viewport, or your website layout
-* device pixel density
+- browser viewport, or your website layout
+- device pixel density
 
 Users have different pixel densities depending on the monitor of their device. Standard devices have a pixel density of 1, meaning the monitor has 1 device pixel per CSS pixel, while the newest HiDpi monitors - including "Retina" displays - have a higher density. For example, a pixel density of 2 means that the monitor has 2x2 device pixels per CSS pixel, and so forth.
 
@@ -40,14 +41,16 @@ HiDpi displays are great when rendering vectors, like fonts or SVG images. But w
 The simplest of things you can do with the new `srcset` attribute is to support different pixel densities. You just need to specify different sources for your image, describing each one with the `x` descriptor, which indicates the pixel density of the image source. Like that:
 
 ```html
-<img src="shirt_300w.jpg"
-  srcset="shirt_300w.jpg 1x,
-          shirt_600w.jpg 2x"
-  alt="A beautiful shirt"
-  width="300" height="380">
+<img
+	src="shirt_300w.jpg"
+	srcset="shirt_300w.jpg 1x, shirt_600w.jpg 2x"
+	alt="A beautiful shirt"
+	width="300"
+	height="380"
+/>
 ```
 
-In this example, we want to display an image of 300 x 380 *CSS* pixels. The standard density image is `shirt_300w.jpg` and it's described by the `1x` descriptor. The double-density image is `shirt_300w.jpg`, and it needs to be 600 x 760 pixels.
+In this example, we want to display an image of 300 x 380 _CSS_ pixels. The standard density image is `shirt_300w.jpg` and it's described by the `1x` descriptor. The double-density image is `shirt_300w.jpg`, and it needs to be 600 x 760 pixels.
 
 **Note:** browsers that understand the new `srcset` attribute will ignore the `src` one, which is still required.
 
@@ -61,12 +64,12 @@ Let's suppose that our image must be wide:
 - 600 pixels on medium (> 600) viewports
 - 1200 pixels on large (> 1200) viewports
 
-How do we make sure that our users always get the image size that best fits their viewport *and* pixel density?
+How do we make sure that our users always get the image size that best fits their viewport _and_ pixel density?
 
 We can define images of these sizes:
 
 | Density / Viewport width | < 600     | >= 600      | >= 1200     |
-|--------------------------|-----------|-------------|-------------|
+| ------------------------ | --------- | ----------- | ----------- |
 | 1x                       | 300 x 380 | 600 x 760   | 1200 x 1520 |
 | 2x                       | 600 x 760 | 1200 x 1520 | 2400 x 3040 |
 
@@ -80,21 +83,24 @@ As you can see, we're using 4 different image sizes. I would advice to name the 
 To markup this in our HTML, we must do:
 
 ```html
-<img src="shirt_300w.jpg"
-  srcset="shirt_300w.jpg 300w,
-          shirt_600w.jpg 600w,
-          shirt_1200w.jpg 1200w,
-          shirt_2400w.jpg 2400w"
-  alt="A beautiful shirt"
-  sizes="(min-width: 1200px) 1200px,
+<img
+	src="shirt_300w.jpg"
+	srcset="
+		shirt_300w.jpg   300w,
+		shirt_600w.jpg   600w,
+		shirt_1200w.jpg 1200w,
+		shirt_2400w.jpg 2400w
+	"
+	alt="A beautiful shirt"
+	sizes="(min-width: 1200px) 1200px,
          (min-width: 600px) 600px,
-         300px">
+         300px"
+/>
 ```
 
 With this markup, the browser knows the space that the image will occupy on the screen (through `sizes`) and all the available image sources that we prepared for our users (through `srcset`).
 
 At this point, the browser will choose what image source to download based on the information we provided and the information it knows about our user, such as screen density, cached files, connection speed, etc.
-
 
 ## Browser support
 

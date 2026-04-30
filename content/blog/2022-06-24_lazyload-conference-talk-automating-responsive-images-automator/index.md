@@ -5,6 +5,7 @@ description: On June 24th, 2022 I spoke about how to automate responsive images 
 tags:
   - talks
   - responsive images
+  - images
   - open source
 ---
 

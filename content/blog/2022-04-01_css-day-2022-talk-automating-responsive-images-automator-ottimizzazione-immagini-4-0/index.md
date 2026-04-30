@@ -3,6 +3,7 @@ title: "Talk: Images optimisation 4.0, automate your work with a user-centric ap
 description: On April 1st 2022 I spoke about responsive images optimisation 4.0 at the CSS Day Conference 2022 in Faenza, Italy. This talk – in Italian language – is on how to become more productive by automating responsive images.
 tags:
   - responsive images
+  - images
   - automation
   - talks
 ---
