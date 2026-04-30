@@ -25,15 +25,15 @@ For lazy-loaded images (most images on a page), we can drop the hand-crafted `si
 
 ```html
 <img
-	loading="lazy"
-	sizes="auto"
-	srcset="
-		shirt_300w.jpg   300w,
-		shirt_600w.jpg   600w,
-		shirt_1200w.jpg 1200w,
-		shirt_2400w.jpg 2400w
-	"
-	alt="A shirt"
+  loading="lazy"
+  sizes="auto"
+  srcset="
+    shirt_300w.jpg   300w,
+    shirt_600w.jpg   600w,
+    shirt_1200w.jpg 1200w,
+    shirt_2400w.jpg 2400w
+  "
+  alt="A shirt"
 />
 ```
 
@@ -41,17 +41,17 @@ For "hero" images — the ones above the fold, candidates to become the page's L
 
 ```html
 <img
-	loading="eager"
-	srcset="
-		shirt_300w.jpg   300w,
-		shirt_600w.jpg   600w,
-		shirt_1200w.jpg 1200w,
-		shirt_2400w.jpg 2400w
-	"
-	sizes="(min-width: 1200px) 100vw,
+  loading="eager"
+  srcset="
+    shirt_300w.jpg   300w,
+    shirt_600w.jpg   600w,
+    shirt_1200w.jpg 1200w,
+    shirt_2400w.jpg 2400w
+  "
+  sizes="(min-width: 1200px) 100vw,
          (min-width: 600px) 600px,
          300px"
-	alt="A shirt"
+  alt="A shirt"
 />
 ```
 
