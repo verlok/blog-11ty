@@ -52,7 +52,6 @@
 		<meta property="og:url" content="{{ canonicalUrl }}">
 		<meta property="og:type" content="{% if layout == 'layouts/post.njk' %}article{% else %}website{% endif %}">
 		<meta property="og:locale" content="{{ metadata.language }}">
-		<meta name="twitter:card" content="{% if image %}summary_large_image{% else %}summary{% endif %}">
 		{%- if image %}
 		{% ogImageMeta image, image_alt, metadata.url %}
 		{%- endif %}
