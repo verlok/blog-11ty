@@ -42,25 +42,6 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		<meta name="generator" content="{{ eleventy.generator }}">
 
-		{#- Open Graph & Twitter Card metadata for social sharing #}
-		{%- set pageTitle = title or metadata.title %}
-		{%- set pageDescription = description or metadata.description %}
-		{%- set canonicalUrl = page.url | htmlBaseUrl | absoluteUrl(metadata.url) %}
-		<meta property="og:site_name" content="{{ metadata.title }}">
-		<meta property="og:title" content="{{ pageTitle }}">
-		<meta property="og:description" content="{{ pageDescription }}">
-		<meta property="og:url" content="{{ canonicalUrl }}">
-		<meta property="og:type" content="{% if layout == 'layouts/post.njk' %}article{% else %}website{% endif %}">
-		<meta property="og:locale" content="{{ metadata.language }}">
-		{%- if image %}
-		{% ogImageMeta image, image_alt, metadata.url %}
-		{%- endif %}
-		{%- if layout == 'layouts/post.njk' and page.date %}
-		<meta property="article:published_time" content="{{ page.date | htmlDateString }}">
-		<meta property="article:author" content="{{ metadata.author.name }}">
-		{%- endif %}
-		<link rel="canonical" href="{{ canonicalUrl }}">
-
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">

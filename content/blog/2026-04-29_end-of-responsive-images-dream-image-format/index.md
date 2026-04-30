@@ -8,8 +8,6 @@ tags:
   - web performance
   - lazy loading
 layout: layouts/post.njk
-image: ./cover.png
-image_alt: "On the left, the text 'The dream of a container image format'. On the right, a graphical representation of a container image labeled '.img' bundling multiple image sizes inside it."
 ---
 
 Andy Bell wrote a great article on [the end of responsive images](https://piccalil.li/blog/the-end-of-responsive-images/#the-beginning-and-the-end), explaining how the now widely supported `sizes="auto"` attribute lets browsers figure out the rendered size of lazy-loaded images on their own, removing the need to hand-craft the `sizes` attribute for most images.
