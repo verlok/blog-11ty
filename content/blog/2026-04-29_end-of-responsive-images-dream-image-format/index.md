@@ -1,6 +1,6 @@
 ---
-title: "The end of responsive images + a dream image format"
-description: "Andy Bell argues that sizes=auto marks the end of responsive images as we know them. Here's my TL;DR plus a dream about a 'super image' format that bundles every size in a single file."
+title: "My dream of a container image format: a call to the web community"
+description: "A single image file bundling every resolution could finally make the `<img>` tag simple again. A call to the web community to build a container image format."
 date: 2026-04-29
 tags:
   - responsive images
@@ -10,18 +10,18 @@ tags:
 layout: layouts/post.njk
 ---
 
-Andy Bell wrote a great article on [the end of responsive images](https://piccalil.li/blog/the-end-of-responsive-images/#the-beginning-and-the-end), explaining how the `sizes="auto"` attribute, now widely supported, lets browsers figure out the rendered size of lazy-loaded images on their own, removing the need to manually specify the `sizes` attribute for most images.
+Andy Bell wrote a great article on [the end of responsive images](https://piccalil.li/blog/the-end-of-responsive-images/#the-beginning-and-the-end), explaining how the now widely supported `sizes="auto"` attribute lets browsers figure out the rendered size of lazy-loaded images on their own, removing the need to hand-craft the `sizes` attribute for most images.
+
+Reading it brought back a dream I've been carrying for years: an image format that would let us write a radically simpler `<img>` tag — simpler than even `sizes="auto"` allows. I'll get to it below. But first, a quick recap of Andy's piece for context.
 
 <figure>
-	{% image "cover.png", "A conceptual e-commerce product page showing a shirt and a 'Super Image' format that bundles multiple resolutions.", [648, 1296], "648px", true %}
+	{% image "cover.png", "On the left, the text 'The dream of a container image format'. On the right, a graphical representation of a container image labeled '.img' bundling multiple image sizes inside it.", [648, 1296], "648px", true %}
 	<figcaption>A dream image format: one file, all the sizes you need.</figcaption>
 </figure>
 
-My TL;DR of Andy's article is what follows.
+## Andy's TL;DR
 
-## For most images: just let the browser do the work
-
-For most images on the page — the lazy-loaded ones — we could simply do:
+For lazy-loaded images (most images on a page), we can drop the hand-crafted `sizes` and let the browser do the work:
 
 ```html
 <img
@@ -37,11 +37,7 @@ For most images on the page — the lazy-loaded ones — we could simply do:
 />
 ```
 
-And good bye to having to hand-craft `sizes`.
-
-## For hero images: keep being meticulous
-
-For the "hero" images, the ones "above the fold," which are candidates to become the page's LCP, we must continue to use meticulous upfront sizing via `sizes`.
+For "hero" images — the ones above the fold, candidates to become the page's LCP — we still need to be meticulous with upfront sizing via `sizes`:
 
 ```html
 <img
@@ -59,18 +55,39 @@ For the "hero" images, the ones "above the fold," which are candidates to become
 />
 ```
 
-We'd still have to provide all the image sizes in a relatively long `srcset` tag though.
+So `sizes` can mostly go away. But we're still left with that long `srcset` listing every variant. And that's where my old dream comes back in.
 
 ## I have a dream
 
-I've been dreaming about having a "super image" format containing all image sizes inside. Like if image files were a "bundled folder of images".
+For years I've been dreaming about a container image format — a single file containing every resolution of an image inside it. Think of it as a bundled folder of images, packaged as one.
 
-Then we could do:
+With a format like that, the `<img>` tag for a lazy image could collapse to this:
 
 ```html
-<img srcset="shirt_all-w.webp" sizes="auto" loading="lazy" alt="A shirt" />
+<img src="shirt.webp" sizes="auto" loading="lazy" alt="A shirt" />
 ```
 
-And the browser would take care of checking what image sources are contained in that file, and only download the relevant part of it.
+No `srcset`. No comma-separated list of widths. The browser would open the file, see which resolutions are inside, and download only the bytes it needs for the size it has to render.
 
-Do you think my dream will ever become true?
+For hero images, we'd still pair it with an upfront `sizes`, but the markup would shrink dramatically:
+
+```html
+<img
+	src="shirt.webp"
+	sizes="(min-width: 1200px) 100vw,
+         (min-width: 600px) 600px,
+         300px"
+	loading="eager"
+	alt="A shirt"
+/>
+```
+
+The `<img>` tag, finally simple again.
+
+## A call to the community
+
+Andy's article shows that the platform can absorb a lot of the complexity we've been carrying around in our markup. I'd love to see us go even further.
+
+To the web standards folks, image format authors, and browser engineers reading this: is a container image format something we could actually build? HTTP range requests already let browsers fetch slices of files. Container formats already exist in other domains. The pieces feel like they're there.
+
+I've been holding this dream for a long time. Could we finally make it real?
