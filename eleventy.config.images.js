@@ -80,16 +80,12 @@ export default (eleventyConfig) => {
 			const jpeg = metadata.jpeg[0];
 			const absolute = new URL(jpeg.url, baseUrl).toString();
 			const altAttr = alt
-				? `\n\t\t<meta property="og:image:alt" content="${escapeAttr(alt)}">`
-				: "";
-			const twAltAttr = alt
-				? `\n\t\t<meta name="twitter:image:alt" content="${escapeAttr(alt)}">`
+				? `\n\t\t<meta property="og:image:alt" content="${escapeAttr(alt)}">\n\t\t<meta name="twitter:image:alt" content="${escapeAttr(alt)}">`
 				: "";
 			return [
 				`<meta property="og:image" content="${absolute}">`,
 				`\t\t<meta property="og:image:width" content="${jpeg.width}">`,
 				`\t\t<meta property="og:image:height" content="${jpeg.height}">${altAttr}`,
-				`\t\t<meta name="twitter:image" content="${absolute}">${twAltAttr}`,
 			].join("\n");
 		}
 	);
