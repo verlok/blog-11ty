@@ -12,7 +12,7 @@ image: ./cover.png
 image_alt: "Graphic representation of a container image format bundling multiple sizes."
 ---
 
-Andy Bell wrote a great article on [the end of responsive images](https://piccalil.li/blog/the-end-of-responsive-images/#the-beginning-and-the-end), explaining how the now widely-supported `sizes="auto"` attribute lets browsers figure out the rendered size of lazy-loaded images on their own, removing the need to hand-craft the `sizes` attribute for most images.
+A few days ago, [Mat Marquis](https://piccalil.li/author/mat-marquis/) wrote a great article on [the end of responsive images](https://piccalil.li/blog/the-end-of-responsive-images/#the-beginning-and-the-end), explaining how the now widely-supported `sizes="auto"` attribute lets browsers figure out the rendered size of lazy-loaded images on their own, removing the need to hand-craft the `sizes` attribute for most images.
 
 Reading it revived a dream I've been carrying for years: an image format that would let us write a radically simpler `<img>` tag — simpler than even `sizes="auto"` allows. I'll get to it below. But first, a quick recap of Andy's piece for context.
 
