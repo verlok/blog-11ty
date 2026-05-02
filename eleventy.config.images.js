@@ -69,4 +69,11 @@ export default (eleventyConfig) => {
 		//const returnedTag = picture || img;
 		return (picture || img).outerHTML;
 	});
+
+	eleventyConfig.addFilter("extractImageUrl", function (content) {
+		const dom = new JSDOM(content);
+		const img = dom.window.document.querySelector("img");
+		if (!img) return "";
+		return img.src;
+	});
 };

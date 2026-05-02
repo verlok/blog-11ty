@@ -42,6 +42,28 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		<meta name="generator" content="{{ eleventy.generator }}">
 
+		{#- Open Graph tags #}
+		<meta property="og:title" content="{{ title or metadata.title }}">
+		<meta property="og:description" content="{{ description or metadata.description }}">
+		<meta property="og:url" content="{{ page.url | htmlBaseUrl(metadata.url) }}">
+		<meta property="og:site_name" content="{{ metadata.title }}">
+		<meta property="og:locale" content="{{ metadata.language }}">
+		{%- if layout == "layouts/post.njk" or (tags and "posts" in tags) %}
+		<meta property="og:type" content="article">
+		{%- else %}
+		<meta property="og:type" content="website">
+		{%- endif %}
+		{%- set ogImage = "" %}
+		{%- if layout != "layouts/home.njk" %}
+			{%- set ogImage = content | extractImageUrl %}
+		{%- endif %}
+		{%- if not ogImage %}
+			{%- set ogImage = metadata.image %}
+		{%- endif %}
+		{%- if ogImage %}
+		<meta property="og:image" content="{{ ogImage | htmlBaseUrl(metadata.url) }}">
+		{%- endif %}
+
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
