@@ -8,11 +8,13 @@ tags:
   - web performance
   - lazy loading
 layout: layouts/post.njk
+image: ./cover.png
+image_alt: "Graphic representation of a container image format bundling multiple sizes."
 ---
 
-Andy Bell wrote a great article on [the end of responsive images](https://piccalil.li/blog/the-end-of-responsive-images/#the-beginning-and-the-end), explaining how the now widely supported `sizes="auto"` attribute lets browsers figure out the rendered size of lazy-loaded images on their own, removing the need to hand-craft the `sizes` attribute for most images.
+Andy Bell wrote a great article on [the end of responsive images](https://piccalil.li/blog/the-end-of-responsive-images/#the-beginning-and-the-end), explaining how the now widely-supported `sizes="auto"` attribute lets browsers figure out the rendered size of lazy-loaded images on their own, removing the need to hand-craft the `sizes` attribute for most images.
 
-Reading it brought back a dream I've been carrying for years: an image format that would let us write a radically simpler `<img>` tag — simpler than even `sizes="auto"` allows. I'll get to it below. But first, a quick recap of Andy's piece for context.
+Reading it revived a dream I've been carrying for years: an image format that would let us write a radically simpler `<img>` tag — simpler than even `sizes="auto"` allows. I'll get to it below. But first, a quick recap of Andy's piece for context.
 
 <figure>
 	{% image "cover.png", "On the left, the text 'The dream of a container image format'. On the right, a graphical representation of a container image labeled '.img' bundling multiple image sizes inside it.", [648, 1296], "648px", true %}
@@ -67,7 +69,7 @@ With a format like that, the `<img>` tag, at least for lazy images, could be dra
 <img srcset="shirt.imgc *w" sizes="auto" loading="lazy" alt="A shirt" />
 ```
 
-No `srcset`. No comma-separated list of widths. The browser would open the file, see which resolutions are inside, and download only the bytes it needs for the size it has to render.
+No more complex `srcset` with a comma-separated list of widths. The browser would open the file, see which resolutions are available inside, and download only the bytes it needs for the size it has to render.
 
 The `<img>` tag, finally simple again.
 
@@ -75,6 +77,6 @@ The `<img>` tag, finally simple again.
 
 Andy's article shows that the platform can absorb a lot of the complexity we've been carrying around in our markup. I'd love to see us go even further.
 
-To the web standards folks, image format authors, and browser engineers reading this: is a container image format something we could actually build? HTTP range requests already let browsers fetch slices of files. Container formats already exist in other domains. The pieces feel like they're there.
+To the web standards folks, image format authors, and browser engineers reading this: is a container image format something we could actually build? HTTP range requests already allow browsers to fetch segments of files. Container formats already exist in other domains. The building blocks are all there.
 
 I've been holding this dream for a long time. Could we finally make it real?
