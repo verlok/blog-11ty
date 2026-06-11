@@ -2,9 +2,9 @@
 <section class="postlist">
 {% for post in postslist | reverse %}
 	{% set imageHTML = post.templateContent | extractImage(firstImage) %}	
-	{% set articleModifier = 'postlist-item--no-image' if imageHTML=='' else 'postlist-item--with-image' %}
-	<article class="postlist-item {{ articleModifier }}">
-		<a href="{{ post.url }}" class="postlist-link">
+	{% set linkModifier = 'postlist-link--no-image' if imageHTML=='' else 'postlist-link--with-image' %}
+	<article class="postlist-item">
+		<a href="{{ post.url }}" class="postlist-link {{ linkModifier }}">
 			<h1 class="postlist-title">
 				{% if post.data.title %}{{ post.data.title }}
 				{% else %}

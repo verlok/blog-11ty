@@ -298,26 +298,25 @@
 
 	.postlist-item {
 		margin-bottom: 2rem;
+	}
+
+	.postlist-link {
 		display: grid;
 		gap: 1rem;
 	}
 
-	.postlist-item--no-image {
+	.postlist-link--no-image {
 		grid-template-areas:
 			"title"
 			"description"
 			"button";
 	}
-	.postlist-item--with-image {
+	.postlist-link--with-image {
 		grid-template-areas:
 			"title"
 			"image"
 			"description"
 			"button";
-	}
-
-	.postlist-link {
-		display: contents;
 	}
 
 	.postlist-link[href] {
@@ -331,6 +330,18 @@
 	}
 	.postlist-link[href]:visited > .postlist-title {
 		color: var(--text-color-special-link-visited);
+	}
+
+	.postlist-link:focus-visible {
+		outline: 2px solid var(--text-color-link);
+		outline-offset: 4px;
+		border-radius: 4px;
+	}
+
+	.postlist-link:hover .postlist-button,
+	.postlist-link:focus-visible .postlist-button {
+		background-color: var(--text-color-link);
+		color: var(--background-color);
 	}
 
 	.postlist-date,
@@ -374,6 +385,7 @@
 		padding: 0.35rem 0.75rem;
 		border-radius: 0.3rem;
 		font-size: 90%;
+		transition: background-color 0.2s ease, color 0.2s ease;
 	}
 
 	/* Post page */
@@ -384,7 +396,7 @@
 
 	/* Post list image left */
 	@media screen and (min-width: 620px) {
-		.postlist-item--with-image {
+		.postlist-link--with-image {
 			grid-template-areas:
 				"title title"
 				"image description"
