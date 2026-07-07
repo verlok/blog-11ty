@@ -1,6 +1,6 @@
 ---
-title: "Responsive vs. Adaptive: What do these words even mean anymore?"
-description: "How Ethan Marcotte's 2010 definition of 'responsive' is colliding with Google's modern 'adaptive' Android apps and web performance interactivity metrics."
+title: "Responsive vs. Adaptive: Are we using the wrong words?"
+description: "How Ethan Marcotte's definition of 'responsive' is colliding with Google's 'adaptive' layouts for Android foldables and the web performance INP metric."
 date: 2026-07-07
 tags:
   - web design
@@ -9,65 +9,57 @@ tags:
   - terminology
 layout: layouts/post.njk
 image: ./cover.jpg
-image_alt: "A confused developer scratching their head while surrounded by screens adapting to different sizes and web pages responding to clicks."
+image_alt: "A pensive developer looking at screens showing responsive websites and adaptive apps, wondering about the terminology."
 ---
 
-Remember 2010? It was a simpler time (except for having to support IE6).
+Back in 2010, Ethan Marcotte coined the term [Responsive Web Design](https://ethanmarcotte.com/books/responsive-web-design/). Since then, we've used "responsive" to describe a website that adapts its layout to the viewport size. Fluid grids, flexible images, media queries.
 
-Back then, Ethan Marcotte coined the term [Responsive Web Design](https://ethanmarcotte.com/books/responsive-web-design/), and suddenly we had a unified vocabulary for making websites work on both desktops and those shiny new iPhones. A mix of fluid grids, flexible images, and media queries. If it adapted its layout to the viewport, it was "responsive."
+For a while, we tried to separate it from "adaptive" design. The latter usually meant snapping to fixed breakpoints, or serving different HTML based on server-side device detection (remember Aaron Gustafson's book?). But eventually, "responsive" won. It became the default term for "looks good on mobile and desktop."
 
-For a brief moment, we tried to separate it from "adaptive" design—the latter usually meaning snapping to fixed breakpoints or serving different HTML based on server-side device detection (like Aaron Gustafson's approach). But eventually, "responsive" won. It became the blanket term for "looks good on any screen size."
-
-But fast forward to today, and I’m starting to feel like these terms have lost all their original meaning. Actually, they’ve split in ways that are causing real confusion.
-
-Here is why.
-
-## Exhibit A: Google and Adaptive Android Apps
-
-If you’ve dipped your toes into Android development or modern UI design guidelines recently, you'll know that Google is heavily pushing the word **"adaptive"** (in guidelines like their official guide on [how to build adaptive layouts](https://developer.android.com/design/ui/mobile/guides/layout-and-content/adapt-layout)).
-
-With the rise of foldable phones (like the Pixel Fold) and tablets, apps can no longer just stretch to fit the screen. They need to completely restructure their layouts. Google’s design documentation now distinguishes the two terms:
-
-- **Responsive layouts** are fluid—they stretch, squeeze, and use constraint-based rules to adjust spacing within a single layout structure.
-- **Adaptive layouts** are structural—they change the entire layout structure (like swapping a bottom navigation bar for a navigation rail, or splitting into a list-detail view) depending on "Window Size Classes".
-
-So in Google’s world, when you design for foldables, you are building an _adaptive_ app.
-
-## Exhibit B: Web Performance and "Responsiveness"
-
-At the same time, in the web performance world—a space I spend a lot of time in—the word "responsive" has been completely hijacked.
-
-When web performance engineers talk about making a page "responsive," they aren’t talking about CSS media queries or viewports. They are talking about **interactivity**. Specifically, how fast the browser reacts to user input.
-
-With Google’s **Interaction to Next Paint (INP)** metric now a Core Web Vital, "responsiveness" is a measure of millisecond delays. If a user clicks a button and the page freezes for 300ms because of a long-running JavaScript task, that page has poor _responsiveness_.
-
-So now, we have a linguistic collision.
-
-## The Cognitive Load of Vocabulary
-
-If a product owner walks into a meeting and says, _"We need to make this app more responsive,"_ what do they mean?
-
-- Do we need to rewrite our CSS to support tablets?
-- Do we need to break up long tasks in our JS event handlers to fix INP?
-- Or does the developer need to implement a master-detail panel for foldable screens?
-
-We’re using the same word to mean "adapts to screen dimensions" and "reacts quickly to user inputs." And we're using "adaptive" to mean "adapts to screen dimensions, but only sometimes, and differently depending on if it's a website or a native app."
-
-It’s messy.
+But fast-forward to today, and these terms have split in ways that are causing real confusion.
 
 <figure>
-	{% image "cover.jpg", "A confused developer scratching their head while surrounded by screens adapting to different sizes and web pages responding to clicks.", [648, 1296], "648px", true %}
-	<figcaption>Responsive? Adaptive? Interactive? It's getting crowded in here.</figcaption>
+	{% image "cover.jpg", "A pensive developer looking at screens showing responsive websites and adaptive apps, wondering about the terminology.", [648, 1296], "648px", true %}
+	<figcaption>Are we building a responsive layout or optimizing for responsiveness?</figcaption>
 </figure>
 
-## Let's Reset: What Should We Call Them?
+## Google's definition of "adaptive" in Android
 
-I want to hear from you on this.
+If you look at Android development or modern UI design guidelines, Google is heavily pushing the word **"adaptive"**.
 
-If we had a magic wand and could reset our industry jargon today, how would you name these concepts to make them clear for everyone—designers, web developers, app developers, and product managers?
+With the rise of foldable phones and tablets, apps can't just stretch to fit. They need to completely restructure. In their [guide on adaptive layouts](https://developer.android.com/design/ui/mobile/guides/layout-and-content/adapt-layout), the main focus is entirely on "adaptive" layouts (changing layouts based on breakpoints and fold states). They still reference "responsive" design concepts (like fluid grids and flexible components) as a foundation, but the end-goal and the terminology they use for a screen-size layout adjustment is always **adaptive**.
 
-- Do you think **"adaptive"** is a better word than "responsive" for layouts that adjust to screen sizes?
-- Should **"responsive"** be reserved purely for interactivity and input delay (like INP)?
-- Or has Ethan Marcotte's 2010 definition of "responsive" earned its place forever, performance metrics be damned?
+So, in Google's mobile world, adapting to screen size has become *adaptive* design.
 
-Drop a comment below or find me on social media. Let’s figure out if we’re all speaking the same language anymore.
+## The web performance definition of "responsiveness"
+
+At the same time, in the web performance space—where I spend a lot of time—the word "responsive" has taken on a completely different meaning.
+
+When performance engineers say they want to make a page "responsive," they aren’t talking about viewports or media queries at all. They are talking about **interactivity**. Specifically, how fast the browser reacts to user inputs.
+
+With Google's [Interaction to Next Paint (INP)](https://web.dev/inp/) metric, "responsiveness" is measured in milliseconds. If a user taps a button and the page freezes for 300ms, the website has poor responsiveness.
+
+## The terminology collision
+
+This has created a confusing mess. 
+
+If a product manager says: *"We need to make this website more responsive."*
+What do they mean?
+*   Do we need to adjust our CSS media queries for foldables and tablets?
+*   Or do we need to break up long JavaScript tasks to improve our INP?
+
+We are using the exact same word to mean "adapts to screen size" and "reacts fast to user input." 
+
+## Should we stop using the word "Responsive" for layouts?
+
+Maybe it's time to let the word "responsive" go—at least when we talk about screen sizes. 
+
+What if we started using **"adaptive"** for everything related to layout adjustment (both on the web and in native apps), and reserved **"responsive"** purely for web performance? 
+
+Under this model:
+*   An **adaptive** website or app is one that adjusts its layout to the viewport (mobile, desktop, foldable).
+*   A **responsive** website or app is one that is fast to respond to user interactions (low INP, no frozen main thread).
+
+It feels cleaner, more logical, and it solves the vocabulary overlap. But is the web community ready to drop Ethan Marcotte's 2010 definition? Or is "responsive design" too deeply engraved in our brains?
+
+I'm curious to hear what you think. Does this distinction make sense, or is it too late to change? Feel free to [reach out](/contact/) and let me know!
