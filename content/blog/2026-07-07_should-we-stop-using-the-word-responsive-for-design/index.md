@@ -1,6 +1,6 @@
 ---
-title: "Responsive vs. Adaptive: Are we using the wrong words?"
-description: "How Ethan Marcotte's definition of 'responsive' is colliding with Google's 'adaptive' layouts for Android foldables and the web performance INP metric."
+title: "Should we stop using the word \"Responsive\" for design?"
+description: "How Ethan Marcotte's 2010 definition of \"responsive\" is colliding with Google's \"adaptive\" layouts for Android foldables and the web performance INP metric."
 date: 2026-07-07
 tags:
   - web design
@@ -20,16 +20,18 @@ But fast-forward to today, and these terms have split in ways that are causing r
 
 <figure>
 	{% image "cover.jpg", "A pensive developer looking at screens showing responsive websites and adaptive apps, wondering about the terminology.", [648, 1296], "648px", true %}
-	<figcaption>Are we building a responsive layout or optimizing for responsiveness?</figcaption>
+	<figcaption>Should we use "adaptive" for layouts and "responsive" for performance?</figcaption>
 </figure>
 
-## Google's definition of "adaptive" in Android
+## The mobile definition of "adaptive" (Android and iOS)
 
-If you look at Android development or modern UI design guidelines, Google is heavily pushing the word **"adaptive"**.
+If you look at modern mobile app development—both Android and iOS—the word **"adaptive"** is the standard.
 
-With the rise of foldable phones and tablets, apps can't just stretch to fit. They need to completely restructure. In their [guide on adaptive layouts](https://developer.android.com/design/ui/mobile/guides/layout-and-content/adapt-layout), the main focus is entirely on "adaptive" layouts (changing layouts based on breakpoints and fold states). They still reference "responsive" design concepts (like fluid grids and flexible components) as a foundation, but the end-goal and the terminology they use for a screen-size layout adjustment is always **adaptive**.
+Google heavily uses it for Android app design. With the rise of foldable phones and tablets, apps can't just stretch to fit. They need to completely restructure. In their [guide on adaptive layouts](https://developer.android.com/design/ui/mobile/guides/layout-and-content/adapt-layout), the focus is entirely on "adaptive" layouts (changing layout structures based on breakpoints and fold states), while "responsive" concepts (like fluid sizing) are just seen as a foundation.
 
-So, in Google's mobile world, adapting to screen size has become *adaptive* design.
+Apple follows a similar logic. In their [Human Interface Guidelines for Layout](https://developer.apple.com/design/human-interface-guidelines/layout), they frame layout adjustments around the concept of **"Adaptability"** rather than "Responsiveness." They guide developers to build interfaces that adapt seamlessly to different devices, screen sizes, and orientations using size classes and adaptive structures.
+
+So, in the mobile app world, adapting to screen sizes is consistently called *adaptive* design.
 
 ## The web performance definition of "responsiveness"
 
@@ -50,7 +52,7 @@ What do they mean?
 
 We are using the exact same word to mean "adapts to screen size" and "reacts fast to user input." 
 
-## Should we stop using the word "Responsive" for layouts?
+## A proposal: Split the terminology
 
 Maybe it's time to let the word "responsive" go—at least when we talk about screen sizes. 
 
