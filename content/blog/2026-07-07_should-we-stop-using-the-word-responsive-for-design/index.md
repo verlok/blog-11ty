@@ -1,6 +1,6 @@
 ---
 title: 'Should we stop using the word "Responsive" for design?'
-description: 'How Ethan Marcotte''s 2010 definition of "responsive" is colliding with Google''s "adaptive" layouts for Android foldables and the web performance INP metric.'
+description: "How Ethan Marcotte's 2010 definition of \"responsive\" is colliding with mobile app guidelines on \"adaptability\" and web performance interactivity metrics."
 date: 2026-07-07
 tags:
   - web design
