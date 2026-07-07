@@ -64,6 +64,8 @@ Under this model:
 - An **adaptive** website or app is one that adjusts its layout to the viewport (mobile, desktop, foldable).
 - A **responsive** website or app is one that is fast to respond to user interactions (low INP, no frozen main thread).
 
+To put it in simple terms, if I had to explain this concept to my mother, I would say that a layout *adapts* to screen sizes, not that it "responds" to them. It is just a much more natural way to describe it.
+
 It feels cleaner, more logical, and it solves the vocabulary overlap. But is the web community ready to drop Ethan Marcotte's 2010 definition? Or is "responsive design" too deeply engraved in our brains?
 
 I'm curious to hear what you think. Does this distinction make sense, or is it too late to change? Feel free to [reach out](/contact/) and let me know!
