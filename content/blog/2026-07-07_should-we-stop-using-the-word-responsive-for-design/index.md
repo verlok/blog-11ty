@@ -14,7 +14,7 @@ image_alt: "A pensive developer looking at screens showing responsive websites a
 
 Back in 2010, Ethan Marcotte coined the term [Responsive Web Design](https://ethanmarcotte.com/books/responsive-web-design/). Since then, we've used "responsive" to describe a website that adapts its layout to the viewport size. Fluid grids, flexible images, media queries.
 
-For a while, we tried to separate it from "adaptive" design. The latter usually meant snapping to fixed breakpoints, or serving different HTML based on server-side device detection (remember Aaron Gustafson's book?). But eventually, "responsive" won. It became the default term for "looks good on mobile and desktop."
+For a while, we tried to separate it from "adaptive" design. Back then, "adaptive" websites had a bit of a bad reputation because they usually relied on server-side device detection and user-agent sniffing to serve completely different HTML and CSS to the browser (remember Aaron Gustafson's book?). Because UA sniffing was brittle and prone to breaking, the web community wanted to distance itself from it. Ethan's responsive model served the exact same code to everyone, letting the browser do the work. "Responsive" won the vocabulary war, and "adaptive" became a word associated with outdated, server-detected layouts.
 
 But fast-forward to today, and these terms have split in ways that are causing real confusion.
 
