@@ -110,6 +110,8 @@
 						{% endif %}
 					</div>
 				</div>
+				{#- Now the things #}
+				<p>{{ strings[page.lang or "en"].tagline }}</p>
 				{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 				<nav>
 					<h2 class="visually-hidden">{{ strings[page.lang or "en"].topLevelNav }}</h2>
@@ -123,8 +125,6 @@
 						{%- endfor %}
 					</ul>
 				</nav>
-				{#- Now the things #}
-				<p>{{ strings[page.lang or "en"].tagline }}</p>
 			</div>
 		</header>
 
