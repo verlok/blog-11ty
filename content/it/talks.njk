@@ -1,7 +1,7 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Presentazioni
+  key: Talk
   order: 3
 ---
 
@@ -9,7 +9,7 @@ eleventyNavigation:
 	<a href="{{ '/' | locale_url }}">&larr; {{ strings[page.lang].backToHome }}</a>
 </nav>
 
-<h1>Presentazioni</h1>
+<h1>Talk</h1>
 
 {% set postslist = collections.posts__talks_it %}
 {% include "postslist.njk" %}

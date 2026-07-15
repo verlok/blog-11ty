@@ -272,6 +272,10 @@
 		align-items: flex-end;
 	}
 
+	header p {
+		margin-block: 0.5em;
+	}
+
 	footer .content {
 		align-items: center;
 	}
@@ -299,6 +303,7 @@
 	/* Nav */
 	.nav {
 		display: flex;
+		flex-wrap: wrap;
 		padding: 0;
 		margin: 0 0 0 -0.5rem;
 		list-style: none;
@@ -311,8 +316,14 @@
 	}
 
 	.nav-item a {
-		padding: 0.75rem 0.5rem;
+		padding: 0.4rem 0.5rem;
 		display: block;
+	}
+
+	@media (max-width: 385px) {
+		.nav-item a {
+			padding: 0.4rem 0.4rem;
+		}
 	}
 
 	.nav-item a:not(:hover) {
