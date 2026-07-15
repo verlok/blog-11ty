@@ -1,0 +1,17 @@
+---
+pagination:
+  data: collections.tags_it
+  size: 1
+  alias: tag
+  addAllPagesToCollections: true
+layout: layouts/home.njk
+eleventyComputed:
+  title: Articoli con tag “{{ tag }}”
+permalink: /it/tags/{{ tag | slugify }}/
+---
+<h1>Articoli con tag “{{ tag }}”</h1>
+
+{% set postslist = collections[ tag ] | filterByLang("it") %}
+{% include "postslist.njk" %}
+
+<p>Vedi <a href="{{ '/tags/' | locale_url }}">tutti i tag</a>.</p>

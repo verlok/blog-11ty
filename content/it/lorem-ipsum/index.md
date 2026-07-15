@@ -9,9 +9,9 @@ layout: layouts/base.njk
 
 # Lorem ipsum
 
-As I was tired to search and find only paid or hard to use Lorem Ipsum generator, I decided to create it myselfe. 
+Poiché ero stanco di cercare e trovare solo generatori di Lorem Ipsum a pagamento o difficili da usare, ho deciso di crearne uno io stesso.
 
-Find below some free and easy-to-copy lorem ipsum text.
+Troverai qui sotto del testo lorem ipsum gratuito e facile da copiare.
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare neque lacus, at blandit magna eleifend ac. Nullam commodo porttitor mi sit amet blandit. Etiam lacus erat, finibus in luctus ut, varius id nisl. Aenean interdum erat quis nisi lacinia pharetra. In accumsan dui augue, sed convallis neque fermentum nec. Aliquam erat volutpat. Nunc nunc mi, eleifend sit amet nisl pellentesque, accumsan ultricies nunc. Ut a congue arcu, in aliquam lectus. Donec accumsan orci leo, vel sollicitudin erat scelerisque in. Nam facilisis ac purus sed ullamcorper. Pellentesque sodales interdum aliquet.
 > 

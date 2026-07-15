@@ -11,19 +11,19 @@ eleventyNavigation:
 
 # vanilla-lazyload
 
-I'm the author of a very popular lazy load script: vanilla-lazyload.<br>
-Here's where you can find it:
+Sono l'autore di un popolare script di lazy load: vanilla-lazyload.<br>
+Ecco dove puoi trovarlo:
 
-- Documentation and demos: [this website](https://verlok.github.io/vanilla-lazyload/)
-- Code, issues, sponsorship: [GitHub](https://github.com/verlok/vanilla-lazyload)
-- Use it via CDN: [jsdelivr](https://www.jsdelivr.com/package/npm/vanilla-lazyload)
-- Install it? Use [npm](https://www.npmjs.com/package/vanilla-lazyload)
+- Documentazione e demo: [questo sito](https://verlok.github.io/vanilla-lazyload/)
+- Codice, segnalazioni, sponsorizzazioni: [GitHub](https://github.com/verlok/vanilla-lazyload)
+- Utilizzalo tramite CDN: [jsdelivr](https://www.jsdelivr.com/package/npm/vanilla-lazyload)
+- Vuoi installarlo? Usa [npm](https://www.npmjs.com/package/vanilla-lazyload)
 
-Open source needs love and caffeine! ☕ [Buy me a coffee](https://ko-fi.com/verlok)
+L'open source ha bisogno di amore e caffeina! ☕ [Offrimi un caffè](https://ko-fi.com/verlok)
 
-### Articles on lazy loading
+### Articoli sul lazy loading
 
-Here are some articles about lazy-loading images!
+Ecco alcuni articoli sul caricamento differito (lazy-loading) delle immagini!
 
 - [Do we still need lazy loading libraries and `data-src` in 2022?]({{ '/blog/do-we-still-need-lazy-loading-libraries-data-src/' | locale_url }})
 - [Lazy load responsive images in 2020]({{ '/blog/lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp/' | locale_url }})

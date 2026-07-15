@@ -1,15 +1,15 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Blog
-  order: 2
+  key: Presentazioni
+  order: 3
 ---
 
 <nav class="post-back post-back--top">
 	<a href="{{ '/' | locale_url }}">&larr; {{ strings[page.lang].backToHome }}</a>
 </nav>
 
-<h1>Blog</h1>
+<h1>Presentazioni</h1>
 
-{% set postslist = collections.posts_en %}
+{% set postslist = collections.posts__talks_it %}
 {% include "postslist.njk" %}

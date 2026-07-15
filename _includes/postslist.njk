@@ -17,7 +17,7 @@
 				<p class="postlist-description">{{ post.data.description }}</p>
 			{% endif %}
 			<div class="postlist-buttonslot">
-				<span class="postlist-button">Read more &rarr;</span>
+				<span class="postlist-button">{{ strings[page.lang or "en"].readMore }} &rarr;</span>
 			</div>
 		</a>
 		{# <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>#}

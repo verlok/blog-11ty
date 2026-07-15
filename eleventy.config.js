@@ -5,8 +5,7 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginBundle from "@11ty/eleventy-plugin-bundle";
 import pluginNavigation from "@11ty/eleventy-navigation";
-import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
-
+import { EleventyHtmlBasePlugin, I18nPlugin } from "@11ty/eleventy";
 import pluginDrafts from "./eleventy.config.drafts.js";
 import pluginImages from "./eleventy.config.images.js";
 
@@ -38,6 +37,13 @@ export default function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
+	eleventyConfig.addPlugin(I18nPlugin, {
+		defaultLanguage: "en",
+		filters: {
+			url: "locale_url",
+			links: "locale_links",
+		},
+	});
 
 	eleventyConfig.addPlugin(eleventyPluginSpeculationRules);
 
@@ -50,6 +56,22 @@ export default function (eleventyConfig) {
 	}); */
 
 	// Filters
+	eleventyConfig.addFilter("filterByLang", function (collection, lang) {
+		return (collection || []).filter((item) => {
+			const itemLang = item.data.lang || "en";
+			return itemLang === lang;
+		});
+	});
+
+	eleventyConfig.addFilter("filterTagAltLinks", function (altLinks, tag) {
+		if (!tag || !altLinks) {
+			return altLinks;
+		}
+		const slugify = eleventyConfig.getFilter("slugify");
+		const tagSlug = slugify(tag);
+		return altLinks.filter((alt) => alt.url.includes(`/${tagSlug}/`));
+	});
+
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
 		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(
@@ -116,6 +138,49 @@ export default function (eleventyConfig) {
 	// Add collection to filter only lazyload posts
 	eleventyConfig.addCollection("posts__lazyload", function (collectionApi) {
 		return collectionApi.getFilteredByTag("lazyload");
+	});
+
+	// Language-specific collections
+	eleventyConfig.addCollection("posts_en", (collectionApi) => {
+		return collectionApi.getFilteredByTag("posts").filter((item) => (item.data.lang || "en") === "en");
+	});
+
+	eleventyConfig.addCollection("posts_it", (collectionApi) => {
+		return collectionApi.getFilteredByTag("posts").filter((item) => item.data.lang === "it");
+	});
+
+	eleventyConfig.addCollection("posts__talks_en", (collectionApi) => {
+		return collectionApi.getFilteredByTag("talks").filter((item) => (item.data.lang || "en") === "en");
+	});
+
+	eleventyConfig.addCollection("posts__talks_it", (collectionApi) => {
+		return collectionApi.getFilteredByTag("talks").filter((item) => item.data.lang === "it");
+	});
+
+	eleventyConfig.addCollection("posts__lazyload_en", (collectionApi) => {
+		return collectionApi.getFilteredByTag("lazyload").filter((item) => (item.data.lang || "en") === "en");
+	});
+
+	eleventyConfig.addCollection("posts__lazyload_it", (collectionApi) => {
+		return collectionApi.getFilteredByTag("lazyload").filter((item) => item.data.lang === "it");
+	});
+
+	eleventyConfig.addCollection("tags_en", (collectionApi) => {
+		const posts = collectionApi.getFilteredByTag("posts").filter((item) => (item.data.lang || "en") === "en");
+		const tagSet = new Set();
+		for (const item of posts) {
+			(item.data.tags || []).forEach((tag) => tagSet.add(tag));
+		}
+		return Array.from(tagSet).filter((tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+	});
+
+	eleventyConfig.addCollection("tags_it", (collectionApi) => {
+		const posts = collectionApi.getFilteredByTag("posts").filter((item) => item.data.lang === "it");
+		const tagSet = new Set();
+		for (const item of posts) {
+			(item.data.tags || []).forEach((tag) => tagSet.add(tag));
+		}
+		return Array.from(tagSet).filter((tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
 	// Features to make your build faster (when you need them)

@@ -1,0 +1,22 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+numberOfLatestPostsToShow: 10
+---
+{% set postsCount = collections.posts_it | length %}
+{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+
+<p>Ciao! Sono <a href="./about/">Andrea</a> e ho scritto...</p>
+
+{# <h1>Ultimi {{ latestPostsCount }} articol{% if latestPostsCount != 1 %}i{% else %}o{% endif %}</h1> #}
+
+{% set postslist = collections.posts_it | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = postsCount %}
+{% include "postslist.njk" %}
+
+{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+<p>Puoi trovare altri {{ morePosts }} articol{% if morePosts != 1 %}i{% else %}o{% endif %} nell'<a href="{{ '/blog/' | locale_url }}">archivio</a>.</p>
+{% endif %}

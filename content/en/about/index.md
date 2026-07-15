@@ -6,7 +6,7 @@ eleventyNavigation:
 ---
 
 <nav class="post-back post-back--top">
-	<a href="/">&larr; Home page</a>
+	<a href="{{ '/' | locale_url }}">&larr; {{ strings[page.lang].backToHome }}</a>
 </nav>
 
 # About
@@ -18,7 +18,7 @@ Hello, I'm Andrea, and I love to create and optimize websites. I'm passionate ab
 	<figcaption>Image courtesy: myself</figcaption>
 </figure>
 
-I write about the web on this tech blog, on [Medium](https://medium.com/@andrea.verlicchi) and [Smashing Magazine](https://www.smashingmagazine.com/author/andrea-verlicchi/), and I love to [speak](/tags/talks/) at web conferences.
+I write about the web on this tech blog, on [Medium](https://medium.com/@andrea.verlicchi) and [Smashing Magazine](https://www.smashingmagazine.com/author/andrea-verlicchi/), and I love to [speak]({{ "/tags/talks/" | locale_url }}) at web conferences.
 
 I'm a GitHub fan and the proud creator of many open-source projects, [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload) amongst others.
 
