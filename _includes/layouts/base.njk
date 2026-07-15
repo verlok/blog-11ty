@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ metadata.language }}">
+<html lang="{{ page.lang or metadata.language }}">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +47,11 @@
 		<meta property="og:description" content="{{ description or metadata.description }}">
 		<meta property="og:url" content="{{ page.url | htmlBaseUrl(metadata.url) }}">
 		<meta property="og:site_name" content="{{ metadata.title }}">
-		<meta property="og:locale" content="{{ metadata.language }}">
+		{%- if page.lang == "it" %}
+		<meta property="og:locale" content="it_IT">
+		{%- else %}
+		<meta property="og:locale" content="en_US">
+		{%- endif %}
 		{%- if layout == "layouts/post.njk" or (tags and "posts" in tags) %}
 		<meta property="og:type" content="article">
 		{%- else %}
@@ -83,16 +87,36 @@
 		<header>
 			<a name="header"></a>
 			<div class="content">
-				<a href="/" class="home-link">
-					<!-- {{ metadata.title }} -->
-					<span class="name">Andrea</span>
-					<span class="surname">Verlicchi</span>
-				</a>
+				<div class="header-top-row">
+					<a href="{{ '/' | locale_url }}" class="home-link">
+						<!-- {{ metadata.title }} -->
+						<span class="name">Andrea</span>
+						<span class="surname">Verlicchi</span>
+					</a>
+					<div class="header-lang-switch">
+						{% set altLinks = page.url | locale_links | filterTagAltLinks(tag) %}
+						{% if altLinks | length > 0 %}
+							{% for alt in altLinks %}
+								<a href="{{ alt.url }}" class="lang-switch" lang="{{ alt.lang }}" title="{{ 'Switch to English' if alt.lang == 'en' else 'Passa all\'Italiano' }}">
+									{% if alt.lang == "en" %}🇬🇧 English{% else %}🇮🇹 Italiano{% endif %}
+								</a>
+							{% endfor %}
+						{% else %}
+							{% if page.lang == "en" %}
+								<a href="/it/" class="lang-switch" lang="it" title="Passa all'Italiano">🇮🇹 Italiano</a>
+							{% else %}
+								<a href="/en/" class="lang-switch" lang="en" title="Switch to English">🇬🇧 English</a>
+							{% endif %}
+						{% endif %}
+					</div>
+				</div>
+				{#- Now the things #}
+				<p>{{ strings[page.lang or "en"].tagline }}</p>
 				{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 				<nav>
-					<h2 class="visually-hidden">Top level navigation menu</h2>
+					<h2 class="visually-hidden">{{ strings[page.lang or "en"].topLevelNav }}</h2>
 					<ul class="nav">
-						{%- for entry in collections.all | eleventyNavigation %}
+						{%- for entry in collections.all | filterByLang(page.lang or "en") | eleventyNavigation %}
 							{% if entry.key !== "Home" %}
 								<li class="nav-item">
 									<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
@@ -101,8 +125,6 @@
 						{%- endfor %}
 					</ul>
 				</nav>
-				{#- Now the things #}
-				<p>{{ metadata.description }}</p>
 			</div>
 		</header>
 
@@ -114,10 +136,10 @@
 
 		<footer>
 			<div class="content">
-				You've reached the end of the page.
+				{{ strings[page.lang or "en"].endOfPage }}
 				<ul class="nav">
 					<li class="nav-item">
-						<a href="#header">👆 To the top</a>
+						<a href="#header">👆 {{ strings[page.lang or "en"].toTheTop }}</a>
 					</li>
 				</ul>
 			</div>

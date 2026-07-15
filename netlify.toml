@@ -22,3 +22,72 @@
 
 	[plugins.inputs]
 		output_path = "reports/lighthouse/index.html"
+
+# Browser language-based redirects for the homepage
+[[redirects]]
+  from = "/"
+  to = "/it/"
+  status = 302
+  conditions = {Language = ["it"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+
+# Redirect old root URLs to their new English equivalents
+[[redirects]]
+  from = "/about/"
+  to = "/en/about/"
+  status = 301
+
+[[redirects]]
+  from = "/contact/"
+  to = "/en/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/talks/"
+  to = "/en/talks/"
+  status = 301
+
+[[redirects]]
+  from = "/tags/"
+  to = "/en/tags/"
+  status = 301
+
+[[redirects]]
+  from = "/tags/*"
+  to = "/en/tags/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/blog/"
+  to = "/en/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/en/blog/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/lorem-ipsum/"
+  to = "/en/lorem-ipsum/"
+  status = 301
+
+[[redirects]]
+  from = "/vanilla-lazyload/"
+  to = "/en/vanilla-lazyload/"
+  status = 301
+
+[[redirects]]
+  from = "/feed/feed.xml"
+  to = "/en/feed/feed.xml"
+  status = 301
+
+[[redirects]]
+  from = "/feed/feed.json"
+  to = "/en/feed/feed.json"
+  status = 301
+
