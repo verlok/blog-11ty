@@ -16,7 +16,7 @@ export default {
     tags: "Tags",
   },
   it: {
-    tagline: "Rendo il web più veloce e più usabile",
+    tagline: "Rendo il web più veloce e più facile da usare",
     backToHome: "Pagina iniziale",
     previous: "Precedente",
     next: "Successivo",
@@ -30,5 +30,5 @@ export default {
     seeAllTags: "Vedi tutti i tag",
     archive: "l'archivio",
     tags: "Tag",
-  }
+  },
 };
