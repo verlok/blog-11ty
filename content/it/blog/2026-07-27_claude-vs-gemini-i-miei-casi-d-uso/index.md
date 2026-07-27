@@ -44,7 +44,7 @@ Non dico che per me si equivalgano in tutto, ma ci sono casi d'uso ben precisi i
 Per domande sulla vita, il mondo e l'universo:
 
 - **Accoglienza cuccioli**: Come accogliere due cuccioli di gatto non avendo mai avuto animali (una lunga chat ancora attiva dopo un mese!).
-- **Alimentazione e nutrizione**: Consigli sull'alimentazione e piano alimentare (chat attiva e consultata da oltre 1 anno).
+- **Alimentazione e nutrizione**: Consigli sull'alimentazione e piano alimentare (diverse chat generate mensilmente con Gem sempre aggiornati, per oltre 1 anno).
 - **Progetti di casa**: Dimensionare correttamente un impianto fotovoltaico (chat fissata che mi servirà a breve).
 
 ## Gemini (web / desktop) – Account Aziendale

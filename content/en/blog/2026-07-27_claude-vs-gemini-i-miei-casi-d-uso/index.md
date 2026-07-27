@@ -44,7 +44,7 @@ I'm not saying they are completely equivalent for me, but there are specific use
 For questions about life, the world, and the universe:
 
 - **Kitten care**: How to welcome two kitten puppies when you've never had pets before (a long chat still active after a month!).
-- **Diet & Nutrition**: Advice on diet and meal planning (an active chat used for over a year).
+- **Diet & Nutrition**: Advice on diet and meal planning (monthly chats generated using Gems as blueprint, for over a year).
 - **Home projects**: Correctly sizing a photovoltaic solar system (a pinned chat I'll need very soon).
 
 ## Gemini (web / desktop) – Work Account
