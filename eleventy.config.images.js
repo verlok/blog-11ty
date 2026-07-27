@@ -76,4 +76,52 @@ export default (eleventyConfig) => {
 		if (!img) return "";
 		return img.src;
 	});
+
+	eleventyConfig.addAsyncFilter(
+		"getOgImageUrl",
+		async function (frontmatterImage, content) {
+			let pageInputPath = this.page?.inputPath;
+			let rawSrc = "";
+			if (frontmatterImage) {
+				rawSrc = frontmatterImage;
+			} else if (content) {
+				const dom = new JSDOM(content);
+				const img = dom.window.document.querySelector("img");
+				if (img) {
+					rawSrc = img.getAttribute("src") || "";
+				}
+			}
+
+			if (!rawSrc) {
+				return "";
+			}
+
+			if (rawSrc.startsWith("http://") || rawSrc.startsWith("https://")) {
+				return rawSrc;
+			}
+
+			try {
+				let filePath = rawSrc;
+				if (!path.isAbsolute(rawSrc) && pageInputPath) {
+					filePath = relativeToInputPath(pageInputPath, rawSrc);
+				}
+
+				let metadata = await eleventyImage(filePath, {
+					widths: [1200],
+					formats: ["png"],
+					outputDir: path.join(eleventyConfig.dir.output, "img"),
+				});
+
+				let pngFormat = metadata.png || metadata.jpeg;
+				if (pngFormat && pngFormat.length > 0) {
+					return pngFormat[pngFormat.length - 1].url;
+				}
+			} catch (e) {
+				console.error("[getOgImageUrl Error]", e.message, "rawSrc:", rawSrc, "inputPath:", pageInputPath);
+				return rawSrc;
+			}
+
+			return rawSrc;
+		}
+	);
 };

@@ -30,7 +30,7 @@ I'm not saying they are completely equivalent for me, but there are specific use
 
 ## Claude in Claude Code
 
-- **Complex code development**: For heavy coding tasks (the ones requiring a good amount of reasoning, like major release refactoring), I rely on *Fable 5, Opus 4.8, or Sonnet 5*. Often these tasks involve direct integrations via CLI with GitLab (`glab`), Google Cloud (`gcloud`), or our internal Athena MCP server.
+- **Complex code development**: For heavy coding tasks (the ones requiring a good amount of reasoning, like major release refactoring), I rely on _Fable 5, Opus 4.8, or Sonnet 5_. Often these tasks involve direct integrations via CLI with GitLab (`glab`), Google Cloud (`gcloud`), or our internal MCP servers.
 - **Git troubleshooting (with Haiku)**: Getting out of tricky `git` situations (like moving recent commits mistakenly pushed to `main` over to a feature branch, or force-pushing the current feature branch to `staging` overriding what was already there — don't judge me: I almost never use `git` from the command line, I'm lazy!).
 
 ## Gemini in Antigravity / Antigravity IDE
@@ -60,7 +60,7 @@ For strictly work-related queries:
 
 Cross-cutting use cases where Gemini is my go-to choice across both personal and work profiles:
 
-- **Persistent web searches**: Web searches whose results I want saved in an accessible history, rather than lost forever *"like tears in rain"*.
+- **Persistent web searches**: Web searches whose results I want saved in an accessible history, rather than lost forever _"like tears in rain"_.
 - **Document & File analysis**: Uploading files to extract structured information.
 - **Tech questions & setup**: Resolving technical doubts, configuring tools, making services talk to each other, or understanding AI model internals.
 - **Brainstorming & Presentations**: Generating ideas and structuring content for presentations.

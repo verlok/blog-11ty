@@ -30,7 +30,7 @@ Non dico che per me si equivalgano in tutto, ma ci sono casi d'uso ben precisi i
 
 ## Claude in Claude Code
 
-- **Sviluppo di codice complesso**: Per task di codice impegnativi (quelli che richiedono un bel po' di ragionamento, come i major release refactoring), mi affido ai modelli *Fable 5, Opus 4.8 o Sonnet 5*. Spesso questi task prevedono l'integrazione diretta con tool via CLI come GitLab (`glab`), Google Cloud (`gcloud`), o il nostro server MCP interno di Athena.
+- **Sviluppo di codice complesso**: Per task di codice impegnativi (quelli che richiedono un bel po' di ragionamento, come i major release refactoring), mi affido ai modelli _Fable 5, Opus 4.8 o Sonnet 5_. Spesso questi task prevedono l'integrazione diretta con tool via CLI come GitLab (`glab`), Google Cloud (`gcloud`), o i nostri server MCP interni.
 - **Troubleshooting di Git (con Haiku)**: Per uscire da situazioni complicate con `git` (ad esempio quando devo prendere gli ultimi commit fatti per errore su `main` e spostarli in un feature branch, oppure forzare il push su `staging` ignorando quello che c'era già — non giudicatemi: non ho quasi mai usato `git` da riga di comando, sono pigro!).
 
 ## Gemini in Antigravity / Antigravity IDE
@@ -60,7 +60,7 @@ Per domande puramente work-related:
 
 Ci sono poi casi d'uso trasversali per cui Gemini è il mio punto di riferimento sia sul profilo personale che aziendale:
 
-- **Ricerche web persistenti**: Ricerche i cui risultati voglio che rimangano salvati in una history accessibile, anziché andare persi per sempre *"come lacrime nella pioggia"*.
+- **Ricerche web persistenti**: Ricerche i cui risultati voglio che rimangano salvati in una history accessibile, anziché andare persi per sempre _"come lacrime nella pioggia"_.
 - **Analisi di documenti e file**: Analisi di file caricati per estrarre informazioni ben organizzate.
 - **Domande tech e configurazioni**: Risolvere dubbi tecnici, come configurare strumenti o far comunicare servizi tra loro, oppure capire come funzionano internamente alcuni aspetti dei modelli AI.
 - **Brainstorming e presentazioni**: Discussione e generazione di idee su come preparare una presentazione.
