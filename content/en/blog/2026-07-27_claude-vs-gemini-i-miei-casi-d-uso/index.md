@@ -37,7 +37,7 @@ I'm not saying they are completely equivalent for me, but there are specific use
 
 - **Medium-complexity coding tasks**: For medium-to-large feature implementations, I use **Gemini 3.6 Flash (high)**.
 - **DevTools & Performance Analysis**: For tasks involving DevTools for Agents and deep web performance profiling, I use **Gemini 3.6 Flash (medium)**.
-- **Blog Maintenance & Enhancements**: For various work on this blog (e.g., recently translating it entirely into Italian, creating custom skills to write new posts, etc.), I use **Gemini 3.6 Flash (medium/high)**.
+- **Blog Maintenance & Enhancements**: For various work on this blog (e.g., recently translating it entirely into Italian, creating custom skills to write new posts, etc.), I use **Gemini 3.6 Flash (medium/high)**. Spoiler: this very blog post, including its cover image, was generated right here using Antigravity and Gemini 3.6 Flash (Medium)!
 
 ## Gemini (web / desktop) – Personal Account
 
