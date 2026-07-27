@@ -13,7 +13,7 @@ image: ./cover.jpg
 image_alt: "Thoughtful Andrea with speech bubbles showing Anthropic Claude and Google Gemini logos."
 ---
 
-I definitely use Claude, I'm not saying I don't! But for many things, I still prefer **Gemini 3.6 Flash**.
+There's a lot of hype and noise out there regarding Claude and Anthropic, especially after the announcement of Fable 5 and lately Opus 5. I definitely use Claude, I'm not saying I don't! But for many things, I still prefer **Gemini 3.6 Flash**.
 
 The reason is simple: although my company has fully adopted Claude and strongly encourages its use, being in close contact with Google and other Google developers through the **GDE (Google Developer Experts)** program means I hear enthusiastic feedback about Gemini as well. So I want to keep testing and using both.
 
@@ -41,7 +41,7 @@ I'm not saying they are completely equivalent for me, but there are specific use
 
 ## Gemini (web / desktop) – Personal Account
 
-For questions about life, the world, and the universe:
+For questions about life, the universe, and everything (the answer to which is always [42](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy)):
 
 - **Kitten care**: How to welcome two kitten puppies when you've never had pets before (a long chat still active after a month!).
 - **Diet & Nutrition**: Advice on diet and meal planning (monthly chats generated using Gems as blueprint, for over a year).
@@ -51,7 +51,7 @@ For questions about life, the world, and the universe:
 
 For strictly work-related queries:
 
-- **Code analysis**: Inspecting minified JS libraries.
+- **Code analysis**: Analyzing minified JS libraries.
 - **SQL optimization**: Comparing complexity and execution cost of SQL queries.
 - **Error debugging**: Analyzing unclear Python or JavaScript stack traces and errors.
 - **Slack workflows**: Advanced Slack automation, app setup, and workflows.
@@ -60,7 +60,7 @@ For strictly work-related queries:
 
 Cross-cutting use cases where Gemini is my go-to choice across both personal and work profiles:
 
-- **Persistent web searches**: Web searches whose results I want saved in an accessible history, rather than lost forever _"like tears in rain"_.
+- **Persistent web searches**: Web searches whose results I want saved in an accessible history, rather than lost forever _like tears in rain_.
 - **Document & File analysis**: Uploading files to extract structured information.
 - **Tech questions & setup**: Resolving technical doubts, configuring tools, making services talk to each other, or understanding AI model internals.
 - **Brainstorming & Presentations**: Generating ideas and structuring content for presentations.

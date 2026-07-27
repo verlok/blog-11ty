@@ -13,7 +13,7 @@ image: ./cover.jpg
 image_alt: "Andrea pensieroso con due fumetti che mostrano i loghi di Anthropic Claude e Google Gemini."
 ---
 
-Lo uso Claude eh, mica dico che non lo uso! Però per molte cose preferisco ancora **Gemini 3.6 Flash**.
+C'è molto hype e si fa molto parlare di Claude ed Anthropic, soprattutto dopo l'annuncio di Fable 5 e, ultimamente, di Opus 5. Lo uso Claude eh, mica dico che non lo uso! Però per molte cose preferisco ancora **Gemini 3.6 Flash**.
 
 Il motivo è semplice: sebbene la mia azienda abbia adottato Claude in full e ne spinga fortemente l'utilizzo, essendo molto in contatto con Google ed altri sviluppatori Google per via del programma **GDE (Google Developer Experts)**, sento pareri entusiasti anche sul fronte Gemini. Quindi voglio continuare a provarli e utilizzarli entrambi.
 
@@ -41,9 +41,9 @@ Non dico che per me si equivalgano in tutto, ma ci sono casi d'uso ben precisi i
 
 ## Gemini (web / desktop) – Account Personale
 
-Per domande sulla vita, il mondo e l'universo:
+Per domande sulla vita, l'universo e tutto quanto (tanto la risposta è sempre [42](https://it.wikipedia.org/wiki/Risposta_alla_domanda_fondamentale_sulla_vita,_l%27universo_e_tutto_quanto)):
 
-- **Accoglienza cuccioli**: Come accogliere due cuccioli di gatto non avendo mai avuto animali (una lunga chat ancora attiva dopo un mese!).
+- **Accoglienza gattini**: Come accogliere due cuccioli di gatto non avendo mai avuto animali (una lunga chat ancora attiva dopo un mese!).
 - **Alimentazione e nutrizione**: Consigli sull'alimentazione e piano alimentare (diverse chat generate mensilmente con Gem sempre aggiornati, per oltre 1 anno).
 - **Progetti di casa**: Dimensionare correttamente un impianto fotovoltaico (chat fissata che mi servirà a breve).
 
@@ -60,7 +60,7 @@ Per domande puramente work-related:
 
 Ci sono poi casi d'uso trasversali per cui Gemini è il mio punto di riferimento sia sul profilo personale che aziendale:
 
-- **Ricerche web persistenti**: Ricerche i cui risultati voglio che rimangano salvati in una history accessibile, anziché andare persi per sempre _"come lacrime nella pioggia"_.
+- **Ricerche web persistenti**: Ricerche i cui risultati voglio che rimangano salvati in una history accessibile, anziché andare persi per sempre _come lacrime nella pioggia_.
 - **Analisi di documenti e file**: Analisi di file caricati per estrarre informazioni ben organizzate.
 - **Domande tech e configurazioni**: Risolvere dubbi tecnici, come configurare strumenti o far comunicare servizi tra loro, oppure capire come funzionano internamente alcuni aspetti dei modelli AI.
 - **Brainstorming e presentazioni**: Discussione e generazione di idee su come preparare una presentazione.
