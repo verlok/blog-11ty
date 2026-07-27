@@ -9,7 +9,7 @@ When the user asks to create a new blog post:
    - Determine whether the draft text or topic provided by the user is in **English** or **Italian**.
    - If **English**: target directory is `content/en/blog/YYYY-MM-DD_post-slug/`
    - If **Italian**: target directory is `content/it/blog/YYYY-MM-DD_post-slug/`
-   - Use the `YYYY-MM-DD_post-slug` naming convention, where `YYYY-MM-DD` is the publication date and `post-slug` is a URL-friendly title.
+   - Use the `YYYY-MM-DD_post-slug` naming convention, where `YYYY-MM-DD` is the publication date and `post-slug` is a URL-friendly title in the post's language.
 
 2. **Create Primary Post (`index.md`)**:
    - Create `index.md` inside the post directory with proper front matter:
@@ -22,7 +22,7 @@ When the user asks to create a new blog post:
        - tag1
        - tag2
      layout: layouts/post.njk
-     image: ./cover.png
+     image: ./cover.jpg
      image_alt: "Description of the image."
      ---
      ```
@@ -30,8 +30,8 @@ When the user asks to create a new blog post:
    - Place any post assets (images, cover, diagrams) directly inside the post directory.
 
 3. **Trigger Automatic Translation**:
-   - If the source post is written in **English**, invoke the `translate-post-en-to-it` skill to localize the post to Italian under `content/it/blog/YYYY-MM-DD_post-slug/`.
-   - If the source post is written in **Italian**, invoke the `translate-post-it-to-en` skill to localize the post to English under `content/en/blog/YYYY-MM-DD_post-slug/`.
+   - If the source post is written in **English**, invoke the `translate-post-en-to-it` skill to localize the post and translate the folder slug to Italian under `content/it/blog/YYYY-MM-DD_it-post-slug/`.
+   - If the source post is written in **Italian**, invoke the `translate-post-it-to-en` skill to localize the post and translate the folder slug to English under `content/en/blog/YYYY-MM-DD_en-post-slug/`.
 
 4. **Verify Build**:
    - Run `npm run build` to verify that both post versions build cleanly without errors.
