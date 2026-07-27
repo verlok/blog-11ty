@@ -1,5 +1,5 @@
 ---
-name: translate-new-post
+name: translate-post-en-to-it
 description: Automatically localizes a new English blog post into Italian, copying assets and setting up the front matter correctly.
 ---
 

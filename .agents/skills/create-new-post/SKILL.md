@@ -30,8 +30,8 @@ When the user asks to create a new blog post:
    - Place any post assets (images, cover, diagrams) directly inside the post directory.
 
 3. **Trigger Automatic Translation**:
-   - If the source post is written in **English**, invoke the `translate-new-post` skill to localize the post to Italian under `content/it/blog/YYYY-MM-DD_post-slug/`.
-   - If the source post is written in **Italian**, invoke the `translate-new-post-to-english` skill to localize the post to English under `content/en/blog/YYYY-MM-DD_post-slug/`.
+   - If the source post is written in **English**, invoke the `translate-post-en-to-it` skill to localize the post to Italian under `content/it/blog/YYYY-MM-DD_post-slug/`.
+   - If the source post is written in **Italian**, invoke the `translate-post-it-to-en` skill to localize the post to English under `content/en/blog/YYYY-MM-DD_post-slug/`.
 
 4. **Verify Build**:
    - Run `npm run build` to verify that both post versions build cleanly without errors.
