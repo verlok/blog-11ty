@@ -1,43 +1,55 @@
-# Redirects from what the browser requests to what we serve
+# Redirects from legacy URLs to localized /en/ paths
 
-/lazyload-swiper-images-instances/                                                     /blog/lazyload-swiper-images-instances/
-/lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp/                        /blog/lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp/
-/aspect-ratio-modern-reserve-space-lazy-images-async-content-responsive-design/        /blog/aspect-ratio-modern-reserve-space-lazy-images-async-content-responsive-design/
-/do-we-need-lazy-loading-libraries-data-src-in-2022/                                   /blog/do-we-need-lazy-loading-libraries-data-src-in-2022/
-/how-integrate-git-autocomplete-mac-shell-terminal-bash-zsh/                           /blog/how-integrate-git-autocomplete-mac-shell-terminal-bash-zsh/
-/lazyload/                                                                             /vanilla-lazyload/
-/using-css-variables-to-scale-layout-spaces/                                           /blog/using-css-variables-to-scale-layout-spaces/
-/talks-how-and-why-to-optimize-web-performance-practical-tips-2023/                    /blog/how-and-why-to-optimize-web-performance-practical-tips-2023/
-/vanilla-lazyload-vs-lazysizes/                                                        /blog/vanilla-lazyload-vs-lazysizes/
-/clever-way-serve-webp-modern-browsers-jpg-internet-explorer/                          /blog/clever-way-serve-webp-modern-browsers-jpg-internet-explorer/
-/css-3-only-spinning-loading-animation/                                                /blog/css-3-only-spinning-loading-animation/
-/capping-image-fidelity-2x-minimize-loading-time/                                      /blog/capping-image-fidelity-2x-minimize-loading-time/
-/create-a-javascript-library-using-es2015-modules-gulp-rollup-jest/                    /blog/create-a-javascript-library-using-es2015-modules-gulp-rollup-jest/
-/now-google-developer-expert-gde/                                                      /blog/google-developer-expert-gde/
-/critical-css-jekyll-sass-github-pages/                                                /blog/critical-css-jekyll-sass-github-pages/
-/optimise-cls-loading-more-content-pagination/                                         /blog/optimise-cls-loading-more-content-pagination/
-/lazy-load-responsive-images-srcset/                                                   /blog/lazy-load-responsive-images-srcset/
-/lazy-load-responsive-images-in-2019-srcset-sizes-more/                                /blog/lazy-load-responsive-images-in-2019-srcset-sizes-more/
-/check-if-element-still-inside-viewport-after-given-time/                              /blog/check-if-element-still-inside-viewport-after-given-time/
-/a-new-lazyload-to-improve-your-website-performance/                                   /blog/a-new-lazyload-to-improve-your-website-performance/
-/css-day-2022-talk-automating-responsive-images-automator-ottimizzazione-immagini-4-0/ /blog/css-day-2022-talk-automating-responsive-images-automator-ottimizzazione-immagini-4-0/
-/tables-look-like-lists-look-like-tables-accessible-responsive-design/                 /blog/tables-look-like-lists-look-like-tables-accessible-responsive-design/
-/this-website-pwa/                                                                     /blog/this-website-pwa/
-/how-intergrate-git-autocomplete-mac-shell-terminal-bash-zsh/                          /blog/how-intergrate-git-autocomplete-mac-shell-terminal-bash-zsh/
-/quicklink-case-study-faster-pages-increased-page-views/                               /blog/quicklink-case-study-faster-pages-increased-page-views/
-/responsive-images-you-dont-need-picture-tag/                                          /blog/responsive-images-you-dont-need-picture-tag/
-/using-intersection-observers-to-create-vanilla-lazyload/                              /blog/using-intersection-observers-to-create-vanilla-lazyload/
-/native-lazy-loading-with-vanilla-lazyload/                                            /blog/native-lazy-loading-with-vanilla-lazyload/
-/web-share-api-step-by-step/                                                           /blog/web-share-api-step-by-step/
-/advanced-sprite-generation-using-compass-sass/                                        /blog/advanced-sprite-generation-using-compass-sass/
-/against-online-streaming-of-local-meetups-copy/                                       /blog/against-online-streaming-of-local-meetups/
-/changing-text-color-for-contrast-based-on-background-lightness/                       /blog/changing-text-color-for-contrast-based-on-background-lightness/
-/how-to-productively-use-the-new-chromium-based-microsoft-edge-browser/                /blog/how-to-productively-use-the-new-chromium-based-microsoft-edge-browser/
-/hybrid-lazy-loading-smashing-magazine-article/                                        /blog/hybrid-lazy-loading-smashing-magazine-article/
-/lazyload-conference-talk-automating-responsive-images-automator/                      /blog/lazyload-conference-talk-automating-responsive-images-automator/
-/responsive-images-a-html-51-standard/                                                 /blog/responsive-images-a-html-51-standard/
-/blog/google-developer-expert-gde/                                                     /blog/google-developer-expert-gde-web-performance/
-/blog/understand-the-event-loop-the-key-to-responsive-websites-in-2024-part-1/         /blog/jake-archibald-in-the-loop-jsconf-asia-talk-transposed/
-/blog/do-we-need-lazy-loading-libraries-data-src-in-2022/                              /blog/do-we-still-need-lazy-loading-libraries-data-src/
-/blog/enhancing-web-responsiveness-debug-avoid-slow-interaction-next-paint-inp/        /blog/how-i-made-the-web-more-responsive--debug-avoid-slow-interaction-next-paint-inp/
-/css-day-2015                                                                          https://www.slideshare.net/slideshow/sviluppo-css-agile-con-sass-e-compass-css-day-2015-faenza/46387797
+/lazyload-swiper-images-instances/                                                     /en/blog/lazyload-swiper-images-instances/ 301
+/lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp/                        /en/blog/lazy-load-responsive-images-in-2020-srcset-sizes-picture-webp/ 301
+/aspect-ratio-modern-reserve-space-lazy-images-async-content-responsive-design/        /en/blog/aspect-ratio-modern-reserve-space-lazy-images-async-content-responsive-design/ 301
+/do-we-need-lazy-loading-libraries-data-src-in-2022/                                   /en/blog/do-we-still-need-lazy-loading-libraries-data-src/ 301
+/how-integrate-git-autocomplete-mac-shell-terminal-bash-zsh/                           /en/blog/how-integrate-git-autocomplete-mac-shell-terminal-bash-zsh/ 301
+/lazyload/                                                                             /en/vanilla-lazyload/ 301
+/using-css-variables-to-scale-layout-spaces/                                           /en/blog/using-css-variables-to-scale-layout-spaces/ 301
+/talks-how-and-why-to-optimize-web-performance-practical-tips-2023/                    /en/blog/how-and-why-to-optimize-web-performance-practical-tips-2023/ 301
+/vanilla-lazyload-vs-lazysizes/                                                        /en/blog/vanilla-lazyload-vs-lazysizes/ 301
+/clever-way-serve-webp-modern-browsers-jpg-internet-explorer/                          /en/blog/clever-way-serve-webp-modern-browsers-jpg-internet-explorer/ 301
+/css-3-only-spinning-loading-animation/                                                /en/blog/css-3-only-spinning-loading-animation/ 301
+/capping-image-fidelity-2x-minimize-loading-time/                                      /en/blog/capping-image-fidelity-2x-minimize-loading-time/ 301
+/create-a-javascript-library-using-es2015-modules-gulp-rollup-jest/                    /en/blog/create-a-javascript-library-using-es2015-modules-gulp-rollup-jest/ 301
+/now-google-developer-expert-gde/                                                      /en/blog/google-developer-expert-gde-web-performance/ 301
+/critical-css-jekyll-sass-github-pages/                                                /en/blog/critical-css-jekyll-sass-github-pages/ 301
+/optimise-cls-loading-more-content-pagination/                                         /en/blog/optimise-cls-loading-more-content-pagination/ 301
+/lazy-load-responsive-images-srcset/                                                   /en/blog/lazy-load-responsive-images-srcset/ 301
+/lazy-load-responsive-images-in-2019-srcset-sizes-more/                                /en/blog/lazy-load-responsive-images-in-2019-srcset-sizes-more/ 301
+/check-if-element-still-inside-viewport-after-given-time/                              /en/blog/check-if-element-still-inside-viewport-after-given-time/ 301
+/a-new-lazyload-to-improve-your-website-performance/                                   /en/blog/a-new-lazyload-to-improve-your-website-performance/ 301
+/css-day-2022-talk-automating-responsive-images-automator-ottimizzazione-immagini-4-0/ /en/blog/css-day-2022-talk-automating-responsive-images-automator-ottimizzazione-immagini-4-0/ 301
+/tables-look-like-lists-look-like-tables-accessible-responsive-design/                 /en/blog/tables-look-like-lists-look-like-tables-accessible-responsive-design/ 301
+/this-website-pwa/                                                                     /en/blog/this-website-pwa/ 301
+/how-intergrate-git-autocomplete-mac-shell-terminal-bash-zsh/                          /en/blog/how-integrate-git-autocomplete-mac-shell-terminal-bash-zsh/ 301
+/quicklink-case-study-faster-pages-increased-page-views/                               /en/blog/quicklink-case-study-faster-pages-increased-page-views/ 301
+/responsive-images-you-dont-need-picture-tag/                                          /en/blog/responsive-images-you-dont-need-picture-tag/ 301
+/using-intersection-observers-to-create-vanilla-lazyload/                              /en/blog/using-intersection-observers-to-create-vanilla-lazyload/ 301
+/native-lazy-loading-with-vanilla-lazyload/                                            /en/blog/native-lazy-loading-with-vanilla-lazyload/ 301
+/web-share-api-step-by-step/                                                           /en/blog/web-share-api-step-by-step/ 301
+/advanced-sprite-generation-using-compass-sass/                                        /en/blog/advanced-sprite-generation-using-compass-sass/ 301
+/against-online-streaming-of-local-meetups-copy/                                       /en/blog/against-online-streaming-of-local-meetups/ 301
+/changing-text-color-for-contrast-based-on-background-lightness/                       /en/blog/changing-text-color-for-contrast-based-on-background-lightness/ 301
+/how-to-productively-use-the-new-chromium-based-microsoft-edge-browser/                /en/blog/how-to-productively-use-the-new-chromium-based-microsoft-edge-browser/ 301
+/hybrid-lazy-loading-smashing-magazine-article/                                        /en/blog/hybrid-lazy-loading-smashing-magazine-article/ 301
+/lazyload-conference-talk-automating-responsive-images-automator/                      /en/blog/lazyload-conference-talk-automating-responsive-images-automator/ 301
+/responsive-images-a-html-51-standard/                                                 /en/blog/responsive-images-a-html-51-standard/ 301
+/blog/google-developer-expert-gde/                                                     /en/blog/google-developer-expert-gde-web-performance/ 301
+/blog/understand-the-event-loop-the-key-to-responsive-websites-in-2024-part-1/         /en/blog/jake-archibald-in-the-loop-jsconf-asia-talk-transposed/ 301
+/blog/do-we-need-lazy-loading-libraries-data-src-in-2022/                              /en/blog/do-we-still-need-lazy-loading-libraries-data-src/ 301
+/blog/enhancing-web-responsiveness-debug-avoid-slow-interaction-next-paint-inp/        /en/blog/how-i-made-the-web-more-responsive--debug-avoid-slow-interaction-next-paint-inp/ 301
+/css-day-2015                                                                          https://www.slideshare.net/slideshow/sviluppo-css-agile-con-sass-e-compass-css-day-2015-faenza/46387797 301
+
+# General redirects from non-localized root paths to /en/ equivalents
+/about/                                                                                /en/about/ 301
+/contact/                                                                              /en/contact/ 301
+/talks/                                                                                /en/talks/ 301
+/tags/                                                                                 /en/tags/ 301
+/tags/*                                                                                /en/tags/:splat 301
+/blog/                                                                                 /en/blog/ 301
+/blog/*                                                                                /en/blog/:splat 301
+/vanilla-lazyload/                                                                     /en/vanilla-lazyload/ 301
+/feed/feed.xml                                                                         /en/feed/feed.xml 301
+/feed/feed.json                                                                        /en/feed/feed.json 301
