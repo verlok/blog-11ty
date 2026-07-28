@@ -42,6 +42,19 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		<meta name="generator" content="{{ eleventy.generator }}">
 
+		{#- Canonical URL #}
+		<link rel="canonical" href="{{ page.url | htmlBaseUrl(metadata.url) }}">
+
+		{#- Multilingual hreflang annotations #}
+		{%- set allAltLocales = page | getAlternateLocales(collections.all, translationKey) %}
+		{%- for alt in allAltLocales %}
+		<link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url | htmlBaseUrl(metadata.url) }}">
+		{%- endfor %}
+		{%- set enDefault = allAltLocales | filterByLang("en") | first %}
+		{%- if enDefault %}
+		<link rel="alternate" hreflang="x-default" href="{{ enDefault.url | htmlBaseUrl(metadata.url) }}">
+		{%- endif %}
+
 		{#- Open Graph tags #}
 		<meta property="og:title" content="{{ title or metadata.title }}">
 		<meta property="og:description" content="{{ description or metadata.description }}">
@@ -101,20 +114,21 @@
 						<span class="surname">Verlicchi</span>
 					</a>
 					<div class="header-lang-switch">
-						{% set altLinks = page.url | locale_links | filterTagAltLinks(tag) %}
-						{% if altLinks | length > 0 %}
-							{% for alt in altLinks %}
+						{%- set allAltLocales = page | getAlternateLocales(collections.all, translationKey) %}
+						{%- set otherLocales = allAltLocales | filterOtherLangs(page.lang or "en") %}
+						{%- if otherLocales | length > 0 %}
+							{%- for alt in otherLocales %}
 								<a href="{{ alt.url }}" class="lang-switch" lang="{{ alt.lang }}" title="{{ 'Switch to English' if alt.lang == 'en' else 'Passa all\'Italiano' }}">
 									{% if alt.lang == "en" %}🇬🇧 English{% else %}🇮🇹 Italiano{% endif %}
 								</a>
-							{% endfor %}
-						{% else %}
-							{% if page.lang == "en" %}
+							{%- endfor %}
+						{%- else %}
+							{%- if page.lang == "en" %}
 								<a href="/it/" class="lang-switch" lang="it" title="Passa all'Italiano">🇮🇹 Italiano</a>
-							{% else %}
+							{%- else %}
 								<a href="/en/" class="lang-switch" lang="en" title="Switch to English">🇬🇧 English</a>
-							{% endif %}
-						{% endif %}
+							{%- endif %}
+						{%- endif %}
 					</div>
 				</div>
 				{#- Now the things #}

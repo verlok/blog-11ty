@@ -12,5 +12,6 @@ When the user requests to translate a new blog post to English, or when a new po
 5. Translate the front matter (`title`, `description`, `image_alt`) and markdown body into natural and professional English:
    - Keep shortcode tags and parameters unchanged (e.g., `{% image %}`).
    - Always enclose the YAML front matter `title` and `description` fields in double quotes (`"`) to prevent syntax errors with colons (`:`).
+   - Ensure `translationKey` (e.g., `"YYYY-MM-DD_topic-identifier"`) is included in the front matter to link localized URL versions across languages.
 6. Write the translated post to `content/en/blog/<en_folder_name>/index.md`.
 7. Run `npm run build` to verify that the build succeeds.

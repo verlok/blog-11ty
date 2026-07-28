@@ -58,7 +58,8 @@ export default function (eleventyConfig) {
 	// Filters
 	eleventyConfig.addFilter("filterByLang", function (collection, lang) {
 		return (collection || []).filter((item) => {
-			const itemLang = item.data.lang || "en";
+			if (!item) return false;
+			const itemLang = item.lang || (item.data && item.data.lang) || "en";
 			return itemLang === lang;
 		});
 	});
@@ -70,6 +71,50 @@ export default function (eleventyConfig) {
 		const slugify = eleventyConfig.getFilter("slugify");
 		const tagSlug = slugify(tag);
 		return altLinks.filter((alt) => alt.url.includes(`/${tagSlug}/`));
+	});
+
+	eleventyConfig.addFilter("getAlternateLocales", function (currentPage, collectionsAll, translationKey) {
+		if (!currentPage || !collectionsAll) {
+			return [];
+		}
+		const currentLang = currentPage.lang || (currentPage.data && currentPage.data.lang) || "en";
+		const currentUrl = currentPage.url;
+
+		const stripLangPrefix = (stem) => {
+			if (!stem) return "";
+			return stem.replace(/^\/(en|it)\b/, "");
+		};
+
+		const currentStem = stripLangPrefix(currentPage.filePathStem);
+		const key = translationKey || (currentPage.data && currentPage.data.translationKey);
+
+		const result = [{ lang: currentLang, url: currentUrl }];
+
+		for (const item of collectionsAll) {
+			if (!item.url || item.url === currentUrl) {
+				continue;
+			}
+			const itemLang = item.data.lang || "en";
+			if (itemLang === currentLang) {
+				continue;
+			}
+			let isMatch = false;
+			if (key && item.data && item.data.translationKey) {
+				isMatch = item.data.translationKey === key;
+			} else if (item.filePathStem) {
+				const itemStem = stripLangPrefix(item.filePathStem);
+				isMatch = itemStem === currentStem;
+			}
+			if (isMatch) {
+				result.push({ lang: itemLang, url: item.url });
+			}
+		}
+
+		return result;
+	});
+
+	eleventyConfig.addFilter("filterOtherLangs", function (locales, currentLang) {
+		return (locales || []).filter((item) => item.lang !== currentLang);
 	});
 
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {

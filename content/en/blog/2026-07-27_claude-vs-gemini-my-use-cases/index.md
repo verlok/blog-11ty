@@ -9,6 +9,7 @@ tags:
   - antigravity
   - productivity
 layout: layouts/post.njk
+translationKey: "2026-07-27_claude-vs-gemini"
 image: ./cover.jpg
 image_alt: "Thoughtful Andrea with speech bubbles showing Anthropic Claude and Google Gemini logos."
 ---

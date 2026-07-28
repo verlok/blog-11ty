@@ -22,6 +22,7 @@ When the user asks to create a new blog post:
        - tag1
        - tag2
      layout: layouts/post.njk
+     translationKey: "YYYY-MM-DD_topic-identifier"
      image: ./cover.jpg
      image_alt: "Description of the image."
      ---

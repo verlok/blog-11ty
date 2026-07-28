@@ -9,6 +9,7 @@ tags:
   - antigravity
   - produttività
 layout: layouts/post.njk
+translationKey: "2026-07-27_claude-vs-gemini"
 image: ./cover.jpg
 image_alt: "Andrea pensieroso con due fumetti che mostrano i loghi di Anthropic Claude e Google Gemini."
 ---
