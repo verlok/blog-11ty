@@ -65,12 +65,18 @@ export default function (eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter("filterTagAltLinks", function (altLinks, tag) {
-		if (!tag || !altLinks) {
+		if (!altLinks) {
 			return altLinks;
+		}
+		let filtered = altLinks.filter(
+			(alt) => alt.url !== "/" && alt.url !== "/index.html"
+		);
+		if (!tag) {
+			return filtered;
 		}
 		const slugify = eleventyConfig.getFilter("slugify");
 		const tagSlug = slugify(tag);
-		return altLinks.filter((alt) => alt.url.includes(`/${tagSlug}/`));
+		return filtered.filter((alt) => alt.url.includes(`/${tagSlug}/`));
 	});
 
 	eleventyConfig.addFilter("getAlternateLocales", function (currentPage, collectionsAll, translationKey) {

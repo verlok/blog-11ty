@@ -118,9 +118,11 @@
 						{%- set otherLocales = allAltLocales | filterOtherLangs(page.lang or "en") %}
 						{%- if otherLocales | length > 0 %}
 							{%- for alt in otherLocales %}
+								{%- if alt.url != "/" and alt.url != "/index.html" %}
 								<a href="{{ alt.url }}" class="lang-switch" lang="{{ alt.lang }}" title="{{ 'Switch to English' if alt.lang == 'en' else 'Passa all\'Italiano' }}">
 									{% if alt.lang == "en" %}🇬🇧 English{% else %}🇮🇹 Italiano{% endif %}
 								</a>
+								{%- endif %}
 							{%- endfor %}
 						{%- else %}
 							{%- if page.lang == "en" %}
