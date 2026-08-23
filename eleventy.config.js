@@ -86,32 +86,32 @@ export default function (eleventyConfig) {
 		const currentLang = currentPage.lang || (currentPage.data && currentPage.data.lang) || "en";
 		const currentUrl = currentPage.url;
 
-		const stripLangPrefix = (stem) => {
-			if (!stem) return "";
-			return stem.replace(/^\/(en|it)\b/, "");
+		const stripLangPrefix = (str) => {
+			if (!str) return "";
+			return str.replace(/^\/(en|it)\b/, "");
 		};
 
-		const currentStem = stripLangPrefix(currentPage.filePathStem);
+		const currentPath = stripLangPrefix(currentUrl);
 		const key = translationKey || (currentPage.data && currentPage.data.translationKey);
 
 		const result = [{ lang: currentLang, url: currentUrl }];
 
 		for (const item of collectionsAll) {
-			if (!item.url || item.url === currentUrl) {
+			if (!item.url || item.url === currentUrl || item.url === "/" || item.url === "/index.html") {
 				continue;
 			}
-			const itemLang = item.data.lang || "en";
+			const itemLang = item.data?.lang || "en";
 			if (itemLang === currentLang) {
 				continue;
 			}
 			let isMatch = false;
-			if (key && item.data && item.data.translationKey) {
+			if (key && item.data?.translationKey) {
 				isMatch = item.data.translationKey === key;
-			} else if (item.filePathStem) {
-				const itemStem = stripLangPrefix(item.filePathStem);
-				isMatch = itemStem === currentStem;
+			} else if (currentPath && item.url) {
+				const itemPath = stripLangPrefix(item.url);
+				isMatch = itemPath === currentPath;
 			}
-			if (isMatch) {
+			if (isMatch && !result.some((r) => r.lang === itemLang && r.url === item.url)) {
 				result.push({ lang: itemLang, url: item.url });
 			}
 		}
