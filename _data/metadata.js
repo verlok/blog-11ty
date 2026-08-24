@@ -7,6 +7,6 @@ export default {
 	author: {
 		name: "Andrea Verlicchi",
 		email: "andrea.verlicchi@gmail.com",
-		url: "https://andreaverlicchi.eu/about/"
+		url: "https://andreaverlicchi.eu/en/about/"
 	}
 }
