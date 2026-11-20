@@ -47,9 +47,12 @@
 /contact/                                                                              /en/contact/ 301
 /talks/                                                                                /en/talks/ 301
 /tags/                                                                                 /en/tags/ 301
-/tags/*                                                                                /en/tags/:splat 301
 /blog/                                                                                 /en/blog/ 301
-/blog/*                                                                                /en/blog/:splat 301
+/lorem-ipsum/                                                                          /en/lorem-ipsum/ 301
 /vanilla-lazyload/                                                                     /en/vanilla-lazyload/ 301
 /feed/feed.xml                                                                         /en/feed/feed.xml 301
 /feed/feed.json                                                                        /en/feed/feed.json 301
+
+# Dynamic (splat) redirects (must come after static redirects for Cloudflare Pages)
+/tags/*                                                                                /en/tags/:splat 301
+/blog/*                                                                                /en/blog/:splat 301
