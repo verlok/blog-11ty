@@ -137,6 +137,16 @@ export default function (eleventyConfig) {
 		return Math.max(1, Math.round(words / 220));
 	});
 
+	eleventyConfig.addFilter("inlineCode", (str) => {
+		if (!str) return "";
+		const escaped = String(str)
+			.replace(/&/g, "&amp;")
+			.replace(/</g, "&lt;")
+			.replace(/>/g, "&gt;")
+			.replace(/"/g, "&quot;");
+		return escaped.replace(/`([^`]+)`/g, "<code>$1</code>");
+	});
+
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
 		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
 		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");

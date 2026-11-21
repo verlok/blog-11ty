@@ -1,5 +1,6 @@
 {% set firstImage = true %}
 {% set currentLang = page.lang or "en" %}
+{% set cardCta = ctaLabel or strings[currentLang].readMore %}
 <section class="postlist{% if featuredFirst %} postlist--featured-first{% endif %}">
 {% for post in postslist | reverse %}
 	{% set imageHTML = post.templateContent | extractImage(firstImage) %}
@@ -19,20 +20,20 @@
 					<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("d MMM yyyy", "utc", currentLang) }}</time>
 					<span class="meta-sep" aria-hidden="true">&middot;</span>
 					<span>{{ post.templateContent | readingTime }} {{ strings[currentLang].minRead }}</span>
-					{% if isFeatured and postTags | length > 0 %}
+					{% if (isFeatured or not hasImage) and postTags | length > 0 %}
 						<span class="postlist-badge">{{ postTags[0] }}</span>
 					{% endif %}
 				</div>
 				<h2 class="postlist-title">
-					{% if post.data.title %}{{ post.data.title }}
+					{% if post.data.title %}{{ post.data.title | inlineCode | safe }}
 					{% else %}
 						<code>{{ post.url }}</code>
 					{% endif %}
 				</h2>
 				{% if post.data.description %}
-					<p class="postlist-description">{{ post.data.description }}</p>
+					<p class="postlist-description">{{ post.data.description | inlineCode | safe }}</p>
 				{% endif %}
-				<span class="postlist-cta">{{ strings[currentLang].readMore }} <span class="cta-arrow" aria-hidden="true">&rarr;</span></span>
+				<span class="postlist-cta">{{ cardCta }} <span class="cta-arrow" aria-hidden="true">&rarr;</span></span>
 			</div>
 		</a>
 	</article>

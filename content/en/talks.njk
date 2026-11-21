@@ -4,10 +4,12 @@ eleventyNavigation:
   key: Talks
   order: 3
 ---
+{% set postslist = collections.posts__talks_en %}
+{% set ctaLabel = strings.en.viewTalk %}
 
 <header class="page-header">
 	<h1>Talks</h1>
+	<p class="page-subtitle">{{ postslist | length }} talks</p>
 </header>
 
-{% set postslist = collections.posts__talks_en %}
 {% include "postslist.njk" %}

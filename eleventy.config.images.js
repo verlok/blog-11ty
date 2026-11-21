@@ -61,12 +61,16 @@ export default (eleventyConfig) => {
 
 	eleventyConfig.addFilter("extractImage", function (content, isFirst) {
 		const dom = new JSDOM(content);
-		const img = dom.window.document.querySelector("img");
+		const imgs = Array.from(dom.window.document.querySelectorAll("img"));
+		const ignoredPatterns = [/codesandbox\.io\/static\/img\/play-codesandbox/i, /img\.shields\.io/i];
+		const img = imgs.find((el) => {
+			const src = el.getAttribute("src") || "";
+			return !ignoredPatterns.some((re) => re.test(src));
+		});
 		if (!img) return "";
 		img.classList.add("postlist-image");
 		correctLazyAttributes(img, isFirst);
 		const picture = img.closest("picture");
-		//const returnedTag = picture || img;
 		return (picture || img).outerHTML;
 	});
 

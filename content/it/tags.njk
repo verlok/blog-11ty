@@ -9,9 +9,15 @@ eleventyComputed:
   title: Articoli con tag “{{ tag }}”
 permalink: /it/tags/{{ tag | slugify }}/
 ---
-<h1>Articoli con tag “{{ tag }}”</h1>
-
 {% set postslist = collections[ tag ] | filterByLang("it") %}
+
+<header class="page-header">
+	<h1>Tag “{{ tag }}”</h1>
+	<p class="page-subtitle">{{ postslist | length }} articol{% if postslist | length != 1 %}i{% else %}o{% endif %}</p>
+</header>
+
 {% include "postslist.njk" %}
 
-<p>Vedi <a href="{{ '/tags/' | locale_url }}">tutti i tag</a>.</p>
+<div class="archive-cta">
+	<p><a href="{{ '/tags/' | locale_url }}">&larr; {{ strings.it.seeAllTags }}</a></p>
+</div>

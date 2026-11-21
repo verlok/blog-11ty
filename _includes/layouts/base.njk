@@ -116,8 +116,9 @@
 					<ul class="nav">
 						{%- for entry in collections.all | filterByLang(currentLang) | eleventyNavigation %}
 							{% if entry.key !== "Home" %}
+								{%- set isSectionActive = (entry.key == "Blog" and layout == "layouts/post.njk") %}
 								<li class="nav-item">
-									<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+									<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% elif isSectionActive %} data-active="true"{% endif %}>{{ entry.title }}</a>
 								</li>
 							{% endif %}
 						{%- endfor %}

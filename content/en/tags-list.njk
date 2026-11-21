@@ -2,10 +2,15 @@
 permalink: /en/tags/
 layout: layouts/home.njk
 ---
-<h1>Tags</h1>
+{% set allTags = collections.posts_en | getAllTags | filterTagList %}
+
+<header class="page-header">
+	<h1>Tags</h1>
+	<p class="page-subtitle">{{ allTags | length }} topics</p>
+</header>
 
 <ul class="tags-cloud">
-{% for tag in collections.posts_en | getAllTags | filterTagList %}
+{% for tag in allTags %}
 	{% set tagUrl %}{{ ("/tags/" + (tag | slugify) + "/") | locale_url }}{% endset %}
 	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
 {% endfor %}
