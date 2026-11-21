@@ -16,7 +16,7 @@ The title of the talk was "How I made the web more responsive - real-world case 
 After providing an initial explanation of INP, I demonstrate how to debug slow interactions using both Chrome DevTools and Real User Monitoring (RUM) data. I then illustrate three common mistakes I encountered while auditing INP on dozens of websites and explain how to avoid them to ensure snappy user interactions and keep your INP below 200 milliseconds.
 
 <figure>
-	{% image "me-speaking-welovespeed-nantes.jpg", "Andrea Verlicchi speaking on stage at We Love Speed, Nantes. The slide shows the flame chart of the performance trace run after an INP optimization", [648, 1296], "648px", true %}
+	{% image "me-speaking-welovespeed-nantes.jpg", "Andrea Verlicchi speaking on stage at We Love Speed, Nantes. The slide shows the flame chart of the performance trace run after an INP optimization", [648, 1296], "648px" %}
   <figcaption>On stage at We Love Speed 2024.</figcaption>
 </figure>
 

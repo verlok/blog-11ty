@@ -11,7 +11,7 @@ image_alt: "Andrea Verlicchi on stage at Web Day 2026, Milan"
 ---
 
 <figure>
-	{% image "me-speaking-web-day-2026-milan-cover.jpg", "Andrea Verlicchi on stage at Web Day 2026, Milan", [648, 1296], "648px", true %}
+	{% image "me-speaking-web-day-2026-milan-cover.jpg", "Andrea Verlicchi on stage at Web Day 2026, Milan", [648, 1296], "648px" %}
 	<figcaption>Andrea Verlicchi on stage at Web Day 2026, Milan</figcaption>
 </figure>
 

@@ -12,7 +12,7 @@ image_alt: "Bologna JS Meetup - Gemini + Chrome: Oltre la Chat. Usare l'AI per c
 ---
 
 <figure>
-	{% image "bologna-js-chrome-devtools.avif", "Bologna JS Meetup - Gemini + Chrome: Oltre la Chat. Usare l'AI per controllare il browser", [648, 1296], "648px", true %}
+	{% image "bologna-js-chrome-devtools.avif", "Bologna JS Meetup - Gemini + Chrome: Oltre la Chat. Usare l'AI per controllare il browser", [648, 1296], "648px" %}
 	<figcaption>Bologna JS Meetup</figcaption>
 </figure>
 

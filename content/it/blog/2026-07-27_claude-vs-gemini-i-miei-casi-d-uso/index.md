@@ -21,7 +21,7 @@ Il motivo è semplice: sebbene la mia azienda abbia adottato Claude in full e ne
 Non dico che per me si equivalgano in tutto, ma ci sono casi d'uso ben precisi in cui preferisco l'uno e casi in cui preferisco l'altro. Ecco come li ho divisi nel mio workflow quotidiano:
 
 <figure>
-	{% image "cover.jpg", "Andrea pensieroso con due fumetti che mostrano i loghi di Anthropic Claude e Google Gemini.", [648, 1296], "648px", true %}
+	{% image "cover.jpg", "Andrea pensieroso con due fumetti che mostrano i loghi di Anthropic Claude e Google Gemini.", [648, 1296], "648px" %}
 	<figcaption>Claude o Gemini? I due fumetti rappresentano le mie opzioni quotidiane di IA.</figcaption>
 </figure>
 

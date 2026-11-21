@@ -15,7 +15,7 @@ image_alt: "A pensive developer looking at screens showing responsive websites a
 Back in 2010, Ethan Marcotte coined the term [Responsive Web Design](https://ethanmarcotte.com/books/responsive-web-design/). Since then, we've used "responsive" to describe a website that adapts its layout to the viewport size. Fluid grids, flexible images, media queries.
 
 <figure>
-	{% image "cover.jpg", "A pensive developer looking at screens showing responsive websites and adaptive apps, wondering about the terminology.", [648, 1296], "648px", true %}
+	{% image "cover.jpg", "A pensive developer looking at screens showing responsive websites and adaptive apps, wondering about the terminology.", [648, 1296], "648px" %}
 	<figcaption>Should we use "adaptive" for layouts and "responsive" for performance?</figcaption>
 </figure>
 

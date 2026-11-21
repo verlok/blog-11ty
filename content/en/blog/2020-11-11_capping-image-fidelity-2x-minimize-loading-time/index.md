@@ -69,7 +69,7 @@ If you feel confused, I recommend you to read [Srcset and Sizes from Eric Portis
 At the time I am writing this article, there's a bunch of high-end devices, both from Apple and Google, mounting a HiDPI display with 3x pixel density or more. Apple calls them Super Retina displays, Google calls them FHD+ displays.
 
 <figure>
-	{% image "devices-with-super-hidpi-display.jpg", "Apple iPhone 12 Mini, Apple iPhone X, Apple iPhone XS, Apple iPhone 11 Pro, Google Pixel 3, Google Pixel 4, Google Pixel 5, Apple iPhone 12, Apple iPhone 12 Pro", [648, 1296], "648px" %}
+	{% image "devices-with-super-hidpi-display.jpg", "Apple iPhone 12 Mini, Apple iPhone X, Apple iPhone XS, Apple iPhone 11 Pro, Google Pixel 3, Google Pixel 4, Google Pixel 5, Apple iPhone 12, Apple iPhone 12 Pro", [648, 1296], "648px", true %}
   <figcaption>Devices with super HiDPI displays</figcaption>
 </figure>
 
@@ -171,7 +171,7 @@ I did a test and I found out that an HTML file containing 54 images weighs 37 kb
 Using this technique on the product listing page of one of the websites we manage led to an **image weight reduction of 45%**. Images weight on an iPhone 11 Pro was 1.7 Mb before and it’s only 949 kb after the capping.
 
 <figure>
-	{% image "image-weight-reduction.jpg", "Name w476.jpg, Size 185kb vs Name w360jpg, Size 102kb, etc.", [648, 1296], "648px" %}
+	{% image "image-weight-reduction.jpg", "Name w476.jpg, Size 185kb vs Name w360jpg, Size 102kb, etc.", [648, 1296], "648px", true %}
   <figcaption>Images weight before (left) and after the capping (right)</figcaption>
 </figure>
 

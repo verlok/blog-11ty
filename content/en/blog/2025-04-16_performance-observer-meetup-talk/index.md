@@ -20,7 +20,7 @@ In this talk, I delved into the practical aspects of identifying and fixing Inte
 The Performance Observer meetups are a fantastic series dedicated to all things web performance, regularly featuring talks from industry experts on monitoring, optimization, and the latest performance metrics. It was great to contribute to this knowledgeable community.
 
 <figure>
-  {% image "presenting-performance-observer-meetup.png", "Presenter speaking during the online Performance Observer meetup. A slide with performance data is visible.", [800], "800px", true %}
+  {% image "presenting-performance-observer-meetup.png", "Presenter speaking during the online Performance Observer meetup. A slide with performance data is visible.", [800], "800px" %}
   <figcaption>Presenting during the Performance Observer meetup session.</figcaption>
 </figure>
 

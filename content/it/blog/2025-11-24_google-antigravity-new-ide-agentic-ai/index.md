@@ -14,7 +14,7 @@ image_alt: "Una rappresentazione astratta e futuristica dell'interfaccia dell'ID
 
 C'è un nuovo IDE di Google che abbraccia l'IA agentica e sfrutta Gemini 3: [Google Antigravity](https://antigravity.google/).
 
-{% image "cover.png", "Una rappresentazione astratta, luminosa e futuristica dell'interfaccia dell'IDE Google Antigravity.", [648, 1296], "648px", true %}
+{% image "cover.png", "Una rappresentazione astratta, luminosa e futuristica dell'interfaccia dell'IDE Google Antigravity.", [648, 1296], "648px" %}
 
 Grazie al ragionamento avanzato, alla gestione degli strumenti e alle capacità di programmazione autonoma di Gemini 3, Google Antigravity trasforma l'assistenza dell'IA da semplice strumento nella cassetta degli attrezzi di uno sviluppatore a un partner attivo. Sebbene il cuore di Google Antigravity sia una familiare esperienza di IDE con IA, i suoi agenti sono stati elevati a un'interfaccia dedicata e hanno ottenuto l'accesso diretto all'editor, al terminale e al browser. Ora gli agenti possono pianificare ed eseguire autonomamente compiti software complessi ed end-to-end per tuo conto, convalidando al contempo il proprio codice.
 

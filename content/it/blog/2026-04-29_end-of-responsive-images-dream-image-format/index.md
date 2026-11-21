@@ -17,7 +17,7 @@ Qualche giorno fa, [Mat Marquis](https://piccalil.li/author/mat-marquis/) ha scr
 Leggerlo ha risvegliato un sogno che porto con me da anni: un formato di immagine che ci permetterebbe di scrivere un tag `<img>` radicalmente più semplice — persino più semplice di quanto consenta `sizes="auto"`. Ci arriverò più in basso. Ma prima, un rapido riassunto del pezzo di Andy per il contesto.
 
 <figure>
-	{% image "cover.png", "A sinistra, il testo 'The dream of a container image format'. A destra, una rappresentazione grafica di un'immagine contenitore con estensione '.img' che raggruppa al suo interno diverse dimensioni dell'immagine.", [648, 1296], "648px", true %}
+	{% image "cover.png", "A sinistra, il testo 'The dream of a container image format'. A destra, una rappresentazione grafica di un'immagine contenitore con estensione '.img' che raggruppa al suo interno diverse dimensioni dell'immagine.", [648, 1296], "648px" %}
 	<figcaption>Un formato di immagine ideale: un solo file, tutte le dimensioni necessarie.</figcaption>
 </figure>
 

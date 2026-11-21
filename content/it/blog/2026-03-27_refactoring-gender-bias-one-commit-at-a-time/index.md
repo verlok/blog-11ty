@@ -17,7 +17,7 @@ Abbiamo condiviso storie personali ed esaminato come i bias si presentino nelle 
 ## Bologna Front-end 🇮🇹
 
 <figure>
-	{% image "refactoring-gender-biases.png", "Rifattorizziamo i bias di genere, un commit alla volta - DevRomagna, marzo 2026 - Giulia Naponiello e Andrea Verlicchi", [648, 1296], "648px", true %}
+	{% image "refactoring-gender-biases.png", "Rifattorizziamo i bias di genere, un commit alla volta - DevRomagna, marzo 2026 - Giulia Naponiello e Andrea Verlicchi", [648, 1296], "648px" %}
 	<figcaption>La slide di copertina del nostro talk.</figcaption>
 </figure>
 

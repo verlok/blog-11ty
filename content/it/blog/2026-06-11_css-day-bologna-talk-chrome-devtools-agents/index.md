@@ -13,7 +13,7 @@ image_alt: "Ehi Gemini, sistema il CSS!"
 ---
 
 <figure>
-	{% image "cover.png", "Ehi Gemini, sistema il CSS!", [648, 1296], "648px", true %}
+	{% image "cover.png", "Ehi Gemini, sistema il CSS!", [648, 1296], "648px" %}
 	<figcaption>Talk: "Ehi Gemini, sistema il CSS!" al CSS Day Bologna</figcaption>
 </figure>
 

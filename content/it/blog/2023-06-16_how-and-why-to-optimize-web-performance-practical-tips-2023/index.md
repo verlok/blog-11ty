@@ -23,7 +23,7 @@ Di seguito trovi le slide del mio talk, sia in inglese che in italiano.
 ## WaysConf, Cracovia 🇵🇱 – <time datetime="2023-09-04">4 settembre 2023</time>
 
 <figure>
-	{% image "waysconf.png", "Andrea Verlicchi sul palco di WaysConf Cracovia", [648, 1296], "648px", true %}
+	{% image "waysconf.png", "Andrea Verlicchi sul palco di WaysConf Cracovia", [648, 1296], "648px" %}
 	<figcaption>Io che spiego la differenza tra strumenti di laboratorio (lab) e di monitoraggio reale degli utenti (RUM) al WaysConf 2023</figcaption>
 </figure>
 

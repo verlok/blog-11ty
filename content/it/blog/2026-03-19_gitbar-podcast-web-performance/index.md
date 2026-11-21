@@ -10,7 +10,7 @@ image_alt: "GitBar Podcast episodio 228 - Non toccate quel tag! con Andrea Verli
 ---
 
 <figure>
-	{% image "gitbar-episode.png", "GitBar Podcast episodio 228 - Non toccate quel tag! con Andrea Verlicchi", [648, 1296], "648px", true %}
+	{% image "gitbar-episode.png", "GitBar Podcast episodio 228 - Non toccate quel tag! con Andrea Verlicchi", [648, 1296], "648px" %}
 	<figcaption>GitBar Podcast - Episodio 228</figcaption>
 </figure>
 

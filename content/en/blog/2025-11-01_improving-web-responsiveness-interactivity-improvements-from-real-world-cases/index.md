@@ -28,6 +28,6 @@ The slides are available at the following link.
 And here's just a picture of me on stage, just to provide eleventy with an image for the posts list. 😉
 
 <figure>
-	{% image "perf-sync-amsterdam.jpg", "Andrea Verlicchi wearing a yellow sweater speaking on stage at the performance.sync() meetup in Amsterdam. The current slide shows \"Slow GTM Code. Audit. Remove. Update. Not enough?\"", [648, 1296], "648px", true %}
+	{% image "perf-sync-amsterdam.jpg", "Andrea Verlicchi wearing a yellow sweater speaking on stage at the performance.sync() meetup in Amsterdam. The current slide shows \"Slow GTM Code. Audit. Remove. Update. Not enough?\"", [648, 1296], "648px" %}
   <figcaption>On stage at performance.sync() 2025.</figcaption>
 </figure>

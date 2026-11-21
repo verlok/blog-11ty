@@ -23,7 +23,7 @@ Find below the slides of my talk, both in English and Italian language.
 ## WaysConf, Kraków 🇵🇱 – <time datetime="2023-09-04">4 September 2023</time>
 
 <figure>
-	{% image "waysconf.png", "Andrea Verlicchi on stage at the WaysConf Kraków", [648, 1296], "648px", true %}
+	{% image "waysconf.png", "Andrea Verlicchi on stage at the WaysConf Kraków", [648, 1296], "648px" %}
 	<figcaption>Me explaining the difference between lab and RUM tools at WaysConf 2023</figcaption>
 </figure>
 

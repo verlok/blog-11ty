@@ -12,7 +12,7 @@ image_alt: "Meetup Bologna Front-end episodio 58 - Ehi Gemini, sistema il CSS! c
 ---
 
 <figure>
-	{% image "bologna-front-end-devtools-mcp.avif", "Meetup Bologna Front-end episodio 58 - Ehi Gemini, sistema il CSS! con Andrea Verlicchi", [648, 1296], "648px", true %}
+	{% image "bologna-front-end-devtools-mcp.avif", "Meetup Bologna Front-end episodio 58 - Ehi Gemini, sistema il CSS! con Andrea Verlicchi", [648, 1296], "648px" %}
 	<figcaption>Bologna Front-end #58</figcaption>
 </figure>
 

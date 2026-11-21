@@ -17,7 +17,7 @@ We shared personal stories and examined how bias shows up in everyday situations
 ## Bologna Front-end 🇮🇹
 
 <figure>
-	{% image "refactoring-gender-biases.png", "Refactoring Biases, One Commit at a Time - DevRomagna, March 2026 - Giulia Naponiello and Andrea Verlicchi", [648, 1296], "648px", true %}
+	{% image "refactoring-gender-biases.png", "Refactoring Biases, One Commit at a Time - DevRomagna, March 2026 - Giulia Naponiello and Andrea Verlicchi", [648, 1296], "648px" %}
 	<figcaption>The cover slide of our talk.</figcaption>
 </figure>
 

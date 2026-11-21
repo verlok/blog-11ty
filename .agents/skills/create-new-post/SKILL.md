@@ -29,6 +29,15 @@ When the user asks to create a new blog post:
      ```
    - Enclose `title` and `description` in double quotes (`"`) to prevent YAML parsing issues with colons.
    - Place any post assets (images, cover, diagrams) directly inside the post directory.
+   - Render images in the post body using the `{% image %}` shortcode (`src, alt, widths, sizes, useLazyLoading, className`):
+     - **First / cover image (above the fold, LCP)**: pass `false` (or omit the 5th argument `useLazyLoading`) so Eleventy outputs `loading="eager"` and `fetchpriority="high"`:
+       ```njk
+       {% image "cover.jpg", "Detailed alt text", [648, 1296], "648px", false %}
+       ```
+     - **All subsequent images**: pass `true` as the 5th argument (`useLazyLoading`) so Eleventy outputs `loading="lazy"` without `fetchpriority`:
+       ```njk
+       {% image "screenshot.png", "Detailed alt text", [648, 1296], "648px", true %}
+       ```
 
 3. **Trigger Automatic Translation**:
    - If the source post is written in **English**, invoke the `translate-post-en-to-it` skill to localize the post and translate the folder slug to Italian under `content/it/blog/YYYY-MM-DD_it-post-slug/`.

@@ -20,7 +20,7 @@ In questo intervento ho approfondito gli aspetti pratici dell'identificazione e 
 I meetup di Performance Observer sono una fantastica serie di eventi dedicati a tutto ciò che riguarda le prestazioni web, e ospitano regolarmente talk di esperti del settore su monitoraggio, ottimizzazione e sulle ultime metriche prestazionali. È stato fantastico dare il mio contributo a questa community così competente.
 
 <figure>
-  {% image "presenting-performance-observer-meetup.png", "Relatore che parla durante il meetup online di Performance Observer. È visibile una slide con dati sulle prestazioni.", [800], "800px", true %}
+  {% image "presenting-performance-observer-meetup.png", "Relatore che parla durante il meetup online di Performance Observer. È visibile una slide con dati sulle prestazioni.", [800], "800px" %}
   <figcaption>Presentazione durante la sessione del meetup di Performance Observer.</figcaption>
 </figure>
 

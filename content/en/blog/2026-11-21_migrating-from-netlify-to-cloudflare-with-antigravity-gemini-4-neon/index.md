@@ -25,7 +25,7 @@ Yesterday, November 20, 2026, I was sitting in the audience at [**performance.no
 I entered this blog's URL and got a brutal verdict: **Netlify** — where I had been hosting the site until yesterday — supported neither QUIC nor HTTP/3. To get them, the most direct route was migrating to **Cloudflare** (who also happened to be a conference sponsor).
 
 <figure>
-	{% image "http-3-fail-savearoundrip-andreaverlicchi.png", "HTTP/3 checklist on savearoundtrip.com for andreaverlicchi.eu showing 0 of 4 checks passed: HTTP/3 support, the HTTP Alt-Svc header, and the HTTPS DNS record all fail, while QUIC 0-RTT for repeat visits is not applicable because HTTP/3 is required first.", [648, 1296], "648px", false %}
+	{% image "http-3-fail-savearoundrip-andreaverlicchi.png", "HTTP/3 checklist on savearoundtrip.com for andreaverlicchi.eu showing 0 of 4 checks passed: HTTP/3 support, the HTTP Alt-Svc header, and the HTTPS DNS record all fail, while QUIC 0-RTT for repeat visits is not applicable because HTTP/3 is required first.", [648, 1296], "648px", true %}
 	<figcaption>Here is how my site failed the HTTP/3 and 0-RTT check before migrating to Cloudflare.</figcaption>
 </figure>
 

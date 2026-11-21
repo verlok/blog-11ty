@@ -41,7 +41,7 @@ Using *Companion mode* lets you join a Google Meet meeting again from a second t
    Right-click on your Google Meet tab and select **Duplicate**. This new tab will be used exclusively for viewing the shared content.
 
     <figure>
-        {% image "duplicate-chrome-tab.png", "...", [341, 682], "341px" %}
+        {% image "duplicate-chrome-tab.png", "...", [341, 682], "341px", true %}
         <figcaption>Here's the dropdown menu to duplicate a Chrome tab</figcaption>
     </figure>
 
@@ -49,7 +49,7 @@ Using *Companion mode* lets you join a Google Meet meeting again from a second t
    In the duplicated tab, choose **Use Companion mode**. Companion mode will join the meeting again without sound, so you won’t have any distracting audio echo or feedback. This secondary window will serve as your content-only view.
 
     <figure>
-        {% image "use-companion-mode.png", "Ready to join? Andrea Verlicchi and Andrea Verlicchi are in this call. Switch here; Present; Use Companion mode; Show fewer options ⬆️", [512, 1024], "512px" %}
+        {% image "use-companion-mode.png", "Ready to join? Andrea Verlicchi and Andrea Verlicchi are in this call. Switch here; Present; Use Companion mode; Show fewer options ⬆️", [512, 1024], "512px", true %}
         <figcaption>Companion mode is right there, highlighted in blue.</figcaption>
     </figure>
 

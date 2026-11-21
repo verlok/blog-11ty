@@ -17,7 +17,7 @@ A few days ago, [Mat Marquis](https://piccalil.li/author/mat-marquis/) wrote a g
 Reading it revived a dream I've been carrying for years: an image format that would let us write a radically simpler `<img>` tag — simpler than even `sizes="auto"` allows. I'll get to it below. But first, a quick recap of Andy's piece for context.
 
 <figure>
-	{% image "cover.png", "On the left, the text 'The dream of a container image format'. On the right, a graphical representation of a container image labeled '.img' bundling multiple image sizes inside it.", [648, 1296], "648px", true %}
+	{% image "cover.png", "On the left, the text 'The dream of a container image format'. On the right, a graphical representation of a container image labeled '.img' bundling multiple image sizes inside it.", [648, 1296], "648px" %}
 	<figcaption>A dream image format: one file, all the sizes you need.</figcaption>
 </figure>
 

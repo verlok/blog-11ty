@@ -28,6 +28,6 @@ Le slide sono disponibili al seguente link.
 Ed ecco una foto di me sul palco, giusto per fornire a Eleventy un'immagine per l'elenco dei post. 😉
 
 <figure>
-	{% image "perf-sync-amsterdam.jpg", "Andrea Verlicchi con un maglione giallo parla sul palco al meetup performance.sync() ad Amsterdam. La slide attuale mostra \"Slow GTM Code. Audit. Remove. Update. Not enough?\"", [648, 1296], "648px", true %}
+	{% image "perf-sync-amsterdam.jpg", "Andrea Verlicchi con un maglione giallo parla sul palco al meetup performance.sync() ad Amsterdam. La slide attuale mostra \"Slow GTM Code. Audit. Remove. Update. Not enough?\"", [648, 1296], "648px" %}
   <figcaption>Sul palco di performance.sync() 2025.</figcaption>
 </figure>

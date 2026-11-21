@@ -11,7 +11,7 @@ image_alt: "Andrea Verlicchi sul palco del Web Day 2026, Milano"
 ---
 
 <figure>
-	{% image "me-speaking-web-day-2026-milan-cover.jpg", "Andrea Verlicchi sul palco del Web Day 2026, Milano", [648, 1296], "648px", true %}
+	{% image "me-speaking-web-day-2026-milan-cover.jpg", "Andrea Verlicchi sul palco del Web Day 2026, Milano", [648, 1296], "648px" %}
 	<figcaption>Andrea Verlicchi sul palco del Web Day 2026, Milano</figcaption>
 </figure>
 

@@ -41,7 +41,7 @@ L'uso della *modalità Companion* consente di accedere nuovamente a una riunione
    Fate clic con il tasto destro sulla scheda di Google Meet e selezionate **Duplica**. Questa nuova scheda verrà utilizzata esclusivamente per visualizzare il contenuto condiviso.
 
     <figure>
-        {% image "duplicate-chrome-tab.png", "...", [341, 682], "341px" %}
+        {% image "duplicate-chrome-tab.png", "...", [341, 682], "341px", true %}
         <figcaption>Ecco il menu a discesa per duplicare una scheda di Chrome</figcaption>
     </figure>
 
@@ -49,7 +49,7 @@ L'uso della *modalità Companion* consente di accedere nuovamente a una riunione
    Nella scheda duplicata, scegliete **Usa modalità Companion**. La modalità Companion vi farà partecipare nuovamente alla riunione ma senza audio, evitando così fastidiosi echi o fischi. Questa seconda finestra servirà esclusivamente per la visualizzazione dei contenuti.
 
     <figure>
-        {% image "use-companion-mode.png", "Pronto a partecipare? Andrea Verlicchi e Andrea Verlicchi sono in questa chiamata. Cambia qui; Presenta; Usa la modalità Companion; Mostra meno opzioni ⬆️", [512, 1024], "512px" %}
+        {% image "use-companion-mode.png", "Pronto a partecipare? Andrea Verlicchi e Andrea Verlicchi sono in questa chiamata. Cambia qui; Presenta; Usa la modalità Companion; Mostra meno opzioni ⬆️", [512, 1024], "512px", true %}
         <figcaption>La modalità Companion si trova proprio lì, evidenziata in blu.</figcaption>
     </figure>
 

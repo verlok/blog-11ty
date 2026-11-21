@@ -14,7 +14,7 @@ image_alt: "A futuristic abstract representation of the Google Antigravity IDE i
 
 There’s a new IDE from Google that embraces agentic AI and leverages Gemini 3: [Google Antigravity](https://antigravity.google/).
 
-{% image "cover.png", "A bright and futuristic abstract representation of the Google Antigravity IDE interface.", [648, 1296], "648px", true %}
+{% image "cover.png", "A bright and futuristic abstract representation of the Google Antigravity IDE interface.", [648, 1296], "648px" %}
 
 With Gemini 3's advanced reasoning, tooling, and autonomous programming capabilities, Google Antigravity transforms AI assistance from a tool in a developer's toolkit to an active partner. While the core of Google Antigravity is a familiar AI IDE experience, its agents have been elevated to a dedicated interface and gained direct access to the editor, terminal, and browser. Now agents can autonomously plan and execute complex, end-to-end software tasks on your behalf, while validating their own code.
 

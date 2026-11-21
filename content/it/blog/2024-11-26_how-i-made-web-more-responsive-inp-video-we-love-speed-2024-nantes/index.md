@@ -16,7 +16,7 @@ Il titolo del talk era "How I made the web more responsive - real-world case stu
 Dopo una spiegazione iniziale dell'INP, mostro come fare il debug delle interazioni lente utilizzando sia Chrome DevTools sia i dati RUM (Real User Monitoring). Illustro poi tre errori comuni che ho riscontrato durante l'audit dell'INP su decine di siti web e spiego come evitarli per garantire interazioni scattanti per l'utente e mantenere l'INP sotto i 200 millisecondi.
 
 <figure>
-	{% image "me-speaking-welovespeed-nantes.jpg", "Andrea Verlicchi parla sul palco di We Love Speed, Nantes. La slide mostra il flame chart della traccia di performance eseguita dopo un'ottimizzazione dell'INP", [648, 1296], "648px", true %}
+	{% image "me-speaking-welovespeed-nantes.jpg", "Andrea Verlicchi parla sul palco di We Love Speed, Nantes. La slide mostra il flame chart della traccia di performance eseguita dopo un'ottimizzazione dell'INP", [648, 1296], "648px" %}
   <figcaption>Sul palco di We Love Speed 2024.</figcaption>
 </figure>
 

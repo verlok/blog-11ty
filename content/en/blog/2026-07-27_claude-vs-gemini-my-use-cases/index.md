@@ -21,7 +21,7 @@ The reason is simple: although my company has fully adopted Claude and strongly 
 I'm not saying they are completely equivalent for me, but there are specific use cases where I prefer one over the other. Here is how I split them in my daily workflow:
 
 <figure>
-	{% image "cover.jpg", "Thoughtful Andrea with speech bubbles showing Anthropic Claude and Google Gemini logos.", [648, 1296], "648px", true %}
+	{% image "cover.jpg", "Thoughtful Andrea with speech bubbles showing Anthropic Claude and Google Gemini logos.", [648, 1296], "648px" %}
 	<figcaption>Claude or Gemini? The speech bubbles represent my daily AI choices.</figcaption>
 </figure>
 

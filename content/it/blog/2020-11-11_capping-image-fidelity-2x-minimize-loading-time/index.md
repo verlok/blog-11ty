@@ -70,7 +70,7 @@ Se ti senti confuso, ti consiglio di leggere [Srcset and Sizes di Eric Portis](h
 Al momento della scrittura di questo articolo, ci sono diversi dispositivi di fascia alta, sia di Apple che di Google, che montano uno schermo HiDPI con una densità di pixel pari a 3x o superiore. Apple li chiama display Super Retina, Google li chiama display FHD+.
 
 <figure>
-	{% image "devices-with-super-hidpi-display.jpg", "Apple iPhone 12 Mini, Apple iPhone X, Apple iPhone XS, Apple iPhone 11 Pro, Google Pixel 3, Google Pixel 4, Google Pixel 5, Apple iPhone 12, Apple iPhone 12 Pro", [648, 1296], "648px" %}
+	{% image "devices-with-super-hidpi-display.jpg", "Apple iPhone 12 Mini, Apple iPhone X, Apple iPhone XS, Apple iPhone 11 Pro, Google Pixel 3, Google Pixel 4, Google Pixel 5, Apple iPhone 12, Apple iPhone 12 Pro", [648, 1296], "648px", true %}
   <figcaption>Dispositivi con display super HiDPI</figcaption>
 </figure>
 
@@ -172,7 +172,7 @@ Ho fatto un test e ho scoperto che un file HTML contenente 54 immagini pesa 37 k
 L'utilizzo di questa tecnica sulla pagina dell'elenco dei prodotti di uno dei siti che gestiamo ha portato a una **riduzione del peso delle immagini del 45%**. Il peso delle immagini su un iPhone 11 Pro era di 1.7 MB prima ed è di soli 949 kB dopo la limitazione.
 
 <figure>
-	{% image "image-weight-reduction.jpg", "Nome w476.jpg, Dimensione 185kb vs Nome w360jpg, Dimensione 102kb, ecc.", [648, 1296], "648px" %}
+	{% image "image-weight-reduction.jpg", "Nome w476.jpg, Dimensione 185kb vs Nome w360jpg, Dimensione 102kb, ecc.", [648, 1296], "648px", true %}
   <figcaption>Peso delle immagini prima (a sinistra) e dopo la limitazione (a destra)</figcaption>
 </figure>
 
