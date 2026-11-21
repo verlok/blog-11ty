@@ -1,26 +1,40 @@
 {% set firstImage = true %}
-<section class="postlist">
+{% set currentLang = page.lang or "en" %}
+<section class="postlist{% if featuredFirst %} postlist--featured-first{% endif %}">
 {% for post in postslist | reverse %}
-	{% set imageHTML = post.templateContent | extractImage(firstImage) %}	
-	{% set linkModifier = 'postlist-link--no-image' if imageHTML=='' else 'postlist-link--with-image' %}
-	<article class="postlist-item">
-		<a href="{{ post.url }}" class="postlist-link {{ linkModifier }}">
-			<h1 class="postlist-title">
-				{% if post.data.title %}{{ post.data.title }}
-				{% else %}
-					<code>{{ post.url }}</code>
-				{% endif %}
-			</h1>
-			{{ post.templateContent | extractImage(firstImage) | safe }}
-			{% set firstImage = false %}
-			{% if post.data.description %}
-				<p class="postlist-description">{{ post.data.description }}</p>
+	{% set imageHTML = post.templateContent | extractImage(firstImage) %}
+	{% set hasImage = imageHTML != '' %}
+	{% set isFeatured = featuredFirst and loop.first %}
+	{% set postTags = post.data.tags | filterTagList %}
+	<article class="postlist-item{% if isFeatured %} postlist-item--featured{% endif %}{% if not hasImage %} postlist-item--no-image{% endif %}">
+		<a href="{{ post.url }}" class="postlist-link">
+			{% if hasImage %}
+				<div class="postlist-media">
+					{{ imageHTML | safe }}
+				</div>
+				{% set firstImage = false %}
 			{% endif %}
-			<div class="postlist-buttonslot">
-				<span class="postlist-button">{{ strings[page.lang or "en"].readMore }} &rarr;</span>
+			<div class="postlist-body">
+				<div class="postlist-meta">
+					<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("d MMM yyyy", "utc", currentLang) }}</time>
+					<span class="meta-sep" aria-hidden="true">&middot;</span>
+					<span>{{ post.templateContent | readingTime }} {{ strings[currentLang].minRead }}</span>
+					{% if isFeatured and postTags | length > 0 %}
+						<span class="postlist-badge">{{ postTags[0] }}</span>
+					{% endif %}
+				</div>
+				<h2 class="postlist-title">
+					{% if post.data.title %}{{ post.data.title }}
+					{% else %}
+						<code>{{ post.url }}</code>
+					{% endif %}
+				</h2>
+				{% if post.data.description %}
+					<p class="postlist-description">{{ post.data.description }}</p>
+				{% endif %}
+				<span class="postlist-cta">{{ strings[currentLang].readMore }} <span class="cta-arrow" aria-hidden="true">&rarr;</span></span>
 			</div>
 		</a>
-		{# <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>#}
 	</article>
 {% endfor %}
 </section>

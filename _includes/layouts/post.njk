@@ -3,30 +3,59 @@ layout: layouts/base.njk
 ---
 {# Only include the syntax highlighter CSS on blog posts #}
 {%- css %}@layer syntax-highlighting { {% include "node_modules/prismjs/themes/prism-okaidia.css" %} }{% endcss %}
-{#- {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %} -#}
-<nav class="post-back post-back--top">
-  <a href="{{ '/' | locale_url }}">&larr; {{ strings[page.lang or "en"].backToHome }}</a>
-</nav>
-<h1>{{ title }}</h1>
+{%- set currentLang = page.lang or "en" %}
 
-<ul class="post-metadata">
-	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-	{%- for tag in tags | filterTagList %}
-	{%- set tagUrl %}{{ ("/tags/" + (tag | slugify) + "/") | locale_url }}{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul>
+<article class="post-article">
+	<nav class="post-back post-back--top" aria-label="Breadcrumb">
+		<a href="{{ '/blog/' | locale_url }}">&larr; {{ strings[currentLang].allArticles }}</a>
+	</nav>
 
-{{ content | safe }}
+	<header class="post-header">
+		<h1>{{ title }}</h1>
 
-{%- set postsCollection = collections["posts_" + (page.lang or "en")] %}
-{%- if postsCollection %}
-{%- set previousPost = postsCollection | getPreviousCollectionItem %}
-{%- set nextPost = postsCollection | getNextCollectionItem %}
-{%- if nextPost or previousPost %}
-<ul class="links-nextprev">
-	{%- if previousPost %}<li>{{ strings[page.lang or "en"].previous }}: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li>{{ strings[page.lang or "en"].next }}: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-</ul>
-{%- endif %}
-{%- endif %}
+		<div class="post-meta-row">
+			<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate("d LLLL yyyy", "utc", currentLang) }}</time>
+			<span class="meta-sep" aria-hidden="true">&middot;</span>
+			<span>{{ content | readingTime }} {{ strings[currentLang].minRead }}</span>
+		</div>
+
+		{%- set postTags = tags | filterTagList %}
+		{%- if postTags | length > 0 %}
+		<ul class="post-tags">
+			{%- for tag in postTags %}
+			{%- set tagUrl %}{{ ("/tags/" + (tag | slugify) + "/") | locale_url }}{% endset %}
+			<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
+			{%- endfor %}
+		</ul>
+		{%- endif %}
+	</header>
+
+	<div class="post-body">
+		{{ content | safe }}
+	</div>
+
+	{%- set postsCollection = collections["posts_" + currentLang] %}
+	{%- if postsCollection %}
+	{%- set previousPost = postsCollection | getPreviousCollectionItem %}
+	{%- set nextPost = postsCollection | getNextCollectionItem %}
+	{%- if nextPost or previousPost %}
+	<nav class="links-nextprev" aria-label="Post navigation">
+		{%- if previousPost %}
+		<a href="{{ previousPost.url }}" class="nextprev-card nextprev-card--prev">
+			<span class="nextprev-label">&larr; {{ strings[currentLang].previousArticle }}</span>
+			<span class="nextprev-title">{{ previousPost.data.title }}</span>
+		</a>
+		{%- else %}
+		<div class="nextprev-spacer" aria-hidden="true"></div>
+		{%- endif %}
+
+		{%- if nextPost %}
+		<a href="{{ nextPost.url }}" class="nextprev-card nextprev-card--next">
+			<span class="nextprev-label">{{ strings[currentLang].nextArticle }} &rarr;</span>
+			<span class="nextprev-title">{{ nextPost.data.title }}</span>
+		</a>
+		{%- endif %}
+	</nav>
+	{%- endif %}
+	{%- endif %}
+</article>

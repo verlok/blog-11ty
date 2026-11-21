@@ -123,11 +123,18 @@ export default function (eleventyConfig) {
 		return (locales || []).filter((item) => item.lang !== currentLang);
 	});
 
-	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
+	eleventyConfig.addFilter("readableDate", (dateObj, format, zone, locale) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(
-			format || "dd LLLL yyyy"
-		);
+		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" })
+			.setLocale(locale || "en")
+			.toFormat(format || "dd LLLL yyyy");
+	});
+
+	eleventyConfig.addFilter("readingTime", (content) => {
+		if (!content) return 1;
+		const text = String(content).replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+		const words = text ? text.split(" ").length : 0;
+		return Math.max(1, Math.round(words / 220));
 	});
 
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {

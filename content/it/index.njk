@@ -3,20 +3,30 @@ layout: layouts/home.njk
 eleventyNavigation:
   key: Home
   order: 1
-numberOfLatestPostsToShow: 10
+numberOfLatestPostsToShow: 9
 ---
 {% set postsCount = collections.posts_it | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 
-<p>Ciao! Sono <a href="./about/">Andrea</a> e ho scritto...</p>
+<section class="home-hero">
+	<p class="home-kicker">{{ strings.it.heroKicker }}</p>
+	<h1>{{ strings.it.tagline }}.</h1>
+	<p class="home-intro">
+		Ciao, sono <a href="{{ '/about/' | locale_url }}">Andrea Verlicchi</a>. Scrivo articoli pratici su Core Web Vitals, architettura front-end e ottimizzazione delle performance web.
+	</p>
+</section>
 
-{# <h1>Ultimi {{ latestPostsCount }} articol{% if latestPostsCount != 1 %}i{% else %}o{% endif %}</h1> #}
+<div class="section-header">
+	<span class="section-title">{{ strings.it.latestArticles }}</span>
+	<a href="{{ '/blog/' | locale_url }}" class="section-meta-link">{{ postsCount }} {{ strings.it.inArchive }} &rarr;</a>
+</div>
 
 {% set postslist = collections.posts_it | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
+{% set featuredFirst = true %}
 {% include "postslist.njk" %}
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-<p>Puoi trovare altri {{ morePosts }} articol{% if morePosts != 1 %}i{% else %}o{% endif %} nell'<a href="{{ '/blog/' | locale_url }}">archivio</a>.</p>
+<div class="archive-cta">
+	<p>Puoi trovare altri {{ morePosts }} articol{% if morePosts != 1 %}i{% else %}o{% endif %} nell'<a href="{{ '/blog/' | locale_url }}">archivio</a>.</p>
+</div>
 {% endif %}

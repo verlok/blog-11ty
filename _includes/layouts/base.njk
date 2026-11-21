@@ -5,6 +5,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ title or metadata.title }}</title>
 
+		{#- Prevent light/dark theme flash before first paint -#}
+		<script>
+			(function () {
+				try {
+					var saved = localStorage.getItem("theme");
+					if (saved === "light" || saved === "dark") {
+						document.documentElement.setAttribute("data-theme", saved);
+					}
+				} catch (e) {}
+			})();
+		</script>
+
 		{#- Google tag (gtag.js) #}
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HGPGLLETP8"></script>
 		<script>
@@ -17,27 +29,14 @@
 			gtag('config', 'G-HGPGLLETP8');
 		</script>
 
-		{#-
-		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
-		1. You can add to them using `{% css %}`
-		2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
-		3. You can do the same for JS: {% js %}{% endjs %} and <script>{% getBundle "js" %}</script>
-		4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
-		#}
-
-		{#- Add an arbitrary string to the bundle #}
+		{#- CSS bundles via eleventy-plugin-bundle #}
 		{%- css %}* { box-sizing: border-box; }{% endcss %}
-		{#- Add the contents of a file to the bundle #}
 		{%- css %}{% include "public/css/index.css" %}{% endcss %}
-		{#- Or add from node_modules #}
-		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
 
-		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
+		{#- Render the CSS bundle using Inlined CSS (for fastest site performance in production) #}
 		<style>
 			{% getBundle "css" %}
 		</style>
-		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
-		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
 		<meta name="description" content="{{ description or metadata.description }}">
 		<meta name="generator" content="{{ eleventy.generator }}">
@@ -97,49 +96,25 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#ffc40d">
-		<meta name="theme-color" content="#000000">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c81e24">
+		<meta name="msapplication-TileColor" content="#fcfcfd">
+		<meta name="theme-color" content="#fcfcfd" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
 	</head>
 	<body>
+		{%- set currentLang = page.lang or "en" %}
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<a name="header"></a>
-			<div class="content">
-				<div class="header-top-row">
-					<a href="{{ '/' | locale_url }}" class="home-link">
-						<!-- {{ metadata.title }} -->
-						<span class="name">Andrea</span>
-						<span class="surname">Verlicchi</span>
-					</a>
-					<div class="header-lang-switch">
-						{%- set allAltLocales = page | getAlternateLocales(collections.all, translationKey) %}
-						{%- set otherLocales = allAltLocales | filterOtherLangs(page.lang or "en") %}
-						{%- if otherLocales | length > 0 %}
-							{%- for alt in otherLocales %}
-								{%- if alt.url != "/" and alt.url != "/index.html" %}
-								<a href="{{ alt.url }}" class="lang-switch" lang="{{ alt.lang }}" title="{{ 'Switch to English' if alt.lang == 'en' else 'Passa all\'Italiano' }}">
-									{% if alt.lang == "en" %}🇬🇧 English{% else %}🇮🇹 Italiano{% endif %}
-								</a>
-								{%- endif %}
-							{%- endfor %}
-						{%- else %}
-							{%- if page.lang == "en" %}
-								<a href="/it/" class="lang-switch" lang="it" title="Passa all'Italiano">🇮🇹 Italiano</a>
-							{%- else %}
-								<a href="/en/" class="lang-switch" lang="en" title="Switch to English">🇬🇧 English</a>
-							{%- endif %}
-						{%- endif %}
-					</div>
-				</div>
-				{#- Now the things #}
-				<p>{{ strings[page.lang or "en"].tagline }}</p>
-				{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-				<nav>
-					<h2 class="visually-hidden">{{ strings[page.lang or "en"].topLevelNav }}</h2>
+		<header id="header" class="site-header">
+			<div class="content content--wide site-header-inner">
+				<a href="{{ '/' | locale_url }}" class="home-link">
+					<span class="name">Andrea</span>
+					<span class="surname">Verlicchi</span>
+				</a>
+
+				<nav class="site-nav" aria-label="{{ strings[currentLang].topLevelNav }}">
 					<ul class="nav">
-						{%- for entry in collections.all | filterByLang(page.lang or "en") | eleventyNavigation %}
+						{%- for entry in collections.all | filterByLang(currentLang) | eleventyNavigation %}
 							{% if entry.key !== "Home" %}
 								<li class="nav-item">
 									<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
@@ -148,25 +123,94 @@
 						{%- endfor %}
 					</ul>
 				</nav>
+
+				<div class="header-actions">
+					<button
+						type="button"
+						class="theme-toggle"
+						id="theme-toggle"
+						aria-label="{{ strings[currentLang].toggleTheme }}"
+						title="{{ strings[currentLang].toggleTheme }}"
+					>
+						<svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<circle cx="12" cy="12" r="4"></circle>
+							<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+						</svg>
+						<svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+						</svg>
+					</button>
+
+					<div class="header-lang-switch">
+						{%- set allAltLocales = page | getAlternateLocales(collections.all, translationKey) %}
+						{%- set otherLocales = allAltLocales | filterOtherLangs(currentLang) %}
+						{%- if otherLocales | length > 0 %}
+							{%- for alt in otherLocales %}
+								{%- if alt.url != "/" and alt.url != "/index.html" %}
+								<a href="{{ alt.url }}" class="lang-switch" lang="{{ alt.lang }}" title="{{ 'Switch to English' if alt.lang == 'en' else 'Passa all\'Italiano' }}">
+									{% if alt.lang == "en" %}<span aria-hidden="true">🇬🇧</span><span class="lang-label-full">English</span><span class="lang-label-short">EN</span>{% else %}<span aria-hidden="true">🇮🇹</span><span class="lang-label-full">Italiano</span><span class="lang-label-short">IT</span>{% endif %}
+								</a>
+								{%- endif %}
+							{%- endfor %}
+						{%- else %}
+							{%- if currentLang == "en" %}
+								<a href="/it/" class="lang-switch" lang="it" title="Passa all'Italiano"><span aria-hidden="true">🇮🇹</span><span class="lang-label-full">Italiano</span><span class="lang-label-short">IT</span></a>
+							{%- else %}
+								<a href="/en/" class="lang-switch" lang="en" title="Switch to English"><span aria-hidden="true">🇬🇧</span><span class="lang-label-full">English</span><span class="lang-label-short">EN</span></a>
+							{%- endif %}
+						{%- endif %}
+					</div>
+				</div>
 			</div>
 		</header>
 
-		<main id="skip">
-			<div class="content">
+		<main id="skip" class="site-main">
+			<div class="content {{ 'content--wide' if wideLayout else 'content--prose' }}">
 				{{ content | safe }}
 			</div>
 		</main>
 
-		<footer>
-			<div class="content">
-				{{ strings[page.lang or "en"].endOfPage }}
-				<ul class="nav">
-					<li class="nav-item">
-						<a href="#header">👆 {{ strings[page.lang or "en"].toTheTop }}</a>
-					</li>
-				</ul>
+		<footer class="site-footer">
+			<div class="content content--wide site-footer-inner">
+				<p class="footer-note">Andrea Verlicchi · {{ strings[currentLang].endOfPage }}</p>
+				<a href="#header" class="footer-top-link">
+					<span aria-hidden="true">&uarr;</span> {{ strings[currentLang].toTheTop }}
+				</a>
 			</div>
 		</footer>
+
+		<script>
+			(function () {
+				var btn = document.getElementById("theme-toggle");
+				if (!btn) return;
+				var root = document.documentElement;
+				var media = window.matchMedia("(prefers-color-scheme: dark)");
+
+				function getActiveTheme() {
+					var explicit = root.getAttribute("data-theme");
+					if (explicit === "light" || explicit === "dark") return explicit;
+					return media.matches ? "dark" : "light";
+				}
+
+				function syncAria() {
+					btn.setAttribute("aria-pressed", String(getActiveTheme() === "dark"));
+				}
+
+				btn.addEventListener("click", function () {
+					var next = getActiveTheme() === "dark" ? "light" : "dark";
+					root.setAttribute("data-theme", next);
+					try {
+						localStorage.setItem("theme", next);
+					} catch (e) {}
+					syncAria();
+				});
+
+				if (media.addEventListener) {
+					media.addEventListener("change", syncAria);
+				}
+				syncAria();
+			})();
+		</script>
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>

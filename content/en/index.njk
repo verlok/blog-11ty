@@ -3,20 +3,30 @@ layout: layouts/home.njk
 eleventyNavigation:
   key: Home
   order: 1
-numberOfLatestPostsToShow: 10
+numberOfLatestPostsToShow: 9
 ---
 {% set postsCount = collections.posts_en | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 
-<p>Hello! I'm <a href="./about/">Andrea</a> and I wrote...</p>
+<section class="home-hero">
+	<p class="home-kicker">{{ strings.en.heroKicker }}</p>
+	<h1>{{ strings.en.tagline }}.</h1>
+	<p class="home-intro">
+		Hi, I'm <a href="{{ '/about/' | locale_url }}">Andrea Verlicchi</a>. I write practical articles about Core Web Vitals, front-end architecture, and real-world performance optimization.
+	</p>
+</section>
 
-{# <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1> #}
+<div class="section-header">
+	<span class="section-title">{{ strings.en.latestArticles }}</span>
+	<a href="{{ '/blog/' | locale_url }}" class="section-meta-link">{{ postsCount }} {{ strings.en.inArchive }} &rarr;</a>
+</div>
 
 {% set postslist = collections.posts_en | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
+{% set featuredFirst = true %}
 {% include "postslist.njk" %}
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="{{ '/blog/' | locale_url }}">the archive</a>.</p>
+<div class="archive-cta">
+	<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="{{ '/blog/' | locale_url }}">{{ strings.en.archive }}</a>.</p>
+</div>
 {% endif %}

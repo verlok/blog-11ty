@@ -1,27 +1,56 @@
 ---
 layout: layouts/base.njk
+wideLayout: true
+templateEngineOverride: njk
 eleventyNavigation:
   key: Chi sono
   order: 4
 ---
 
-<nav class="post-back post-back--top">
-	<a href="{{ '/' | locale_url }}">&larr; {{ strings[page.lang].backToHome }}</a>
-</nav>
+<div class="about-page">
+	<h1>Chi sono</h1>
 
-# Chi sono
+	<section class="about-grid">
+		<figure class="about-face">
+			{% image "profile-picture.png", "Andrea Verlicchi", [320, 648], "(min-width: 680px) 240px, 280px" %}
+			<figcaption>Immagine: me stesso</figcaption>
+		</figure>
 
-Ciao, sono Andrea, e amo creare e ottimizzare siti web. Sono appassionato di web performance, accessibilità e user experience.
+		<div class="about-bio">
+			<p class="about-lead">
+				Ciao, sono Andrea, e amo creare e ottimizzare siti web. Sono appassionato di web performance, accessibilità e user experience.
+			</p>
+			<p>
+				Scrivo del web su questo blog tecnologico, su <a href="https://medium.com/@andrea.verlicchi">Medium</a> e <a href="https://www.smashingmagazine.com/author/andrea-verlicchi/">Smashing Magazine</a>, e amo <a href="{{ '/tags/talks/' | locale_url }}">parlare</a> alle conferenze web.
+			</p>
+			<p>
+				Attualmente lavoro presso <a href="https://www.speedkit.com">Speed Kit</a> come ingegnere di web performance (<a href="https://linkedin.com/in/andreaverlicchi">scopri di più su LinkedIn</a>).
+			</p>
+			<p class="about-personal">
+				Amo la natura in tutte le sue forme, mi piace andare in bicicletta, fare escursioni, mangiare cibo locale e imparare tutto su culture e lingue di ogni tipo.
+			</p>
+		</div>
+	</section>
 
-<figure class="about-face">
-	{% image "profile-picture.png", "Andrea Verlicchi", [648, 1296], "648px" %}
-	<figcaption>Immagine: me stesso</figcaption>
-</figure>
-
-Scrivo del web su questo blog tecnologico, su [Medium](https://medium.com/@andrea.verlicchi) e [Smashing Magazine](https://www.smashingmagazine.com/author/andrea-verlicchi/), e amo [parlare]({{ "/tags/talks/" | locale_url }}) alle conferenze web.
-
-Sono un grande fan di GitHub e l'orgoglioso creatore di molti progetti open-source, tra cui [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload).
-
-Attualmente lavoro presso [Speed Kit](https://www.speedkit.com) come ingegnere di web performance. [Scopri di più su LinkedIn](https://linkedin.com/in/andreaverlicchi).
-
-Amo la natura in tutte le sue forme, mi piace andare in bicicletta, fare escursioni, mangiare cibo locale e imparare tutto su culture e lingue di ogni tipo.
+	<section class="about-highlights">
+		<h2>{{ strings.it.aboutHighlightsTitle }}</h2>
+		<div class="highlights-grid">
+			<div class="highlight-item">
+				<h3>Speed Kit</h3>
+				<p>Web performance engineer focalizzato su Core Web Vitals, caching e architetture front-end veloci.</p>
+			</div>
+			<div class="highlight-item">
+				<h3>Open Source</h3>
+				<p>Grande fan di GitHub e creatore di <a href="https://github.com/verlok/vanilla-lazyload">vanilla-lazyload</a> e altri progetti leggeri open-source.</p>
+			</div>
+			<div class="highlight-item">
+				<h3>Scrittura tecnica</h3>
+				<p>Autore di guide pratiche su questo blog, su <a href="https://www.smashingmagazine.com/author/andrea-verlicchi/">Smashing Magazine</a> e su <a href="https://medium.com/@andrea.verlicchi">Medium</a>.</p>
+			</div>
+			<div class="highlight-item">
+				<h3>Conferenze e Talk</h3>
+				<p>Speaker alle conferenze web su performance, accessibilità ed esperienza utente. <a href="{{ '/talks/' | locale_url }}">Vedi i talk &rarr;</a></p>
+			</div>
+		</div>
+	</section>
+</div>

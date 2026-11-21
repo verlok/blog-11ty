@@ -5,11 +5,10 @@ eleventyNavigation:
   order: 2
 ---
 
-<nav class="post-back post-back--top">
-	<a href="{{ '/' | locale_url }}">&larr; {{ strings[page.lang].backToHome }}</a>
-</nav>
-
-<h1>Blog</h1>
+<header class="page-header">
+	<h1>Blog</h1>
+	<p class="page-subtitle">{{ collections.posts_it | length }} {{ strings.it.inArchive }}</p>
+</header>
 
 {% set postslist = collections.posts_it %}
 {% include "postslist.njk" %}
