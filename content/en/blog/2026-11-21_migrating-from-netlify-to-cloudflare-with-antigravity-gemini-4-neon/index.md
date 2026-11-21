@@ -15,6 +15,11 @@ image: ./cover.png
 image_alt: "Screenshot of the Cloudflare dashboard during the blog's DNS transfer, with a zoomed-in callout on Antigravity's cursor and 'Thinking...' badge as the agent operates directly inside the browser."
 ---
 
+<figure>
+	{% image "cover.png", "Screenshot of the Cloudflare dashboard during the blog's DNS transfer, with a zoomed-in callout on Antigravity's cursor and 'Thinking...' badge as the agent operates directly inside the browser.", [648, 1296], "648px", false %}
+	<figcaption>Antigravity working directly inside the Cloudflare dashboard: the cursor moves, "thinks," and clicks right before my eyes.</figcaption>
+</figure>
+
 Yesterday, November 20, 2026, I was sitting in the audience at [**performance.now()**](https://www.perfnow.nl/) in **Amsterdam**. On stage was [**Max Inden**](https://max-inden.de), talking about how **HTTP/3** and **QUIC 0-RTT** can shave multiple round-trips off network connections and speed up page loads. At one point during his talk, he challenged the audience: open [**savearoundtrip.com**](https://savearoundtrip.com/) and check how your own site holds up.
 
 I entered this blog's URL and got a brutal verdict: **Netlify** — where I had been hosting the site until yesterday — supported neither QUIC nor HTTP/3. To get them, the most direct route was migrating to **Cloudflare** (who also happened to be a conference sponsor).
@@ -28,19 +33,14 @@ There was also an extra incentive: some **Mozilla swag** up for grabs for anyone
 
 ## Beyond code: when AI takes control of the browser
 
-<figure>
-	{% image "cover.png", "Screenshot of the Cloudflare dashboard during the blog's DNS transfer, with a zoomed-in callout on Antigravity's cursor and 'Thinking...' badge as the agent operates directly inside the browser.", [648, 1296], "648px", false %}
-	<figcaption>Antigravity working directly inside the Cloudflare dashboard: the cursor moves, "thinks," and clicks right before my eyes.</figcaption>
-</figure>
-
 That Gemini, Claude, or any other AI model could adapt this blog's codebase — built with Eleventy — to move from Netlify to Cloudflare was something I fully expected: rewriting config files, redirects, or small serverless functions is their bread and butter.
 
 What truly surprised me, and what I want to focus on in the first part of this story, was watching **Antigravity and Gemini 4 Neon directly drive the built-in web browser**, clicking and filling out forms on my behalf while I watched and kept tabs on what they were doing (with one eye on my screen and the other on the conference).
 
 I got there almost out of exasperation. At first, I was following the usual script: I had the Cloudflare dashboard open and was asking the AI how to proceed. The problem was that Gemini kept directing me to a hidden menu item that was nearly impossible to find in Cloudflare's maze of menus. I was about to fall into that classic frustrating loop we all know:
 
-> *"Go to section X and click Y."*  
-> *"It's not there, I can't find it."*  
+> *"Go to section X and click Y."*
+> *"It's not there, I can't find it."*
 > *"Sorry, let me check the docs... ah okay, they moved that menu, try under Z."*
 
 _This was also because I had stumbled onto outdated documentation on migrating to Cloudflare Pages, whereas Cloudflare is deprecating Pages in favor of Workers. I'll get to that._

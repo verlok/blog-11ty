@@ -15,6 +15,11 @@ image: ./cover.png
 image_alt: "Schermata della dashboard di Cloudflare durante il trasferimento DNS del blog, con un ingrandimento sul cursore di Antigravity e il badge 'Thinking...' mentre l'agente opera direttamente nel browser."
 ---
 
+<figure>
+	{% image "cover.png", "Schermata della dashboard di Cloudflare durante il trasferimento DNS del blog, con un ingrandimento sul cursore di Antigravity e il badge 'Thinking...' mentre l'agente opera direttamente nel browser.", [648, 1296], "648px", false %}
+	<figcaption>Antigravity al lavoro direttamente dentro la dashboard di Cloudflare: il cursore si muove, "pensa" e clicca sotto i miei occhi.</figcaption>
+</figure>
+
 Ieri, 20 novembre 2026, ero seduto in sala a [**performance.now()**](https://www.perfnow.nl/) ad **Amsterdam**. Sul palco c'era [**Max Inden**](https://max-inden.de), che stava parlando di come **HTTP/3** e **QUIC 0-RTT** permettano di tagliare diversi round-trip durante la connessione di rete e velocizzare il caricamento delle pagine. A un certo punto del talk ha lanciato una sfida al pubblico: aprire [**savearoundtrip.com**](https://savearoundtrip.com/) e verificare come se la cavasse il proprio sito.
 
 Ho inserito l'indirizzo di questo blog e il responso è stato impietoso: **Netlify** — dove ospitavo il sito fino a ieri — non supportava né QUIC né HTTP/3. Per ottenerli, la via più diretta era migrare su **Cloudflare** (che peraltro era sponsor della conferenza).
@@ -27,11 +32,6 @@ Ho inserito l'indirizzo di questo blog e il responso è stato impietoso: **Netli
 C'era anche un incentivo extra: uno **swag di Mozilla** in palio per chi avesse mostrato allo speaker, dopo il talk, che il proprio sito passava tutti e 5 i check svolti da savearoundtrip.com. Così mi sono detto: *"Ma sì, lo faccio al volo tra un talk e l'altro!"*. Spoiler: la migrazione è riuscita ma non è stata proprio immediata, quindi lo swag mi è sfuggito, ma l'esperienza vissuta in quell'ora di migrazione mi ha letteralmente lasciato a bocca aperta e merita di essere raccontata.
 
 ## Oltre il codice: quando l'AI prende il controllo del browser
-
-<figure>
-	{% image "cover.png", "Schermata della dashboard di Cloudflare durante il trasferimento DNS del blog, con un ingrandimento sul cursore di Antigravity e il badge 'Thinking...' mentre l'agente opera direttamente nel browser.", [648, 1296], "648px", false %}
-	<figcaption>Antigravity al lavoro direttamente dentro la dashboard di Cloudflare: il cursore si muove, "pensa" e clicca sotto i miei occhi.</figcaption>
-</figure>
 
 Che Gemini, Claude o qualsiasi altro modello AI riuscissero ad adattare il codice del blog — costruito con Eleventy — per passare da Netlify a Cloudflare me lo potevo aspettare: riscrivere file di configurazione, redirect o piccole funzioni serverless è il loro pane quotidiano.
 
