@@ -14,7 +14,7 @@ eleventyNavigation:
 Ciao, sono Andrea, e amo creare e ottimizzare siti web. Sono appassionato di web performance, accessibilità e user experience.
 
 <figure class="about-face">
-	{% image "2023-andrea-verlicchi-summit-enhanced.png", "Andrea Verlicchi", [648, 1296], "648px" %}
+	{% image "profile-picture.png", "Andrea Verlicchi", [648, 1296], "648px" %}
 	<figcaption>Immagine: me stesso</figcaption>
 </figure>
 
