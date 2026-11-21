@@ -39,9 +39,9 @@ What truly surprised me, and what I want to focus on in the first part of this s
 
 I got there almost out of exasperation. At first, I was following the usual script: I had the Cloudflare dashboard open and was asking the AI how to proceed. The problem was that Gemini kept directing me to a hidden menu item that was nearly impossible to find in Cloudflare's maze of menus. I was about to fall into that classic frustrating loop we all know:
 
-> *"Go to section X and click Y."*
-> *"It's not there, I can't find it."*
-> *"Sorry, let me check the docs... ah okay, they moved that menu, try under Z."*
+- "Go to section X and click Y."
+- "It's not there, I can't find it."
+- "Sorry, let me check the docs... ah okay, they moved that menu, try under Z."
 
 _This was also because I had stumbled onto outdated documentation on migrating to Cloudflare Pages, whereas Cloudflare is deprecating Pages in favor of Workers. I'll get to that._
 
