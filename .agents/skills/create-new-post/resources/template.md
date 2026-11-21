@@ -6,6 +6,7 @@ tags:
   - TAG_1
   - TAG_2
 layout: layouts/post.njk
+translationKey: "YYYY-MM-DD_TOPIC_IDENTIFIER"
 image: ./cover.png
 image_alt: "IMAGE_ALT_HERE"
 ---
