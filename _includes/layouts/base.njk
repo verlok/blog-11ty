@@ -17,18 +17,6 @@
 			})();
 		</script>
 
-		{#- Google tag (gtag.js) #}
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HGPGLLETP8"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-
-			gtag('config', 'G-HGPGLLETP8');
-		</script>
-
 		{#- CSS bundles via eleventy-plugin-bundle #}
 		{%- css %}* { box-sizing: border-box; }{% endcss %}
 		{%- css %}{% include "public/css/index.css" %}{% endcss %}
@@ -211,6 +199,18 @@
 				}
 				syncAria();
 			})();
+		</script>
+
+		{#- Google tag (gtag.js) #}
+		<script async fetchpriority="low" src="https://www.googletagmanager.com/gtag/js?id=G-HGPGLLETP8"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-HGPGLLETP8');
 		</script>
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
