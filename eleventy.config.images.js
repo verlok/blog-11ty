@@ -40,6 +40,9 @@ export default (eleventyConfig) => {
 				widths: widths || ["auto"],
 				formats,
 				outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
+				// Keep the eleventy-img v3 behavior: drop requested widths larger than the
+				// original instead of adding an extra original-width variant (v4+ default: 1.25).
+				minimumThreshold: Infinity,
 			});
 
 			// Find a way to pass loading lazy to second to more images
