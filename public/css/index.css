@@ -381,6 +381,10 @@
 		grid-template-columns: 1fr auto;
 		align-items: center;
 		gap: 0.5rem 0.75rem;
+		/* On mobile the header actions sit visually above the nav (row 1) but come
+		   after it in the DOM: make Tab follow the visual grid order. No effect on
+		   the desktop flex layout; unsupported browsers fall back to DOM order. */
+		reading-flow: grid-rows;
 	}
 
 	@media (min-width: 768px) {

@@ -187,11 +187,27 @@ export default function (eleventyConfig) {
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", (mdLib) => {
 		mdLib.use(markdownItAnchor, {
-			permalink: markdownItAnchor.permalink.ariaHidden({
+			permalink: markdownItAnchor.permalink.linkInsideHeader({
 				placement: "after",
 				class: "header-anchor",
 				symbol: "#",
 				ariaHidden: false,
+				// Give each "#" link a meaningful accessible name instead of "number sign"
+				renderAttrs: (slug, state) => {
+					const idx = state.tokens.findIndex(
+						(t) => t.type === "heading_open" && t.attrGet("id") === slug
+					);
+					const title =
+						idx >= 0
+							? state.tokens[idx + 1].children
+									.filter((t) => t.type === "text" || t.type === "code_inline")
+									.map((t) => t.content)
+									.join("")
+							: slug;
+					const lang = state.env?.page?.lang || state.env?.lang || "en";
+					const prefix = lang === "it" ? "Link alla sezione" : "Link to section";
+					return { "aria-label": `${prefix}: ${title}` };
+				},
 			}),
 			level: [1, 2, 3, 4],
 			slugify: eleventyConfig.getFilter("slugify"),
