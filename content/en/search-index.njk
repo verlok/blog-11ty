@@ -1,0 +1,5 @@
+---
+permalink: /en/search-index.json
+eleventyExcludeFromCollections: true
+---
+{{ collections.posts_en | buildSearchIndex("en") | safe }}

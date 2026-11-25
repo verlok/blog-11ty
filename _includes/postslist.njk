@@ -7,7 +7,15 @@
 	{% set hasImage = imageHTML != '' %}
 	{% set isFeatured = featuredFirst and loop.first %}
 	{% set postTags = post.data.tags | filterTagList %}
-	<article class="postlist-item{% if isFeatured %} postlist-item--featured{% endif %}{% if not hasImage %} postlist-item--no-image{% endif %}">
+	{% set postKeywords = post.data.tags | getPostKeywords(post.data.keywords) %}
+	<article
+		class="postlist-item{% if isFeatured %} postlist-item--featured{% endif %}{% if not hasImage %} postlist-item--no-image{% endif %}"
+		{% if enableSearch %}
+		data-search-title="{{ post.data.title or '' }}"
+		data-search-desc="{{ post.data.description or '' }}"
+		data-search-keywords="{{ postKeywords | join(' | ') }}"
+		{% endif %}
+	>
 		<a href="{{ post.url }}" class="postlist-link">
 			{% if hasImage %}
 				<div class="postlist-media">

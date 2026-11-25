@@ -116,6 +116,23 @@
 				<div class="header-actions">
 					<button
 						type="button"
+						class="search-toggle"
+						id="search-toggle"
+						aria-label="{{ strings[currentLang].searchPostsLabel }}"
+						aria-haspopup="dialog"
+						aria-controls="search-dialog"
+						title="{{ strings[currentLang].searchPostsLabel }}"
+					>
+						<svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<circle cx="11" cy="11" r="7"></circle>
+							<path d="m21 21-4.35-4.35"></path>
+						</svg>
+						<span class="search-toggle-label">{{ strings[currentLang].search }}</span>
+						<kbd class="search-toggle-kbd" aria-hidden="true">/</kbd>
+					</button>
+
+					<button
+						type="button"
 						class="theme-toggle"
 						id="theme-toggle"
 						aria-label="{{ strings[currentLang].toggleTheme }}"
@@ -167,6 +184,94 @@
 				</a>
 			</div>
 		</footer>
+
+		<dialog
+			id="search-dialog"
+			class="search-dialog"
+			aria-labelledby="search-dialog-label"
+			data-index-url="{{ ('/' + currentLang + '/search-index.json') | url }}"
+		>
+			<div class="search-dialog-panel">
+				<div class="search-dialog-header">
+					<svg class="search-input-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<circle cx="11" cy="11" r="7"></circle>
+						<path d="m21 21-4.35-4.35"></path>
+					</svg>
+					<label id="search-dialog-label" for="search-dialog-input" class="visually-hidden">
+						{{ strings[currentLang].searchPostsLabel }}
+					</label>
+					<input
+						type="search"
+						id="search-dialog-input"
+						class="search-dialog-input"
+						placeholder="{{ strings[currentLang].searchPlaceholder }}"
+						autocomplete="off"
+						autocorrect="off"
+						autocapitalize="off"
+						spellcheck="false"
+						enterkeyhint="search"
+						aria-controls="search-dialog-results"
+					>
+					<button
+						type="button"
+						id="search-dialog-clear"
+						class="search-dialog-clear"
+						aria-label="{{ strings[currentLang].searchClear }}"
+						hidden
+					>
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<circle cx="12" cy="12" r="9"></circle>
+							<path d="m15 9-6 6M9 9l6 6"></path>
+						</svg>
+					</button>
+					<button
+						type="button"
+						id="search-dialog-close"
+						class="search-dialog-close"
+						aria-label="{{ strings[currentLang].searchClose }}"
+					>
+						<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M18 6 6 18M6 6l12 12"></path>
+						</svg>
+					</button>
+				</div>
+
+				<div id="search-dialog-status" class="search-dialog-status" role="status" aria-live="polite" aria-atomic="true">
+					{{ strings[currentLang].searchEmptyPrompt }}
+				</div>
+
+				<div id="search-dialog-body" class="search-dialog-body">
+					<div id="search-dialog-tags" class="search-dialog-tags" hidden></div>
+					<p id="search-dialog-empty" class="search-dialog-empty" hidden>{{ strings[currentLang].searchNoResultsHint }}</p>
+					<ul id="search-dialog-results" class="search-dialog-results" aria-label="{{ strings[currentLang].searchPostsLabel }}"></ul>
+				</div>
+
+				<div class="search-dialog-footer" aria-hidden="true">
+					<span><kbd>&uarr;</kbd><kbd>&darr;</kbd> {{ strings[currentLang].searchKeyNavigate }}</span>
+					<span><kbd>&crarr;</kbd> {{ strings[currentLang].searchKeyOpen }}</span>
+					<span><kbd>Esc</kbd> {{ strings[currentLang].searchKeyClose }}</span>
+				</div>
+			</div>
+		</dialog>
+
+		<script type="application/json" id="search-i18n">
+			{{ {
+				lang: currentLang,
+				minRead: strings[currentLang].minRead,
+				emptyPrompt: strings[currentLang].searchEmptyPrompt,
+				popularKeywords: strings[currentLang].searchPopularKeywords,
+				noResults: strings[currentLang].searchNoResults,
+				noResultsHint: strings[currentLang].searchNoResultsHint,
+				resultsSingular: strings[currentLang].searchResultsSingular,
+				resultsPlural: strings[currentLang].searchResultsPlural,
+				ofTotal: strings[currentLang].searchOfTotal,
+				loading: strings[currentLang].searchLoading,
+				error: strings[currentLang].searchError,
+				reset: strings[currentLang].searchReset
+			} | dump | safe }}
+		</script>
+
+		<script src="{{ '/js/search.js' | url }}" defer></script>
 
 		<script>
 			(function () {

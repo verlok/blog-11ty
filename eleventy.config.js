@@ -1,3 +1,4 @@
+import fs from "fs";
 import { DateTime } from "luxon";
 import markdownItAnchor from "markdown-it-anchor";
 
@@ -182,6 +183,70 @@ export default function (eleventyConfig) {
 		return (tags || []).filter(
 			(tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
 		);
+	});
+
+	const getPostKeywords = (tags, keywords) => {
+		const ignored = new Set(["all", "nav", "post", "posts"]);
+		const combined = [];
+		const seen = new Set();
+
+		const addTerm = (raw) => {
+			if (typeof raw !== "string") return;
+			const term = raw.trim();
+			if (!term) return;
+			const key = term.toLowerCase();
+			if (ignored.has(key) || seen.has(key)) return;
+			seen.add(key);
+			combined.push(term);
+		};
+
+		if (Array.isArray(tags)) {
+			tags.forEach(addTerm);
+		}
+		if (Array.isArray(keywords)) {
+			keywords.forEach(addTerm);
+		} else if (typeof keywords === "string") {
+			keywords.split(",").forEach(addTerm);
+		}
+
+		return combined;
+	};
+
+	eleventyConfig.addFilter("getPostKeywords", function (tags, keywords) {
+		return getPostKeywords(tags, keywords);
+	});
+
+	eleventyConfig.addFilter("buildSearchIndex", function (collection, lang) {
+		const locale = lang || "en";
+		const items = [...(collection || [])].reverse().map((post) => {
+			let minutes = 1;
+			if (post.inputPath) {
+				try {
+					const raw = fs.readFileSync(post.inputPath, "utf8");
+					const body = raw.replace(/^---[\s\S]*?---\s*/, "");
+					const plainText = body
+						.replace(/\{%[\s\S]*?%\}/g, " ")
+						.replace(/<[^>]*>/g, " ")
+						.replace(/\s+/g, " ")
+						.trim();
+					const words = plainText ? plainText.split(" ").length : 0;
+					minutes = Math.max(1, Math.round(words / 220));
+				} catch (e) {}
+			}
+
+			return {
+				url: post.url,
+				title: post.data?.title || "",
+				description: post.data?.description || "",
+				keywords: getPostKeywords(post.data?.tags, post.data?.keywords),
+				date: DateTime.fromJSDate(post.date, { zone: "utc" })
+					.setLocale(locale)
+					.toFormat("d MMM yyyy"),
+				readingTime: minutes,
+			};
+		});
+
+		return JSON.stringify(items);
 	});
 
 	// Customize Markdown library settings:

@@ -10,5 +10,39 @@ eleventyNavigation:
 	<p class="page-subtitle">{{ collections.posts_en | length }} {{ strings.en.inArchive }}</p>
 </header>
 
+<div class="blog-search" data-total-count="{{ collections.posts_en | length }}">
+	<div class="blog-search-field">
+		<svg class="blog-search-icon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+			<circle cx="11" cy="11" r="7"></circle>
+			<path d="m21 21-4.35-4.35"></path>
+		</svg>
+		<label for="blog-search-input" class="visually-hidden">{{ strings.en.searchPostsLabel }}</label>
+		<input
+			type="search"
+			id="blog-search-input"
+			class="blog-search-input"
+			placeholder="{{ strings.en.searchShortPlaceholder }}"
+			autocomplete="off"
+			autocorrect="off"
+			autocapitalize="off"
+			spellcheck="false"
+			enterkeyhint="search"
+		>
+		<button type="button" id="blog-search-clear" class="blog-search-clear" aria-label="{{ strings.en.searchClear }}" hidden>
+			<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+				<path d="M18 6 6 18M6 6l12 12"></path>
+			</svg>
+		</button>
+	</div>
+	<p id="blog-search-status" class="blog-search-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+</div>
+
 {% set postslist = collections.posts_en %}
+{% set enableSearch = true %}
 {% include "postslist.njk" %}
+
+<div id="blog-search-empty" class="blog-search-empty" hidden>
+	<p id="blog-search-empty-title" class="blog-search-empty-title"></p>
+	<p class="blog-search-empty-hint">{{ strings.en.searchNoResultsHint }}</p>
+	<button type="button" id="blog-search-reset" class="blog-search-reset">{{ strings.en.searchReset }}</button>
+</div>
