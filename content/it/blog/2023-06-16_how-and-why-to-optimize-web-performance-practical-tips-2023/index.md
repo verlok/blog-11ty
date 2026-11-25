@@ -5,7 +5,7 @@ tags:
   - talks
   - web performance
   - core web vitals
-  - google developer groups
+  - community
 ---
 
 Nel 2023 ho parlato di web performance in conferenze, Google Developer Groups (GDG) e meetup locali in tutta Europa. Il titolo di questo talk è "Come e perché ($) migliorare le prestazioni web: consigli pratici per il 2023".

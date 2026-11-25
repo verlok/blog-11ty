@@ -2,8 +2,9 @@
 title: Check if an element is still inside viewport after a given time
 description: What would you do if somebody asked you to load a DOM element only if it stays inside the viewport for a given time? You would use vanilla-lazyload, wouldn't you?
 tags:
-  - techniques
+  - lazy loading
   - vanilla-lazyload
+  - browsers
 ---
 
 What would you do if somebody asked you to load a DOM element only if it **stays inside the viewport for a given time**? You would use [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload), wouldn't you? 😉 This is exactly what the GitHub community asked for as new feature in LazyLoad, to **avoid loading elements which users skipped** by **scrolling fast beyond them**. In this post, I'd like to share the solution with you.

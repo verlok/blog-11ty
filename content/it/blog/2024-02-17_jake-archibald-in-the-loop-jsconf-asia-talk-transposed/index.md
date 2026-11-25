@@ -4,6 +4,9 @@ description: "Il talk di Jake Archibald \"In the loop\" è ancora una delle migl
 tags:
   - web performance
   - interaction to next paint
+  - browsers
+keywords:
+  - inp
 ---
 
 Il talk di [Jake Archibald](https://jakearchibald.com/) "In the loop" (JS Conf Asia) è ancora una delle migliori fonti di informazioni su come i browser elaborano i task e riescono a rispondere all'input dell'utente. Non avendo trovato nulla di così comprensibile in formato testuale, ho deciso di trascrivere il suo intervento in questo articolo. Trovi il video alla fine.

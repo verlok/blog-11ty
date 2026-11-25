@@ -6,6 +6,8 @@ tags:
   - talks
   - web performance
   - interaction to next paint
+keywords:
+  - inp
 layout: layouts/post.njk
 image: ./perf-sync-amsterdam.jpg
 image_alt: "A placeholder image for the Performance Sync event in Amsterdam."

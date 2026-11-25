@@ -2,8 +2,8 @@
 title: True full-screen mode for Google Meet shared content
 description: Tired of the lack of a true full-screen option for shared content on Google Meet, I created a bookmarklet to solve the issue, available on GitHub.
 tags:
-  - google meet
-  - hacks
+  - productivity
+  - browsers
 ---
 
 

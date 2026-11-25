@@ -2,9 +2,9 @@
 title: "Critical CSS con Jekyll e SASS"
 description: "In passato il mio blog era gestito da Jekyll su GitHub Pages e il suo CSS era compilato usando SASS. Oggi ho deciso di migliorare ulteriormente le prestazioni integrando inline il critical CSS che blocca il rendering, ma anche cercando su internet ho faticato a trovare un modo semplice per farlo. Questo post fa al caso tuo, se vuoi fare la stessa cosa."
 tags:
-  - techniques
-  - web performance
   - css
+  - web performance
+  - tutorials
 layout: layouts/post.njk
 ---
 

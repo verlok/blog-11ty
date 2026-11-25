@@ -4,8 +4,8 @@ description: "Il 6 aprile 2019, Addy Osmani ha scritto del lazy loading nativo d
 tags:
   - lazy loading
   - images
-  - libraries
-  - techniques
+  - vanilla-lazyload
+  - open source
 layout: layouts/post.njk
 ---
 

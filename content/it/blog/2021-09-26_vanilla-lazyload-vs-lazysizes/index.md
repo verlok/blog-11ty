@@ -2,9 +2,9 @@
 title: "vanilla-lazyload vs lazysizes"
 description: "Come autore di vanilla-lazyload, non è la prima volta che mi viene posta questa domanda: quali sono le differenze tra vanilla-lazyload e lazysizes? Questo post è la risposta a tale domanda."
 tags:
-  - libraries
   - lazy loading
   - vanilla-lazyload
+  - open source
 layout: layouts/post.njk
 ---
 

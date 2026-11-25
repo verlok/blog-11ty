@@ -4,7 +4,6 @@ description: Say you have a responsive website layout where images are sized at 
 tags:
   - responsive images
   - images
-  - techniques
 ---
 
 Say you have a responsive website layout where images are sized at 100% of the container, but **the container is not always as wide as the viewport**. Do we need to use the `picture` tag, or the `img` tag is enough? **The `img` tag can do it**, using its `sizes` and `srcset` attributes. Here's how.

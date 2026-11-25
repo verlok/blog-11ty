@@ -2,10 +2,9 @@
 title: An elegant technique to lazyload images in Swiper, and lazily create Swiper instances
 description: Say you have multiple carousels in a page, each one containing multiple images, and you want to download only the images that are inside the visible portion of the page, and maybe save some CPU time by lazily create the carousel instances. I think I’ve found a valuable and elegant technique to do so.
 tags:
-  - techniques
   - lazy loading
-  - vanilla-lazyload
   - images
+  - vanilla-lazyload
 ---
 
 Say you have multiple carousels in a page, each one containing multiple images, and you want to download only the images that are inside the visible portion of the page, and maybe save some CPU time by lazily create the carousel instances. I think I’ve found a valuable and elegant technique to do so.

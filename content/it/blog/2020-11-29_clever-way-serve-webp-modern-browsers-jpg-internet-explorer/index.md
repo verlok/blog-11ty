@@ -3,7 +3,8 @@ title: "Un modo intelligente per servire immagini WebP ai browser moderni e JPG 
 description: "Prima che Safari iniziasse a supportare le immagini WebP, eravamo costretti a usare il tag picture per servire le immagini WebP ai browser che le supportavano. Oggi tutti i browser moderni supportano il formato WebP, quindi c'è probabilmente un modo intelligente per farlo usando un singolo tag: img."
 tags:
   - images
-  - techniques
+  - responsive images
+  - browsers
 layout: layouts/post.njk
 ---
 

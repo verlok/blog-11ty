@@ -2,10 +2,8 @@
 title: "Il dibattito sul lavoro da remoto: la mia visione per trovare un equilibrio"
 description: "Dopo anni di lavoro sia da remoto che in ufficio, ho capito che se da un lato il lavoro da remoto offre flessibilità e concentrazione, dall'altro può far mancare quelle connessioni spontanee che stimolano la creatività e cementano il team."
 tags:
-  - remote work
-  - hybrid work
-  - collaboration
-  - workplace trends
+  - community
+  - productivity
 ---
 
 {% image "remote-working-debate.webp", "Un'illustrazione di una persona che lavora da remoto in un comodo ufficio a casa, circondata da piante e oggetti personali, con un laptop aperto.", [648, 1296], "648px" %}

@@ -4,8 +4,8 @@ description: On April 6th 2019, Addy Osmany wrote about native image lazy-loadin
 tags:
   - lazy loading
   - images
-  - libraries
-  - techniques
+  - vanilla-lazyload
+  - open source
 ---
 
 On April 6th 2019, Addy Osmany wrote about [native image lazy-loading](https://addyosmani.com/blog/lazy-loading/). Two days later Yvain, a front-end developer from Paris, [asked me](https://github.com/verlok/vanilla-lazyload/issues/331) if my [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload/) could be a **loading attribute polyfill**, inspiring me to develop and release version 12 of the script, which features a new `use_native` option to enable native lazy-loading where supported. You can already use it today.

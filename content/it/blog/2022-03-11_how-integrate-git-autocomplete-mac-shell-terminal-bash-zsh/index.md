@@ -3,9 +3,7 @@ title: "Come integrare git nel Terminale (shell) di Mac OS"
 description: "Ora che zsh è la shell predefinita sul terminale di Mac OS, potresti voler configurare il tuo nuovo Mac o il terminale di VS Code per avere un'integrazione intelligente con git, simile a git bash per Windows."
 tags:
   - tutorials
-  - mac
-  - zsh
-  - git
+  - productivity
 ---
 
 Ora che `zsh` è la shell predefinita sul terminale di Mac OS, potresti voler configurare il tuo nuovo Mac o il terminale di VS Code per avere un'integrazione intelligente con `git`, simile a [git bash](https://gitforwindows.org/) per Windows.

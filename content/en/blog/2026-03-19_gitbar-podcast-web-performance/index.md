@@ -2,8 +2,9 @@
 title: "GitBar Podcast: Non toccate quel tag!"
 description: "I joined Mauro \"Brainrepo\" Murru on the GitBar podcast to chat about web performance, Core Web Vitals, image optimization, and the silent damage of Google Tag Manager."
 tags:
-  - podcast
   - web performance
+  - core web vitals
+  - community
 layout: layouts/post.njk
 image: ./gitbar-episode.png
 image_alt: "GitBar Podcast episode 228 - Non toccate quel tag! with Andrea Verlicchi"

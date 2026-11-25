@@ -3,7 +3,8 @@ title: "Come usare in modo produttivo il nuovo browser Microsoft Edge basato su 
 description: "Una guida pratica su come usare in modo produttivo il nuovo browser Microsoft Edge basato su Chromium"
 tags:
   - browsers
-  - guides
+  - tutorials
+  - productivity
 layout: layouts/post.njk
 ---
 

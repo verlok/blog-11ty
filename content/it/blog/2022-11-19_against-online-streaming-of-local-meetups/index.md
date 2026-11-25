@@ -2,8 +2,7 @@
 title: "Contro lo streaming online dei meetup locali"
 description: "Mi piace partecipare ai meetup locali. Sono informativi, divertenti e allo stesso tempo stimolanti dal punto di vista sociale. A volte viene chiesto agli organizzatori dei meetup di trasmettere gli eventi online. Sarebbe una bella funzionalità, ma a mio parere farebbe più male che bene alla community. Vi spiego perché."
 tags:
-  - meetups
-  - considerations
+  - community
 ---
 
 Mi piace partecipare ai meetup locali. Sono informativi, divertenti e allo stesso tempo stimolanti dal punto di vista sociale. A volte viene chiesto agli organizzatori dei meetup di trasmettere gli eventi online. Sarebbe una bella funzionalità, ma a mio parere farebbe più male che bene alla community. Vi spiego perché.

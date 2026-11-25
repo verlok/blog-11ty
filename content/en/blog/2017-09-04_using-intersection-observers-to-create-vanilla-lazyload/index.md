@@ -2,9 +2,9 @@
 title: Intersection Observer and lazy loading of elements
 description: In August 2017 the Intersection Observer API, a new exciting browser API, finally gained quite wide support. We can use it to know when two DOM elements intersect, or when a given DOM element enters the browser viewport. The lazy loading of images is just the case.
 tags:
-  - browsers APIs
   - lazy loading
-  - techniques
+  - vanilla-lazyload
+  - browsers
 ---
 
 In August 2017 a new exciting browser API finally [gained](https://hacks.mozilla.org/2017/08/intersection-observer-comes-to-firefox/) quite [wide support](https://caniuse.com/#search=IntersectionObserver): the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API), which we can use to know when two DOM elements intersect, or when a given DOM element **enters the browser viewport**. The lazy loading of images is just the case.

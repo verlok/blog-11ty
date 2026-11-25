@@ -3,8 +3,8 @@ title: "Un fantastico articolo sul lazy loading ibrido"
 description: "Il 6 maggio 2019 ho scritto il mio primo articolo su Smashing Magazine: Lazy Loading Ibrido, Una Migrazione Progressiva Al Lazy Loading Nativo."
 tags:
   - lazy loading
-  - techniques
-  - featured
+  - web performance
+  - vanilla-lazyload
 layout: layouts/post.njk
 ---
 

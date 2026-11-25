@@ -2,7 +2,10 @@
 title: "Snippet di web performance per il debug dell'INP in Chrome DevTools"
 description: "Dopo averli tenuti sul mio computer per alcuni giorni, ho deciso di pubblicare su GitHub questa raccolta di snippet di web performance per fare il debug dell'INP in Chrome Developer Tools, o per inviare i dati ai tuoi sistemi di analytics."
 tags:
-  - utilities
+  - web performance
+  - core web vitals
+  - interaction to next paint
+  - browsers
 ---
 
 <figure>

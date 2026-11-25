@@ -2,8 +2,12 @@
 title: Advanced sprite generation using Compass (SASS)
 description: Spriting is a way to improve performance in your website by putting many images (or icons) in a single larger image, in order to make a single HTTP request instead of many. Here's how you can make sprites using Compass.
 tags:
+  - css
+  - images
+  - web performance
+keywords:
   - sprites
-  - automation
+  - sass
 ---
 
 Spriting is a way to improve performance in your website by putting many images (or icons) in a single larger image, in order to make a single HTTP request instead of many. Here's how you can make sprites using Compass.

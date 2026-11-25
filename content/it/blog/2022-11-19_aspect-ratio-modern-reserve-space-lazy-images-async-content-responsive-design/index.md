@@ -2,13 +2,12 @@
 title: "aspect-ratio: Un modo moderno per riservare spazio a immagini e contenuti asincroni nel responsive design"
 description: "Per evitare lo spostamento del layout (layout shifting) e ottimizzare la metrica Web Vital Cumulative Layout Shift (CLS) nelle tue pagine web, è necessario riservare spazio per qualsiasi contenuto che potrebbe essere renderizzato in un secondo momento. Questo è il caso di immagini, video e qualsiasi contenuto caricato in modo asincrono (ad esempio con chiamate AJAX). Ecco un nuovo modo per farlo."
 tags:
-  - techniques
-  - aspect-ratio
-  - responsive design
-  - responsive images
-  - images
-  - cumulative layout shift
   - core web vitals
+  - css
+  - images
+  - responsive images
+keywords:
+  - cumulative layout shift
 ---
 
 Per evitare lo **spostamento del layout** (layout shifting) e ottimizzare la metrica [Cumulative Layout Shift](https://web.dev/cls/) delle [Core Web Vitals](https://web.dev/vitals/) nelle tue pagine web, devi riservare spazio per qualsiasi **contenuto che potrebbe essere renderizzato in un secondo momento**. Questo è il caso di immagini, video e qualsiasi contenuto caricato in modo asincrono (ad esempio tramite chiamate AJAX). Ecco un nuovo modo per farlo.

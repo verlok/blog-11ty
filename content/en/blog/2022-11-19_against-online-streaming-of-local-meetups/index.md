@@ -2,8 +2,7 @@
 title: Against online streaming of local meetups.
 description: I like to take part to local meetup events. They are informative, fun, and socially engaging at the same time. Sometimes, the meetup organizers get asked to stream events online. It would be a cool feature, I guess, but if you ask me, it would do more harm than good the community. Let me explain why.
 tags:
-  - meetups
-  - considerations
+  - community
 ---
 
 I like to take part to local meetup events. They are informative, fun, and socially engaging at the same time. Sometimes, the meetup organizers get asked to stream events online. It would be a cool feature, I guess, but if you ask me, it would do more harm than good the community. Let me explain why.

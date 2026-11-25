@@ -2,8 +2,8 @@
 title: "Case study su Quicklink: pagine più veloci, aumento delle visualizzazioni"
 description: "Quicklink è una libreria leggera creata da Addy Osmani (Google) che esegue il prefetch delle pagine collegate alla pagina corrente non appena i link a tali pagine entrano nella porzione visibile della pagina (viewport). Ecco un case study al riguardo."
 tags:
-  - open source
   - web performance
+  - open source
 layout: layouts/post.njk
 ---
 

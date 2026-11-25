@@ -2,9 +2,8 @@
 title: "Usare le variabili CSS come unità di spaziatura"
 description: "In questo articolo ti mostro come utilizzare le variabili CSS, note popolarmente come proprietà personalizzate (CSS custom properties), per scalare gli spazi del tuo layout su diverse media query."
 tags:
-  - techniques
-  - layout
-  - css variables
+  - css
+  - web design
 ---
 
 In questo articolo ti mostro come puoi utilizzare le variabili CSS, note popolarmente come *proprietà personalizzate* (CSS custom properties), per **scalare gli spazi del tuo layout** su diverse media query.

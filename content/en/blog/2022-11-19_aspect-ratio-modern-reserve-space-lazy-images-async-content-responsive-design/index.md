@@ -3,13 +3,12 @@ title: "aspect-ratio: A modern way to reserve space for images and async content
 description: To avoid layout shifting and optimize for the Cumulative Layout Shift (CLS) Web Vital in you web pages, you need to reserve space for any content that might be rendered later in time. This is the case for images, videos and any asynchonously loaded content (e.g with AJAX calls). Here's a new way to do it.
 
 tags:
-  - techniques
-  - aspect-ratio
-  - responsive design
-  - responsive images
-  - images
-  - cumulative layout shift
   - core web vitals
+  - css
+  - images
+  - responsive images
+keywords:
+  - cumulative layout shift
 ---
 
 To avoid **layout shifting** and optimize for the [Cumulative Layout Shift](https://web.dev/cls/) [web vital](https://web.dev/vitals/) in you web pages, you need to reserve space for any **content that might be rendered later in time**. This is the case for images, videos and any asynchonously loaded content (e.g with AJAX calls). Here's a new way to do it.

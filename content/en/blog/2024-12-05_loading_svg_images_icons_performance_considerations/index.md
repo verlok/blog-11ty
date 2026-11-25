@@ -2,8 +2,9 @@
 title: "Optimizing SVG Usage for Web Performance: A Comprehensive Discussion"
 description: "Various techniques to render SVGs compared, including inline SVGs, the `<img>` tag, CSS backgrounds, and SVG sprites. Here's a summary of the key insights and recommendations from a design and web performance standpoint."
 tags:
-  - svg
+  - images
   - web performance
+  - accessibility
 ---
 
 In a recent conversation among web performance enthusiasts, the topic of efficiently loading SVGs (Scalable Vector Graphics) on websites was explored in depth. The discussion centered around the best methods for incorporating SVGs, particularly icons, with performance in mind. Various techniques were compared, including inline SVGs, the `<img>` tag, CSS backgrounds, and SVG sprites. Here's a summary of the key insights and recommendations from that conversation.

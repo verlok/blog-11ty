@@ -5,7 +5,8 @@ tags:
   - talks
   - web performance
   - interaction to next paint
-  - meetups
+  - community
+keywords:
   - inp
 ---
 

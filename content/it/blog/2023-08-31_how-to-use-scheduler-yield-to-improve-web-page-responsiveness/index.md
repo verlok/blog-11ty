@@ -3,8 +3,10 @@ title: "Come usare scheduler.yield per migliorare la reattività delle pagine we
 description: "Google Chrome sta introducendo una nuova funzionalità chiamata scheduler.yield. Questa funzione consente agli sviluppatori web di cedere esplicitamente il controllo al thread principale. Ecco i punti chiave."
 tags:
   - web performance
-  - google chrome
   - interaction to next paint
+  - browsers
+keywords:
+  - inp
 ---
 
 <figure>

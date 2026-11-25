@@ -3,8 +3,7 @@ title: "Rifattorizziamo i bias di genere, un commit alla volta"
 description: "Ho co-presentato con Giulia Naponiello un talk sui bias inconsci di genere nel mondo tech in occasione di due meetup a Bologna e Imola. Ecco di cosa abbiamo parlato e perché è importante."
 tags:
   - talks
-  - gender bias
-  - diversity
+  - community
 layout: layouts/post.njk
 image: ./refactoring-gender-biases.png
 image_alt: "Rifattorizziamo i bias di genere, un commit alla volta - DevRomagna, marzo 2026 - Giulia Naponiello e Andrea Verlicchi"

@@ -3,7 +3,7 @@ title: "The macOS clipboard manager you've been waiting for, now native in MacOS
 description: "You know when you copy a piece of code, then you copy another one and you lose the previous one? Or you know you have something in your clipboard, you'd like to copy something else, but you have to paste what's in your clipboard first, otherwise you'll lose it? No more clipboard stress. Finally, multiple clipboard landed on macOS."
 tags:
   - tutorials
-  - mac-os
+  - productivity
 ---
 
 <figure>

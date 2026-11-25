@@ -2,8 +2,8 @@
 title: "Web Share API, il passo successivo alla PWA"
 description: "Oggi ho sperimentato con la Web Share API e l'ho implementata su questo sito, tanto per iniziare. Ecco cosa ho fatto e come puoi implementarla sul tuo sito."
 tags:
-  - APIs
-  - techniques
+  - browsers
+  - tutorials
 layout: layouts/post.njk
 ---
 

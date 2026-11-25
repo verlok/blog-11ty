@@ -4,11 +4,10 @@ description: "Da performance.now() ad Amsterdam a Cloudflare Workers con HTTP/3 
 date: 2026-11-21
 tags:
   - ai
-  - antigravity
-  - gemini
-  - cloudflare
   - web performance
-  - perf.now
+  - productivity
+keywords:
+  - cloudflare
 layout: layouts/post.njk
 translationKey: "2026-11-21_netlify-to-cloudflare-antigravity-gemini-4-neon"
 image: ./cover.png

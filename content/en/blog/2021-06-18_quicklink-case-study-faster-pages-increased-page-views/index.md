@@ -2,8 +2,8 @@
 title: "Quicklink case study: faster pages, increased page views"
 description: Quicklink is a lightweight library created by Addy Osmani (Google) that prefetches pages linked to the current page, as the links to those pages enter the visible portion of the page (viewport). Here's a case study for it.
 tags:
-  - open source
   - web performance
+  - open source
 ---
 
 [QuickLink](https://github.com/GoogleChromeLabs/quicklink) is a lightweight library created by Addy Osmani (Google) that prefetches pages linked to the current page, as the links to those pages enter the visible portion of the page (viewport).

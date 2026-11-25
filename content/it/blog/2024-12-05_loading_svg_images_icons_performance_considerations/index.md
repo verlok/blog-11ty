@@ -2,8 +2,9 @@
 title: "Ottimizzare l'uso degli SVG per le prestazioni web: una guida completa"
 description: "Confronto tra varie tecniche per renderizzare gli SVG: SVG inline, tag `<img>`, sfondi CSS e sprite SVG. Ecco una sintesi delle principali considerazioni e raccomandazioni dal punto di vista del design e delle performance web."
 tags:
-  - svg
+  - images
   - web performance
+  - accessibility
 ---
 
 In una recente conversazione tra appassionati di web performance, è stato approfondito il tema del caricamento efficiente degli SVG (Scalable Vector Graphics) sui siti web. La discussione si è concentrata sui metodi migliori per integrare gli SVG, in particolare le icone, con un occhio di riguardo alle prestazioni. Sono state confrontate diverse tecniche: SVG inline, il tag `<img>`, gli sfondi CSS e gli sprite SVG. Ecco un riassunto dei punti chiave e dei consigli emersi da quel confronto.

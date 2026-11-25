@@ -2,8 +2,8 @@
 title: Web Share API, the step after PWA
 description: Today I experimented with the Web Share API and implemented it on this website, just to begin. Here's what I did and how you can implement it on your website.
 tags:
-  - APIs
-  - techniques
+  - browsers
+  - tutorials
 ---
 
 Today I experimented with the Web Share API and implemented it on this website, just to begin. Here's what I did and how you can implement it on your website.

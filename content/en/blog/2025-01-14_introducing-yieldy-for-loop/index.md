@@ -2,8 +2,11 @@
 title: "Introducing yieldy-for-loop: an npm package to keep your loops non-blocking (and your UI smooth)"
 description: "A tiny utility to help you process large loops in JavaScript without freezing the UI. Inspired by Rick Viscomi's article “Breaking up with long tasks, or how I learned to group loops and wield the yield”, yieldy-for-loop periodically yields control to the browser so your app stays responsive."
 tags:
+  - interaction to next paint
+  - web performance
+  - open source
+keywords:
   - inp
-  - resources
 ---
 
 If you’ve ever had to process thousands (or millions) of items in JavaScript, you’ve likely experienced that dreaded lag or UI freeze. It can happen when you perform intensive loops on the main thread, blocking updates to the interface. To tackle this, I’ve created an NPM package called [yieldy-for-loop](https://www.npmjs.com/package/yieldy-for-loop). This tiny utility helps you break large loops into chunks, periodically yielding control to the browser so your application remains responsive.

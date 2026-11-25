@@ -2,7 +2,10 @@
 title: Web performance snippets to debug INP in Chrome dev tools
 description: After keeping them on my computer for some days, I decided to publish on GitHub this set of web performance snippets to debug INP in Chrome developer tools, or to report data to your analytics.
 tags:
-  - utilities
+  - web performance
+  - core web vitals
+  - interaction to next paint
+  - browsers
 ---
 
 <figure>

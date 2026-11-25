@@ -2,10 +2,9 @@
 title: "Una tecnica elegante per il lazy loading delle immagini in Swiper e la creazione lazy delle istanze di Swiper"
 description: "Immagina di avere più caroselli in una pagina, ognuno contenente più immagini, e di voler scaricare solo le immagini che si trovano all'interno della porzione visibile della pagina, magari risparmiando tempo di CPU creando le istanze del carosello in modalità lazy. Credo di aver trovato una tecnica valida ed elegante per farlo."
 tags:
-  - techniques
   - lazy loading
-  - vanilla-lazyload
   - images
+  - vanilla-lazyload
 layout: layouts/post.njk
 ---
 

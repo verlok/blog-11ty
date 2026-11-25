@@ -4,10 +4,7 @@ description: "Google Antigravity 2 and Gemini 3.5 Flash have completely transfor
 date: 2026-05-22
 tags:
   - ai
-  - google
-  - antigravity
-  - ide
-  - gemini
+  - productivity
 layout: layouts/post.njk
 image: ./cover.png
 image_alt: "The Google Antigravity logo featuring the text 'Experience liftoff'."

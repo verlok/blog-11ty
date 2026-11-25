@@ -2,9 +2,9 @@
 title: How to cap image fidelity to 2x and save 45% image weight on high-end mobile phones
 description: With the rise of very high density “super retina” displays in the newest high-end devices, capping image fidelity to 2x leads to a big improvement in terms of rendering speed, and no perceivable quality loss for your users. Here’s a new best practice on how to do that.
 tags:
-  - techniques
-  - web performance
   - images
+  - responsive images
+  - web performance
 ---
 
 {% image "capping-image-fidelity.jpg", "Capping image fidelity to 2x", [648, 1296], "648px" %}

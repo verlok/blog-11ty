@@ -2,9 +2,8 @@
 title: Using CSS variables as a spacing unit
 description: Here I show you how you can CSS variables, popular name of CSS custom properties, to scale your layout spaces across different media queries.
 tags:
-  - techniques
-  - layout
-  - css variables
+  - css
+  - web design
 ---
 
 Here I show you how you can CSS variables, popular name of _CSS custom properties_, to **scale your layout spaces** across different media queries.

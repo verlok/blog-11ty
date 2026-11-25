@@ -3,8 +3,10 @@ title: How to use scheduler.yield to improve web pages responsiveness
 description: Google Chrome is introducing a new feature called scheduler.yield. This feature allows web developers to explicitly tell the browser to yield control to the main thread. Here are the key points.
 tags:
   - web performance
-  - google chrome
   - interaction to next paint
+  - browsers
+keywords:
+  - inp
 ---
 
 <figure>

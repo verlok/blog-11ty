@@ -5,8 +5,6 @@ date: 2026-07-07
 tags:
   - web design
   - web performance
-  - user experience
-  - terminology
 layout: layouts/post.njk
 image: ./cover.jpg
 image_alt: "A pensive developer looking at screens showing responsive websites and adaptive apps, wondering about the terminology."

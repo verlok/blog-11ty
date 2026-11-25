@@ -2,7 +2,7 @@
 title: The web is dead, long live the web (repost in English)
 description: "“Online publishing as we have known it for the past twenty years is now dead and buried”. Reposting an article from my friend Antonio Moro aka Itomi, one of those who has been part of “online publishing” in Italy since the early days."
 tags:
-  - reposts
+  - community
 ---
 
 👀 The author of this article is Antonio Moro aka Itomi.

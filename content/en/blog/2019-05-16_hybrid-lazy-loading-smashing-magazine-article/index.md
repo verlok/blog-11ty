@@ -3,8 +3,8 @@ title: A smashing article on hybrid lazy loading
 description: "On May 6th, 2019 I wrote my first article on Smashing Magazine: Hybrid Lazy Loading, A Progressive Migration To Native Lazy Loading."
 tags:
   - lazy loading
-  - techniques
-  - featured
+  - web performance
+  - vanilla-lazyload
 ---
 
 On <time datetime="2019-05-06">May 6th, 2019</time> I wrote my first article on **Smashing Magazine**: <a href="https://www.smashingmagazine.com/2019/05/hybrid-lazy-loading-progressive-migration-native/">Hybrid Lazy Loading: A Progressive Migration To Native Lazy Loading</a>.

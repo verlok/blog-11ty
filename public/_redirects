@@ -47,6 +47,8 @@
 /contact/                                                                              /en/contact/ 301
 /talks/                                                                                /en/talks/ 301
 /tags/                                                                                 /en/tags/ 301
+/en/tags/lazyload/                                                                     /en/tags/lazy-loading/ 301
+/it/tags/lazyload/                                                                     /it/tags/lazy-loading/ 301
 /blog/                                                                                 /en/blog/ 301
 /lorem-ipsum/                                                                          /en/lorem-ipsum/ 301
 /vanilla-lazyload/                                                                     /en/vanilla-lazyload/ 301

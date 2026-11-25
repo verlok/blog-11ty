@@ -2,8 +2,7 @@
 title: "Impressioni su Google I/O Connect 2024 + GDE Forum a Berlino"
 description: "Come l'anno scorso, sono stato invitato al Google I/O Connect EMEA 2024. E in qualità di Google Developer Expert (GDE), il giorno successivo ho partecipato anche al GDE Forum presso gli uffici Google di Berlino. In questo post condivido le mie impressioni."
 tags:
-  - conferences
-  - google I/O connect
+  - community
 ---
 
 Google I/O è l'evento annuale di Google per sviluppatori che si tiene nei loro uffici in California, negli <abbr title="Stati Uniti d'America">USA</abbr>.

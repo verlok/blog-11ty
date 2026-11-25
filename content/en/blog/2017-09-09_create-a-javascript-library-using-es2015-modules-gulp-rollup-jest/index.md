@@ -3,6 +3,8 @@ title: Create a JavaScript library using ES2015 modules, Gulp, Rollup and Jest
 description: Let's see how to write a JavaScript library using ES2015 transpiled with Babel, featuring ES modules packed up using Rollup via Gulp, and Jest to test your code.
 tags:
   - tutorials
+  - open source
+keywords:
   - javascript
 ---
 

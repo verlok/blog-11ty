@@ -2,7 +2,9 @@
 title: "My experience at performance.now() 2024: Europe's premier web performance conference"
 description: "A detailed account of my participation and insights gained from attending and contributing to performance.now(), the top web performance conference in Europe."
 tags:
-  - conferences
+  - community
+  - web performance
+keywords:
   - perf.now
 ---
 

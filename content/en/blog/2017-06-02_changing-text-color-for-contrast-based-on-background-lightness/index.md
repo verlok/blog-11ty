@@ -2,8 +2,8 @@
 title: Changing text color for contrast based on background lightness
 description: If you had to change the color of some fixed-positioned text based on the lightness of its scrolling background, how would you do that? CSS filters, blend modes? But what if you had to support all browsers, including Internet Explorer? Here are a couple of ways to do that using CSS clip and clip-path.
 tags:
-  - techniques
   - css
+  - accessibility
 ---
 
 If you had to change the color of some fixed-positioned text based on the lightness of its scrolling background, how would you do that? CSS filters, blend modes? But what if you had to support all browsers, including Internet Explorer? Here are a couple of ways to do that using CSS `clip` and `clip-path`.

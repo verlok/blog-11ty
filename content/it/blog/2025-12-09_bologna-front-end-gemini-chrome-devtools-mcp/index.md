@@ -5,7 +5,9 @@ date: 2025-12-09
 tags:
   - talks
   - ai
-  - web performance
+  - css
+  - browsers
+  - accessibility
 layout: layouts/post.njk
 image: ./bologna-front-end-devtools-mcp.avif
 image_alt: "Meetup Bologna Front-end episodio 58 - Ehi Gemini, sistema il CSS! con Andrea Verlicchi"

@@ -2,9 +2,9 @@
 title: vanilla-lazyload vs lazysizes
 description: "As the author of vanilla-lazyload, it's not the first time I get asked the question: What are the differences between vanilla-lazyload and lazysizes? This blog post is the answer to that question."
 tags:
-  - libraries
   - lazy loading
   - vanilla-lazyload
+  - open source
 ---
 
 As the author of vanilla-lazyload, it's not the first time I get asked the question: <q>What are the differences between vanilla-lazyload and lazysizes?</q> This blog post is the answer to that question.

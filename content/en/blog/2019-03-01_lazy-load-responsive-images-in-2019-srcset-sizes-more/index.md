@@ -2,10 +2,10 @@
 title: Lazy load responsive images in 2019
 description: In the latest years, both at my job and as maintainer of a LazyLoad script, I've specialized in lazy loading of responsive images. Today I'm going to show you what HTML, CSS and JavaScript code you need to write in 2019 in order to serve responsive images and load them lazily.
 tags:
-  - techniques
   - lazy loading
   - responsive images
   - images
+  - vanilla-lazyload
 ---
 
 In the latest years, both at my job and as maintainer of a [LazyLoad script](https://github.com/verlok/vanilla-lazyload), I've specialized in **lazy loading** of **responsive images**. Today I'm going to show you what HTML, CSS and JavaScript code you need to write _in 2019_ in order to serve responsive images _and_ load them lazily. In the second part of the post, I'm also showing how to make the browser **natively pick the WebP image** when it supports it.

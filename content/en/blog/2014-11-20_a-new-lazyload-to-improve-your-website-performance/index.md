@@ -2,7 +2,8 @@
 title: A new LazyLoad to improve your website performance
 description: In the latest days I've been working on websites performance optimization and I realized that there is no way to take advantage of the progressive JPEG image format on websites if you're using jQuery_lazyload from Mika Tuupola, so I decided to write my own lazy load, which turned to be better for multiple reasons.
 tags:
-  - lazyload
+  - lazy loading
+  - vanilla-lazyload
   - web performance
   - open source
 ---

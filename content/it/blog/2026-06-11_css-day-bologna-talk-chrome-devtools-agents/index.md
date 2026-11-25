@@ -6,7 +6,8 @@ tags:
   - talks
   - ai
   - css
-  - chrome-devtools
+  - browsers
+  - accessibility
 layout: layouts/post.njk
 image: ./cover.png
 image_alt: "Ehi Gemini, sistema il CSS!"

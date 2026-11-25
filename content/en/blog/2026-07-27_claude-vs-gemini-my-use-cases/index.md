@@ -4,9 +4,6 @@ description: "A practical breakdown of how I use Anthropic Claude and Google Gem
 date: 2026-07-27
 tags:
   - ai
-  - claude
-  - gemini
-  - antigravity
   - productivity
 layout: layouts/post.njk
 translationKey: "2026-07-27_claude-vs-gemini"

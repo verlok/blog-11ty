@@ -98,7 +98,7 @@ eleventyNavigation:
 	<section class="project-articles">
 		<div class="section-header">
 			<h2>Articoli sul lazy loading</h2>
-			<a href="{{ '/tags/lazyload/' | locale_url }}" class="section-meta-link">Tutti gli articoli &rarr;</a>
+			<a href="{{ '/tags/lazy-loading/' | locale_url }}" class="section-meta-link">Tutti gli articoli &rarr;</a>
 		</div>
 		<p class="project-articles-intro">
 			Ecco alcuni articoli selezionati sul caricamento differito delle immagini e sulle performance:

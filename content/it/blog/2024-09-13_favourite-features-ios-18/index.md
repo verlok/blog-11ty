@@ -2,6 +2,8 @@
 title: "Le mie funzioni preferite di iOS 18: una svolta per gli utenti multilingue (e non solo)"
 description: "Con ogni nuova versione di iOS, non vedo l'ora di esplorare le ultime funzionalità offerte da Apple. iOS 18 ha introdotto diversi cambiamenti, alcuni piccoli e discreti, altri più profondi, che hanno migliorato notevolmente la mia esperienza d'uso. Ecco le mie nuove funzioni preferite in iOS 18 e perché penso che rappresentino una svolta."
 tags:
+  - productivity
+keywords:
   - ios
   - smartphone
 ---

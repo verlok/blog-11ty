@@ -4,9 +4,7 @@ description: "Google Antigravity transforms AI assistance from a tool into an ac
 date: 2025-11-24
 tags:
   - ai
-  - google
-  - antigravity
-  - ide
+  - productivity
 layout: layouts/post.njk
 image: ./cover.png
 image_alt: "A futuristic abstract representation of the Google Antigravity IDE interface."

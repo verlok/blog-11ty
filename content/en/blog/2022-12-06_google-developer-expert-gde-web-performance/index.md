@@ -2,8 +2,8 @@
 title: I'm a Google Developer Expert for Web Performance
 description: In December 2023 I became a Google Developer Expert (GDE) for Web Performance. Google Developer Experts is a Google program to create a global network of professionals, influencers, and thought leaders, and enable them to share their knowledge with the developer community, like speaking at events, sharing best practices, and mentoring others.
 tags:
-  - Announcements
-  - Google Developer Experts
+  - community
+  - web performance
 ---
 
 In December 2023 I became a Google Developer Expert (GDE) for Web Performance. [Google Developer Experts](https://developers.google.com/community/experts) is a Google program to create a global network of professionals, influencers, and thought leaders, and enable them to share their knowledge with the developer community, like speaking at events, sharing best practices, and mentoring others.

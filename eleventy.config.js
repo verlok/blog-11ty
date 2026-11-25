@@ -286,7 +286,7 @@ export default function (eleventyConfig) {
 
 	// Add collection to filter only lazyload posts
 	eleventyConfig.addCollection("posts__lazyload", function (collectionApi) {
-		return collectionApi.getFilteredByTag("lazyload");
+		return collectionApi.getFilteredByTag("lazy loading");
 	});
 
 	// Language-specific collections
@@ -307,11 +307,11 @@ export default function (eleventyConfig) {
 	});
 
 	eleventyConfig.addCollection("posts__lazyload_en", (collectionApi) => {
-		return collectionApi.getFilteredByTag("lazyload").filter((item) => (item.data.lang || "en") === "en");
+		return collectionApi.getFilteredByTag("lazy loading").filter((item) => (item.data.lang || "en") === "en");
 	});
 
 	eleventyConfig.addCollection("posts__lazyload_it", (collectionApi) => {
-		return collectionApi.getFilteredByTag("lazyload").filter((item) => item.data.lang === "it");
+		return collectionApi.getFilteredByTag("lazy loading").filter((item) => item.data.lang === "it");
 	});
 
 	eleventyConfig.addCollection("tags_en", (collectionApi) => {

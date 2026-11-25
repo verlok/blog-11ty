@@ -5,8 +5,6 @@ date: 2026-07-07
 tags:
   - web design
   - web performance
-  - user experience
-  - terminologia
 layout: layouts/post.njk
 image: ./cover.jpg
 image_alt: "Uno sviluppatore pensieroso guarda schermi che mostrano siti web responsive e app adattive, chiedendosi informazioni sulla terminologia."

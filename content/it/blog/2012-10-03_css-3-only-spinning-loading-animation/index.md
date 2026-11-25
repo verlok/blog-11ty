@@ -3,7 +3,6 @@ title: "Animazione di caricamento \"loading\" rotante in solo CSS 3"
 description: "Abbiamo usato immagini GIF per creare animazioni per anni, ma non sono belle da usare sopra gradienti o immagini (niente canale alfa, niente anti-aliasing) di cui i siti web moderni sono pieni. Esistono molte soluzioni alternative per animare invece immagini PNG, ma..."
 tags:
   - css
-  - animations
 ---
 
 Abbiamo usato immagini GIF per creare animazioni per anni, ma non sono adatte ad essere utilizzate sopra sfumature o immagini (niente canale alfa, niente anti-aliasing) di cui i siti web moderni sono pieni. Esistono molte soluzioni alternative per animare invece immagini PNG, ma...

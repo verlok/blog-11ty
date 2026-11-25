@@ -4,10 +4,7 @@ description: "Un confronto pratico tra Anthropic Claude e Google Gemini: come li
 date: 2026-07-27
 tags:
   - ai
-  - claude
-  - gemini
-  - antigravity
-  - produttività
+  - productivity
 layout: layouts/post.njk
 translationKey: "2026-07-27_claude-vs-gemini"
 image: ./cover.jpg

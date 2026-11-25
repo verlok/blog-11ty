@@ -2,7 +2,7 @@
 permalink: /it/tags/
 layout: layouts/home.njk
 ---
-{% set allTags = collections.posts_it | getAllTags | filterTagList %}
+{% set allTags = collections.posts_it | getAllTags | filterTagList | sort %}
 
 <header class="page-header">
 	<h1>Tag</h1>

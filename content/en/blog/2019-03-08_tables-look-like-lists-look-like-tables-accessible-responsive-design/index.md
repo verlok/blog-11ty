@@ -2,9 +2,9 @@
 title: Responsive and accessible table design
 description: How to make a potentially wide table fit on small devices, without losing readability and accessibility? Here are simple solutions to make tables look like lists, lists look like tables, in responsive and accessible design.
 tags:
-  - techniques
   - accessibility
-  - responsive web design
+  - web design
+  - css
 ---
 
 How to make a potentially wide table fit on small devices, without losing readability and accessibility? Here are simple solutions to make tables look like lists, lists look like tables, in responsive and accessible design.

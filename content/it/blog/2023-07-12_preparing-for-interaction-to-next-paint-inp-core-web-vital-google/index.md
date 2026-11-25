@@ -2,8 +2,8 @@
 title: "Prepararsi a Interaction to Next Paint (INP), una nuova Core Web Vital da marzo 2024"
 description: "Come consulente di web performance, sono sempre attento alle novità che influenzano l'esperienza utente dei siti web. Una di queste novità è l'introduzione da parte di Google di una nuova metrica chiamata Interaction to Next Paint (INP). Destinata a diventare una Core Web Vital a marzo 2024, l'INP è progettata per misurare il tempo impiegato da un sito web per rispondere alle interazioni dell'utente. In questo articolo approfondiremo cos'è l'INP, perché è importante e come le aziende possono prepararsi per garantire che i loro siti soddisfino questa metrica fondamentale."
 tags:
-  - core web vitals
   - web performance
+  - core web vitals
   - interaction to next paint
 ---
 

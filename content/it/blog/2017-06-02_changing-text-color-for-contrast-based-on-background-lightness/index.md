@@ -2,8 +2,8 @@
 title: "Cambiare il colore del testo per contrasto in base alla luminosità dello sfondo"
 description: "Se dovessi cambiare il colore di un testo con posizionamento fisso in base alla luminosità del suo sfondo durante lo scorrimento, come faresti? Filtri CSS, blend mode? E se dovessi supportare tutti i browser, incluso Internet Explorer? Ecco un paio di modi per farlo utilizzando le proprietà CSS clip e clip-path."
 tags:
-  - techniques
   - css
+  - accessibility
 ---
 
 Se dovessi cambiare il colore di un testo in posizione fissa (`position: fixed`) in base alla luminosità dello sfondo che scorre sotto di esso, come faresti? Filtri CSS, blend mode? E se dovessi supportare tutti i browser, incluso Internet Explorer? Ecco un paio di modi per farlo utilizzando le proprietà CSS `clip` e `clip-path`.

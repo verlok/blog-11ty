@@ -4,6 +4,9 @@ description: Jake Archibald's talk "In the loop" is still one of the best source
 tags:
   - web performance
   - interaction to next paint
+  - browsers
+keywords:
+  - inp
 ---
 
 [Jake Archibald](https://jakearchibald.com/)'s talk "In the loop" (JS Conf Asia) is still one of the best sources of information on how browsers process tasks and are able to respond to user input. As I didn't find anything as comprehensible as that in text format, I transposed his talk into this blog post. Find the video at the end.

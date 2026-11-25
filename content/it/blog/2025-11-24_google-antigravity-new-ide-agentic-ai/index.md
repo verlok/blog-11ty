@@ -4,9 +4,7 @@ description: "Google Antigravity trasforma l'assistenza dell'IA da semplice stru
 date: 2025-11-24
 tags:
   - ai
-  - google
-  - antigravity
-  - ide
+  - productivity
 layout: layouts/post.njk
 image: ./cover.png
 image_alt: "Una rappresentazione astratta e futuristica dell'interfaccia dell'IDE Google Antigravity."

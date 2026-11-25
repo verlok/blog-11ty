@@ -2,8 +2,12 @@
 title: "Generazione avanzata di sprite con Compass (SASS)"
 description: "Creare sprite (spriting) è un modo per migliorare le prestazioni del tuo sito web raggruppando molte immagini (o icone) in un'unica immagine più grande, al fine di effettuare una singola richiesta HTTP anziché molte. Ecco come puoi creare sprite utilizzando Compass."
 tags:
+  - css
+  - images
+  - web performance
+keywords:
   - sprites
-  - automation
+  - sass
 ---
 
 La creazione di sprite (spriting) è un modo per migliorare le prestazioni del tuo sito web posizionando molte immagini (o icone) all'interno di un'unica immagine più grande, in modo da effettuare una sola richiesta HTTP anziché molte. Ecco come puoi creare gli sprite utilizzando Compass.

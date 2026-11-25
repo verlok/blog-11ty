@@ -2,9 +2,9 @@
 title: "Design di tabelle responsive e accessibili"
 description: "Come far adattare una tabella potenzialmente larga ai dispositivi più piccoli, senza perdere leggibilità e accessibilità? Ecco semplici soluzioni per far apparire le tabelle come liste e le liste come tabelle, in un design responsive e accessibile."
 tags:
-  - techniques
   - accessibility
-  - responsive web design
+  - web design
+  - css
 ---
 
 Come fare in modo che una tabella potenzialmente larga si adatti ai dispositivi più piccoli, senza perdere in leggibilità e accessibilità? Ecco alcune semplici soluzioni per far apparire le tabelle come liste e le liste come tabelle, all'interno di un design responsive e accessibile.

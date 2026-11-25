@@ -5,7 +5,7 @@ tags:
   - talks
   - web performance
   - core web vitals
-  - google developer groups
+  - community
 ---
 
 In 2023 I've been speaking about web performance at conferences, Google Developer Groups (GDG) and local meetups all over Europe. The title of this talk is "How and Why ($) to improve web performance, practical tips for 2023".

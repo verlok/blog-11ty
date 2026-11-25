@@ -2,7 +2,10 @@
 title: "Trasformare il mio blog in una Progressive Web Application"
 description: "Alcuni colleghi ed io abbiamo partecipato a un Hackathon di Google sulle Progressive Web Application e abbiamo imparato molto, così ho deciso di abilitare questo sito web come PWA. Ecco cosa ho fatto."
 tags:
-  - techniques
+  - browsers
+  - web performance
+keywords:
+  - pwa
 layout: layouts/post.njk
 ---
 

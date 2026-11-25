@@ -2,8 +2,9 @@
 title: "Verificare se un elemento è ancora nella viewport dopo un certo tempo"
 description: "Cosa faresti se qualcuno ti chiedesse di caricare un elemento DOM solo se rimane all'interno della viewport per un determinato periodo di tempo? Utilizzeresti vanilla-lazyload, giusto?"
 tags:
-  - techniques
+  - lazy loading
   - vanilla-lazyload
+  - browsers
 ---
 
 Cosa faresti se qualcuno ti chiedesse di caricare un elemento DOM solo se **rimane all'interno della viewport per un determinato periodo di tempo**? Utilizzeresti [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload), vero? 😉 Questa è esattamente la nuova funzionalità che la community di GitHub ha richiesto per LazyLoad, allo scopo di **evitare il caricamento di elementi che gli utenti hanno saltato** scorrendo via velocemente. In questo post vorrei condividere con te la soluzione.

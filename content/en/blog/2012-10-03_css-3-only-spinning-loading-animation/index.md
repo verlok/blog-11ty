@@ -3,7 +3,6 @@ title: CSS 3 only spinning "loading" animation
 description: We used GIF images to create animations for years, but they aren't pretty to be used over gradients or pictures (no alpha channel, no anti-aliasing) of which modern web sites are full. There are many workarounds to animate PNG images instead, but...
 tags:
   - css
-  - animations
 ---
 
 We used GIF images to create animations for years, but they aren't pretty to be used over gradients or pictures (no alpha channel, no anti-aliasing) of which modern web sites are full. There are many workarounds to animate PNG images instead, but...

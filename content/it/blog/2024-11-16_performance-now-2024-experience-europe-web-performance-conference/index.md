@@ -2,7 +2,9 @@
 title: "La mia esperienza a performance.now() 2024: la principale conferenza sulla web performance in Europa"
 description: "Un resoconto dettagliato della mia partecipazione e delle idee emerse frequentando e contribuendo a performance.now(), la più importante conferenza sulla web performance in Europa."
 tags:
-  - conferences
+  - community
+  - web performance
+keywords:
   - perf.now
 ---
 

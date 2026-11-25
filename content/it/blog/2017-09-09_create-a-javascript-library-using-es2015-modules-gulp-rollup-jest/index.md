@@ -3,6 +3,8 @@ title: "Creare una libreria JavaScript con moduli ES2015, Gulp, Rollup e Jest"
 description: "Vediamo come scrivere una libreria JavaScript in ES2015 transpilata con Babel, utilizzando i moduli ES impacchettati con Rollup tramite Gulp, e Jest per testare il codice."
 tags:
   - tutorials
+  - open source
+keywords:
   - javascript
 ---
 

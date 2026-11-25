@@ -2,7 +2,7 @@
 title: "Il web è morto, lunga vita al web (repost)"
 description: "“La pubblicazione online come l'abbiamo conosciuta negli ultimi vent'anni è ormai morta e sepolta”. Condivido un articolo del mio amico Antonio Moro, in arte Itomi, uno di quelli che ha fatto parte dell'“editoria online” in Italia fin dagli albori."
 tags:
-  - reposts
+  - community
 ---
 
 👀 L'autore di questo articolo è Antonio Moro, in arte Itomi.

@@ -3,6 +3,8 @@ title: "Mitigare il CLS causato da banner promozionali: una soluzione pratica"
 description: "Esploriamo una soluzione pratica per mitigare il Cumulative Layout Shift (CLS) causato dai banner promozionali. Evita spostamenti di layout imprevisti usando sessionStorage per memorizzare il contenuto e lo stato di visualizzazione del banner tra i caricamenti di pagina."
 tags:
   - web performance
+  - core web vitals
+keywords:
   - cumulative layout shift
 ---
 

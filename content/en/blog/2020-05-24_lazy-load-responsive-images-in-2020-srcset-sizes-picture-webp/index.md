@@ -2,8 +2,8 @@
 title: Lazy load responsive images in 2020
 description: Do you want to boost performance on your website? You can do that by using **responsive images and lazy loading! In this article, you will find the HTML, JavaScript, and CSS code to lazy load responsive images, to make browsers use modern image formats like WebP and Jpeg2000, and to enable native lazy load where supported.
 tags:
-  - techniques
   - lazy loading
+  - responsive images
   - images
   - vanilla-lazyload
 ---

@@ -6,7 +6,6 @@ tags:
   - responsive images
   - images
   - web performance
-  - techniques
 ---
 
 È ufficiale. Le immagini responsive sono una [raccomandazione W3C](https://www.w3.org/TR/html51/) da novembre 2016, caratterizzate dal nuovissimo tag `picture` e dai nuovi attributi per il tag `img`: `srcset` e `sizes`.

@@ -3,8 +3,7 @@ title: "Refactoring Gender Bias, One Commit at a Time"
 description: "I co-presented with Giulia Naponiello about unconscious gender bias in tech at two meetup events in Bologna and Imola. Here's what we discussed and why it matters."
 tags:
   - talks
-  - gender bias
-  - diversity
+  - community
 layout: layouts/post.njk
 image: ./refactoring-gender-biases.png
 image_alt: "Refactoring Biases, One Commit at a Time - DevRomagna, March 2026 - Giulia Naponiello and Andrea Verlicchi"

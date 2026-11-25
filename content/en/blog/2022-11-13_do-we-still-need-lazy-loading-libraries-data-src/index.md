@@ -2,10 +2,10 @@
 title: Do we still need lazy loading libraries and `data-src`?
 description: Back in the day, when browser support for native lazy loading wasn’t widespread, the best practice was to use `data-src` attributes and a JavaScript library like my vanilla-lazyload to load images as they entered the viewport. Is this still best practice today?
 tags:
-  - considerations
   - lazy loading
-  - hybrid lazy loading
-  - native lazy loading
+  - images
+  - web performance
+  - vanilla-lazyload
 ---
 
 Back in the day, when browser support for [native lazy loading](https://web.dev/browser-level-image-lazy-loading/) wasn’t widespread, the best practice was to use `data-src` attributes and a JavaScript library like my [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload) to load images as they entered the viewport. Is this still best practice today?

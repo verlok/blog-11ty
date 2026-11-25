@@ -6,6 +6,7 @@ tags:
   - talks
   - ai
   - web performance
+  - browsers
 layout: layouts/post.njk
 image: ./bologna-js-chrome-devtools.avif
 image_alt: "Bologna JS Meetup - Gemini + Chrome: Oltre la Chat. Usare l'AI per controllare il browser"

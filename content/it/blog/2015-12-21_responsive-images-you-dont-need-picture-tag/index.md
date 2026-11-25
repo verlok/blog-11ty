@@ -4,7 +4,6 @@ description: "Supponiamo di avere un layout di sito web responsive in cui le imm
 tags:
   - responsive images
   - images
-  - techniques
 ---
 
 Supponiamo di avere un layout di sito web responsive in cui le immagini sono dimensionate al 100% del loro contenitore, ma **il contenitore non è sempre largo quanto la viewport**. Dobbiamo per forza usare il tag `picture` o il tag `img` è sufficiente? **Il tag `img` è in grado di farlo da solo**, utilizzando i suoi attributi `sizes` e `srcset`. Ecco come.

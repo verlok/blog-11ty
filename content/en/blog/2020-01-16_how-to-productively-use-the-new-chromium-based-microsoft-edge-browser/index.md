@@ -3,7 +3,8 @@ title: How to productively use the new Chromium-based Microsoft Edge browser
 description: A practical guide on how to productively use the new Chromium-based Microsoft Edge browser
 tags:
   - browsers
-  - guides
+  - tutorials
+  - productivity
 ---
 
 Here’s a practical guide on how to productively use the new Chromium-based Microsoft Edge browser: download it, change the default search engine, install extensions, and more.

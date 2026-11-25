@@ -2,8 +2,8 @@
 title: "Modalità a schermo intero reale per i contenuti condivisi su Google Meet"
 description: "Stanco della mancanza di un'opzione di schermo intero reale per i contenuti condivisi su Google Meet, ho creato un bookmarklet per risolvere il problema, disponibile su GitHub."
 tags:
-  - google meet
-  - hacks
+  - productivity
+  - browsers
 ---
 
 

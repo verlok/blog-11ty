@@ -2,8 +2,10 @@
 title: How to optimise for CLS when loading more content asynchronously
 description: Cumulative Layout Shift (CLS) is an important, user-centric metric for measuring visual stability because it helps quantify how often users experience unexpected layout shifts — a low CLS helps ensure that the page is delightful.
 tags:
+  - core web vitals
+  - web performance
+keywords:
   - cumulative layout shift
-  - techniques
 ---
 
 Cumulative Layout Shift (CLS) is an important, user-centric metric for measuring visual stability because it helps quantify how often users experience unexpected layout shifts — a low CLS helps ensure that the page is delightful.

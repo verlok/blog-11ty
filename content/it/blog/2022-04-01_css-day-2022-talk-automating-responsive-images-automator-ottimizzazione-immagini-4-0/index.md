@@ -2,10 +2,10 @@
 title: "Talk: Ottimizzazione delle immagini 4.0, automatizza il tuo lavoro con un approccio incentrato sull'utente - CSS Day 2022"
 description: "Il 1° aprile 2022 ho parlato di ottimizzazione delle immagini responsive 4.0 alla conferenza CSS Day 2022 a Faenza, in Italia. Questo talk spiega come essere più produttivi automatizzando le immagini responsive."
 tags:
+  - talks
   - responsive images
   - images
-  - automation
-  - talks
+  - productivity
 ---
 
 <figure>

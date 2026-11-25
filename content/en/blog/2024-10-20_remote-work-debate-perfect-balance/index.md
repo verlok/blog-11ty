@@ -2,10 +2,8 @@
 title: "The remote work debate: my view on finding balance"
 description: "After years of both remote and office work, I’ve found that while remote work offers flexibility and focus, it can lack the spontaneous connections that spark creativity and build team bonds."
 tags:
-  - remote work
-  - hybrid work
-  - collaboration
-  - workplace trends
+  - community
+  - productivity
 ---
 
 {% image "remote-working-debate.webp", "An illustration of a person working remotely in a comfortable home office, surrounded by plants and personal items, with a laptop open.", [648, 1296], "648px" %}

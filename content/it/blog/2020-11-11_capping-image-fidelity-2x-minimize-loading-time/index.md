@@ -2,9 +2,9 @@
 title: "Come limitare la fedeltà delle immagini a 2x e risparmiare il 45% del peso sui telefoni cellulari di fascia alta"
 description: "Con la diffusione di schermi ad altissima densità “super retina” nei dispositivi di fascia alta più recenti, limitare la fedeltà delle immagini a 2x porta a un notevole miglioramento nei tempi di rendering, senza alcuna perdita di qualità percepibile per gli utenti. Ecco una nuova best practice su come fare."
 tags:
-  - techniques
-  - web performance
   - images
+  - responsive images
+  - web performance
 layout: layouts/post.njk
 ---
 

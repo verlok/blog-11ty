@@ -3,7 +3,7 @@ title: "Come usare Google Meet con due schermi: separare i contenuti condivisi e
 description: "Scopri come migliorare la tua esperienza con Google Meet utilizzando la modalità Companion per separare i contenuti condivisi e i volti dei partecipanti su due schermi, per una maggiore concentrazione e coinvolgimento."
 tags:
   - tutorials
-  - google meet
+  - productivity
 ---
 
 <figure>

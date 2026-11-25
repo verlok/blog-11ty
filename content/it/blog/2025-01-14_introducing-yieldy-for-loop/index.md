@@ -2,8 +2,11 @@
 title: "Presentazione di yieldy-for-loop: un pacchetto npm per mantenere i loop non bloccanti (e la UI fluida)"
 description: "Una piccola utility per elaborare cicli di grandi dimensioni in JavaScript senza bloccare l'interfaccia utente. Ispirato all'articolo di Rick Viscomi “Breaking up with long tasks, or how I learned to group loops and wield the yield”, yieldy-for-loop cede periodicamente il controllo al browser in modo che l'app rimanga reattiva."
 tags:
+  - interaction to next paint
+  - web performance
+  - open source
+keywords:
   - inp
-  - resources
 ---
 
 Se avete mai dovuto elaborare migliaia (o milioni) di elementi in JavaScript, avrete probabilmente sperimentato quel fastidioso lag o blocco dell'interfaccia utente. Può accadere quando si eseguono cicli intensivi sul thread principale, bloccando gli aggiornamenti dell'interfaccia. Per affrontare questo problema, ho creato un pacchetto npm chiamato [yieldy-for-loop](https://www.npmjs.com/package/yieldy-for-loop). Questa piccola utility vi aiuta a suddividere cicli di grandi dimensioni in blocchi, cedendo periodicamente il controllo al browser per far sì che la vostra applicazione rimanga reattiva.

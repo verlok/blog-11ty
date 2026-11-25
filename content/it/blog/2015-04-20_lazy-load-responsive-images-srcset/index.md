@@ -2,9 +2,10 @@
 title: "Caricamento lazy di immagini responsive con srcset e LazyLoad"
 description: "Ora è possibile avere il caricamento lazy (lazy loading) sulle immagini responsive per fare in modo che si adattino agli schermi degli utenti e mantenere veloce il nostro sito web. In questo articolo vedremo quale markup dobbiamo scrivere e quali librerie Javascript ci serviranno."
 tags:
-  - techniques
   - lazy loading
+  - responsive images
   - images
+  - vanilla-lazyload
 ---
 
 Ora è possibile (sì, oggi stesso!) implementare il **lazy loading** (caricamento pigro) sulle **immagini responsive**, così da far sì che si adattino agli schermi degli utenti *e* mantenere veloce il nostro sito web. Evviva! \o/ In questo articolo vedremo quale markup dobbiamo scrivere e quali librerie JavaScript saranno necessarie per farlo.

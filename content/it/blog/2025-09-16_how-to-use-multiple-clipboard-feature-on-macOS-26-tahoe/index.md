@@ -3,7 +3,7 @@ title: "Il gestore degli appunti di macOS che stavi aspettando, ora nativo in ma
 description: "Hai presente quando copi un pezzo di codice, poi ne copi un altro e perdi quello precedente? O quando sai di avere qualcosa negli appunti, vorresti copiare qualcos'altro, ma devi prima incollare quello che hai negli appunti altrimenti lo perderai? Niente più stress da appunti. Finalmente gli appunti multipli sono arrivati su macOS."
 tags:
   - tutorials
-  - mac-os
+  - productivity
 ---
 
 <figure>
