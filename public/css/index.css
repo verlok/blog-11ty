@@ -387,7 +387,7 @@
 		reading-flow: grid-rows;
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 920px) {
 		.site-header-inner {
 			display: flex;
 			align-items: center;
@@ -425,7 +425,7 @@
 		grid-column: 1 / -1;
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 920px) {
 		.site-nav {
 			grid-row: auto;
 			grid-column: auto;
@@ -442,7 +442,7 @@
 		list-style: none;
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 920px) {
 		.nav {
 			margin-left: 0;
 			gap: 0.2rem;
@@ -467,7 +467,7 @@
 		transition: color 0.15s ease, background-color 0.15s ease;
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 920px) {
 		.nav-item a {
 			padding: 0.4rem 0.55rem;
 			font-size: 0.88rem;
@@ -498,7 +498,7 @@
 		background-color: var(--brand);
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 920px) {
 		.nav-item a[aria-current="page"]::after,
 		.nav-item a[data-active="true"]::after {
 			left: 0.55rem;
@@ -517,7 +517,7 @@
 		flex-shrink: 0;
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 920px) {
 		.header-actions {
 			grid-row: auto;
 			grid-column: auto;
