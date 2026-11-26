@@ -1,6 +1,21 @@
+import fs from "fs";
 import path from "path";
 import eleventyImage from "@11ty/eleventy-img";
 import { JSDOM } from "jsdom";
+
+const IGNORED_IMAGE_PATTERNS = [
+	/codesandbox\.io\/static\/img\/play-codesandbox/i,
+	/img\.shields\.io/i,
+];
+
+const findFirstContentImage = (content) => {
+	const dom = new JSDOM(content);
+	const imgs = Array.from(dom.window.document.querySelectorAll("img"));
+	return imgs.find((el) => {
+		const src = el.getAttribute("src") || "";
+		return !IGNORED_IMAGE_PATTERNS.some((re) => re.test(src));
+	});
+};
 
 const correctLazyAttributes = (img, isFirst) => {
 	if (isFirst) {
@@ -13,11 +28,35 @@ const correctLazyAttributes = (img, isFirst) => {
 };
 
 export default (eleventyConfig) => {
+	const generatedUrlToSourceFile = new Map();
+
 	function relativeToInputPath(inputPath, relativeFilePath) {
 		let split = inputPath.split("/");
 		split.pop();
 
 		return path.resolve(split.join(path.sep), relativeFilePath);
+	}
+
+	function resolveSourceFile(rawSrc, pageInputPath) {
+		if (generatedUrlToSourceFile.has(rawSrc)) {
+			return generatedUrlToSourceFile.get(rawSrc);
+		}
+
+		if (rawSrc.startsWith("/")) {
+			const candidates = [
+				path.join(eleventyConfig.dir.output, rawSrc),
+				path.join("public", rawSrc),
+				rawSrc,
+			];
+			const match = candidates.find((candidate) => fs.existsSync(candidate));
+			return match || null;
+		}
+
+		if (pageInputPath) {
+			return relativeToInputPath(pageInputPath, rawSrc);
+		}
+
+		return rawSrc;
 	}
 
 	// Eleventy Image shortcode
@@ -42,6 +81,14 @@ export default (eleventyConfig) => {
 				outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
 			});
 
+			for (const entries of Object.values(metadata)) {
+				for (const entry of entries) {
+					if (entry?.url) {
+						generatedUrlToSourceFile.set(entry.url, file);
+					}
+				}
+			}
+
 			// Find a way to pass loading lazy to second to more images
 			const loading = useLazyLoading ? "lazy" : "eager";
 			let imageAttributes = {
@@ -60,13 +107,7 @@ export default (eleventyConfig) => {
 	);
 
 	eleventyConfig.addFilter("extractImage", function (content, isFirst) {
-		const dom = new JSDOM(content);
-		const imgs = Array.from(dom.window.document.querySelectorAll("img"));
-		const ignoredPatterns = [/codesandbox\.io\/static\/img\/play-codesandbox/i, /img\.shields\.io/i];
-		const img = imgs.find((el) => {
-			const src = el.getAttribute("src") || "";
-			return !ignoredPatterns.some((re) => re.test(src));
-		});
+		const img = findFirstContentImage(content);
 		if (!img) return "";
 		img.classList.add("postlist-image");
 		correctLazyAttributes(img, isFirst);
@@ -89,8 +130,7 @@ export default (eleventyConfig) => {
 			if (frontmatterImage) {
 				rawSrc = frontmatterImage;
 			} else if (content) {
-				const dom = new JSDOM(content);
-				const img = dom.window.document.querySelector("img");
+				const img = findFirstContentImage(content);
 				if (img) {
 					rawSrc = img.getAttribute("src") || "";
 				}
@@ -105,9 +145,9 @@ export default (eleventyConfig) => {
 			}
 
 			try {
-				let filePath = rawSrc;
-				if (!path.isAbsolute(rawSrc) && pageInputPath) {
-					filePath = relativeToInputPath(pageInputPath, rawSrc);
+				let filePath = resolveSourceFile(rawSrc, pageInputPath);
+				if (!filePath) {
+					return rawSrc;
 				}
 
 				let metadata = await eleventyImage(filePath, {
