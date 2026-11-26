@@ -314,22 +314,29 @@ export default function (eleventyConfig) {
 		return collectionApi.getFilteredByTag("lazy loading").filter((item) => item.data.lang === "it");
 	});
 
-	eleventyConfig.addCollection("tags_en", (collectionApi) => {
-		const posts = collectionApi.getFilteredByTag("posts").filter((item) => (item.data.lang || "en") === "en");
-		const tagSet = new Set();
+	const getSortedTagsForLang = (collectionApi, lang) => {
+		const posts = collectionApi
+			.getFilteredByTag("posts")
+			.filter((item) => (item.data.lang || "en") === lang);
+		const ignored = new Set(["all", "nav", "post", "posts"]);
+		const counts = new Map();
 		for (const item of posts) {
-			(item.data.tags || []).forEach((tag) => tagSet.add(tag));
+			for (const tag of item.data.tags || []) {
+				if (ignored.has(tag)) continue;
+				counts.set(tag, (counts.get(tag) || 0) + 1);
+			}
 		}
-		return Array.from(tagSet).filter((tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+		return Array.from(counts.entries())
+			.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+			.map(([tag]) => tag);
+	};
+
+	eleventyConfig.addCollection("tags_en", (collectionApi) => {
+		return getSortedTagsForLang(collectionApi, "en");
 	});
 
 	eleventyConfig.addCollection("tags_it", (collectionApi) => {
-		const posts = collectionApi.getFilteredByTag("posts").filter((item) => item.data.lang === "it");
-		const tagSet = new Set();
-		for (const item of posts) {
-			(item.data.tags || []).forEach((tag) => tagSet.add(tag));
-		}
-		return Array.from(tagSet).filter((tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+		return getSortedTagsForLang(collectionApi, "it");
 	});
 
 	// Features to make your build faster (when you need them)

@@ -5,37 +5,42 @@ eleventyNavigation:
   order: 2
 ---
 
-<header class="page-header">
-	<h1>Blog</h1>
-	<p class="page-subtitle">{{ collections.posts_it | length }} {{ strings.it.inArchive }}</p>
+<header class="page-header page-header--blog">
+	<div class="page-header-heading">
+		<h1>Blog</h1>
+		<p class="page-subtitle">{{ collections.posts_it | length }} {{ strings.it.inArchive }}</p>
+	</div>
+
+	<div class="blog-search" data-total-count="{{ collections.posts_it | length }}">
+		<div class="blog-search-field">
+			<svg class="blog-search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+				<circle cx="11" cy="11" r="7"></circle>
+				<path d="m21 21-4.35-4.35"></path>
+			</svg>
+			<label for="blog-search-input" class="visually-hidden">{{ strings.it.searchPostsLabel }}</label>
+			<input
+				type="search"
+				id="blog-search-input"
+				class="blog-search-input"
+				placeholder="{{ strings.it.searchShortPlaceholder }}"
+				autocomplete="off"
+				autocorrect="off"
+				autocapitalize="off"
+				spellcheck="false"
+				enterkeyhint="search"
+			>
+			<button type="button" id="blog-search-clear" class="blog-search-clear" aria-label="{{ strings.it.searchClear }}" hidden>
+				<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M18 6 6 18M6 6l12 12"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
 </header>
 
-<div class="blog-search" data-total-count="{{ collections.posts_it | length }}">
-	<div class="blog-search-field">
-		<svg class="blog-search-icon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-			<circle cx="11" cy="11" r="7"></circle>
-			<path d="m21 21-4.35-4.35"></path>
-		</svg>
-		<label for="blog-search-input" class="visually-hidden">{{ strings.it.searchPostsLabel }}</label>
-		<input
-			type="search"
-			id="blog-search-input"
-			class="blog-search-input"
-			placeholder="{{ strings.it.searchShortPlaceholder }}"
-			autocomplete="off"
-			autocorrect="off"
-			autocapitalize="off"
-			spellcheck="false"
-			enterkeyhint="search"
-		>
-		<button type="button" id="blog-search-clear" class="blog-search-clear" aria-label="{{ strings.it.searchClear }}" hidden>
-			<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-				<path d="M18 6 6 18M6 6l12 12"></path>
-			</svg>
-		</button>
-	</div>
-	<p id="blog-search-status" class="blog-search-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
-</div>
+{% include "topicsbar.njk" %}
+
+<p id="blog-search-status" class="blog-search-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
 
 {% set postslist = collections.posts_it %}
 {% set enableSearch = true %}

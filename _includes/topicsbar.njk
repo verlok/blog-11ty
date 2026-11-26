@@ -1,0 +1,56 @@
+{%- set currentLang = page.lang or "en" %}
+{%- set topicTags = collections["tags_" + currentLang] %}
+{%- if topicTags and topicTags | length > 0 %}
+{%- set previewCount = 6 %}
+{%- set activeIndex = -1 %}
+{%- if activeTag %}
+	{%- for topic in topicTags %}
+		{%- if topic == activeTag %}{%- set activeIndex = loop.index0 %}{%- endif %}
+	{%- endfor %}
+{%- endif %}
+{%- set hasOverflow = (topicTags | length) > previewCount %}
+{%- set startExpanded = activeIndex >= previewCount %}
+{%- set moreLabel = strings[currentLang].moreTopics | replace("{n}", (topicTags | length) - previewCount) %}
+{%- set lessLabel = strings[currentLang].lessTopics %}
+<nav
+	class="topics-bar"
+	aria-label="{{ strings[currentLang].browseByTopic }}"
+	{% if hasOverflow %}data-expanded="{{ 'true' if startExpanded else 'false' }}"{% endif %}
+>
+	<ul class="topics-bar-list" id="topics-bar-list">
+		<li>
+			<a
+				href="{{ '/blog/' | locale_url }}"
+				class="topics-bar-link{% if not activeTag %} is-active{% endif %}"
+				{% if not activeTag %}aria-current="page"{% endif %}
+			>{{ strings[currentLang].allTopics }}</a>
+		</li>
+		{%- for topic in topicTags %}
+		{%- set topicUrl %}{{ ("/tags/" + (topic | slugify) + "/") | locale_url }}{% endset %}
+		{%- set isCurrent = activeTag == topic %}
+		<li{% if loop.index0 >= previewCount %} class="topics-bar-extra"{% endif %}>
+			<a
+				href="{{ topicUrl }}"
+				class="topics-bar-link{% if isCurrent %} is-active{% endif %}"
+				{% if isCurrent %}aria-current="page"{% endif %}
+			>{{ topic }}</a>
+		</li>
+		{%- endfor %}
+		{%- if hasOverflow %}
+		<li class="topics-bar-more-item">
+			<button
+				type="button"
+				class="topics-bar-more"
+				aria-expanded="{{ 'true' if startExpanded else 'false' }}"
+				aria-controls="topics-bar-list"
+				data-more-label="{{ moreLabel }}"
+				data-less-label="{{ lessLabel }}"
+			>{{ lessLabel if startExpanded else moreLabel }}</button>
+		</li>
+		{%- endif %}
+	</ul>
+</nav>
+{%- if hasOverflow %}
+<noscript><style>.topics-bar-extra{display:list-item!important}.topics-bar-more-item{display:none!important}</style></noscript>
+{%- endif %}
+{%- endif %}

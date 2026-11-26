@@ -315,10 +315,23 @@
 				return;
 			}
 
+			var header = document.createElement("div");
+			header.className = "search-dialog-tags-header";
+
 			var heading = document.createElement("p");
 			heading.className = "search-dialog-tags-label";
 			heading.textContent = i18n.popularKeywords || "Popular keywords";
-			tagsEl.appendChild(heading);
+			header.appendChild(heading);
+
+			if (i18n.tagsUrl) {
+				var allLink = document.createElement("a");
+				allLink.className = "search-dialog-tags-all";
+				allLink.href = i18n.tagsUrl;
+				allLink.textContent = (i18n.allTopicsLink || "All topics") + " \u2192";
+				header.appendChild(allLink);
+			}
+
+			tagsEl.appendChild(header);
 
 			var list = document.createElement("div");
 			list.className = "search-dialog-tags-list";
@@ -783,6 +796,40 @@
 		} catch (e) {}
 	}
 
+	/* ======================================================================
+	 * 3. Topics Bar: expand/collapse on desktop + center active on mobile
+	 * ====================================================================== */
+	function initTopicsBar() {
+		var nav = document.querySelector(".topics-bar");
+		var list = document.querySelector(".topics-bar-list");
+		if (!nav || !list) return;
+
+		var moreBtn = nav.querySelector(".topics-bar-more");
+		if (moreBtn) {
+			moreBtn.addEventListener("click", function () {
+				var expanded = nav.getAttribute("data-expanded") === "true";
+				var next = !expanded;
+				nav.setAttribute("data-expanded", String(next));
+				moreBtn.setAttribute("aria-expanded", String(next));
+				moreBtn.textContent = next
+					? moreBtn.getAttribute("data-less-label") || "Show less"
+					: moreBtn.getAttribute("data-more-label") || "More";
+			});
+		}
+
+		if (list.scrollWidth <= list.clientWidth) return;
+		var active = list.querySelector('.topics-bar-link[aria-current="page"]');
+		if (!active) return;
+		var listRect = list.getBoundingClientRect();
+		var activeRect = active.getBoundingClientRect();
+		var targetLeft =
+			list.scrollLeft + (activeRect.left - listRect.left) - (list.clientWidth - activeRect.width) / 2;
+		if (targetLeft > 0) {
+			list.scrollLeft = targetLeft;
+		}
+	}
+
 	initSearchDialog();
 	initBlogFilter();
+	initTopicsBar();
 })();

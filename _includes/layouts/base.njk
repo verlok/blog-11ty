@@ -102,9 +102,10 @@
 
 				<nav class="site-nav" aria-label="{{ strings[currentLang].topLevelNav }}">
 					<ul class="nav">
+						{%- set isTagsPage = page.url and ("/tags/" in page.url) %}
 						{%- for entry in collections.all | filterByLang(currentLang) | eleventyNavigation %}
 							{% if entry.key !== "Home" %}
-								{%- set isSectionActive = (entry.key == "Blog" and layout == "layouts/post.njk") %}
+								{%- set isSectionActive = (entry.key == "Blog" and (layout == "layouts/post.njk" or isTagsPage)) %}
 								<li class="nav-item">
 									<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% elif isSectionActive %} data-active="true"{% endif %}>{{ entry.title }}</a>
 								</li>
@@ -179,9 +180,13 @@
 		<footer class="site-footer">
 			<div class="content content--wide site-footer-inner">
 				<p class="footer-note">Andrea Verlicchi · {{ strings[currentLang].endOfPage }}</p>
-				<a href="#header" class="footer-top-link">
-					<span aria-hidden="true">&uarr;</span> {{ strings[currentLang].toTheTop }}
-				</a>
+				<div class="footer-links">
+					<a href="{{ '/tags/' | locale_url }}" class="footer-link">{{ strings[currentLang].topics }}</a>
+					<span class="meta-sep" aria-hidden="true">&middot;</span>
+					<a href="#header" class="footer-top-link">
+						<span aria-hidden="true">&uarr;</span> {{ strings[currentLang].toTheTop }}
+					</a>
+				</div>
 			</div>
 		</footer>
 
@@ -260,6 +265,8 @@
 				minRead: strings[currentLang].minRead,
 				emptyPrompt: strings[currentLang].searchEmptyPrompt,
 				popularKeywords: strings[currentLang].searchPopularKeywords,
+				allTopicsLink: strings[currentLang].allTopicsLink,
+				tagsUrl: ('/tags/' | locale_url),
 				noResults: strings[currentLang].searchNoResults,
 				noResultsHint: strings[currentLang].searchNoResultsHint,
 				resultsSingular: strings[currentLang].searchResultsSingular,

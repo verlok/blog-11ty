@@ -16,6 +16,9 @@ permalink: /en/tags/{{ tag | slugify }}/
 	<p class="page-subtitle">{{ postslist | length }} article{% if postslist | length != 1 %}s{% endif %}</p>
 </header>
 
+{% set activeTag = tag %}
+{% include "topicsbar.njk" %}
+
 {% include "postslist.njk" %}
 
 <div class="archive-cta">
