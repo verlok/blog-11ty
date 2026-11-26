@@ -16,7 +16,7 @@ There’s a new IDE from Google that embraces agentic AI and leverages Gemini 3:
 
 With Gemini 3's advanced reasoning, tooling, and autonomous programming capabilities, Google Antigravity transforms AI assistance from a tool in a developer's toolkit to an active partner. While the core of Google Antigravity is a familiar AI IDE experience, its agents have been elevated to a dedicated interface and gained direct access to the editor, terminal, and browser. Now agents can autonomously plan and execute complex, end-to-end software tasks on your behalf, while validating their own code.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SVCBA-pBgt0?si=-KPiJ6v2sxRXdude" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/SVCBA-pBgt0?si=-KPiJ6v2sxRXdude" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 On Friday, my workmate Brian and I put it to work on some complex task in the development of the project we're working on, with the Gemini 3 model, and we were quite impressed by it.
 
@@ -32,7 +32,7 @@ I wanted to know more on how to use it best, so this weekend I took some time to
 
 The first one is "Learn the basics of Google Antigravity" from the Antigravity team.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nTOVIGsqCuY?si=Q74TZpCHCD14C2EY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/nTOVIGsqCuY?si=Q74TZpCHCD14C2EY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 This video provides an official introduction and walkthrough of Anti-gravity's core components:
 
@@ -46,7 +46,7 @@ This video provides an official introduction and walkthrough of Anti-gravity's c
 
 If you want a more in-depth view, check out "Google Antigravity: The New Best AI Editor?" from "AI with Brandon".
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/j0UPItO6BX4?si=Nlfsk8KXBsgRcG2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/j0UPItO6BX4?si=Nlfsk8KXBsgRcG2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 This review highlights:
 

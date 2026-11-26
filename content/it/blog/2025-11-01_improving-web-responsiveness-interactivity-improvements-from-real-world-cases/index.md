@@ -21,7 +21,7 @@ La velocità di interazione è un aspetto chiave della reattività di un sito al
 
 Guarda il video del talk se vuoi capire come identificare, risolvere e correggere le interazioni lente, garantendo un'esperienza utente costantemente reattiva.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HSLLBUXuu08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/HSLLBUXuu08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 Le slide sono disponibili al seguente link.
 

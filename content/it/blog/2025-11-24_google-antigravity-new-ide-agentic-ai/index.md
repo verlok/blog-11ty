@@ -16,7 +16,7 @@ C'è un nuovo IDE di Google che abbraccia l'IA agentica e sfrutta Gemini 3: [Goo
 
 Grazie al ragionamento avanzato, alla gestione degli strumenti e alle capacità di programmazione autonoma di Gemini 3, Google Antigravity trasforma l'assistenza dell'IA da semplice strumento nella cassetta degli attrezzi di uno sviluppatore a un partner attivo. Sebbene il cuore di Google Antigravity sia una familiare esperienza di IDE con IA, i suoi agenti sono stati elevati a un'interfaccia dedicata e hanno ottenuto l'accesso diretto all'editor, al terminale e al browser. Ora gli agenti possono pianificare ed eseguire autonomamente compiti software complessi ed end-to-end per tuo conto, convalidando al contempo il proprio codice.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SVCBA-pBgt0?si=-KPiJ6v2sxRXdude" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/SVCBA-pBgt0?si=-KPiJ6v2sxRXdude" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 Venerdì, io e il mio collega Brian lo abbiamo messo all'opera su un compito complesso nello sviluppo del progetto a cui stiamo lavorando, con il modello Gemini 3, e ne siamo rimasti piuttosto colpiti.
 
@@ -32,7 +32,7 @@ Volevo saperne di più su come usarlo al meglio, così questo fine settimana ho 
 
 Il primo è "Learn the basics of Google Antigravity" del team di Antigravity.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nTOVIGsqCuY?si=Q74TZpCHCD14C2EY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/nTOVIGsqCuY?si=Q74TZpCHCD14C2EY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 Questo video fornisce un'introduzione ufficiale e una panoramica dei componenti principali di Antigravity:
 
@@ -46,7 +46,7 @@ Questo video fornisce un'introduzione ufficiale e una panoramica dei componenti 
 
 Se vuoi una visione più approfondita, dai un'occhiata a "Google Antigravity: The New Best AI Editor?" di "AI with Brandon".
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/j0UPItO6BX4?si=Nlfsk8KXBsgRcG2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/j0UPItO6BX4?si=Nlfsk8KXBsgRcG2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 Questa recensione evidenzia:
 

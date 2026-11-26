@@ -15,7 +15,7 @@ tags:
 
 Il 1° aprile 2022 ho parlato di **ottimizzazione delle immagini responsive 4.0** alla conferenza [CSS Day 2022](https://2022.cssday.it) a Faenza. Questo talk affronta il tema di come diventare più produttivi automatizzando la gestione delle immagini responsive. Ecco il video del mio intervento.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8D4skk17BGI?si=lSA2B2PT_dEfXY-l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/8D4skk17BGI?si=lSA2B2PT_dEfXY-l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 Lo strumento di cui ho parlato nel talk è [responsive-images-automator](https://github.com/verlok/responsive-images-automator).
 

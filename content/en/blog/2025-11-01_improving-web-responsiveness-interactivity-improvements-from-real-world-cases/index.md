@@ -21,7 +21,7 @@ Interaction speed is a key aspect of a site’s responsiveness to user interacti
 
 Watch the video of the talk if you want to understand how to identify, troubleshoot, and fix slow interactions, ensuring a consistently responsive user experience.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HSLLBUXuu08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/HSLLBUXuu08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 The slides are available at the following link. 
 
