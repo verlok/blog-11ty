@@ -18,6 +18,6 @@ Il 24 giugno 2022 ho parlato di **ottimizzazione delle immagini responsive 4.0**
 
 Il talk spiega come migliorare le prestazioni del proprio sito web automatizzando le immagini responsive con un approccio basato sui dati. Ecco il video dell'intervento.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vuWH34f6uds?si=Za5a4gWUefluQ7-B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vuWH34f6uds?si=Za5a4gWUefluQ7-B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9"></iframe>
 
 Lo strumento menzionato nel talk è [responsive-images-automator](https://github.com/verlok/responsive-images-automator).
